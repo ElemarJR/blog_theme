@@ -8,13 +8,13 @@ require 'recipe/common.php';
 require 'recipe/npm.php';
 require 'app/recipe/grunt.php';
 
-host('baseproject.aztecweb.net')
-	->stage('production')
-	->user('baseproject')
-	->set('deploy_path', '/home/baseproject')
+host('elemarjr.aztecweb.net')
+	->stage('staging')
+	->user('elemarjr')
+	->set('deploy_path', '/home/elemarjr')
 	->set('http_user', 'www-data');
 
-set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/base-project.git');
+set('repository', 'git@github.com:ElemarJR/blog_theme.git');
 set('branch', 'master');
 
 set('shared_files', [
