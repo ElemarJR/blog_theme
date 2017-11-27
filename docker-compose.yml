@@ -1,0 +1,65 @@
+# Development project infrastructure generated over the Docker. For see how up
+# the infrastructure read the README file.
+
+version: "2"
+
+services:
+  # PHP 7.1 with project required extensions.
+  php:
+    build:
+      context: ./app/docker/php
+    volumes:
+      - .:/app
+      - ./.ssh:/root/.ssh
+    depends_on:
+      - db
+
+  # Image for install and update project PHP packages.
+  composer:
+    image: composer
+    volumes:
+      - .:/app
+      # Map local user Composer directory with container for cache packages
+      - ~/.docker_cache/composer:/root/composer
+
+  # Database image to run the mysql
+  db:
+    image: mariadb:10.3
+    ports:
+        - "3306:3306"
+    volumes:
+       - ./database:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: project
+      MYSQL_USER: project
+      MYSQL_PASSWORD: project
+
+  # Run the applicatiion over HTTP on localhost:8080
+  server:
+    command: wp server --host=0.0.0.0
+    build:
+      context: ./app/docker/php
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  # Node 8.2 with Grunt and Bower
+  node:
+    build:
+      context: ./app/docker/node
+    volumes:
+      - .:/app
+
+  # Watch changes in the project and update the files local server
+  watch:
+    command: grunt watch
+    build:
+      context: ./app/docker/node
+    ports:
+      - "35729:35729"
+    volumes:
+      - .:/app

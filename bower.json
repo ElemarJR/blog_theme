@@ -1,0 +1,7 @@
+{
+  "name": "aztec-wp-dev-env",
+  "private": true,
+  "dependencies": {
+    "requirejs": "^2.2.0"
+  }
+}

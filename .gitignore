@@ -1,0 +1,17 @@
+# Project files
+/.assets/
+/.ssh/
+/app/template/assets
+/database/
+/web/
+.salts
+deploy.log
+wp-cli.yml
+
+# Composer
+/vendor/
+/composer.phar
+
+# Node
+bower_components/
+node_modules/

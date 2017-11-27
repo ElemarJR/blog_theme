@@ -1,0 +1,23 @@
+{
+  "name": "base-project",
+  "version": "1.0.0",
+  "description": "A quick way to start a project with WordPress using Docker.",
+  "repository": {
+    "type": "git",
+    "url": "git@greatcode.aztecweb.net:aztecwebteam/base-project.git"
+  },
+  "author": "Aztec Online Solutions <aztec@aztecweb.net>",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "grunt": "^0.4.5",
+    "grunt-bower": "^0.21.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-symlink": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-stylint": "^0.1.2",
+    "grunt-sync": "^0.5.2",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
