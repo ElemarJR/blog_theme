@@ -5,7 +5,7 @@
  * grunt-bower task.
  */
 requirejs.config({
-    baseUrl: aztec_script.base_url,
+    baseUrl: elemarjr_script.base_url,
     paths: {
         app: '../app',
         libs: '../libs'

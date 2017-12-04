@@ -4,7 +4,7 @@
   "description": "A quick way to start a project with WordPress using Docker.",
   "repository": {
     "type": "git",
-    "url": "git@greatcode.aztecweb.net:aztecwebteam/base-project.git"
+    "url": "git@github.com:ElemarJR/blog_theme.git"
   },
   "author": "Aztec Online Solutions <aztec@aztecweb.net>",
   "license": "GPL-2.0",

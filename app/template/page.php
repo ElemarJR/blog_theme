@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Aztec
+ * @subpackage ElemarJr
  * @since 0.1.0
  * @version 0.1.0
  */

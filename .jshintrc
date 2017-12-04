@@ -25,7 +25,7 @@
 		"wp": false,
 		"require": false,
 		"requirejs": false,
-		"aztec_script": false,
+		"elemarjr_script": false,
 		"define": false
 	}
 }

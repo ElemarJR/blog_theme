@@ -1,6 +1,6 @@
 {
-	"name" : "aztecweb/base-project",
-	"description" : "A quick way to start a project with WordPress using Docker.",
+	"name" : "aztecweb/elemarjr",
+	"description" : "elemarjr.com",
 	"repositories" : [{
 		"type" : "composer",
 		"url" : "https://wpackagist.org"
