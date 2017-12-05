@@ -35,6 +35,8 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Performance\Css::class,
+			
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\DisableEmoji::class,
 			\Aztec\Setup\Head::class,
