@@ -78,7 +78,6 @@ dotenv
 # Remove default WordPress packages 
 rm -rf web/wp-content/themes/twenty*
 rm -rf web/wp-content/plugins/hello.php
-rm -rf web/wp-content/plugins/akismet
 rm -rf web/wp-content/languages/plugins
 rm -rf web/wp-content/languages/themes
 
@@ -129,8 +128,11 @@ if [ ! -z "${_arg_with_data+x}" ]; then
     fi
 fi
 
+# Install portuguese language
+$wp language core install pt_BR --activate
+
 # Update language of core, theme and plugins
-$wp core language update
+$wp language core update
 
 # Activate theme
 $wp theme activate ${THEME}
