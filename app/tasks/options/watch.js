@@ -16,6 +16,10 @@ module.exports = {
 		files: ['<%= config.assets.src %>/theme/js/**/*.js'],
 		tasks: ['sync:requirejs']
 	},
+	images: {
+		files: ['<%= config.assets.src %>/images/**/*.{png,jpg,gif,svg}'],
+		tasks: ['imagemin']
+	},
 	bower: {
 		files: ['bower_components/**/*'],
 		tasks: ['bower:dev']
