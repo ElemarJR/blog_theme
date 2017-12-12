@@ -35,6 +35,10 @@ body
         padding-right 0
         width $screen-lg
 
+// Hide screen reader element until load the CSS file
+.screen-reader-text
+    display none
+
 // Header
 .site-header
     background-color $gray-dark
@@ -43,7 +47,7 @@ body
     position relative
 
     @media screen and ( min-width $nav-breakpoint )
-        min-height none
+        min-height auto
 
     .top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
@@ -176,6 +180,10 @@ body
                         padding 0
                         text-decoration none
                         width auto
+
+                    ^[0..-2].current-menu-item ^[-1..-1],
+                    &:hover
+                        color $red
 
 // Hero Content
 .hero
