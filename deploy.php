@@ -6,6 +6,7 @@ namespace Deployer;
 
 require 'recipe/common.php';
 require 'recipe/npm.php';
+require 'app/recipe/bower.php';
 require 'app/recipe/grunt.php';
 
 host('107.22.150.147')
@@ -47,6 +48,7 @@ task('deploy', [
 	'deploy:shared', // execute before installation to share .env file
 	'npm:install',
 	'deploy:vendors',
+	'bower:install',
 	'grunt:build',
 	'deploy:install',
 	'deploy:shared', // execute after installation beacause deploy:vendor overwrite the public directory
