@@ -18,7 +18,7 @@
  * @package WordPress
  */
 
-$root_dir = __DIR__ . '/../';
+$root_dir = __DIR__ . '/../../../';
 
 require_once $root_dir . '/vendor/autoload.php';
 

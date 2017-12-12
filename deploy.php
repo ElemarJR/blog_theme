@@ -8,7 +8,7 @@ require 'recipe/common.php';
 require 'recipe/npm.php';
 require 'app/recipe/grunt.php';
 
-host('elemarjr.aztecweb.net')
+host('107.22.150.147')
 	->stage('staging')
 	->user('elemarjr')
 	->set('deploy_path', '/home/elemarjr')
@@ -16,6 +16,8 @@ host('elemarjr.aztecweb.net')
 
 set('repository', 'git@github.com:ElemarJR/blog_theme.git');
 set('branch', 'master');
+
+set('ssh_multiplexing', false);
 
 set('shared_files', [
 	'.env'
