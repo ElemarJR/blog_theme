@@ -8,5 +8,5 @@ set('bin/grunt', function () {
 
 desc('Execute grunt build task');
 task('grunt:build', function () {
-    run("cd {{release_path}} && {{bin/grunt}}");
+    run("cd {{release_path}} && {{bin/grunt}} dist");
 });
