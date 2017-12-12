@@ -2,6 +2,7 @@
   "name": "elemarjr",
   "private": true,
   "dependencies": {
-    "requirejs": "^2.2.0"
+    "requirejs": "^2.2.0",
+    "webfontloader": "^1.6.28"
   }
 }

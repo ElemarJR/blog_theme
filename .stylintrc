@@ -8,7 +8,6 @@
   "commaSpace": "always",
   "commentSpace": "always",
   "cssLiteral": "never",
-  "depthLimit": 4,
   "duplicates": true,
   "efficient": "always",
   "extendPref": false,

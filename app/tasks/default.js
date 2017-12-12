@@ -10,6 +10,7 @@ module.exports = function ( grunt ) {
 		'stylus:dev',
 		'bower:copy',
 		'sync:requirejs',
+		'sync:font-icon',
 		'imagemin',
 		'symlink'
 	] );

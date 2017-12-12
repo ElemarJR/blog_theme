@@ -18,17 +18,9 @@ class Assets extends Base {
 	 * Add assets hooks
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', $this->callback( 'enqueue_style' ) );
 		add_action( 'wp_enqueue_scripts', $this->callback( 'enqueue_script' ) );
 
 		add_filter( 'script_loader_tag', $this->callback( 'script_loader_tag' ), 10, 3 );
-	}
-
-	/**
-	 * Enqueue the theme style file
-	 */
-	public function enqueue_style() {
-		wp_enqueue_style( 'aztec-style', get_stylesheet_directory_uri() . '/assets/css/style.css' );
 	}
 
 	/**
@@ -38,9 +30,9 @@ class Assets extends Base {
 	 * file url path.
 	 */
 	function enqueue_script() {
-		wp_enqueue_script( 'aztec-script', get_stylesheet_directory_uri() . '/assets/js/libs/require.js', [ 'jquery' ], false, true );
+		wp_enqueue_script( 'elemarjr-script', get_stylesheet_directory_uri() . '/assets/js/libs/require.js', [ 'jquery' ], false, true );
 		wp_localize_script(
-			'aztec-script', 'aztec_script', [
+			'elemarjr-script', 'elemarjr_script', [
 				'base_url' => get_stylesheet_directory_uri() . '/assets/js/libs',
 			]
 		);
@@ -55,7 +47,7 @@ class Assets extends Base {
 	 * @return string The HTML tag adding the main application script.
 	 */
 	function script_loader_tag( $tag, $handle, $src ) {
-		if ( 'aztec-script' === $handle ) {
+		if ( 'elemarjr-script' === $handle ) {
 			$require_main = get_stylesheet_directory_uri() . '/assets/js/app';
 			return '<script data-main="' . $require_main . '" src="' . $src . '"></script>';
 		}

@@ -1,0 +1,46 @@
+.search-form
+    background $white
+    justify-content space-between
+    left 0
+    padding 28px 35px 25px 60px
+    position absolute
+    top $sm-nav-height
+    width 100%
+    z-index 999
+
+    @media screen and ( min-width $nav-breakpoint )
+        background transparent
+        display flex
+        padding 0
+        position static
+
+    label
+        order 2
+        width 100%
+
+    input
+        border-bottom-color $gray-dark
+        color $red
+        width 100%
+
+        @media screen and ( min-width $nav-breakpoint )
+            border-bottom-color $white
+            color $white
+            margin-left 5px
+            margin-top -3px
+            width 0
+
+            /.toggled &
+                width 300px
+
+    button[type='submit']
+        color $gray-dark
+        font-size 40px
+        height 40px
+        icon( i-search )
+        margin-right 28px
+        order 1
+        width 40px
+
+        @media screen and ( min-width $nav-breakpoint )
+            display none

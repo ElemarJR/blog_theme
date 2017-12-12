@@ -1,5 +1,202 @@
+// All style of elements that is above the fold
 @import 'nib'
 @import 'variables'
+@import 'mixins/*'
+@import '../font-icon/variables'
 
 normalize-css()
 
+// General CSS
+*,
+*:before,
+*:after
+    box-sizing border-box
+
+body
+    font-family $sans-serif
+
+// Helper classes
+
+// Container to center the element in the page on large screens. In minor
+// screens the element is full width.
+.container
+    max-width 100%
+    padding-left 10px
+    padding-right 10px
+    width 100vw
+
+    &.full
+        padding 0
+
+    @media screen and ( min-width $screen-lg )
+        margin-left auto
+        margin-right auto
+        padding-left 0
+        padding-right 0
+        width $screen-lg
+
+// Header
+.site-header
+    background-color $gray-dark
+    height 100vh
+    min-height 695px
+    position relative
+
+    @media screen and ( min-width $nav-breakpoint )
+        min-height none
+
+    .top-header-wrapper
+        border-bottom 1px solid rgba( $white, .7 )
+        height $sm-nav-height
+
+        @media screen and ( min-width $nav-breakpoint )
+            height 107px
+
+    .top-header
+        position relative
+
+    .site-branding
+        height 53px
+        left 58px
+        position absolute
+        top 18px
+        width 140px
+
+        @media screen and ( min-width $nav-breakpoint )
+            float left
+            height 70px
+            left 0
+            margin-top 18px
+            position static
+            width 180px
+
+    .header-right
+        @media screen and ( min-width $nav-breakpoint )
+            display flex
+            float right
+            max-width calc( 100% - 200px )
+            padding-top 38px
+
+    .header-toogle-button
+        color $white
+        cursor pointer
+        position absolute
+
+        /.toggled ^[1..-1]
+            color $red
+
+    .site-search
+        @media screen and ( min-width $nav-breakpoint )
+            display flex
+            margin-right 40px
+
+        .search-toggle
+            font-size 26px
+            icon( i-search )
+            right 130px
+            top 33px
+
+            @media screen and ( min-width $nav-breakpoint )
+                padding-top 3px
+                position static
+
+        .search-form
+            display none
+
+            ~/ .toggled ^[2..-1]
+                display flex
+
+    .main-navigation
+        .menu-toggle
+            font-size 46px
+            icon( i-menu )
+            right 46px
+            top 22px
+
+            @media screen and ( min-width $nav-breakpoint )
+                display none
+
+        div
+            background $white
+            display none
+            left 0
+            position absolute
+            top $sm-nav-height
+            width 100%
+            z-index 999
+
+            @media screen and ( min-width $nav-breakpoint )
+                background transparent
+                border-left 1px solid $white
+                display flex
+                height 30px
+                padding-left 20px
+                position static
+
+            ~/ .toggled ^[2..-1]
+                display block
+
+        ul
+            list-style none
+            margin 0
+            padding 0
+            width 100%
+
+            @media screen and ( min-width $nav-breakpoint )
+                width auto
+
+            > .menu-item
+                display block
+                line-height 47px
+                text-transform uppercase
+
+                @media screen and ( min-width $nav-breakpoint )
+                    display inline-block
+                    font-size 16px
+                    line-height 30px
+                    padding 0 20px
+                    position relative
+
+                &:last-child
+                    @media screen and ( min-width $nav-breakpoint )
+                        padding-right 0
+
+                a
+                    color $gray-dark
+                    display block
+                    font-size 16px
+                    font-weight bold
+                    padding 0 30px
+                    text-decoration none
+                    width 100%
+
+                    @media screen and ( min-width $nav-breakpoint )
+                        color $white
+                        display inline-block
+                        padding 0
+                        text-decoration none
+                        width auto
+
+// Hero Content
+.hero
+    color $white
+
+    &__blog
+        padding-top 120px
+        text-transform uppercase
+        width 440px
+
+    &--title
+        color $red
+        font-size 64px
+        margin-bottom 0
+
+    &--subtitle
+        font-size 70px
+        font-weight 400
+        line-height 1.1em
+        margin 0 0 33px
+
+    &--description
+        font-size 22px
+        text-transform none

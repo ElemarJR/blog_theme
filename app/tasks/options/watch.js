@@ -13,7 +13,7 @@ module.exports = {
 		tasks: ['stylint', 'stylus:dev']
 	},
 	js: {
-		files: ['<%= config.assets.src %>/theme/js/**/*.js'],
+		files: ['<%= config.assets.src %>/js/**/*.js'],
 		tasks: ['sync:requirejs']
 	},
 	images: {
@@ -22,10 +22,14 @@ module.exports = {
 	},
 	bower: {
 		files: ['bower_components/**/*'],
-		tasks: ['bower:dev']
+		tasks: ['bower:copy']
 	},
 	config: {
 		files: ['<%= config.config.dir %>/**/*'],
 		tasks: ['symlink']
+	},
+	'font-icon': {
+		files: ['theme/font-icon/fonts/**/*'],
+		tasks: ['sync:font-icon']
 	}
 };

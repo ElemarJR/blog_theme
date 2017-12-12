@@ -1,7 +1,7 @@
 /**
  * The RequireJS main file.
- * 
- * Config the app and libs paths. The libs is automagically loaded with the 
+ *
+ * Config the app and libs paths. The libs is automagically loaded with the
  * grunt-bower task.
  */
 requirejs.config({
@@ -14,14 +14,14 @@ requirejs.config({
 
 // define the WordPress jQuery as a module
 if (typeof jQuery === 'function') {
-	define('jquery', function() {
-		return jQuery;
-	});
+    define('jquery', function() {
+        return jQuery;
+    });
 }
 
 // start the application
-requirejs( [ 'jquery', 'app/sub' ], function( $, sub ) {
-	// example function calls
-	console.log( $.fn.jquery );
-	sub.print();
-});
+requirejs([
+    'app/font',
+    'app/site-navigation',
+    'app/site-search'
+], function() {});

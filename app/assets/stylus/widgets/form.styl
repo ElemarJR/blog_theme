@@ -1,5 +1,5 @@
-label
-    display block
+// label
+//     display block
 
 input[type=text],
 input[type=url],
@@ -10,60 +10,62 @@ input[type=number],
 input[type=range],
 select,
 textarea
-    background-color $input-background-color
-    border 1px solid $input-border-color
+    background-color transparent
+    border none
+    border-bottom 1px solid $input-border-color
     box-sizing border-box
     color $input-text-color
     display block
+    height 37px
+    padding 0
     width 100%
 
-    &[type=range]
-        border none
+//     &[type=range]
+//         border none
 
-    &[type=number]
-        max-width 60px
+//     &[type=number]
+//         max-width 60px
 
-    &:focus
-        background-color $input-focus-background-color
-        border-color $input-focus-border-color
-        color $input-focus-text-color
+//     &:focus
+//         background-color $input-focus-background-color
+//         border-color $input-focus-border-color
+//         color $input-focus-text-color
 
-    &:hover
-        background-color $input-hover-background-color
-        border-color $input-hover-border-color
-        color $input-hover-text-color
+//     &:hover
+//         background-color $input-hover-background-color
+//         border-color $input-hover-border-color
+//         color $input-hover-text-color
 
-    &:disabled
-        background-color $input-disabled-background-color
-        border-color $input-disabled-border-color
-        color $input-disabled-text-color
+//     &:disabled
+//         background-color $input-disabled-background-color
+//         border-color $input-disabled-border-color
+//         color $input-disabled-text-color
 
-    &:invalid,
-    &:out-of-range
-        background-color $input-invalid-background-color
-        border-color $input-invalid-border-color
-        color $input-invalid-text-color
+//     &:invalid,
+//     &:out-of-range
+//         background-color $input-invalid-background-color
+//         border-color $input-invalid-border-color
+//         color $input-invalid-text-color
 
-textarea
-    resize vertical
+// textarea
+//     resize vertical
 
-input[type=radio],
-input[type=checkbox]
-    display inline-block
-    margin-right 5px
+// input[type=radio],
+// input[type=checkbox]
+//     display inline-block
+//     margin-right 5px
 
-    + label
-        cursor pointer
-        display inline-block
+//     + label
+//         cursor pointer
+//         display inline-block
 
-    &:disabled + label
-        color $input-disabled-text-color
-        cursor default
+//     &:disabled + label
+//         color $input-disabled-text-color
+//         cursor default
 
 button,
 input[type=button],
 input[type=submit]
-    background-color $button-background-color
+    background-color transparent
     border none
-    color $button-text-color
-    padding 5px 20px
+    padding 0

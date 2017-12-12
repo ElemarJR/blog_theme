@@ -1,5 +1,8 @@
 @import 'nib'
+@import 'mixins/*'
 @import 'variables'
+
+@import '../font-icon'
 
 .hentry
     &:after
@@ -12,7 +15,9 @@
 @import 'widgets/*'
 
 body
-  background url( '../images/mockups/m_010_home.jpg' ) center top no-repeat
+    // background $gray-dark
+    background url( '../images/mockups/d_030_blog.jpg' ) center top no-repeat
+    // background url( '../images/mockups/m_030_search.jpg' ) center top no-repeat
 
 main
-  margin-top 1000px
+    margin-top 1000px
