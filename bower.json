@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "requirejs": "^2.2.0",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "masonry": "masonry-layout#^4.2.0",
+    "jquery-bridget": "^2.0.1"
   }
 }

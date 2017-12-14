@@ -1,9 +1,13 @@
 /**
- * Create symlink to the application 
+ * Create symlink to the application
  */
 module.exports = {
 	options: {
 		overwrite: true
+	},
+	bower: {
+		src: 'bower_components',
+		dest: '<%= config.assets.build %>/js/bower_components'
 	},
 	theme: {
 		src: '<%= config.template.src %>',

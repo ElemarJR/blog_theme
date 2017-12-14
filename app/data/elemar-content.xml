@@ -1515,7 +1515,7 @@
 
 	<item>
 		<title>sample-blog-img</title>
-		<link>http://localhost:8080/?attachment_id=6187&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6187&#038;lang=pt</link>
 		<pubDate>Wed, 06 Jan 2016 21:41:47 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2013/01/sample-img.png</guid>
@@ -1534,7 +1534,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2013/01/sample-img.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2013/01/sample-img.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1547,7 +1547,7 @@
 	</item>
 	<item>
 		<title>icon</title>
-		<link>http://localhost:8080/?attachment_id=6213&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6213&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 03:02:32 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/icon.jpg</guid>
@@ -1566,7 +1566,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/icon.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/icon.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1579,7 +1579,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr</title>
-		<link>http://localhost:8080/?attachment_id=6220&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6220&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 03:15:16 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2015/12/m_elemarjr.jpg</guid>
@@ -1598,7 +1598,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2015/12/m_elemarjr.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2015/12/m_elemarjr.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1611,7 +1611,7 @@
 	</item>
 	<item>
 		<title>photo</title>
-		<link>http://localhost:8080/?attachment_id=6243&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6243&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 04:38:15 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/photo.jpg</guid>
@@ -1630,7 +1630,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/photo.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/photo.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1643,7 +1643,7 @@
 	</item>
 	<item>
 		<title>m_elemar2</title>
-		<link>http://localhost:8080/?attachment_id=6253&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6253&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 12:10:39 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemar2.jpg</guid>
@@ -1662,7 +1662,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemar2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemar2.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1675,7 +1675,7 @@
 	</item>
 	<item>
 		<title>m_elemar3</title>
-		<link>http://localhost:8080/?attachment_id=6255&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6255&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 12:11:18 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemar3.jpg</guid>
@@ -1694,7 +1694,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemar3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemar3.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1707,7 +1707,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr_0_bg</title>
-		<link>http://localhost:8080/?attachment_id=6271&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6271&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 12:40:46 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_0_bg.jpg</guid>
@@ -1726,7 +1726,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemarjr_0_bg.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_0_bg.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1739,7 +1739,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr_1_bg</title>
-		<link>http://localhost:8080/?attachment_id=6272&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6272&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 12:41:40 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_1_bg.jpg</guid>
@@ -1758,7 +1758,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemarjr_1_bg.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_1_bg.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1771,7 +1771,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr_2_bg</title>
-		<link>http://localhost:8080/?attachment_id=6273&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6273&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 12:42:34 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_2_bg.jpg</guid>
@@ -1790,7 +1790,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemarjr_2_bg.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_2_bg.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1803,7 +1803,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr_0_bg</title>
-		<link>http://localhost:8080/?attachment_id=6290&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6290&#038;lang=pt</link>
 		<pubDate>Sun, 02 Apr 2017 13:13:50 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_0_bg-1.jpg</guid>
@@ -1822,7 +1822,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/m_elemarjr_0_bg-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/m_elemarjr_0_bg-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1835,7 +1835,7 @@
 	</item>
 	<item>
 		<title>elemar_about_0</title>
-		<link>http://localhost:8080/?attachment_id=6362&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6362&#038;lang=pt</link>
 		<pubDate>Tue, 04 Apr 2017 02:22:27 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/elemar_about_0.jpg</guid>
@@ -1854,7 +1854,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/elemar_about_0.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/elemar_about_0.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1867,7 +1867,7 @@
 	</item>
 	<item>
 		<title>hexagonal_style</title>
-		<link>http://localhost:8080/?attachment_id=6413</link>
+		<link>http://www.elemarjr.com/?attachment_id=6413</link>
 		<pubDate>Mon, 17 Apr 2017 11:59:06 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/hexagonal_style.jpg</guid>
@@ -1886,7 +1886,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/hexagonal_style.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/hexagonal_style.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1899,7 +1899,7 @@
 	</item>
 	<item>
 		<title>hexagonal_style</title>
-		<link>http://localhost:8080/?attachment_id=6423</link>
+		<link>http://www.elemarjr.com/?attachment_id=6423</link>
 		<pubDate>Mon, 17 Apr 2017 12:56:06 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/hexagonal_style-1.jpg</guid>
@@ -1918,7 +1918,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/hexagonal_style-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/hexagonal_style-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1931,7 +1931,7 @@
 	</item>
 	<item>
 		<title>strategy</title>
-		<link>http://localhost:8080/?attachment_id=6463</link>
+		<link>http://www.elemarjr.com/?attachment_id=6463</link>
 		<pubDate>Fri, 21 Apr 2017 12:50:13 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/strategy.gif</guid>
@@ -1950,7 +1950,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/strategy.gif]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/strategy.gif]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1963,7 +1963,7 @@
 	</item>
 	<item>
 		<title>questions-2212771_1920</title>
-		<link>http://localhost:8080/?attachment_id=6483&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6483&#038;lang=pt</link>
 		<pubDate>Wed, 10 May 2017 13:11:37 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/questions-2212771_1920.jpg</guid>
@@ -1982,7 +1982,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/questions-2212771_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/questions-2212771_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -1995,7 +1995,7 @@
 	</item>
 	<item>
 		<title>blackboard-837210_1920</title>
-		<link>http://localhost:8080/?attachment_id=6487</link>
+		<link>http://www.elemarjr.com/?attachment_id=6487</link>
 		<pubDate>Thu, 11 May 2017 13:16:07 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/blackboard-837210_1920-1.jpg</guid>
@@ -2014,7 +2014,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/blackboard-837210_1920-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/blackboard-837210_1920-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2027,7 +2027,7 @@
 	</item>
 	<item>
 		<title>problem-1951987_1920</title>
-		<link>http://localhost:8080/?attachment_id=6490</link>
+		<link>http://www.elemarjr.com/?attachment_id=6490</link>
 		<pubDate>Thu, 11 May 2017 13:30:19 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/problem-1951987_1920.jpg</guid>
@@ -2046,7 +2046,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/problem-1951987_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/problem-1951987_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2059,7 +2059,7 @@
 	</item>
 	<item>
 		<title>accept-1671024_1920</title>
-		<link>http://localhost:8080/?attachment_id=6491</link>
+		<link>http://www.elemarjr.com/?attachment_id=6491</link>
 		<pubDate>Thu, 11 May 2017 13:36:51 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/accept-1671024_1920.jpg</guid>
@@ -2078,7 +2078,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/accept-1671024_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/accept-1671024_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2091,7 +2091,7 @@
 	</item>
 	<item>
 		<title>hex-675576</title>
-		<link>http://localhost:8080/?attachment_id=6492</link>
+		<link>http://www.elemarjr.com/?attachment_id=6492</link>
 		<pubDate>Thu, 11 May 2017 13:45:06 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/hex-675576.jpg</guid>
@@ -2110,7 +2110,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/hex-675576.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/hex-675576.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2123,7 +2123,7 @@
 	</item>
 	<item>
 		<title>books-1012088_1920</title>
-		<link>http://localhost:8080/?attachment_id=6493</link>
+		<link>http://www.elemarjr.com/?attachment_id=6493</link>
 		<pubDate>Thu, 11 May 2017 13:50:10 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/books-1012088_1920.jpg</guid>
@@ -2142,7 +2142,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/books-1012088_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/books-1012088_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2155,7 +2155,7 @@
 	</item>
 	<item>
 		<title>command</title>
-		<link>http://localhost:8080/?attachment_id=6502</link>
+		<link>http://www.elemarjr.com/?attachment_id=6502</link>
 		<pubDate>Thu, 11 May 2017 22:09:52 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/command.png</guid>
@@ -2174,7 +2174,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/command.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/command.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2187,7 +2187,7 @@
 	</item>
 	<item>
 		<title>hex-675576</title>
-		<link>http://localhost:8080/?attachment_id=6503</link>
+		<link>http://www.elemarjr.com/?attachment_id=6503</link>
 		<pubDate>Thu, 11 May 2017 22:10:47 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/hex-675576-1.jpg</guid>
@@ -2206,7 +2206,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/hex-675576-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/hex-675576-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2219,7 +2219,7 @@
 	</item>
 	<item>
 		<title>accept-1671024_1920</title>
-		<link>http://localhost:8080/?attachment_id=6504</link>
+		<link>http://www.elemarjr.com/?attachment_id=6504</link>
 		<pubDate>Thu, 11 May 2017 22:12:17 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/accept-1671024_1920-1.jpg</guid>
@@ -2238,7 +2238,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/accept-1671024_1920-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/accept-1671024_1920-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2251,7 +2251,7 @@
 	</item>
 	<item>
 		<title>problem-1951987_1920</title>
-		<link>http://localhost:8080/?attachment_id=6505</link>
+		<link>http://www.elemarjr.com/?attachment_id=6505</link>
 		<pubDate>Thu, 11 May 2017 22:13:48 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/problem-1951987_1920-1.jpg</guid>
@@ -2270,7 +2270,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/problem-1951987_1920-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/problem-1951987_1920-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2283,7 +2283,7 @@
 	</item>
 	<item>
 		<title>blackboard-837210_1920</title>
-		<link>http://localhost:8080/?attachment_id=6506</link>
+		<link>http://www.elemarjr.com/?attachment_id=6506</link>
 		<pubDate>Thu, 11 May 2017 22:14:52 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/blackboard-837210_1920.jpg</guid>
@@ -2302,7 +2302,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/blackboard-837210_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/blackboard-837210_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2315,7 +2315,7 @@
 	</item>
 	<item>
 		<title>questions-2212771_1920</title>
-		<link>http://localhost:8080/?attachment_id=6507</link>
+		<link>http://www.elemarjr.com/?attachment_id=6507</link>
 		<pubDate>Thu, 11 May 2017 22:17:14 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/questions-2212771_1920.jpg</guid>
@@ -2334,7 +2334,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/questions-2212771_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/questions-2212771_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2347,7 +2347,7 @@
 	</item>
 	<item>
 		<title>strategy</title>
-		<link>http://localhost:8080/?attachment_id=6508</link>
+		<link>http://www.elemarjr.com/?attachment_id=6508</link>
 		<pubDate>Thu, 11 May 2017 22:19:27 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/strategy-1.png</guid>
@@ -2366,7 +2366,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/strategy-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/strategy-1.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2379,7 +2379,7 @@
 	</item>
 	<item>
 		<title>strategy</title>
-		<link>http://localhost:8080/?attachment_id=6510</link>
+		<link>http://www.elemarjr.com/?attachment_id=6510</link>
 		<pubDate>Fri, 12 May 2017 11:11:01 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/strategy.png</guid>
@@ -2398,7 +2398,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/strategy.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/strategy.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2411,7 +2411,7 @@
 	</item>
 	<item>
 		<title>command</title>
-		<link>http://localhost:8080/?attachment_id=6511</link>
+		<link>http://www.elemarjr.com/?attachment_id=6511</link>
 		<pubDate>Fri, 12 May 2017 11:12:37 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/command-1.png</guid>
@@ -2430,7 +2430,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/command-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/command-1.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2443,7 +2443,7 @@
 	</item>
 	<item>
 		<title>strategy</title>
-		<link>http://localhost:8080/?attachment_id=6539</link>
+		<link>http://www.elemarjr.com/?attachment_id=6539</link>
 		<pubDate>Fri, 12 May 2017 13:10:16 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/strategy-2.png</guid>
@@ -2462,7 +2462,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/strategy-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/strategy-2.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2475,7 +2475,7 @@
 	</item>
 	<item>
 		<title>command</title>
-		<link>http://localhost:8080/?attachment_id=6540</link>
+		<link>http://www.elemarjr.com/?attachment_id=6540</link>
 		<pubDate>Fri, 12 May 2017 13:11:01 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/04/command-2.png</guid>
@@ -2494,7 +2494,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/04/command-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/04/command-2.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2507,7 +2507,7 @@
 	</item>
 	<item>
 		<title>sunset-2247726_1920</title>
-		<link>http://localhost:8080/?attachment_id=6560</link>
+		<link>http://www.elemarjr.com/?attachment_id=6560</link>
 		<pubDate>Fri, 19 May 2017 22:32:40 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/sunset-2247726_1920.jpg</guid>
@@ -2526,7 +2526,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/sunset-2247726_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/sunset-2247726_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2539,7 +2539,7 @@
 	</item>
 	<item>
 		<title>sunset-2247726_1920</title>
-		<link>http://localhost:8080/?attachment_id=6563</link>
+		<link>http://www.elemarjr.com/?attachment_id=6563</link>
 		<pubDate>Sat, 20 May 2017 12:27:59 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/sunset-2247726_1920-1.jpg</guid>
@@ -2558,7 +2558,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/sunset-2247726_1920-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/sunset-2247726_1920-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2571,7 +2571,7 @@
 	</item>
 	<item>
 		<title>opencv</title>
-		<link>http://localhost:8080/?attachment_id=6603</link>
+		<link>http://www.elemarjr.com/?attachment_id=6603</link>
 		<pubDate>Fri, 26 May 2017 17:46:26 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/opencv.png</guid>
@@ -2590,7 +2590,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/opencv.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/opencv.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2603,7 +2603,7 @@
 	</item>
 	<item>
 		<title>options</title>
-		<link>http://localhost:8080/?attachment_id=6623</link>
+		<link>http://www.elemarjr.com/?attachment_id=6623</link>
 		<pubDate>Mon, 29 May 2017 21:21:57 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/options.png</guid>
@@ -2622,7 +2622,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/options.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/options.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2635,7 +2635,7 @@
 	</item>
 	<item>
 		<title>options</title>
-		<link>http://localhost:8080/?attachment_id=6626</link>
+		<link>http://www.elemarjr.com/?attachment_id=6626</link>
 		<pubDate>Mon, 29 May 2017 21:25:50 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/05/options-1.png</guid>
@@ -2654,7 +2654,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/05/options-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/05/options-1.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2667,7 +2667,7 @@
 	</item>
 	<item>
 		<title>logo_w</title>
-		<link>http://localhost:8080/?attachment_id=6636&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6636&#038;lang=pt</link>
 		<pubDate>Thu, 01 Jun 2017 21:15:32 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/logo_w.png</guid>
@@ -2686,7 +2686,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/logo_w.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/logo_w.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2699,7 +2699,7 @@
 	</item>
 	<item>
 		<title>logo_b</title>
-		<link>http://localhost:8080/?attachment_id=6637&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6637&#038;lang=pt</link>
 		<pubDate>Thu, 01 Jun 2017 21:18:31 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/logo_b.png</guid>
@@ -2718,7 +2718,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/logo_b.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/logo_b.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2731,7 +2731,7 @@
 	</item>
 	<item>
 		<title>logo_b_r</title>
-		<link>http://localhost:8080/?attachment_id=6638&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6638&#038;lang=pt</link>
 		<pubDate>Thu, 01 Jun 2017 21:18:57 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/logo_b_r.png</guid>
@@ -2750,7 +2750,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/logo_b_r.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/logo_b_r.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2763,7 +2763,7 @@
 	</item>
 	<item>
 		<title>logo_w_r</title>
-		<link>http://localhost:8080/?attachment_id=6639&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6639&#038;lang=pt</link>
 		<pubDate>Thu, 01 Jun 2017 21:27:12 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/logo_w_r.png</guid>
@@ -2782,7 +2782,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/logo_w_r.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/logo_w_r.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2795,7 +2795,7 @@
 	</item>
 	<item>
 		<title>software_sem_bugs</title>
-		<link>http://localhost:8080/?attachment_id=6641&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6641&#038;lang=pt</link>
 		<pubDate>Fri, 02 Jun 2017 02:58:25 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/software_sem_bugs.png</guid>
@@ -2814,7 +2814,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/software_sem_bugs.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/software_sem_bugs.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2827,7 +2827,7 @@
 	</item>
 	<item>
 		<title>microservice_arch</title>
-		<link>http://localhost:8080/?attachment_id=6654</link>
+		<link>http://www.elemarjr.com/?attachment_id=6654</link>
 		<pubDate>Tue, 06 Jun 2017 00:22:18 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/microservice_arch.png</guid>
@@ -2846,7 +2846,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/microservice_arch.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/microservice_arch.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2859,7 +2859,7 @@
 	</item>
 	<item>
 		<title>microservices_arch2</title>
-		<link>http://localhost:8080/?attachment_id=6656</link>
+		<link>http://www.elemarjr.com/?attachment_id=6656</link>
 		<pubDate>Tue, 06 Jun 2017 00:43:41 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/microservices_arch2.png</guid>
@@ -2878,7 +2878,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/microservices_arch2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/microservices_arch2.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2891,7 +2891,7 @@
 	</item>
 	<item>
 		<title>window-1231894_1280</title>
-		<link>http://localhost:8080/?attachment_id=6666</link>
+		<link>http://www.elemarjr.com/?attachment_id=6666</link>
 		<pubDate>Tue, 06 Jun 2017 01:01:35 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/window-1231894_1280.jpg</guid>
@@ -2910,7 +2910,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/window-1231894_1280.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/window-1231894_1280.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2923,7 +2923,7 @@
 	</item>
 	<item>
 		<title>window-1231894_1280</title>
-		<link>http://localhost:8080/?attachment_id=6668</link>
+		<link>http://www.elemarjr.com/?attachment_id=6668</link>
 		<pubDate>Tue, 06 Jun 2017 01:04:07 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/window-1231894_1280-1.jpg</guid>
@@ -2942,7 +2942,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/window-1231894_1280-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/window-1231894_1280-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2955,7 +2955,7 @@
 	</item>
 	<item>
 		<title>m_elemarjr_0_bg-1</title>
-		<link>http://localhost:8080/?attachment_id=6676&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6676&#038;lang=pt</link>
 		<pubDate>Wed, 07 Jun 2017 11:58:37 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/m_elemarjr_0_bg-1.jpg</guid>
@@ -2974,7 +2974,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/m_elemarjr_0_bg-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/m_elemarjr_0_bg-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -2987,7 +2987,7 @@
 	</item>
 	<item>
 		<title>csharp_nolight</title>
-		<link>http://localhost:8080/?attachment_id=6701</link>
+		<link>http://www.elemarjr.com/?attachment_id=6701</link>
 		<pubDate>Wed, 14 Jun 2017 12:47:58 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/csharp_nolight.png</guid>
@@ -3006,7 +3006,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/csharp_nolight.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/csharp_nolight.png]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3019,7 +3019,7 @@
 	</item>
 	<item>
 		<title>csharp_nolight</title>
-		<link>http://localhost:8080/?attachment_id=6703</link>
+		<link>http://www.elemarjr.com/?attachment_id=6703</link>
 		<pubDate>Wed, 14 Jun 2017 12:51:31 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/csharp_nolight-1.png</guid>
@@ -3038,7 +3038,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/csharp_nolight-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/csharp_nolight-1.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3051,7 +3051,7 @@
 	</item>
 	<item>
 		<title>result</title>
-		<link>http://localhost:8080/?attachment_id=6714</link>
+		<link>http://www.elemarjr.com/?attachment_id=6714</link>
 		<pubDate>Wed, 14 Jun 2017 14:46:03 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/result.png</guid>
@@ -3070,7 +3070,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/result.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/result.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3083,7 +3083,7 @@
 	</item>
 	<item>
 		<title>internet-1895376_1920</title>
-		<link>http://localhost:8080/?attachment_id=6725</link>
+		<link>http://www.elemarjr.com/?attachment_id=6725</link>
 		<pubDate>Thu, 15 Jun 2017 21:49:13 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/06/internet-1895376_1920.jpg</guid>
@@ -3102,7 +3102,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/06/internet-1895376_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/06/internet-1895376_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3115,7 +3115,7 @@
 	</item>
 	<item>
 		<title>FOTOS-SOBRE-01</title>
-		<link>http://localhost:8080/?attachment_id=6810&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6810&#038;lang=pt</link>
 		<pubDate>Fri, 07 Jul 2017 17:38:43 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-01.jpg</guid>
@@ -3134,7 +3134,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/FOTOS-SOBRE-01.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-01.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3147,7 +3147,7 @@
 	</item>
 	<item>
 		<title>FOTOS-SOBRE-02</title>
-		<link>http://localhost:8080/?attachment_id=6811&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6811&#038;lang=pt</link>
 		<pubDate>Fri, 07 Jul 2017 17:39:15 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-02.jpg</guid>
@@ -3166,7 +3166,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/FOTOS-SOBRE-02.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-02.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3179,7 +3179,7 @@
 	</item>
 	<item>
 		<title>FOTOS-SOBRE-04</title>
-		<link>http://localhost:8080/?attachment_id=6813&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6813&#038;lang=pt</link>
 		<pubDate>Fri, 07 Jul 2017 17:40:05 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-04-1.jpg</guid>
@@ -3198,7 +3198,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/FOTOS-SOBRE-04-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-04-1.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3211,7 +3211,7 @@
 	</item>
 	<item>
 		<title>FOTOS-SOBRE-03</title>
-		<link>http://localhost:8080/?attachment_id=6820&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6820&#038;lang=pt</link>
 		<pubDate>Fri, 07 Jul 2017 17:41:50 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-03.jpg</guid>
@@ -3230,7 +3230,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/FOTOS-SOBRE-03.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-03.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3243,7 +3243,7 @@
 	</item>
 	<item>
 		<title>FOTOS-SOBRE-05</title>
-		<link>http://localhost:8080/?attachment_id=6821&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6821&#038;lang=pt</link>
 		<pubDate>Fri, 07 Jul 2017 17:42:17 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-05.jpg</guid>
@@ -3262,7 +3262,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/FOTOS-SOBRE-05.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/FOTOS-SOBRE-05.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3275,7 +3275,7 @@
 	</item>
 	<item>
 		<title>electricity-1835546_1920</title>
-		<link>http://localhost:8080/?attachment_id=6892</link>
+		<link>http://www.elemarjr.com/?attachment_id=6892</link>
 		<pubDate>Tue, 18 Jul 2017 01:45:42 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/electricity-1835546_1920.jpg</guid>
@@ -3294,7 +3294,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/electricity-1835546_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/electricity-1835546_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3307,7 +3307,7 @@
 	</item>
 	<item>
 		<title>CONTATO-cabeçalho</title>
-		<link>http://localhost:8080/?attachment_id=6904&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6904&#038;lang=pt</link>
 		<pubDate>Wed, 19 Jul 2017 16:00:08 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/CONTATO-cabeçalho.jpg</guid>
@@ -3326,7 +3326,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/CONTATO-cabeçalho.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/CONTATO-cabeçalho.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3339,7 +3339,7 @@
 	</item>
 	<item>
 		<title>brazil-2128654_1920</title>
-		<link>http://localhost:8080/?attachment_id=6915</link>
+		<link>http://www.elemarjr.com/?attachment_id=6915</link>
 		<pubDate>Wed, 26 Jul 2017 16:39:12 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/brazil-2128654_1920.jpg</guid>
@@ -3358,7 +3358,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/brazil-2128654_1920.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/brazil-2128654_1920.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3371,7 +3371,7 @@
 	</item>
 	<item>
 		<title>2017-07-26 15_08_11-ElemarJR_RavenDB.Indexing.BrazilianAnalyzer_ RavenDB index analyzer that removes</title>
-		<link>http://localhost:8080/?attachment_id=6926</link>
+		<link>http://www.elemarjr.com/?attachment_id=6926</link>
 		<pubDate>Wed, 26 Jul 2017 18:10:40 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_08_11-ElemarJR_RavenDB.Indexing.BrazilianAnalyzer_-RavenDB-index-analyzer-that-removes.png</guid>
@@ -3390,7 +3390,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/2017-07-26-15_08_11-ElemarJR_RavenDB.Indexing.BrazilianAnalyzer_-RavenDB-index-analyzer-that-removes.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_08_11-ElemarJR_RavenDB.Indexing.BrazilianAnalyzer_-RavenDB-index-analyzer-that-removes.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3403,7 +3403,7 @@
 	</item>
 	<item>
 		<title>2017-07-26 15_17_12-Terms _ Raven.Studio</title>
-		<link>http://localhost:8080/?attachment_id=6927</link>
+		<link>http://www.elemarjr.com/?attachment_id=6927</link>
 		<pubDate>Wed, 26 Jul 2017 18:17:44 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_17_12-Terms-_-Raven.Studio.png</guid>
@@ -3422,7 +3422,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/2017-07-26-15_17_12-Terms-_-Raven.Studio.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_17_12-Terms-_-Raven.Studio.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3435,7 +3435,7 @@
 	</item>
 	<item>
 		<title>Seletor de idioma</title>
-		<link>http://localhost:8080/?p=6840</link>
+		<link>http://www.elemarjr.com/?p=6840</link>
 		<pubDate>Fri, 07 Jul 2017 19:49:53 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/?p=6840</guid>
@@ -3486,7 +3486,7 @@
 	</item>
 	<item>
 		<title>Seletor de idioma</title>
-		<link>http://localhost:8080/?p=6841</link>
+		<link>http://www.elemarjr.com/?p=6841</link>
 		<pubDate>Fri, 07 Jul 2017 19:50:13 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/?p=6841</guid>
@@ -3537,7 +3537,7 @@
 	</item>
 	<item>
 		<title>2017-07-26 15_21_41-ravendb_Raven.Database_Indexing_Analyzers at v3.5 · ravendb_ravendb</title>
-		<link>http://localhost:8080/?attachment_id=6928</link>
+		<link>http://www.elemarjr.com/?attachment_id=6928</link>
 		<pubDate>Wed, 26 Jul 2017 18:22:42 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_21_41-ravendb_Raven.Database_Indexing_Analyzers-at-v3.5-·-ravendb_ravendb.png</guid>
@@ -3556,7 +3556,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/2017-07-26-15_21_41-ravendb_Raven.Database_Indexing_Analyzers-at-v3.5-·-ravendb_ravendb.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_21_41-ravendb_Raven.Database_Indexing_Analyzers-at-v3.5-·-ravendb_ravendb.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3569,7 +3569,7 @@
 	</item>
 	<item>
 		<title>2017-07-26 15_29_26-Terms _ Raven.Studio</title>
-		<link>http://localhost:8080/?attachment_id=6929</link>
+		<link>http://www.elemarjr.com/?attachment_id=6929</link>
 		<pubDate>Wed, 26 Jul 2017 18:31:13 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_29_26-Terms-_-Raven.Studio.png</guid>
@@ -3588,7 +3588,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/2017-07-26-15_29_26-Terms-_-Raven.Studio.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_29_26-Terms-_-Raven.Studio.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3601,7 +3601,7 @@
 	</item>
 	<item>
 		<title>2017-07-26 15_35_31-C__Windows_system32_cmd.exe</title>
-		<link>http://localhost:8080/?attachment_id=6930</link>
+		<link>http://www.elemarjr.com/?attachment_id=6930</link>
 		<pubDate>Wed, 26 Jul 2017 18:35:52 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_35_31-C__Windows_system32_cmd.exe_.png</guid>
@@ -3620,7 +3620,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/07/2017-07-26-15_35_31-C__Windows_system32_cmd.exe_.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/07/2017-07-26-15_35_31-C__Windows_system32_cmd.exe_.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3633,7 +3633,7 @@
 	</item>
 	<item>
 		<title>puzzle</title>
-		<link>http://localhost:8080/?attachment_id=6950&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6950&#038;lang=pt</link>
 		<pubDate>Thu, 17 Aug 2017 15:33:48 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/08/puzzle.jpg</guid>
@@ -3652,7 +3652,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/08/puzzle.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/08/puzzle.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3665,7 +3665,7 @@
 	</item>
 	<item>
 		<title>IMG_20151104_220840</title>
-		<link>http://localhost:8080/?attachment_id=6959&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6959&#038;lang=pt</link>
 		<pubDate>Thu, 17 Aug 2017 16:47:00 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/08/IMG_20151104_220840.jpg</guid>
@@ -3684,7 +3684,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/08/IMG_20151104_220840.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/08/IMG_20151104_220840.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3697,7 +3697,7 @@
 	</item>
 	<item>
 		<title>21587277_1956304777981255_3843148973171350455_o</title>
-		<link>http://localhost:8080/?attachment_id=6972</link>
+		<link>http://www.elemarjr.com/?attachment_id=6972</link>
 		<pubDate>Wed, 13 Sep 2017 18:27:13 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/09/21587277_1956304777981255_3843148973171350455_o.jpg</guid>
@@ -3716,7 +3716,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/09/21587277_1956304777981255_3843148973171350455_o.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/09/21587277_1956304777981255_3843148973171350455_o.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3729,7 +3729,7 @@
 	</item>
 	<item>
 		<title>Amazing_CSharp_v2(animations_splited)</title>
-		<link>http://localhost:8080/?attachment_id=6973</link>
+		<link>http://www.elemarjr.com/?attachment_id=6973</link>
 		<pubDate>Wed, 13 Sep 2017 18:31:47 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/09/Amazing_CSharp_v2animations_splited.pdf</guid>
@@ -3748,7 +3748,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/09/Amazing_CSharp_v2animations_splited.pdf]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/09/Amazing_CSharp_v2animations_splited.pdf]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3757,7 +3757,7 @@
 	</item>
 	<item>
 		<title>21458153_1956307134647686_2636095235272504746_o</title>
-		<link>http://localhost:8080/?attachment_id=6975</link>
+		<link>http://www.elemarjr.com/?attachment_id=6975</link>
 		<pubDate>Wed, 13 Sep 2017 18:35:22 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/09/21458153_1956307134647686_2636095235272504746_o.jpg</guid>
@@ -3776,7 +3776,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/09/21458153_1956307134647686_2636095235272504746_o.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/09/21458153_1956307134647686_2636095235272504746_o.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3789,7 +3789,7 @@
 	</item>
 	<item>
 		<title>databoff-frontend</title>
-		<link>http://localhost:8080/?attachment_id=6981&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=6981&#038;lang=pt</link>
 		<pubDate>Mon, 25 Sep 2017 01:49:43 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/09/databoff-frontend.zip</guid>
@@ -3808,7 +3808,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/09/databoff-frontend.zip]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/09/databoff-frontend.zip]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3817,7 +3817,7 @@
 	</item>
 	<item>
 		<title>rob-bye-141865</title>
-		<link>http://localhost:8080/?attachment_id=6989</link>
+		<link>http://www.elemarjr.com/?attachment_id=6989</link>
 		<pubDate>Mon, 02 Oct 2017 18:11:24 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/rob-bye-141865.jpg</guid>
@@ -3836,7 +3836,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/rob-bye-141865.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/rob-bye-141865.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="en"><![CDATA[English]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3849,7 +3849,7 @@
 	</item>
 	<item>
 		<title>Rplot</title>
-		<link>http://localhost:8080/?attachment_id=6999</link>
+		<link>http://www.elemarjr.com/?attachment_id=6999</link>
 		<pubDate>Mon, 02 Oct 2017 20:58:28 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/Rplot.png</guid>
@@ -3868,7 +3868,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/Rplot.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/Rplot.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3881,7 +3881,7 @@
 	</item>
 	<item>
 		<title>linh-pham-221033</title>
-		<link>http://localhost:8080/?attachment_id=7011</link>
+		<link>http://www.elemarjr.com/?attachment_id=7011</link>
 		<pubDate>Mon, 02 Oct 2017 21:32:24 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/linh-pham-221033.jpg</guid>
@@ -3900,7 +3900,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/linh-pham-221033.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/linh-pham-221033.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3913,7 +3913,7 @@
 	</item>
 	<item>
 		<title>exception</title>
-		<link>http://localhost:8080/?attachment_id=7017</link>
+		<link>http://www.elemarjr.com/?attachment_id=7017</link>
 		<pubDate>Sat, 07 Oct 2017 12:40:09 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/exception.jpg</guid>
@@ -3932,7 +3932,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/exception.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/exception.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3945,7 +3945,7 @@
 	</item>
 	<item>
 		<title>alex-knight-199368</title>
-		<link>http://localhost:8080/?attachment_id=7021</link>
+		<link>http://www.elemarjr.com/?attachment_id=7021</link>
 		<pubDate>Tue, 24 Oct 2017 22:40:27 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/alex-knight-199368.jpg</guid>
@@ -3964,7 +3964,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/alex-knight-199368.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/alex-knight-199368.jpg]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -3977,7 +3977,7 @@
 	</item>
 	<item>
 		<title>git_elemar</title>
-		<link>http://localhost:8080/?attachment_id=7023</link>
+		<link>http://www.elemarjr.com/?attachment_id=7023</link>
 		<pubDate>Tue, 24 Oct 2017 22:42:55 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/git_elemar.png</guid>
@@ -3996,7 +3996,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/git_elemar.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/git_elemar.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -4009,7 +4009,7 @@
 	</item>
 	<item>
 		<title>logo_elemarjr</title>
-		<link>http://localhost:8080/?attachment_id=7029&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=7029&#038;lang=pt</link>
 		<pubDate>Wed, 25 Oct 2017 13:44:26 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemarjr.png</guid>
@@ -4028,7 +4028,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/logo_elemarjr.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemarjr.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -4041,7 +4041,7 @@
 	</item>
 	<item>
 		<title>logo_elemarjr_54</title>
-		<link>http://localhost:8080/?attachment_id=7030&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=7030&#038;lang=pt</link>
 		<pubDate>Wed, 25 Oct 2017 13:46:31 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemarjr_54.png</guid>
@@ -4060,7 +4060,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/logo_elemarjr_54.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemarjr_54.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
@@ -4073,7 +4073,7 @@
 	</item>
 	<item>
 		<title>logo_elemar_114</title>
-		<link>http://localhost:8080/?attachment_id=7031&#038;lang=pt</link>
+		<link>http://www.elemarjr.com/?attachment_id=7031&#038;lang=pt</link>
 		<pubDate>Wed, 25 Oct 2017 13:52:06 +0000</pubDate>
 		<dc:creator><![CDATA[elemarjr]]></dc:creator>
 		<guid isPermaLink="false">http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemar_114.png</guid>
@@ -4092,7 +4092,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://localhost:8080/wp-content/uploads/2017/10/logo_elemar_114.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://www.elemarjr.com/wp-content/uploads/2017/10/logo_elemar_114.png]]></wp:attachment_url>
 		<category domain="language" nicename="pt"><![CDATA[Português]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>

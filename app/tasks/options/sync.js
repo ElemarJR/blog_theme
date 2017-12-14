@@ -11,7 +11,7 @@ module.exports = {
 		pretend : false,
 		verbose: true,
 		updateAndDelete: true,
-		ignoreInDest: 'libs/**'
+		ignoreInDest: 'bower_components'
 	},
 	'font-icon': {
 		files : [ {

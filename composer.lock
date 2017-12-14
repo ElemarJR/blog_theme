@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed0ae2ac0e2a5d5006aba21b97da700e",
+    "content-hash": "4b9c5b497b5f9187aa6a622195722c3c",
     "packages": [
         {
             "name": "aaemnnosttv/wp-cli-dotenv-command",
@@ -1215,16 +1215,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e"
+                "reference": "ba816f2e1bacc16278792c78b67c730dfff064a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d667e245d5dcd4d7bf80f26f2c947d476b66213e",
-                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ba816f2e1bacc16278792c78b67c730dfff064a6",
+                "reference": "ba816f2e1bacc16278792c78b67c730dfff064a6",
                 "shasum": ""
             },
             "require": {
@@ -1262,11 +1262,11 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-10-16T22:40:25+00:00"
+            "time": "2017-12-12T21:36:10+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -1328,16 +1328,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0"
+                "reference": "2cdef78de8f54f68ff16a857e710e7302b47d4c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0",
-                "reference": "9468ad3fba3a5e1f0dc12a96e50e84cddb923cf0",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2cdef78de8f54f68ff16a857e710e7302b47d4c7",
+                "reference": "2cdef78de8f54f68ff16a857e710e7302b47d4c7",
                 "shasum": ""
             },
             "require": {
@@ -1393,11 +1393,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-29T13:28:14+00:00"
+            "time": "2017-12-02T18:20:11+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -1453,16 +1453,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "36777bb762b1367c55d090a7a479876551b98d85"
+                "reference": "27810742895ad89e706ba5028e4f8fe425792b50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/36777bb762b1367c55d090a7a479876551b98d85",
-                "reference": "36777bb762b1367c55d090a7a479876551b98d85",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/27810742895ad89e706ba5028e4f8fe425792b50",
+                "reference": "27810742895ad89e706ba5028e4f8fe425792b50",
                 "shasum": ""
             },
             "require": {
@@ -1520,11 +1520,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-29T16:42:20+00:00"
+            "time": "2017-12-04T19:20:32+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -1587,7 +1587,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -1636,7 +1636,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1744,7 +1744,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -1793,7 +1793,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -1861,16 +1861,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "b3d0c9c11be3831b84825967dc6b52b5a7b84e04"
+                "reference": "f6a99b95b338799645fe9f7880d7d4ca1bf79cc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/b3d0c9c11be3831b84825967dc6b52b5a7b84e04",
-                "reference": "b3d0c9c11be3831b84825967dc6b52b5a7b84e04",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f6a99b95b338799645fe9f7880d7d4ca1bf79cc1",
+                "reference": "f6a99b95b338799645fe9f7880d7d4ca1bf79cc1",
                 "shasum": ""
             },
             "require": {
@@ -1915,7 +1915,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-29T13:28:14+00:00"
+            "time": "2017-12-04T18:15:22+00:00"
         },
         {
             "name": "tightenco/collect",
@@ -2013,6 +2013,53 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "worddrop/bookworm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/worddrop/bookworm.git",
+                "reference": "07f1f2a3ca66b03386b53906a41eaac2c4ceb2ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/worddrop/bookworm/zipball/07f1f2a3ca66b03386b53906a41eaac2c4ceb2ce",
+                "reference": "07f1f2a3ca66b03386b53906a41eaac2c4ceb2ce",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.11",
+                "phpunit/phpunit": ">=4.1.0",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bookworm": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen Visser",
+                    "email": "jeroenvisser101@gmail.com"
+                }
+            ],
+            "description": "A PHP utility to estimate reading time.",
+            "keywords": [
+                "estimated",
+                "reading",
+                "text",
+                "time"
+            ],
+            "time": "2016-03-11T11:02:04+00:00"
         },
         {
             "name": "wp-cli/autoload-splitter",
@@ -2227,16 +2274,16 @@
         },
         {
             "name": "wp-cli/core-command",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/core-command.git",
-                "reference": "6662f259f949ab69adb81ff8a1904cf00cd38135"
+                "reference": "2ef05ac01560c571530d539a517aaa587908a851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/core-command/zipball/6662f259f949ab69adb81ff8a1904cf00cd38135",
-                "reference": "6662f259f949ab69adb81ff8a1904cf00cd38135",
+                "url": "https://api.github.com/repos/wp-cli/core-command/zipball/2ef05ac01560c571530d539a517aaa587908a851",
+                "reference": "2ef05ac01560c571530d539a517aaa587908a851",
                 "shasum": ""
             },
             "require-dev": {
@@ -2250,6 +2297,7 @@
                 },
                 "bundled": true,
                 "commands": [
+                    "core",
                     "core check-update",
                     "core download",
                     "core install",
@@ -2280,9 +2328,9 @@
                     "homepage": "https://runcommand.io"
                 }
             ],
-            "description": "Download, install, update and manage a WordPress install.",
+            "description": "Downloads, installs, updates, and manages a WordPress installation.",
             "homepage": "https://github.com/wp-cli/core-command",
-            "time": "2017-11-21T16:01:01+00:00"
+            "time": "2017-12-11T12:56:16+00:00"
         },
         {
             "name": "wp-cli/cron-command",
@@ -3862,11 +3910,33 @@
                 "dependency injection"
             ],
             "time": "2017-07-23T07:32:15+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "2.17.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/2.17.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.17.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "worddrop/bookworm": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

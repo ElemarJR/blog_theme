@@ -35,6 +35,8 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Pages\Blog::class,
+			
 			\Aztec\Performance\Css::class,
 			
 			\Aztec\Setup\Assets::class,
@@ -42,6 +44,7 @@ class Kernel {
 			\Aztec\Setup\Head::class,
 			\Aztec\Setup\HttpHeader::class,
 			\Aztec\Setup\Navigation::class,
+			\Aztec\Setup\Thumbnail::class,
 		];
 
 		foreach ( $init_classes as $class ) {

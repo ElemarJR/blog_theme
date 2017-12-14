@@ -17,26 +17,20 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'template-parts/blog/category-nav' ) ?>
+
 <main>
-	<section>
+	<section class="post-list">
 		<?php
 		while ( have_posts() ) :
 			the_post();
-?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<?php the_post_thumbnail( 'full' ); ?>
-
-			<h2>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h2>
-
-			<?php the_excerpt(); ?>
-
-		</article>
-		<?php endwhile; ?>
-
-		<p><?php posts_nav_link(); ?></p>
+			get_template_part( 'template-parts/blog/content' );
+		endwhile;
+		?>
 	</section>
+
+	<div class="posts-nav">
+		<?php posts_nav_link( ' ', __( 'Previous Page' ), __( 'Next Page' ) ); ?>
+	</div>
 </main>
 <?php get_footer(); ?>

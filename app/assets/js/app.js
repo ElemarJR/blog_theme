@@ -7,8 +7,7 @@
 requirejs.config({
     baseUrl: elemarjr_script.base_url,
     paths: {
-        app: '../app',
-        libs: '../libs'
+        app: '../app'
     }
 });
 
@@ -21,6 +20,7 @@ if (typeof jQuery === 'function') {
 
 // start the application
 requirejs([
+    'app/blog',
     'app/font',
     'app/site-navigation',
     'app/site-search'

@@ -1,0 +1,21 @@
+.category-nav
+    ul
+        display flex
+        flex-wrap wrap
+        justify-content center
+        list-style none
+        margin 35px 0
+        padding 0
+
+    .cat-item
+        margin 20px 45px
+
+        a
+            color $gray-dark
+            font-weight bold
+            text-decoration none
+            text-transform uppercase
+
+            ^[0..-2].current-cat ^[-1..-1]
+            &:hover
+                color $red

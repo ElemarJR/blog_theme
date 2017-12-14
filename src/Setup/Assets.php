@@ -30,10 +30,10 @@ class Assets extends Base {
 	 * file url path.
 	 */
 	function enqueue_script() {
-		wp_enqueue_script( 'elemarjr-script', get_stylesheet_directory_uri() . '/assets/js/libs/require.js', [ 'jquery' ], false, true );
+		wp_enqueue_script( 'elemarjr-script', get_stylesheet_directory_uri() . '/assets/js/bower_components/requirejs/require.js', [ 'jquery' ], false, true );
 		wp_localize_script(
 			'elemarjr-script', 'elemarjr_script', [
-				'base_url' => get_stylesheet_directory_uri() . '/assets/js/libs',
+				'base_url' => get_stylesheet_directory_uri() . '/assets/js/bower_components',
 			]
 		);
 	}
