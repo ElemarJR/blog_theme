@@ -30,7 +30,7 @@ get_header(); ?>
 	</section>
 
 	<div class="posts-nav">
-		<?php posts_nav_link( ' ', __( 'Previous Page' ), __( 'Next Page' ) ); ?>
+		<?php posts_nav_link( ' ', __( 'Previous Page', 'elemarjr' ), __( 'Next Page', 'elemarjr' ) ); ?>
 	</div>
 </main>
 <?php get_footer(); ?>

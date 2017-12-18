@@ -44,6 +44,7 @@ class Kernel {
 			\Aztec\Setup\Head::class,
 			\Aztec\Setup\HttpHeader::class,
 			\Aztec\Setup\Navigation::class,
+			\Aztec\Setup\Textdomain::class,
 			\Aztec\Setup\Thumbnail::class,
 		];
 

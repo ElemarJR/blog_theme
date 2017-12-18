@@ -53,6 +53,10 @@ RUN { \
 		echo 'opcache.enable_cli=1'; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
+# Override WP-CLI program to open help
+# By default WP-CLI uses 'less -r'. '-r' argument is incompatible on Alpine
+ENV PAGER="less"
+
 # Add vendors binaries to the PATH
 ENV PATH="/app/vendor/bin:${PATH}"
 
