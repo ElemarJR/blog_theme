@@ -184,7 +184,7 @@ img
                         text-decoration none
                         width auto
 
-                    ^[0..-2].current-menu-item ^[-1..-1],
+                    ^[0..-2].current-menu-item ^[-1..-1] // @stylint ignore
                     &:hover
                         color $red
 
@@ -197,11 +197,12 @@ img
         height 100%
         position absolute
         top 0
+        width 100%
 
     &--container
-        position absolute
         bottom 0
         left 0
+        position absolute
         right 0
         top 0
 
