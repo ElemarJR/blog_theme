@@ -40,7 +40,7 @@ global $container;
 						<?php get_search_form() ?>
 					</div><!-- #site-search -->
 			
-					<nav id="site-navigation" class="main-navigation toggled">
+					<nav id="site-navigation" class="main-navigation">
 						<button class="header-toogle-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 						<?php
 							wp_nav_menu( array(
@@ -54,10 +54,12 @@ global $container;
 			</div>
 		</div>
 
-		<div class="container">
-			<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
-			<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ); ?>">
-				<?php get_template_part( 'template-parts/hero/hero', $hero_template ); ?>
+		<div class="hero--wrapper">
+			<div class="container hero--container">
+				<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
+				<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ); ?>">
+					<?php get_template_part( 'template-parts/hero/hero', $hero_template ); ?>
+				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->

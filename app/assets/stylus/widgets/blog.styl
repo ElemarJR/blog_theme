@@ -3,9 +3,14 @@
         $column-gutter = 50px
 
         section
-            margin-left - ( $column-gutter / 2 )
-            width 'calc( 100% + %s )' % ( $column-gutter )
+            @media screen and ( min-width $screen-md )
+                margin-left '-%s' %  ( $column-gutter / 2 )
+                width 'calc( 100% + %s )' % ( $column-gutter )
 
             article
-                padding 0 ( $column-gutter / 2 )
-                width 33.33%
+                @media screen and ( min-width $screen-md )
+                    padding 0 ( $column-gutter / 2 )
+                    width 50%
+
+                @media screen and ( min-width $screen-lg )
+                    width 33.33%

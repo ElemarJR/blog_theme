@@ -1,11 +1,14 @@
 .category-nav
     ul
-        display flex
-        flex-wrap wrap
-        justify-content center
         list-style none
         margin 35px 0
         padding 0
+        text-align center
+
+        @media screen and ( min-width $screen-md )
+            display flex
+            flex-wrap wrap
+            justify-content center
 
     .cat-item
         margin 20px 45px
@@ -16,6 +19,6 @@
             text-decoration none
             text-transform uppercase
 
-            ^[0..-2].current-cat ^[-1..-1]
+            ^[0..-2].current-cat ^[-1..-1] // @stylint ignore
             &:hover
                 color $red
