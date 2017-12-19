@@ -21,8 +21,8 @@ class Head extends Base {
 	 * Execute hooks
 	 */
 	public function init() {
-		$this->remove_feed_links();
-		$this->remove_services_links();
+		// $this->remove_feed_links();
+		// $this->remove_services_links();
 		$this->remove_post_related_links();
 		$this->remove_generator();
 

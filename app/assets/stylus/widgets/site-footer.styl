@@ -1,0 +1,32 @@
+.site-footer
+    background-color $purple
+    color $white
+    height 300px
+    padding-top 47px
+    text-align center
+
+    @media screen and ( min-width $footer-breakpoint )
+        height 172px
+        padding-top 60px
+
+    .site-info
+        @media screen and ( min-width $footer-breakpoint )
+            position relative
+
+    .site-branding
+        display none
+
+        @media screen and ( min-width $footer-breakpoint )
+            display block
+            height 64px
+            left $container-padding
+            position absolute
+            top 0
+            width 164px
+
+    a
+        color $white
+        text-decoration none
+
+        &:hover
+            color $red
