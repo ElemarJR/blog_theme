@@ -1,6 +1,7 @@
 <?php
 
 use Aztec\Helper\Template;
+use Aztec\Helper\HeaderBgImage;
 
 /**
  * The header for our theme
@@ -27,7 +28,7 @@ global $container;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" data-bg="<?php echo esc_url( $container->get( HeaderBgImage::class )->get_header_bg_image() ) ?>">
 		<div class="top-header-wrapper">
 			<div class="top-header container">
 				<div class="site-branding">

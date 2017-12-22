@@ -47,6 +47,7 @@ img
 // Header
 .site-header
     background-color $gray-dark
+    background-size cover
     height 100vh
     position relative
 
@@ -194,6 +195,16 @@ img
     color $white
     max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
 
+    &__blog
+        bottom $container-padding
+        left $container-padding
+        position absolute
+        text-transform uppercase
+        width 440px
+
+        @media screen and ( min-width $screen-md )
+            bottom 200px
+
     &--wrapper
         height 100%
         position absolute
@@ -206,16 +217,6 @@ img
         position absolute
         right 0
         top 0
-
-    &__blog
-        bottom $container-padding
-        left $container-padding
-        position absolute
-        text-transform uppercase
-        width 440px
-
-        @media screen and ( min-width $screen-sm )
-            padding-top 120px
 
     &--title
         color $red
@@ -236,4 +237,5 @@ img
 
     &--description
         font-size 22px
+        margin-bottom 0
         text-transform none

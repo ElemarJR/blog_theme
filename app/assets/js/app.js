@@ -22,6 +22,7 @@ if (typeof jQuery === 'function') {
 requirejs([
     'app/blog',
     'app/font',
+    'app/site-header',
     'app/site-navigation',
     'app/site-search'
 ], function() {});
