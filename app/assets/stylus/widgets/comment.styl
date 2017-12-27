@@ -2,6 +2,20 @@
     border-bottom 1px solid $gray-light
     padding 40px 0
 
+    a.comment-reply-link
+        background $tiffany
+        color $white
+        display inline-block
+        float right
+        font-weight 700
+        padding 8px
+        text-transform uppercase
+
+        &:hover
+            background $red
+            color $white
+            text-decoration none
+
 .comment-list
     list-style none
     padding 0
@@ -12,36 +26,45 @@
         content ''
         display block
 
+    @media screen and ( min-width $screen-md )
+        position relative
+
+    @media screen and ( min-width $screen-lg )
+        position static
+        display flex
+
 .comment-meta
-    a
-        color $red
-        text-decoration none
-
-        &:hover
-            color $red
-            text-decoration underline
-
     &:after
         clear both
         content ''
         display block
 
+    @media screen and ( min-width $screen-lg )
+        flex 0 0 150px
+
 .comment-author
-    img
+    .avatar
         border-radius 50%
         float left
         margin-right 20px
 
-a.comment-reply-link
-    background $tiffany
-    color $white
-    display inline-block
-    float right
-    font-weight 700
-    padding 8px
-    text-decoration none
-    text-transform uppercase
+        @media screen and ( min-width $screen-lg )
+            float none
 
-    &:hover
-        background $red
-        color $white
+    .fn
+        @media screen and ( min-width $screen-lg )
+            &:before
+                content '\A'
+                display block
+
+.comment-content
+    @media screen and ( min-width $screen-lg )
+        flex-grow 2
+        margin 0 40px
+
+.reply
+    @media screen and ( min-width $screen-md )
+        absolute top right
+
+    @media screen and ( min-width $screen-md )
+        position static

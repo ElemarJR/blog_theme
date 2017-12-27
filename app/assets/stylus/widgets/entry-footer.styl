@@ -14,12 +14,16 @@
                 width 0
 
             @media screen and ( min-width $screen-md )
+                display flex
                 padding 40px 0
 
             strong
-                display inline-block
+                display block
                 margin-right 25px
                 text-transform uppercase
+
+                @media screen and ( min-width $screen-sm )
+                    display inline-block
 
             a
                 color $gray
@@ -34,15 +38,22 @@
                 margin-bottom 20px
 
                 @media screen and ( min-width $screen-md )
-                    width calc( 100% - 310px )
-                    float left
                     margin-bottom 0
-
 
             &--share
                 @media screen and ( min-width $screen-md )
-                    float right
+                    flex 0 0 209px
+
+                @media screen and ( min-width $screen-lg )
+                    flex 0 0 352px
 
                 a
                     font-size 36px
                     vertical-align middle
+
+                strong
+                    @media screen and ( min-width $screen-md )
+                        display block
+
+                    @media screen and ( min-width $screen-lg )
+                        display inline-block

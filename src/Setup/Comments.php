@@ -33,12 +33,10 @@ class Comments extends Base {
 	}
 	
 	public function open_comment_meta( $field ) {
-		error_log(print_r($field, true));
 		return '<div class="comment-meta">' . $field;
 	}
 	
 	public function close_comment_meta( $field ) {
-		error_log(print_r($field, true));
 		return $field . '</div>';
 	}
 	
