@@ -40,9 +40,11 @@ class Kernel {
 			\Aztec\Performance\Css::class,
 			
 			\Aztec\Setup\Assets::class,
+			\Aztec\Setup\Comments::class,
 			\Aztec\Setup\DisableEmoji::class,
 			\Aztec\Setup\Head::class,
 			\Aztec\Setup\HttpHeader::class,
+			\Aztec\Setup\Html5::class,
 			\Aztec\Setup\Navigation::class,
 			\Aztec\Setup\Textdomain::class,
 			\Aztec\Setup\Thumbnail::class,

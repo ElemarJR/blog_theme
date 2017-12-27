@@ -18,15 +18,11 @@ get_header(); ?>
 			the_post();
 ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h1>
-
 			<?php the_content(); ?>
+			
+			<?php get_template_part( 'template-parts/blog/single/footer-meta' ); ?>
 
 			<?php comments_template(); ?>
-
 		</article>
 		<?php endwhile; ?>
 	</main>

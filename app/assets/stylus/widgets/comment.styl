@@ -1,0 +1,47 @@
+.comment
+    border-bottom 1px solid $gray-light
+    padding 40px 0
+
+.comment-list
+    list-style none
+    padding 0
+
+.comment-body
+    &:after
+        clear both
+        content ''
+        display block
+
+.comment-meta
+    a
+        color $red
+        text-decoration none
+
+        &:hover
+            color $red
+            text-decoration underline
+
+    &:after
+        clear both
+        content ''
+        display block
+
+.comment-author
+    img
+        border-radius 50%
+        float left
+        margin-right 20px
+
+a.comment-reply-link
+    background $tiffany
+    color $white
+    display inline-block
+    float right
+    font-weight 700
+    padding 8px
+    text-decoration none
+    text-transform uppercase
+
+    &:hover
+        background $red
+        color $white

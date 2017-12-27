@@ -18,6 +18,10 @@ class Template {
 	 * @return string The template. Default: (empty string)
 	 */
 	public function get_hero_template() {
+		if( is_single() ) {
+			return 'single';
+		}
+		
 		return 'blog';
 	}
 }

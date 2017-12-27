@@ -8,44 +8,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2017-12-27T03:32:00+00:00\n"
-"PO-Revision-Date: 2017-12-27 01:32-0200\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"PO-Revision-Date: 2017-12-27T03:32:00+00:00\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Domain: elemarjr\n"
-"X-Generator: Poedit 2.0.4\n"
 
 #: app/template/index.php:33
 msgid "Previous Page"
-msgstr "Página Anterior"
+msgstr ""
 
 #: app/template/index.php:33
 msgid "Next Page"
-msgstr "Próxima Página"
+msgstr ""
 
 #: app/template/comments.php:43
 msgid "Comments are closed."
-msgstr "Comentários estão fechados."
+msgstr ""
 
 #: app/template/header.php:29
 msgid "Skip to content"
-msgstr "Pular para o conteúdo"
+msgstr ""
 
 #: app/template/template-parts/blog/single/footer-meta.php:3
 msgid "Tags"
-msgstr "Etiquetas"
+msgstr ""
 
 #: app/template/template-parts/blog/single/footer-meta.php:7
 msgid "Share"
-msgstr "Compartilhe"
+msgstr ""
 
 #: app/template/template-parts/blog/category-nav.php:19
 msgid "Show All"
-msgstr "Mostrar tudo"
+msgstr ""
 
 #: app/template/template-parts/hero/hero-single.php:15
 msgid "Reading time:"
-msgstr "Tempo de leitura:"
+msgstr ""
 
 #: app/template/footer.php:10
 msgid "Follow us"
-msgstr "Siga-nos"
+msgstr ""

@@ -22,6 +22,8 @@ class Blog extends Base {
 
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
 		add_filter( 'excerpt_more', $this->callback( 'excerpt_more' ) );
+		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
+		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 	}
 
 	/**
@@ -57,5 +59,7 @@ class Blog extends Base {
 		return ' ...';
 	}
 	
-	
+	public function nav_link_class( $attr ) {
+		return $attr . ' class="button"';
+	}
 }

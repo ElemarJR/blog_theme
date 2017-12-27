@@ -1,5 +1,5 @@
 /**
- * Synchronize files between to directories  
+ * Synchronize files between to directories
  */
 module.exports = {
 	requirejs: {

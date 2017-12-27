@@ -13,6 +13,7 @@ normalize-css()
     box-sizing border-box
 
 body
+    color $gray-dark
     font-family $sans-serif
     overflow-x hidden
 
@@ -25,6 +26,8 @@ img
 // Container to center the element in the page on large screens. In minor
 // screens the element is full width.
 .container
+    margin-left auto
+    margin-right auto
     max-width 100%
     padding-left $container-padding
     padding-right $container-padding
@@ -34,8 +37,6 @@ img
         padding 0
 
     @media screen and ( min-width $screen-lg )
-        margin-left auto
-        margin-right auto
         padding-left 0
         padding-right 0
         width $screen-lg
@@ -53,6 +54,17 @@ img
 
     @media screen and ( min-width $nav-breakpoint )
         min-height auto
+
+    &:before
+        background $header-overlay
+        bottom 0
+        content ''
+        height 100%
+        left 0
+        position absolute
+        right 0
+        top 0
+        width 100%
 
     .top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
@@ -192,18 +204,11 @@ img
 
 // Hero Content
 .hero
+    bottom $container-padding
     color $white
+    left $container-padding
     max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
-
-    &__blog
-        bottom $container-padding
-        left $container-padding
-        position absolute
-        text-transform uppercase
-        width 440px
-
-        @media screen and ( min-width $screen-md )
-            bottom 200px
+    position absolute
 
     &--wrapper
         height 100%
@@ -218,24 +223,70 @@ img
         right 0
         top 0
 
-    &--title
-        color $red
-        margin-bottom 0
+    ~/__blog
+        text-transform uppercase
+        width 440px
 
-        @media screen and ( min-width $screen-sm )
-            font-size 64px
+        @media screen and ( min-width $screen-md )
+            bottom 200px
 
-    &--subtitle
-        font-size 44px
-        font-weight 400
-        line-height 1.1em
-        margin 0
+        & ^[0]--title
+            color $red
+            margin-bottom 0
 
-        @media screen and ( min-width $screen-sm )
-            font-size 70px
-            margin 0 0 33px
+            @media screen and ( min-width $screen-sm )
+                font-size 64px
 
-    &--description
-        font-size 22px
-        margin-bottom 0
-        text-transform none
+        & ^[0]--subtitle
+            font-size 44px
+            font-weight 400
+            line-height 1.1em
+            margin 0
+
+            @media screen and ( min-width $screen-sm )
+                font-size 70px
+                margin 0 0 33px
+
+        & ^[0]--description
+            font-size 22px
+            margin-bottom 0
+            text-transform none
+
+    ~/__single
+        @media screen and ( min-width $screen-md )
+            bottom 80px
+
+        & ^[0]--title
+            color $white
+            text-transform uppercase
+            max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
+            width 440px
+
+        & ^[0]--meta
+            &--data
+                display block
+                margin-top 10px
+
+                @media screen and ( min-width $screen-md )
+                    display inline-block
+                    margin-right 60px
+
+                &__reading
+                    icon( i-time )
+
+                &__comments
+                    color $white
+                    icon( i-comments )
+                    text-decoration none
+
+                    &:hover
+                        color $red
+
+                        &:before
+                            color $red
+
+                &:before
+                    display inline-block
+                    color $tiffany
+                    font-size 24px
+                    vertical-align bottom

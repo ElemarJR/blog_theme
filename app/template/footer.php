@@ -7,7 +7,7 @@
 		</div><!-- .site-branding -->
 
 		<div class="follow-us">
-			<h3 class="follow-us--title"><?php esc_html_e( 'Siga-nos', 'elemarjr' ) ?></h3>
+			<h3 class="follow-us--title"><?php esc_html_e( 'Follow us', 'elemarjr' ) ?></h3>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'social',
