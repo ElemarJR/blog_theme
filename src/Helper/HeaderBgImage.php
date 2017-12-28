@@ -67,6 +67,6 @@ class HeaderBgImage extends Base {
 	 * @return string The fallback image URL.
 	 */
 	public function get_fallback_image() {
-		return get_template_directory() . '/assets/images/header/fallback.jpg';
+		return get_template_directory_uri() . '/assets/images/header/fallback.jpg';
 	}
 }

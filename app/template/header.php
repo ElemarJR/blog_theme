@@ -67,6 +67,7 @@ global $container;
 
 	<?php 
 		// @todo pass this code to `src`
-		$containerized = ! is_front_page();
+		$containerized = ! is_front_page() && ! is_page_template();
+		
 	?>
 	<div id="content" class="<?php echo esc_attr( 'site-content' . ( $containerized ? ' container' : '' ) ) ?>">

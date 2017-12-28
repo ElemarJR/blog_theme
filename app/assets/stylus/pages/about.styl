@@ -1,0 +1,63 @@
+.about
+    &--row
+        padding 90px 0
+
+        &--container
+            @media screen and ( min-width $screen-md )
+                align-items center
+                display flex
+                justify-content space-between
+
+        &--content
+            margin-bottom 40px
+
+            @media screen and ( min-width $screen-md )
+                flex 0 0 340px
+
+            @media screen and ( min-width $screen-lg )
+                flex-basis 470px
+
+        &--title
+            color $navy
+            margin-top 0
+            text-transform uppercase
+
+        &--image
+            text-align center
+
+            @media screen and ( min-width $screen-md )
+                margin-left 40px
+
+            @media screen and ( min-width $screen-lg )
+                flex 0 0 640px
+
+            img
+                @media screen and ( min-width $screen-sm )
+                    max-width 400px
+
+                @media screen and ( min-width $screen-md )
+                    max-width 100%
+
+        &__gray
+            background $gray-light
+
+        &__tiffany
+            background $tiffany
+
+            & ^[0..-2]--title
+            & ^[0..-2]--text
+                color $white
+
+        &__red-title
+            & ^[0..-2]--title
+                color $red
+
+        &__invert
+            & ^[0..-2]--content
+                @media screen and ( min-width $screen-md )
+                    order 2
+
+            & ^[0..-2]--image
+                @media screen and ( min-width $screen-md )
+                    margin-left 0
+                    margin-right 40px
