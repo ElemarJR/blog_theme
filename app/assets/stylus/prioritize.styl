@@ -223,6 +223,29 @@ img
         right 0
         top 0
 
+    &--title
+        color $red
+        margin-bottom 0
+        text-transform uppercase
+
+    &--description
+        font-size 22px
+        margin-bottom 0
+        text-transform none
+
+    ~/__front-page
+        & ^[0]--title
+            font-size 29px
+
+            @media screen and ( min-width $screen-sm )
+                font-size 40px
+
+            @media screen and ( min-width $screen-md )
+                font-size 64px
+
+        & ^[0]--description
+            margin-bottom 60px
+
     ~/__blog
         text-transform uppercase
         width 440px
@@ -231,9 +254,6 @@ img
             bottom 200px
 
         & ^[0]--title
-            color $red
-            margin-bottom 0
-
             @media screen and ( min-width $screen-sm )
                 font-size 64px
 
@@ -246,11 +266,6 @@ img
             @media screen and ( min-width $screen-sm )
                 font-size 70px
                 margin 0 0 33px
-
-        & ^[0]--description
-            font-size 22px
-            margin-bottom 0
-            text-transform none
 
     ~/__single
         @media screen and ( min-width $screen-md )

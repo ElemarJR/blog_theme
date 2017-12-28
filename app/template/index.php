@@ -20,14 +20,16 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/blog/category-nav' ) ?>
 
 <main>
-	<section class="post-list">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			get_template_part( 'template-parts/blog/content' );
-		endwhile;
-		?>
-	</section>
+	<div class="post-list--wrapper">
+		<section class="post-list">
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				get_template_part( 'template-parts/blog/content' );
+			endwhile;
+			?>
+		</section>
+	</div>
 
 	<div class="posts-nav">
 		<?php posts_nav_link( ' ', __( 'Previous Page', 'elemarjr' ), __( 'Next Page', 'elemarjr' ) ); ?>

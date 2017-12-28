@@ -65,4 +65,8 @@ global $container;
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container">
+	<?php 
+		// @todo pass this code to `src`
+		$containerized = ! is_front_page();
+	?>
+	<div id="content" class="<?php echo esc_attr( 'site-content' . ( $containerized ? ' container' : '' ) ) ?>">

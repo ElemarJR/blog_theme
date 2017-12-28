@@ -22,7 +22,10 @@ if (typeof jQuery === 'function') {
 requirejs([
     'app/blog',
     'app/font',
+    'app/front-page',
     'app/site-header',
     'app/site-navigation',
     'app/site-search'
-], function() {});
+], function() {
+    jQuery( window ).trigger('resize');
+});

@@ -22,6 +22,10 @@ class Template {
 			return 'single';
 		}
 		
+		if( is_front_page() ) {
+			return 'front-page';
+		}
+		
 		return 'blog';
 	}
 }
