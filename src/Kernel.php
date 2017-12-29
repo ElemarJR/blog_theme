@@ -36,6 +36,7 @@ class Kernel {
 	public function init() {
 		$init_classes = [
 			\Aztec\Pages\Blog::class,
+			\Aztec\Pages\Contact::class,
 			
 			\Aztec\Performance\Css::class,
 			

@@ -2,6 +2,10 @@
  * Load the background header
  */
 define([],function () {
-	$siteHeader = jQuery('.site-header');
-    $siteHeader.css('background-image', 'url("' + $siteHeader.data('bg') + '")');
+	var $siteHeader = jQuery('.site-header'),
+		bg = $siteHeader.data('bg');
+
+	if( '' !== bg ) {
+    	$siteHeader.css('background-image', 'url("' + bg + '")');
+	}
 });

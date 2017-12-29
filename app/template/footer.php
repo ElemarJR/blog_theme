@@ -8,16 +8,7 @@
 
 		<div class="follow-us">
 			<h3 class="follow-us--title"><?php esc_html_e( 'Follow us', 'elemarjr' ) ?></h3>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'social',
-					'menu_id'        => 'social-menu',
-					'menu_class'     => 'follow-us--menu',
-					'depth'          => 1,
-					'link_before'    => '<span class="screen-reader-text">',
-					'link_after'     => '</span>',
-				) );
-			?>
+			<?php get_template_part( 'template-parts/social-menu') ?>
 		</div>
 
 		<div class="contact-info">

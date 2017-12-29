@@ -27,7 +27,7 @@ get_header(); ?>
 			<div class="front-page--purpose--wrapper">
 				<div class="front-page--purpose--item--wrapper">
 					<div class="front-page--purpose--item">
-						<i class="front-page--purpose--icon i-flow"></i>
+						<i class="front-page--purpose--icon bordered-icon i-flow"></i>
 						<p>
 							Eu ajudo <strong>desenvolvedores com maior senioridade</strong> a criar software de alta qualidade
 							que realmente atendem as necessidades do negócio, possibilitando <strong>inovação e uso inteligente
@@ -37,7 +37,7 @@ get_header(); ?>
 				</div>
 				<div class="front-page--purpose--item--wrapper">
 					<div class="front-page--purpose--item">
-						<i class="front-page--purpose--icon i-suitcase"></i>
+						<i class="front-page--purpose--icon bordered-icon i-suitcase"></i>
 						<p>
 							Eu ajudo <strong>executivos de tecnologia</strong> a desenvolver negócios inovadores, suportados
 							por software de qualidade, garantido <strong>ótimos resultados</strong>.

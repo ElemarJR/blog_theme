@@ -48,4 +48,23 @@ class Template {
 		
 		return pathinfo( $slug, PATHINFO_FILENAME );
 	}
+	
+	/**
+	 * Get template header classes
+	 * 
+	 * Add variation `no-hero` if the template is set to hide header hero 
+	 * content.
+	 * 
+	 * @return string The heaer classes.
+	 */
+	public function header_classes() {
+		$classes = array();
+		$classes[] = 'site-header';
+		
+		if( ! apply_filters( 'elemarjr_display_hero', true ) ) {
+			$classes[] = 'site-header__no-hero';
+		}
+			
+		return implode( ' ', $classes );
+	}
 }

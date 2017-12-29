@@ -1,7 +1,7 @@
 <?php
 
 use Aztec\Helper\Template;
-use Aztec\Helper\HeaderBgImage;
+use Aztec\Helper\BackgroundImage;
 
 /**
  * The header for our theme
@@ -24,11 +24,15 @@ global $container;
 <head>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-bg="">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
-	<header id="masthead" class="site-header" data-bg="<?php echo esc_url( $container->get( HeaderBgImage::class )->get_header_bg_image() ) ?>">
+	<?php
+		$bg_image = $container->get( BackgroundImage::class )->get_header_bg_image();
+		$classes = $container->get( Template::class )->header_classes();
+	?>
+	<header id="masthead" class="<?php echo esc_attr( $classes ) ?>" data-bg="<?php echo esc_url( $bg_image ) ?>">
 		<div class="top-header-wrapper">
 			<div class="top-header container">
 				<div class="site-branding">
@@ -55,6 +59,7 @@ global $container;
 			</div>
 		</div>
 
+		<?php if( apply_filters( 'elemarjr_display_hero', true ) ) : ?>
 		<div class="hero--wrapper">
 			<div class="container hero--container">
 				<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
@@ -63,11 +68,12 @@ global $container;
 				</div>
 			</div>
 		</div>
+		<?php endif; ?>
 	</header><!-- #masthead -->
 
 	<?php 
 		// @todo pass this code to `src`
-		$containerized = ! is_front_page() && ! is_page_template();
+		$containerized = ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) );
 		
 	?>
 	<div id="content" class="<?php echo esc_attr( 'site-content' . ( $containerized ? ' container' : '' ) ) ?>">

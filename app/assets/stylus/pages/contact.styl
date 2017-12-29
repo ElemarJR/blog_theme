@@ -1,0 +1,70 @@
+.contact
+    $element-y-space = 45px
+    background url('../images/contact.jpg')
+    background-size cover
+    color $white
+
+    &:before
+        background $header-overlay
+        bottom 0
+        content ''
+        height 100%
+        left 0
+        position absolute
+        right 0
+        top 0
+        width 100%
+
+    a
+    a:visited
+        color $white
+
+    .site
+        position relative
+        z-index 1
+
+    &--info
+        margin-bottom $element-y-space
+
+        @media screen and ( min-width $screen-lg )
+            align-items center
+            display flex
+            justify-content space-between
+
+        &--contact
+            @media screen and ( min-width $screen-md )
+                display flex
+                justify-content center
+
+            @media screen and ( min-width $screen-lg )
+                width 980px
+                justify-content flex-start
+
+        &--item
+            align-items center
+            display flex
+            margin-top $element-y-space
+
+            @media screen and ( min-width $screen-md )
+                padding 0 15px
+
+            @media screen and ( min-width $screen-lg )
+                padding 0
+                width 50%
+
+        &--data
+            margin-left 15px
+
+            strong
+                display block
+
+        &--social
+            margin-top $element-y-space
+            text-align center
+
+            a:hover
+                color $red
+                text-decoration none
+
+    &--form
+        margin-bottom $element-y-space

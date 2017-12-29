@@ -23,6 +23,7 @@ requirejs([
     'app/blog',
     'app/font',
     'app/front-page',
+    'app/site-footer',
     'app/site-header',
     'app/site-navigation',
     'app/site-search'

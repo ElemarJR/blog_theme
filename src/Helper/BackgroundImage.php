@@ -1,6 +1,9 @@
 <?php
 /**
- * Header Background Image class
+ * Background Image class
+ * 
+ * Normally the background image is loaded in the header. But for the contact 
+ * page, the 
  *
  * @package Aztec
  */
@@ -12,7 +15,7 @@ use Aztec\Base;
 /**
  * Load the header background image for each page
  */
-class HeaderBgImage extends Base {
+class BackgroundImage extends Base {
 	
 	/**
 	 * Get the header background image url
@@ -23,6 +26,11 @@ class HeaderBgImage extends Base {
 	 * @return string The header backgorund image URL.
 	 */
 	public function get_header_bg_image() {
+		if( ! apply_filters( 'elemarjr_display_hero', true ) ) {
+			return '';
+		}
+		
+		$image_url = false;
 		if ( is_page() || is_single() ) {
 			$image_url = $this->get_post_featured_image();
 		} elseif( is_archive() ) {

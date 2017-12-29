@@ -1,7 +1,7 @@
 .button
-input[type="submit"]
     $height = 56px
     background $red
+    border-color $red
     border-radius $height
     color $white
     display inline-block
@@ -11,10 +11,17 @@ input[type="submit"]
     text-decoration none
     text-transform uppercase
 
-.button__bordered
-    background transparent
-    border 1px solid $white
+    &__bordered
+        background transparent
+        border 1px solid $white
 
-    &:hover
-        color $red
-        border-color $red
+        &:hover
+            color $red
+            border-color $red
+
+    &__tiffany
+        background $tiffany
+        border-color $tiffany
+
+        &:hover
+            color $red

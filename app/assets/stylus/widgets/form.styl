@@ -1,72 +1,49 @@
 .form
-    // label
-    //     display block
+    $input-height = 37px
+    label
+        display block
+        margin-bottom 25px
 
-    input[type=text],
-    input[type=url],
-    input[type=tel],
-    input[type=email],
-    input[type=search],
-    input[type=number],
-    input[type=range],
-    select,
+    input[type=text]
+    input[type=url]
+    input[type=tel]
+    input[type=email]
+    input[type=search]
+    input[type=number]
+    input[type=range]
+    select
     textarea
         background-color transparent
         border none
         border-bottom 1px solid $input-border-color
         box-sizing border-box
-        color $input-text-color
+        color $white
         display block
-        height 37px
+        height $input-height
         padding 0
         width 100%
 
-    //     &[type=range]
-    //         border none
+        &:focus
+            outline none
 
-    //     &[type=number]
-    //         max-width 60px
+        +placeholder()
+            color $gray-light
 
-    //     &:focus
-    //         background-color $input-focus-background-color
-    //         border-color $input-focus-border-color
-    //         color $input-focus-text-color
+    textarea
+        height 150px
+        min-height $input-height
+        padding-top 3px
+        resize vertical
 
-    //     &:hover
-    //         background-color $input-hover-background-color
-    //         border-color $input-hover-border-color
-    //         color $input-hover-text-color
+    &--submit-wrapper
+        text-align center
 
-    //     &:disabled
-    //         background-color $input-disabled-background-color
-    //         border-color $input-disabled-border-color
-    //         color $input-disabled-text-color
+    &--half
+        @media screen and ( min-width $screen-md )
+            $gutter = 30px
+            float left
+            padding-left $gutter
+            width 'calc( 50% + %s )' % ( $gutter / 2 )
 
-    //     &:invalid,
-    //     &:out-of-range
-    //         background-color $input-invalid-background-color
-    //         border-color $input-invalid-border-color
-    //         color $input-invalid-text-color
-
-    // textarea
-    //     resize vertical
-
-    // input[type=radio],
-    // input[type=checkbox]
-    //     display inline-block
-    //     margin-right 5px
-
-    //     + label
-    //         cursor pointer
-    //         display inline-block
-
-    //     &:disabled + label
-    //         color $input-disabled-text-color
-    //         cursor default
-
-    button,
-    input[type=button],
-    input[type=submit]
-        background-color transparent
-        border none
-        padding 0
+            &:first-child
+                margin-left '-%s' %  $gutter
