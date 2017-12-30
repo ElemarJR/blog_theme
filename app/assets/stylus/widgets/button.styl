@@ -1,7 +1,7 @@
 .button
     $height = 56px
     background $red
-    border-color $red
+    border 2px solid $red
     border-radius $height
     color $white
     display inline-block
@@ -10,6 +10,14 @@
     padding 0 50px
     text-decoration none
     text-transform uppercase
+
+    a&:visited
+        color $white
+
+    a&:hover
+        border-color $navy
+        color $navy
+        text-decoration none
 
     &__bordered
         background transparent
@@ -24,4 +32,5 @@
         border-color $tiffany
 
         &:hover
+            border-color $red
             color $red

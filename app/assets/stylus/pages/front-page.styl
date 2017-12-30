@@ -29,6 +29,13 @@
                     padding 0 ( $column-gutter / 2 )
                     width 50%
 
+            &:hover
+                box-shadow 0 0 10px 2px $gray-light
+
+                & ^[0..1]--icon
+                    background $red
+                    color $white
+
     &--quote
         background $quote-bg
         color $white
@@ -56,7 +63,7 @@
             &:after
                 icon-font()
                 bottom $y-space
-                content i-left-quote
+                content i-right-quote
                 font-size $icon-size
                 position absolute
                 right $x-space

@@ -38,13 +38,13 @@ global $container;
 				<div class="site-branding">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
 				</div><!-- .site-branding -->
-				
+
 				<div class="header-right">
 					<div id="site-search" class="site-search">
 						<button class="header-toogle-button search-toggle" aria-controls="search" aria-expanded="false"></button>
 						<?php get_search_form() ?>
 					</div><!-- #site-search -->
-			
+
 					<nav id="site-navigation" class="main-navigation">
 						<button class="header-toogle-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 						<?php
@@ -74,6 +74,6 @@ global $container;
 	<?php 
 		// @todo pass this code to `src`
 		$containerized = ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) );
-		
+
 	?>
 	<div id="content" class="<?php echo esc_attr( 'site-content' . ( $containerized ? ' container' : '' ) ) ?>">
