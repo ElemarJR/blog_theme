@@ -2,7 +2,7 @@
     background $white
     justify-content space-between
     left 0
-    padding 28px 35px 25px 60px
+    padding 20px
     position absolute
     top $sm-nav-height
     width 100%
@@ -15,12 +15,14 @@
         position static
 
     label
+        margin-bottom 0
         order 2
         width 100%
 
-    input
+    input[type="search"]
         border-bottom-color $gray-dark
         color $red
+        height 30px
         width 100%
 
         @media screen and ( min-width $nav-breakpoint )
@@ -35,10 +37,10 @@
 
     button[type='submit']
         color $gray-dark
-        font-size 40px
-        height 40px
+        font-size 30px
+        height 30px
         icon( i-search )
-        margin-right 28px
+        margin-right 20px
         order 1
         width 40px
 

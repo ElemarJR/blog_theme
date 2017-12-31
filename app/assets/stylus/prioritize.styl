@@ -66,7 +66,7 @@ img
         top 0
         width 100%
 
-    .top-header-wrapper
+    /.top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
         height $sm-nav-height
 
@@ -78,7 +78,6 @@ img
         z-index 9999
 
     .site-branding
-        height 53px
         position absolute
         top 18px
         width 140px
@@ -98,7 +97,7 @@ img
             max-width calc( 100% - 200px )
             padding-top 38px
 
-    .header-toogle-button
+    /.header-toogle-button
         color $white
         cursor pointer
         position absolute
@@ -111,12 +110,12 @@ img
             display flex
             margin-right 40px
 
-        .search-toggle
+        /.search-toggle
             background transparent
             border 0
             font-size 26px
             icon( i-search )
-            right 130px
+            right 83px
             top 33px
 
             @media screen and ( min-width $nav-breakpoint )
@@ -130,10 +129,13 @@ img
                 display flex
 
     .main-navigation
-        .menu-toggle
+        /.menu-toggle
+            background-color transparent
+            border 0
             font-size 46px
             icon( i-menu )
-            right 46px
+            padding 0
+            right 20px
             top 22px
 
             @media screen and ( min-width $nav-breakpoint )
