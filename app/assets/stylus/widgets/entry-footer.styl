@@ -15,7 +15,11 @@
 
             @media screen and ( min-width $screen-md )
                 display flex
+                justify-content space-between
                 padding 40px 0
+
+                &:after
+                    content none
 
             strong
                 display block
@@ -45,11 +49,15 @@
                     flex 0 0 209px
 
                 @media screen and ( min-width $screen-lg )
-                    flex 0 0 352px
+                    flex 0 0 auto
 
                 a
                     font-size 36px
                     vertical-align middle
+
+                    &:last-child
+                        @media screen and ( min-width $screen-lg )
+                            margin-right 0
 
                 strong
                     @media screen and ( min-width $screen-md )

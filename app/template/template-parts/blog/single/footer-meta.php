@@ -2,15 +2,6 @@
 	<div class="entry-footer--tags">
 		<strong><?php echo esc_html_e( 'Tags', 'elemarjr' ) ?></strong>
 		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
-		<?php the_terms( get_the_ID(), 'post_tag', '', '', '' ) ?>
 	</div>
 	<?php // @todo Add share links ?>
 	<div class="entry-footer--share">

@@ -1,4 +1,5 @@
 .button
+input[type="submit"]
     $height = 56px
     background $red
     border 2px solid $red
@@ -10,14 +11,6 @@
     padding 0 50px
     text-decoration none
     text-transform uppercase
-
-    a&:visited
-        color $white
-
-    a&:hover
-        border-color $navy
-        color $navy
-        text-decoration none
 
     &__bordered
         background transparent
@@ -34,3 +27,12 @@
         &:hover
             border-color $red
             color $red
+
+a.button
+    &:visited
+        color $white
+
+    &:hover
+        border-color $navy
+        color $navy
+        text-decoration none
