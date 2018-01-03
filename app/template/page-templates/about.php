@@ -28,100 +28,90 @@ get_header(); ?>
 		<div class="about--row">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title">Minhas Habilidades</h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_abilities_title', true ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							Fusce lobortis orci in neque aliquet, eget facilisis leo facilisis. Duis vel eleifend
-							lacus. Donec id euismod diam. Fusce finibus arcu vel laoreet eleifend. In consequat 
-							lorem elit, vel gravida nisi consectetur a. Phasellus posuere ut nulla quis pellentesque.
-							Sed vehicula enim eu sem laoreet dignissim.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_abilities_text', true ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="about--row--image">
-					<img src="<?php echo get_template_directory_uri()?>/assets/images/about/prancheta.png" />
+					<?php 
+						$media_id = get_post_meta( get_the_ID(), 'about_abilities_image', true );
+						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
+					?>
 				</div>
 			</div>
 		</div>
 		<div class="about--row about--row__gray about--row__invert">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title">Clientes no Brasil, Israel e Estados Unidos</h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_clients_title', true ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							Fusce lobortis orci in neque aliquet, eget facilisis leo facilisis. Duis vel eleifend
-							lacus. Donec id euismod diam. Fusce finibus arcu vel laoreet eleifend. In consequat 
-							lorem elit, vel gravida nisi consectetur a.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_clients_text', true ) ) ?>
 						</p>
-						
-						<?php // @todo Style the list ?>
-						<ul>
-							<li>in nisi lectus;</li>
-							<li>commodo ut mattis;</li>
-							<li>scelerisque magna;</li>
-							<li>condimentum blandit;</li>
-							<li>lorem est;</li>
-							<li>dapibus sit amet;</li>
-							<li>iaculis rhoncus;</li>
-							<li>metus vel.</li>
-						</ul>
 					</div>
 				</div>
 				<div class="about--row--image">
-					<img src="<?php echo get_template_directory_uri()?>/assets/images/about/mapa.png" />
+					<?php 
+						$media_id = get_post_meta( get_the_ID(), 'about_clients_image', true );
+						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
+					?>
 				</div>
 			</div>
 		</div>
 		<div class="about--row about--row__tiffany">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title">Mais de 20 anos de experiência</h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_expirience_title', true ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							Fusce lobortis orci in neque aliquet, eget facilisis leo facilisis. Duis vel eleifend
-							lacus. Donec id euismod diam. Fusce finibus arcu vel laoreet eleifend. In consequat 
-							lorem elit, vel gravida nisi consectetur a. Phasellus posuere ut nulla quis pellentesque.
-							Sed vehicula enim eu sem laoreet dignissim.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_expirience_text', true ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="about--row--image">
-					<img src="<?php echo get_template_directory_uri()?>/assets/images/about/experiencia.png" />
+					<?php 
+						$media_id = get_post_meta( get_the_ID(), 'about_expirience_image', true );
+						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
+					?>
 				</div>
 			</div>
 		</div>
 		<div class="about--row about--row__red-title about--row__invert">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title">Membro do time de desenvolvimento do RavenDB</h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_raven_title', true ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							Fusce lobortis orci in neque aliquet, eget facilisis leo facilisis. Duis vel eleifend
-							lacus. Donec id euismod diam. Fusce finibus arcu vel laoreet eleifend. In consequat 
-							lorem elit, vel gravida nisi consectetur a.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_raven_text', true ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="about--row--image">
-					<img src="<?php echo get_template_directory_uri()?>/assets/images/about/raven.jpg" />
+					<?php 
+						$media_id = get_post_meta( get_the_ID(), 'about_raven_image', true );
+						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
+					?>
 				</div>
 			</div>
 		</div>
 		<div class="about--row about--row__gray">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title">Microsoft Most Valuable Professional (MVP)</h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_mvp_title', true ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							Fusce lobortis orci in neque aliquet, eget facilisis leo facilisis. Duis vel eleifend
-							lacus. Donec id euismod diam. Fusce finibus arcu vel laoreet eleifend. In consequat 
-							lorem elit, vel gravida nisi consectetur a. Phasellus posuere ut nulla quis pellentesque.
-							Sed vehicula enim eu sem laoreet dignissim.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_mvp_text', true ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="about--row--image">
-					<img src="<?php echo get_template_directory_uri() ?>/assets/images/about/mvp.png" />
+					<?php 
+						$media_id = get_post_meta( get_the_ID(), 'about_mvp_image', true );
+						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
+					?>
 				</div>
 			</div>
 		</div>

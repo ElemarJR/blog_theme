@@ -35,6 +35,10 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Integration\ACF\ACF::class,
+			\Aztec\Integration\ACF\Pages\About::class,
+			\Aztec\Integration\ACF\Pages\HomePage::class,
+			
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
 			

@@ -6,6 +6,8 @@
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
+ * 
+ * Template name: Home
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -27,20 +29,19 @@ get_header(); ?>
 			<div class="front-page--purpose--wrapper">
 				<div class="front-page--purpose--item--wrapper">
 					<div class="front-page--purpose--item">
-						<i class="front-page--purpose--icon bordered-icon i-flow"></i>
+						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ) ?>
+						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
 						<p>
-							Eu ajudo <strong>desenvolvedores com maior senioridade</strong> a criar software de alta qualidade
-							que realmente atendem as necessidades do negócio, possibilitando <strong>inovação e uso inteligente
-							de tecnologia</strong>.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="front-page--purpose--item--wrapper">
 					<div class="front-page--purpose--item">
-						<i class="front-page--purpose--icon bordered-icon i-suitcase"></i>
+						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ) ?>
+						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
 						<p>
-							Eu ajudo <strong>executivos de tecnologia</strong> a desenvolver negócios inovadores, suportados
-							por software de qualidade, garantido <strong>ótimos resultados</strong>.
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ) ?>
 						</p>
 					</div>
 				</div>
@@ -49,8 +50,7 @@ get_header(); ?>
 		
 		<div class="front-page--quote">
 			<div class="front-page--quote--container container">
-				Ajudo organizações grandes e pequenas, a promover inovação &amp; empreendedorismo através do uso 
-				inteligente de tecnologia e conhecimento para melhor desempenho e lucro.
+				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ) ?>
 			</div>
 		</div>
 		
@@ -59,7 +59,7 @@ get_header(); ?>
 				<h2 class="front-page--blog--title">Blog</h2>
 				
 				<p class="front-page--blog--description">
-					Saiba tudo sobre as áreas de tecnologia e conhecimento.
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'blog_text', true ) ) ?>
 				</p>
 			</div>
 			
