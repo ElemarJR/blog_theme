@@ -39,6 +39,8 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\About::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
 			
+			\Aztec\Integration\Polylang\Polylang::class,
+			
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
 			
