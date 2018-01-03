@@ -1,4 +1,4 @@
-.button
+a.button
 input[type="submit"]
     $height = 56px
     background $red
@@ -12,6 +12,14 @@ input[type="submit"]
     text-decoration none
     text-transform uppercase
 
+    &:visited
+        color $white
+
+    &:hover
+        border-color $white
+        text-decoration none
+
+a.button
     &__bordered
         background transparent
         border 1px solid $white
@@ -28,11 +36,3 @@ input[type="submit"]
             border-color $red
             color $red
 
-a.button
-    &:visited
-        color $white
-
-    &:hover
-        border-color $navy
-        color $navy
-        text-decoration none

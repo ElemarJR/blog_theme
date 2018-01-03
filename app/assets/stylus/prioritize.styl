@@ -22,6 +22,10 @@ img
     height auto
     max-width 100%
 
+button
+    background none
+    border 0
+
 // Helper classes
 
 // Container to center the element in the page on large screens. In minor
@@ -221,11 +225,11 @@ img
 
 // Hero Content
 .hero
-    bottom $container-padding
-    color $white
-    left $container-padding
-    max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
+    bottom 0
+    left 0
     position absolute
+    right 0
+    top 0
 
     &--wrapper
         height 100%
@@ -234,25 +238,41 @@ img
         width 100%
 
     &--container
-        bottom 0
-        left 0
+        bottom 116px // .scroll-button height + padding
+        color $white
+        max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
         position absolute
-        right 0
-        top 0
 
     &--title
         color $red
-        margin-bottom 0
+        margin 0
         text-transform uppercase
 
     &--description
         font-size 22px
-        margin-bottom 0
+        margin 0
         text-transform none
 
-    ~/__front-page
+    &--button
+        margin 0
+
+    &--scroll-button
+        color $white
+        font-size 56px
+        left 50%
+        padding 30px
+        position absolute
+        bottom 0
+        transform translateX( -50% )
+
+        &:hover
+            color $red
+
+    ~/__home
         & ^[0]--title
             font-size 29px
+            margin-bottom 45px
+            max-width 690px
 
             @media screen and ( min-width $screen-sm )
                 font-size 40px
@@ -262,13 +282,13 @@ img
 
         & ^[0]--description
             margin-bottom 60px
+            max-width 450px
 
     ~/__blog
         text-transform uppercase
-        width 440px
 
-        @media screen and ( min-width $screen-md )
-            bottom 200px
+        & ^[0]--container
+            width 440px
 
         & ^[0]--title
             @media screen and ( min-width $screen-sm )
@@ -278,16 +298,13 @@ img
             font-size 44px
             font-weight 400
             line-height 1.1em
-            margin 0
+            margin-bottom 40px
 
             @media screen and ( min-width $screen-sm )
                 font-size 70px
                 margin 0 0 33px
 
     ~/__single
-        @media screen and ( min-width $screen-md )
-            bottom 80px
-
         & ^[0]--title
             color $white
             text-transform uppercase
@@ -324,8 +341,10 @@ img
                     vertical-align bottom
 
     ~/__about
-        bottom 60px
         width 100%
+
+        & ^[0]--container
+            width 100%
 
         & ^[0]--title
             color $white

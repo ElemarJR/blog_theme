@@ -24,6 +24,7 @@ requirejs([
     'app/blog',
     'app/font',
     'app/front-page',
+    'app/scroll-button',
     'app/site-footer',
     'app/site-header',
     'app/site-navigation',

@@ -36,7 +36,9 @@ global $container;
 		<div class="top-header-wrapper">
 			<div class="top-header container">
 				<div class="site-branding">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+					</a>
 				</div><!-- .site-branding -->
 
 				<div class="header-right">
@@ -52,7 +54,7 @@ global $container;
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
 								'depth'          => 1,
-							) );
+							) )
 						?>
 					</nav><!-- #site-navigation -->
 				</div>
@@ -61,11 +63,12 @@ global $container;
 
 		<?php if( apply_filters( 'elemarjr_display_hero', true ) ) : ?>
 		<div class="hero--wrapper">
-			<div class="container hero--container">
-				<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
-				<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ); ?>">
-					<?php get_template_part( 'template-parts/hero/hero', $hero_template ); ?>
+			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
+			<div class="<?php echo esc_attr( 'container hero hero__' . $hero_template ) ?>">
+				<div class="hero--container">
+					<?php get_template_part( 'template-parts/hero/hero', $hero_template )  ?>
 				</div>
+				<button class="hero--scroll-button i-mouse"></button>
 			</div>
 		</div>
 		<?php endif; ?>
