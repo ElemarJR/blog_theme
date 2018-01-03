@@ -20,6 +20,7 @@ if (typeof jQuery === 'function') {
 
 // start the application
 requirejs([
+    'app/animation',
     'app/blog',
     'app/font',
     'app/front-page',

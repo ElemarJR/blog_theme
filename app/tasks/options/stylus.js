@@ -5,7 +5,8 @@ module.exports = {
 	dev: {
 		options: {
 			compress: false,
-			linenos: true
+			linenos: true,
+			'include css': true
 		},
 		files : {
 			'<%= config.assets.build %>/css/style.css' : '<%= config.assets.src %>/stylus/style.styl',
@@ -13,6 +14,9 @@ module.exports = {
 		}
 	},
 	dist: {
+		options: {
+			'include css': true
+		},
 		files : {
 			'<%= config.assets.build %>/css/style.css' : '<%= config.assets.src %>/stylus/style.styl',
 			'<%= config.assets.build %>/css/prioritize.css' : '<%= config.assets.src %>/stylus/prioritize.styl'

@@ -35,7 +35,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about--row--image">
+				<div class="about--row--image wow fadeInDown">
 					<?php 
 						$media_id = get_post_meta( get_the_ID(), 'about_abilities_image', true );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
@@ -53,7 +53,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about--row--image">
+				<div class="about--row--image wow fadeInDown">
 					<?php 
 						$media_id = get_post_meta( get_the_ID(), 'about_clients_image', true );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
@@ -71,7 +71,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about--row--image">
+				<div class="about--row--image wow fadeInDown">
 					<?php 
 						$media_id = get_post_meta( get_the_ID(), 'about_expirience_image', true );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
@@ -89,7 +89,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about--row--image">
+				<div class="about--row--image wow fadeInDown">
 					<?php 
 						$media_id = get_post_meta( get_the_ID(), 'about_raven_image', true );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
@@ -107,7 +107,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about--row--image">
+				<div class="about--row--image wow fadeInDown">
 					<?php 
 						$media_id = get_post_meta( get_the_ID(), 'about_mvp_image', true );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );

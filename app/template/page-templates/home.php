@@ -27,7 +27,7 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--purpose container">
 			<div class="front-page--purpose--wrapper">
-				<div class="front-page--purpose--item--wrapper">
+				<div class="front-page--purpose--item--wrapper wow slideInLeft">
 					<div class="front-page--purpose--item">
 						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ) ?>
 						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
@@ -36,7 +36,7 @@ get_header(); ?>
 						</p>
 					</div>
 				</div>
-				<div class="front-page--purpose--item--wrapper">
+				<div class="front-page--purpose--item--wrapper wow slideInRight">
 					<div class="front-page--purpose--item">
 						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ) ?>
 						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
@@ -49,7 +49,7 @@ get_header(); ?>
 		</div>
 		
 		<div class="front-page--quote">
-			<div class="front-page--quote--container container">
+			<div class="front-page--quote--container container wow slideInLeft">
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ) ?>
 			</div>
 		</div>

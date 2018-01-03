@@ -7,10 +7,11 @@
 normalize-css()
 
 // General CSS
-*,
-*:before,
+*
+*:before
 *:after
     box-sizing border-box
+    transition all .2s linear
 
 body
     color $gray-dark
@@ -44,6 +45,11 @@ img
 // Hide screen reader element until load the CSS file
 .screen-reader-text
     display none
+
+// WOWJS integration
+.wow
+    visibility hidden
+
 
 // Header
 .site-header
