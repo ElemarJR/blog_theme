@@ -8,7 +8,7 @@ use Bookworm\Bookworm;
 
 <div class="entry-meta hero--meta">
 	<div class="hero--meta--data hero--meta--data__date">
-		<?php echo esc_html( get_the_date( 'd M, Y' ) ); ?>
+		<?php echo esc_html( get_the_date() ); ?>
 	</div>
 	
 	<div class="hero--meta--data hero--meta--data__reading">

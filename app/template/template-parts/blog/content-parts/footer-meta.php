@@ -4,7 +4,7 @@ use Bookworm\Bookworm;
 
 ?>
 <div class="listing-post__date">
-	<?php echo esc_html( get_the_date( 'd M, Y' ) ); ?>
+	<?php echo esc_html( get_the_date() ); ?>
 </div>
 
 <div class="listing-post__footer__right">
