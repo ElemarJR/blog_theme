@@ -27,6 +27,11 @@ class Template extends Base {
 	 */
 	public function body_class( $classes ) {
 		$classes[] = $this->container->get( HelperTemplate::class )->get_template_name();
+		
+		if( ! apply_filters( 'elemarjr_display_hero', true ) ) {
+			$classes[] = 'site-header__no-hero';
+		}
+		
 		return $classes;
 	}
 }

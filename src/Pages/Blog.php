@@ -19,11 +19,25 @@ class Blog extends Base {
 	 */
 	public function init() {
 		add_action( 'pre_get_posts', $this->callback( 'limit_posts_per_page' ) );
-
+		
+		add_filter( 'elemarjr_display_hero', $this->callback( 'display_hero' ) );
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
 		add_filter( 'excerpt_more', $this->callback( 'excerpt_more' ) );
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
+	}
+
+	/**
+	 * Show header just in the home of the blog
+	 * 
+	 * @return boolean True, if is the home of the blog. False, otherwise.
+	 */
+	public function display_hero( $display ) {
+		if( is_home() && 1 === ( get_query_var( 'paged', 1 ) ) ) {
+			return false;
+		}
+		
+		return $display;
 	}
 
 	/**
