@@ -20,3 +20,14 @@
 
         @media screen and ( min-width $screen-lg )
             width 33.33%
+
+        // In medium screen show 4 post, in another just 3
+        /.home &
+            &:last-child
+                display none
+
+                @media screen and ( min-width $screen-md )
+                    display block
+
+                @media screen and ( min-width $screen-lg )
+                    display none

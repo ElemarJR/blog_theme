@@ -67,7 +67,7 @@ get_header(); ?>
 				<div class="post-list front-page--blog--list">
 					<?php 
 						$query = new WP_Query( array(
-							'posts_per_page' => 3,	
+							'posts_per_page' => 4,	
 						) );
 						while ( $query->have_posts() ) : $query->the_post();
 							get_template_part( 'template-parts/blog/content' );
