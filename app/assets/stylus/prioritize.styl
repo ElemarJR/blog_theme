@@ -57,24 +57,26 @@ button
 
 // Header
 .site-header
-    background-color $gray-dark
+    background-color $purple
     background-size cover
     height 100vh
-    position relative
 
     @media screen and ( min-width $nav-breakpoint )
         min-height auto
 
-    &:before
-        background $header-overlay
-        bottom 0
-        content ''
-        height 100%
-        left 0
-        position absolute
-        right 0
-        top 0
-        width 100%
+    /.single-post &
+        position relative
+
+        &:before
+            background $header-overlay
+            bottom 0
+            content ''
+            height 100%
+            left 0
+            position absolute
+            right 0
+            top 0
+            width 100%
 
     /.top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
