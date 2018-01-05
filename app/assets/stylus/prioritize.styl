@@ -17,6 +17,10 @@ body
     color $gray-dark
     font-family $sans-serif
     overflow-x hidden
+    padding-top $sm-nav-height
+
+    @media screen and ( min-width $nav-breakpoint )
+        padding-top $sm-nav-height-breakpoint
 
 img
     height auto
@@ -54,14 +58,17 @@ button
 .wow
     visibility hidden
 
-
 // Header
 .site-header
     background-color $purple
     background-size cover
     height 100vh
+    margin-top '-%s' % $sm-nav-height
+    padding-top $sm-nav-height
 
     @media screen and ( min-width $nav-breakpoint )
+        margin-top '-%s' % $sm-nav-height-breakpoint
+        padding-top $sm-nav-height-breakpoint
         min-height auto
 
     /.single-post &
@@ -81,9 +88,12 @@ button
     /.top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
         height $sm-nav-height
+        fixed top left
+        width 100%
+        z-index 99
 
         @media screen and ( min-width $nav-breakpoint )
-            height 107px
+            height $sm-nav-height-breakpoint
 
     .top-header
         position relative
@@ -219,7 +229,6 @@ button
                         color $red
 
     &__no-hero
-        background transparent
         height auto
 
         &:before
@@ -311,7 +320,6 @@ button
             color $white
             text-transform uppercase
             max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
-            width 440px
 
         & ^[0]--meta
             &--data

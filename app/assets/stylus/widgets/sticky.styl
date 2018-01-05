@@ -1,10 +1,14 @@
+body
+    &.sticky
+        padding-top $sm-nav-height-sticky
+
+        .site-header
+            margin-top '-%s' % $sm-nav-height-sticky
+
 .top-header-wrapper
     &__sticky
         background rgba( $header-overlay, .9 )
-        fixed top left
         height $sm-nav-height-sticky
-        width 100%
-        z-index 99
 
         .site-branding
             top 10px

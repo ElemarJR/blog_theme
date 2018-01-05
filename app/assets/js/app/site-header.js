@@ -8,7 +8,9 @@ define([],function () {
 	var $siteHeader = jQuery( '.site-header' ),
 		bg = $siteHeader.data('bg'),
 		$topHeader = jQuery( '.top-header-wrapper' ),
-		stickyClass = 'top-header-wrapper__sticky';
+		headerStickyClass = 'top-header-wrapper__sticky'
+		$body = jQuery( 'body' ),
+		bodyStickyClass = 'sticky';
 
 	if( '' !== bg ) {
     	$siteHeader.css( 'background-image', 'url("' + bg + '")' );
@@ -31,9 +33,11 @@ define([],function () {
 	jQuery( window )
 		.on( 'scroll', function() {
 			if( jQuery( this ).scrollTop() > 0 ) {
-				$topHeader.addClass( stickyClass );
+				$body.addClass( bodyStickyClass );
+				$topHeader.addClass( headerStickyClass );
 			} else {
-				$topHeader.removeClass( stickyClass );
+				$body.removeClass( bodyStickyClass );
+				$topHeader.removeClass( headerStickyClass );
 			}
 		} )
 		.trigger( 'scroll' );

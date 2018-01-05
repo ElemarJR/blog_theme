@@ -24,7 +24,25 @@ get_header(); ?>
 		while ( have_posts() ) :
 			the_post();
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
+		<form action="#" method="POST" class="contact--form form">
+			<label for="" class="form--half">
+				<span class="screen-reader-text">Nome</span>
+				<input type="text" placeholder="Nome" />
+			</label>
+			<label for="" class="form--half">
+				<span class="screen-reader-text">E-mail</span>
+				<input type="text" placeholder="E-mail" />
+			</label>
+			<label for="">
+				<span class="screen-reader-text">Mensagem</span>
+				<textarea placeholder="Sua mensagem"></textarea>
+			</label>
+			<div class="form--submit-wrapper">
+				<input type="submit" class="button button__tiffany" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ) ?>" />
+			</div>
+		</form>
+
 		<div class="contact--info">
 			<div class="contact--info--contact">
 				<div class="contact--info--item">
@@ -47,24 +65,6 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/social-menu') ?>
 			</div>
 		</div>
-			
-		<form action="#" method="POST" class="contact--form form">
-			<label for="" class="form--half">
-				<span class="screen-reader-text">Nome</span>
-				<input type="text" placeholder="Nome" />
-			</label>
-			<label for="" class="form--half">
-				<span class="screen-reader-text">E-mail</span>
-				<input type="text" placeholder="E-mail" />
-			</label>
-			<label for="">
-				<span class="screen-reader-text">Mensagem</span>
-				<textarea placeholder="Sua mensagem"></textarea>
-			</label>
-			<div class="form--submit-wrapper">
-				<input type="submit" class="button button__tiffany" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ) ?>" />
-			</div>
-		</form>
 	</article>
 	<?php endwhile; ?>
 </main>

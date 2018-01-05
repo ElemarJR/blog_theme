@@ -30,7 +30,7 @@ class Contact extends Base {
 	/**
 	 * Hide hero on contact page
 	 * 
-	 * @return boolean True, if is contact template. Otherwise, false.
+	 * @return boolean False, if is contact template. Otherwise, false.
 	 */
 	public function hide_hero( $show ) {
 		if( is_page_template( $this->template ) ) {

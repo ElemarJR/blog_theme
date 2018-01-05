@@ -1,20 +1,8 @@
 .contact
-    $element-y-space = 45px
-    background url('../images/contact.jpg')
-    background-size cover
+    $element-space = 45px
+    background $navy
     color $white
     position relative
-
-    &:before
-        background $header-overlay
-        bottom 0
-        content ''
-        height 100%
-        left 0
-        position absolute
-        right 0
-        top 0
-        width 100%
 
     a
         color $white
@@ -23,13 +11,26 @@
         position relative
         z-index 1
 
-    &--info
-        margin-bottom $element-y-space
+    .site-content
+        margin-bottom $element-space
+        margin-top $element-space
 
+    &--container
         @media screen and ( min-width $screen-lg )
-            align-items center
             display flex
             justify-content space-between
+
+    &--form
+        margin 0 auto $element-space
+        max-width 600px
+
+        @media screen and ( min-width $screen-lg )
+            flex 0 0 500px
+            margin 0
+
+    &--info
+        @media screen and ( min-width $screen-lg )
+            flex 0 0 600px
 
         &--contact
             @media screen and ( min-width $screen-md )
@@ -43,7 +44,7 @@
         &--item
             align-items center
             display flex
-            margin-top $element-y-space
+            margin-top $element-space
 
             @media screen and ( min-width $screen-md )
                 padding 0 15px
@@ -59,12 +60,9 @@
                 display block
 
         &--social
-            margin-top $element-y-space
+            margin-top $element-space
             text-align center
 
             a:hover
                 color $red
                 text-decoration none
-
-    &--form
-        margin-bottom $element-y-space
