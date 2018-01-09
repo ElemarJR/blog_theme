@@ -8,30 +8,30 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 	var $postList = jQuery( '.post-list' );
 
 	if( $postList.length > 0 ) {
-		jQuery( window ).on( 'resize', function() {
-			$postList.imagesLoaded()
-				.done(function( instance ) {
-					var $this = jQuery( instance.elements[0] );
-					$this
-						.css({
-							'display': 'block',
-							'visibility' : 'hidden'
-						});
-
-					var masonry = new Masonry( instance.elements[0], {
-						itemSelector: '.post',
-						fitWidth: true
+		$postList.imagesLoaded()
+			.done(function( instance ) {
+				var $this = jQuery( instance.elements[0] );
+				$this
+					.css({
+						'display': 'block',
+						'visibility' : 'hidden'
 					});
 
-					$this
-						.css('visibility', 'visible')
-						.addClass('animated fadeInUpBig')
-						.siblings('.post-list--loading')
-							.addClass('animated fadeOutDown')
-							.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-								jQuery( this ).hide();
-							});
+				var masonry = new Masonry( instance.elements[0], {
+					itemSelector: '.post',
+					fitWidth: true
 				});
-		});
+
+				$this
+					.css('visibility', 'visible')
+					.addClass('animated fadeInUpBig')
+					.siblings('.post-list--loading')
+						.addClass('animated fadeOutDown')
+						.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+							jQuery( this ).hide();
+						});
+
+				jQuery( window ).trigger( 'resize' );
+			});
 	}
 });
