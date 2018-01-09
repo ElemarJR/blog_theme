@@ -1,14 +1,25 @@
 .post-list
     $column-gutter = 50px
+    display none
     margin 0 auto
 
     @media screen and ( min-width $screen-md )
         margin 0 auto
 
     &--wrapper
+        position relative
+
         @media screen and ( min-width $screen-md )
             margin-left '-%s' %  ( $column-gutter / 2 )
             width 'calc( 100% + %s )' % ( $column-gutter )
+
+    &--loading
+        margin-bottom $column-gutter
+        text-align center
+
+        &.animated
+            position absolute
+            width 100%
 
     article
         margin-bottom 70px

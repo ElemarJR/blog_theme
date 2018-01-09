@@ -15,21 +15,18 @@
  * @version 0.1.0
  */
 
+global $wp_query;
+
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/blog/category-nav' ) ?>
 
 <main>
-	<div class="post-list--wrapper">
-		<section class="post-list">
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/blog/content' );
-			endwhile;
-			?>
-		</section>
-	</div>
+	<?php
+		$container->set( 'post_list.query', $wp_query );
+		$container->set( 'post_list.extra_class', '' );
+		get_template_part( 'template-parts/blog/post-list' );
+	?>
 
 	<div class="posts-nav">
 		<?php posts_nav_link( ' ', __( 'Previous Page', 'elemarjr' ), __( 'Next Page', 'elemarjr' ) ); ?>

@@ -21,14 +21,13 @@ if (typeof jQuery === 'function') {
 // start the application
 requirejs([
     'app/animation',
-    'app/blog',
     'app/font',
-    'app/front-page',
+    'app/post-list',
     'app/scroll-button',
     'app/site-footer',
     'app/site-header',
     'app/site-navigation',
-    'app/site-search'
+    'app/site-search',
 ], function() {
     jQuery( window ).trigger('resize');
 });

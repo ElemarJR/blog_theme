@@ -17,6 +17,8 @@
  * @version 0.1.0
  */
 
+global $container;
+
 get_header(); ?>
 
 <main>
@@ -63,19 +65,14 @@ get_header(); ?>
 				</p>
 			</div>
 			
-			<div class="post-list--wrapper">
-				<div class="post-list front-page--blog--list">
-					<?php 
-						$query = new WP_Query( array(
-							'posts_per_page' => 4,	
-						) );
-						while ( $query->have_posts() ) : $query->the_post();
-							get_template_part( 'template-parts/blog/content' );
-						endwhile;
-						wp_reset_query();
-					?>
-				</div>
-			</div>
+			<?php 
+				$query = new WP_Query( array(
+					'posts_per_page' => 4,	
+				) );
+				$container->set( 'post_list.query', $query );
+				$container->set( 'post_list.extra_class', 'front-page--blog--list' );
+				get_template_part( 'template-parts/blog/post-list' );
+			?>
 			
 			<div class="front-page--blog--footer">
 				<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
