@@ -54,6 +54,7 @@ class Kernel {
 			\Aztec\Setup\Html5::class,
 			\Aztec\Setup\Navigation::class,
 			\Aztec\Setup\Template::class,
+			\Aztec\Setup\Title::class,
 			\Aztec\Setup\Textdomain::class,
 			\Aztec\Setup\Thumbnail::class,
 		];
