@@ -2,23 +2,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-09T13:28:36+00:00\n"
+"PO-Revision-Date: 2018-01-09 11:44-0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-01-03T19:18:27+00:00\n"
-"PO-Revision-Date: 2018-01-03 17:19-0200\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Domain: elemarjr\n"
 "X-Generator: Poedit 2.0.5\n"
 
-#: app/template/index.php:35
+#: app/template/index.php:32
 msgid "Previous Page"
 msgstr "Página Anterior"
 
-#: app/template/index.php:35
+#: app/template/index.php:32
 msgid "Next Page"
 msgstr "Próxima Página"
 
@@ -26,15 +26,15 @@ msgstr "Próxima Página"
 msgid "Comments are closed."
 msgstr "Comentários estão fechados."
 
-#: app/template/header.php:29
+#: app/template/header.php:36
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: app/template/page-templates/home.php:82
+#: app/template/page-templates/home.php:79
 msgid "See more"
 msgstr "Veja mais"
 
-#: app/template/page-templates/contact.php:65
+#: app/template/page-templates/contact.php:42
 msgid "Send"
 msgstr "Enviar"
 
@@ -46,7 +46,11 @@ msgstr "Etiquetas"
 msgid "Share"
 msgstr "Compartilhe"
 
-#: app/template/template-parts/blog/category-nav.php:19
+#: app/template/template-parts/blog/post-list.php:9
+msgid "Loading posts..."
+msgstr "Carregando posts…"
+
+#: app/template/template-parts/blog/category-nav.php:13
 msgid "Show All"
 msgstr "Mostrar tudo"
 
@@ -57,3 +61,103 @@ msgstr "Tempo de leitura:"
 #: app/template/footer.php:10
 msgid "Follow us"
 msgstr "Siga-nos"
+
+#: src/Integration/ACF/Pages/HomePage.php:49
+msgid "Purpose"
+msgstr "Propósito"
+
+#: src/Integration/ACF/Pages/HomePage.php:57
+msgid "Icon Class 1"
+msgstr "Classe do ícone 1"
+
+#: src/Integration/ACF/Pages/HomePage.php:63
+msgid "Text 1"
+msgstr "Texto 1"
+
+#: src/Integration/ACF/Pages/HomePage.php:69
+msgid "Icon Class 2"
+msgstr "Classe do ícone 2"
+
+#: src/Integration/ACF/Pages/HomePage.php:75
+msgid "Text 2"
+msgstr "Texto 2"
+
+#: src/Integration/ACF/Pages/HomePage.php:88
+#: src/Integration/ACF/Pages/HomePage.php:95
+msgid "Quote"
+msgstr "Citação"
+
+#: src/Integration/ACF/Pages/HomePage.php:108
+msgid "Blog"
+msgstr "Blog"
+
+#: src/Integration/ACF/Pages/HomePage.php:115
+#: src/Integration/ACF/Pages/About.php:61
+#: src/Integration/ACF/Pages/About.php:79
+#: src/Integration/ACF/Pages/About.php:97
+#: src/Integration/ACF/Pages/About.php:115
+#: src/Integration/ACF/Pages/About.php:133
+msgid "Text"
+msgstr "Texto"
+
+#: src/Integration/ACF/Pages/HomePage.php:116
+msgid "Text after the section title"
+msgstr "Texto após o título da seção"
+
+#: src/Integration/ACF/Pages/About.php:48
+msgid "Sections"
+msgstr "Seções"
+
+#: src/Integration/ACF/Pages/About.php:55
+#: src/Integration/ACF/Pages/About.php:61
+#: src/Integration/ACF/Pages/About.php:67
+msgid "My Abilities"
+msgstr "Minhas habilidades"
+
+#: src/Integration/ACF/Pages/About.php:55
+#: src/Integration/ACF/Pages/About.php:73
+#: src/Integration/ACF/Pages/About.php:91
+#: src/Integration/ACF/Pages/About.php:109
+#: src/Integration/ACF/Pages/About.php:127
+msgid "Title"
+msgstr "Título"
+
+#: src/Integration/ACF/Pages/About.php:67
+#: src/Integration/ACF/Pages/About.php:85
+#: src/Integration/ACF/Pages/About.php:103
+#: src/Integration/ACF/Pages/About.php:121
+#: src/Integration/ACF/Pages/About.php:139
+msgid "Image"
+msgstr "Imagem"
+
+#: src/Integration/ACF/Pages/About.php:73
+#: src/Integration/ACF/Pages/About.php:79
+#: src/Integration/ACF/Pages/About.php:85
+msgid "My Clients"
+msgstr "Meus Clientes"
+
+#: src/Integration/ACF/Pages/About.php:91
+#: src/Integration/ACF/Pages/About.php:97
+#: src/Integration/ACF/Pages/About.php:103
+msgid "My Experience"
+msgstr "Minha Experiência"
+
+#: src/Integration/ACF/Pages/About.php:109
+#: src/Integration/ACF/Pages/About.php:115
+#: src/Integration/ACF/Pages/About.php:121
+msgid "RavenDB"
+msgstr "RavenDB"
+
+#: src/Integration/ACF/Pages/About.php:127
+#: src/Integration/ACF/Pages/About.php:133
+#: src/Integration/ACF/Pages/About.php:139
+msgid "Most Valuable Professional"
+msgstr "Most Valuable Professional"
+
+#: src/Setup/Navigation.php:31
+msgid "Primary"
+msgstr "Primário"
+
+#: src/Setup/Navigation.php:32
+msgid "Social Menu"
+msgstr "Menu Social"
