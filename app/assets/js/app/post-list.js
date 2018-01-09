@@ -23,18 +23,14 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 						fitWidth: true
 					});
 
-					masonry.on( 'layoutComplete', function(msnryInstance, laidOutItems) {
-						$this
-							.css('visibility', 'visible')
-							.addClass('animated fadeInUpBig')
-							.siblings('.post-list--loading')
-								.addClass('animated fadeOutDown')
-								.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-									jQuery( this ).hide();
-								});
-					});
-
-					masonry.layout();
+					$this
+						.css('visibility', 'visible')
+						.addClass('animated fadeInUpBig')
+						.siblings('.post-list--loading')
+							.addClass('animated fadeOutDown')
+							.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+								jQuery( this ).hide();
+							});
 				});
 		});
 	}
