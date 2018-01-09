@@ -25,8 +25,8 @@ class BackgroundImage extends Base {
 	 * 
 	 * @return string The header backgorund image URL.
 	 */
-	public function get_header_bg_image() {
-		if( ! apply_filters( 'elemarjr_display_hero', true ) ) {
+	public function get_header_bg_image( $display_hero ) {
+		if( ! $display_hero ) {
 			return '';
 		}
 		

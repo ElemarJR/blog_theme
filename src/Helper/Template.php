@@ -57,11 +57,11 @@ class Template {
 	 * 
 	 * @return string The heaer classes.
 	 */
-	public function header_classes() {
+	public function header_classes( $display_hero ) {
 		$classes = array();
 		$classes[] = 'site-header';
 		
-		if( ! apply_filters( 'elemarjr_display_hero', true ) ) {
+		if( ! $display_hero ) {
 			$classes[] = 'site-header__no-hero';
 		}
 			

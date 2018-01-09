@@ -19,6 +19,13 @@ use Aztec\Helper\BackgroundImage;
  */
 global $container;
 
+/**
+ * Display hero in the site header
+ * 
+ * @var bool $display_hero
+ */
+$display_hero = $container->get( 'display_hero' );
+
 ?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -29,8 +36,8 @@ global $container;
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
 	<?php
-		$bg_image = $container->get( BackgroundImage::class )->get_header_bg_image();
-		$classes = $container->get( Template::class )->header_classes();
+		$bg_image = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
+		$classes = $container->get( Template::class )->header_classes( $display_hero );
 	?>
 	<header id="masthead" class="<?php echo esc_attr( $classes ) ?>" data-bg="<?php echo esc_url( $bg_image ) ?>">
 		<div class="top-header-wrapper">
@@ -61,7 +68,13 @@ global $container;
 			</div>
 		</div>
 
-		<?php if( apply_filters( 'elemarjr_display_hero', true ) ) : ?>
+		<?php 
+			if( $container->get( 'display_breadcrumb' ) ) :
+				get_template_part( 'template-parts/blog/breadcrumb' );
+			endif;
+		?>
+
+		<?php if( $display_hero ) : ?>
 		<div class="hero--wrapper">
 			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
 			<div class="<?php echo esc_attr( 'container hero hero__' . $hero_template ) ?>">
@@ -72,6 +85,7 @@ global $container;
 			</div>
 		</div>
 		<?php endif; ?>
+		
 	</header><!-- #masthead -->
 
 	<?php 

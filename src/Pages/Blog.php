@@ -21,6 +21,7 @@ class Blog extends Base {
 		add_action( 'pre_get_posts', $this->callback( 'limit_posts_per_page' ) );
 		
 		add_filter( 'elemarjr_display_hero', $this->callback( 'display_hero' ) );
+		add_filter( 'elemarjr_display_breadcrumb', $this->callback( 'display_breadcrumb' ) );
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
 		add_filter( 'excerpt_more', $this->callback( 'excerpt_more' ) );
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
@@ -33,11 +34,19 @@ class Blog extends Base {
 	 * @return boolean True, if is the home of the blog. False, otherwise.
 	 */
 	public function display_hero( $display ) {
-		if( is_home() && 1 === ( get_query_var( 'paged', 1 ) ) ) {
+		if( $this->is_post_list() ) {
 			return false;
 		}
 		
 		return $display;
+	}
+	
+	public function display_breadcrumb() {
+		return $this->is_post_list() || is_single();
+	}
+	
+	public function is_post_list() {
+		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
 	}
 
 	/**

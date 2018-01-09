@@ -1,0 +1,28 @@
+.breadcrumb
+    color $gray-light
+    list-style none
+    margin 0
+    padding 20px 0
+
+    &--wrapper
+        background $red
+        position relative
+        z-index 10
+
+        /.single-post &
+            background none
+
+    &--item
+        display inline
+
+        &:after
+            content '/'
+            display inline-block
+            margin 0 10px
+
+        &:last-child:after
+            display none
+
+    &--link
+        color $white
+        text-decoration none
