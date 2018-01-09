@@ -7,7 +7,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="listing-post__content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
