@@ -42,7 +42,7 @@ class Blog extends Base {
 	}
 	
 	public function display_breadcrumb() {
-		return $this->is_post_list() || is_single();
+		return $this->is_post_list();
 	}
 	
 	public function is_post_list() {
