@@ -5,22 +5,23 @@
  * @todo Add animation to post list
  */
 define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) {
-	var $postList = jQuery( '.post-list' );
-
-	if( $postList.length > 0 ) {
-		$postList.imagesLoaded()
+	jQuery( '.post-list' ).each( function( i,item ) {
+		jQuery( item ).imagesLoaded()
 			.done(function( instance ) {
 				var $this = jQuery( instance.elements[0] );
+
 				$this
 					.css({
 						'display': 'block',
 						'visibility' : 'hidden'
 					});
 
-				var masonry = new Masonry( instance.elements[0], {
-					itemSelector: '.post',
-					fitWidth: true
-				});
+				if( jQuery( item ).length > 3 ) {
+					var masonry = new Masonry( instance.elements[0], {
+						itemSelector: '.post',
+						fitWidth: true
+					});
+				}
 
 				$this
 					.css('visibility', 'visible')
@@ -33,5 +34,5 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 
 				jQuery( window ).trigger( 'resize' );
 			});
-	}
+	});
 });
