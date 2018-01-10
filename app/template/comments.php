@@ -12,11 +12,16 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 
 	<div class="comments-area--number">
-		<?php
-			printf(
-				_nx( '1 Comment', '%1$s Comments', get_comments_number(), 'comments title', 'elemarjr' ), 
-				number_format_i18n( get_comments_number() )
-			);
+		<?php 
+			$n = get_comments_number();
+			$comments_string = __( 'No Comments' );
+			if( 1 === $n ) {
+				$comments_string = __( '1 Comment' );
+			} elseif( 1 < $n ) {
+				$comments_string = $n . ' ' . __( 'Comments' );
+			}
+
+			echo esc_html( $comments_string );
 		?>
 	</div>
 
