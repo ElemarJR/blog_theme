@@ -47,6 +47,12 @@ services:
       - .:/app:cached
     depends_on:
       - db
+    environment:
+      # Run $ sudo ifconfig en0 alias 10.254.254.254 255.255.255.0
+      # to create a alias IP for the host machine and connect with Xdebug.
+      # This command must be executed every time you restartr your machine.
+      # Switch the value to 'On' to enable the remote connection.
+      PHP_XDEBUG_REMOTE_ENABLE: "Off"
 
   # Node 8.2 with Grunt and Bower
   node:

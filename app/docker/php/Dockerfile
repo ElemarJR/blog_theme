@@ -4,7 +4,9 @@
 # Credits: https://github.com/docker-library/wordpress
 #
 # Alpine packages
+# autoconf          - Pecl dependency
 # bash              - To execute the bin scripts
+# build-base        - Pecl dependency
 # libjpeg-turbo-dev - Thumbnail generator
 # libpng-dev        - Thumbnail generator
 # mysql-client      - To WP-CLI access the database
@@ -17,7 +19,7 @@
 FROM php:7.1-alpine
 
 # Install alpine packages
-RUN apk add --update bash mysql-client openssh-client
+RUN apk add --update autoconf bash build-base mysql-client openssh-client
 
 # install the PHP extensions we need
 RUN set -ex; \
@@ -53,6 +55,10 @@ RUN { \
 		echo 'opcache.enable_cli=1'; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
+# Enable xdebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 # Override WP-CLI program to open help
 # By default WP-CLI uses 'less -r'. '-r' argument is incompatible on Alpine
 ENV PAGER="less"
@@ -61,6 +67,7 @@ ENV PAGER="less"
 ENV PATH="/app/vendor/bin:${PATH}"
 
 COPY entrypoint /usr/local/bin/
+COPY ./xdebug.ini /usr/local/etc/php/conf.d/
 
 WORKDIR /app
 
