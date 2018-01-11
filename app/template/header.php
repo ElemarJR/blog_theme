@@ -36,10 +36,14 @@ $display_hero = $container->get( 'display_hero' );
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
 	<?php
-		$bg_image = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
+		$bg_images = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
 		$classes = $container->get( Template::class )->header_classes( $display_hero );
 	?>
-	<header id="masthead" class="<?php echo esc_attr( $classes ) ?>" data-bg="<?php echo esc_url( $bg_image ) ?>">
+	<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
+		foreach ( $bg_images as $name => $url ) :
+			echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
+		endforeach;
+	?>>
 		<div class="top-header-wrapper">
 			<div class="top-header container">
 				<div class="site-branding">

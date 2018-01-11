@@ -8,17 +8,43 @@
 namespace Aztec\Setup;
 
 use Aztec\Base;
+use DI\Container;
 
 /**
  * Manipulate project thumbnail
  */
 class Thumbnail extends Base {
 
+	public $image_sizes;
+	
+	public function __construct( Container $container ) {
+		parent::__construct( $container );
+		
+		$this->image_sizes = array(
+			array(
+				'name' => 'header-sm',
+				'width' => 480,
+				'height' => 760,
+			),
+			array(
+				'name' => 'header-md',
+				'width' => 768,
+				'height' => 984,
+			),
+			array(
+				'name' => 'header-lg',
+				'width' => 1440,
+				'height' => 900,
+			),
+		);
+	}
+
 	/**
 	 * Add thumbnail behavior hooks
 	 */
 	public function init() {
 		add_action( 'after_setup_theme', $this->callback( 'add_thumbnail_support' ) );
+		add_action( 'after_setup_theme', $this->callback( 'add_image_sizes' ) );
 	}
 
 	/**
@@ -26,5 +52,14 @@ class Thumbnail extends Base {
 	 */
 	public function add_thumbnail_support() {
 		add_theme_support( 'post-thumbnails' );
+	}
+	
+	/**
+	 * Add header image sizes
+	 */
+	public function add_image_sizes() {
+		foreach ( $this->image_sizes as $image_size ) {
+			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'], true );
+		}
 	}
 }
