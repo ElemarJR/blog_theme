@@ -1,0 +1,138 @@
+// Hero Content
+.hero
+    bottom 0
+    left 0
+    position absolute
+    right 0
+    top 0
+
+    &--wrapper
+        height 100%
+        position absolute
+        top 0
+        width 100%
+
+    &--container
+        bottom 116px // .scroll-button height + padding
+        color $white
+        max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
+        position absolute
+
+    &--title
+        color $red
+        margin 0
+        text-transform uppercase
+
+    &--description
+        font-size 22px
+        margin 0
+        text-transform none
+
+    &--button
+        margin 0
+
+    &--scroll-button
+        color $white
+        font-size 56px
+        left 50%
+        padding 30px
+        position absolute
+        bottom 0
+        transform translateX( -50% )
+
+        &:hover
+            color $red
+
+    ~/__home
+        & ^[0]--title
+            font-size 29px
+            margin-bottom 45px
+            max-width 690px
+
+            @media screen and ( min-width $screen-sm )
+                font-size 40px
+
+            @media screen and ( min-width $screen-md )
+                font-size 64px
+
+        & ^[0]--description
+            margin-bottom 60px
+            max-width 450px
+
+    ~/__blog
+        text-transform uppercase
+
+        & ^[0]--container
+            width 440px
+
+        & ^[0]--title
+            @media screen and ( min-width $screen-sm )
+                font-size 64px
+
+        & ^[0]--subtitle
+            font-size 44px
+            font-weight 400
+            line-height 1.1em
+            margin-bottom 40px
+
+            @media screen and ( min-width $screen-sm )
+                font-size 70px
+                margin 0 0 33px
+
+    ~/__single
+        & ^[0]--title
+            color $white
+            text-transform uppercase
+            max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
+
+        & ^[0]--meta
+            &--data
+                display block
+                margin-top 10px
+
+                @media screen and ( min-width $screen-md )
+                    display inline-block
+                    margin-right 60px
+
+                &__reading
+                    icon( i-time )
+
+                &__comments
+                    color $white
+                    icon( i-comments )
+                    text-decoration none
+
+                    &:hover
+                        color $red
+
+                        &:before
+                            color $red
+
+                &:before
+                    display inline-block
+                    color $tiffany
+                    font-size 24px
+                    vertical-align bottom
+
+    ~/__about
+        width 100%
+
+        .typed-cursor
+            animation flash 2s infinite
+            color $white
+            font-size 52px
+
+        & ^[0]--container
+            width 100%
+            text-align center
+
+        & ^[0]--title
+            color $white
+            display inline-block
+            font-size 50px
+            font-weight 400
+
+            strong
+                color $tiffany
+                font-weight 700
+                white-space nowrap

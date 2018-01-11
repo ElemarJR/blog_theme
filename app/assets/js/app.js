@@ -22,6 +22,7 @@ if (typeof jQuery === 'function') {
 requirejs([
     'app/animation',
     'app/font',
+    'app/hero',
     'app/post-list',
     'app/scroll-button',
     'app/site-footer',
