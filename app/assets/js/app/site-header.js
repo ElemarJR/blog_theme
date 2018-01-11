@@ -6,15 +6,10 @@ define([],function () {
 	 * Load the background header
 	 */
 	var $siteHeader = jQuery( '.site-header' ),
-		bg = $siteHeader.data('bg'),
 		$topHeader = jQuery( '.top-header-wrapper' ),
 		headerStickyClass = 'top-header-wrapper__sticky'
 		$body = jQuery( 'body' ),
 		bodyStickyClass = 'sticky';
-
-	if( '' !== bg ) {
-    	$siteHeader.css( 'background-image', 'url("' + bg + '")' );
-	}
 
 	/*
 	 * Hide the navigation when open the search
@@ -40,5 +35,20 @@ define([],function () {
 				$topHeader.removeClass( headerStickyClass );
 			}
 		} )
-		.trigger( 'scroll' );
+		.trigger( 'scroll' )
+		.on( 'resize', function() {
+			var bg = $siteHeader.data('bg-header-sm');
+
+			if( '' !== bg ) {
+				$siteHeader.css( 'background-image', 'url("' + bg + '")' );
+			}
+
+			if( jQuery( this ).width() >= 768 ) {
+				bg = $siteHeader.data('bg-header-lg');
+			} else if( jQuery( this ).width() >= 480 ) {
+				bg = $siteHeader.data('bg-header-md');
+			}
+
+			$siteHeader.css( 'background-image', 'url("' + bg + '")' );
+		} );
 });
