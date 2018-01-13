@@ -61,7 +61,7 @@ class Blog {
 	 */
 	public function add_hero_fields() {
 		acf_add_local_field_group( array(
-			'key' => 'home_hero',
+			'key' => 'blog_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
