@@ -35,9 +35,30 @@ class About {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
+			$this->add_hero_fields();
 			$this->add_body_fields();
 		}
 	}
+	
+	/**
+	 * Add Hero custom fields
+	 */
+	public function add_hero_fields() {
+		acf_add_local_field_group( array(
+			'key' => 'about_hero',
+			'title' => __( 'Hero', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
+			'fields' => array(
+				array(
+					'type' => 'wysiwyg',
+					'key' => 'hero_text',
+					'name' => 'hero_text',
+					'label' => __( 'Text', 'elemarjr' ),
+				),
+			),
+			'location' => $this->location,
+		) );
+	}	
 
 	/**
 	 * Add Purpose custom fields

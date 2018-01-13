@@ -27,6 +27,46 @@ class Blog extends Base {
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 	}
+	
+	/**
+	 * Get the ID of the page set in reading settings
+	 * 
+	 * @return int|boolean The page ID in the setting. False, if not set.
+	 */
+	public function get_id() {
+		return (int) get_option( 'page_for_posts', false );
+	}
+	
+	/**
+	 * Get the page id for the current language
+	 * 
+	 * @return int|false|NULL The page id, if exist for the current language. 
+	 *                        Null, if the current language is not defined yet.
+	 *                        False, otherwise.
+	 */
+	public function get_current_language_id() {
+		return pll_get_post( $this->get_id() );
+	}
+	
+	/**
+	 * Get all languages page ids
+	 * 
+	 * @return array|number|false|NULL
+	 */
+	public function get_pages_id() {
+		$pages_id = array();
+
+		if( $main_page_id = $this->get_id() ) {
+			$languages = PLL()->links->model->get_languages_list();
+			foreach ( $languages as $language ) {
+				if( ! empty( $page_id = pll_get_post( $main_page_id, $language->slug ) ) ) {
+					$pages_id[] = $page_id;
+				}
+			}
+		}
+
+		return $pages_id;
+	}
 
 	/**
 	 * Show header just in the home of the blog

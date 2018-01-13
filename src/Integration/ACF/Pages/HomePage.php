@@ -34,10 +34,50 @@ class HomePage {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
+			$this->add_hero_fields();
 			$this->add_purpose_fields();
 			$this->add_quote_fields();
 			$this->add_blog_fields();
 		}
+	}
+	
+	/**
+	 * Add Hero custom fields
+	 */
+	public function add_hero_fields() {
+		acf_add_local_field_group( array(
+			'key' => 'home_hero',
+			'title' => __( 'Hero', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
+			// @todo Use repeater instead two fixed fields
+			'fields' => array(
+				array(
+					'type' => 'text',
+					'key' => 'hero_title',
+					'name' => 'hero_title',
+					'label' => __( 'Title', 'elemarjr' ),
+				),
+				array(
+					'type' => 'wysiwyg',
+					'key' => 'hero_text',
+					'name' => 'hero_text',
+					'label' => __( 'Text', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'hero_button_label',
+					'name' => 'hero_button_label',
+					'label' => __( 'Button Label', 'elemarjr' ),
+				),
+				array(
+					'type' => 'url',
+					'key' => 'hero_button_url',
+					'name' => 'hero_button_url',
+					'label' => __( 'Button URL', 'elemarjr' ),
+				),
+			),
+			'location' => $this->location,
+		) );
 	}
 
 	/**

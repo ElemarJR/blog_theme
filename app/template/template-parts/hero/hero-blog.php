@@ -1,5 +1,14 @@
-<h1 class="hero--title">Blog</h1>
-<h2 class="hero--subtitle">Tecnologia e negócios</h2>
+<?php 
+
+use Aztec\Pages\Blog;
+
+global $container;
+
+$blog_page_id = $container->get( Blog::class )->get_current_language_id();
+
+?>
+<h1 class="hero--title"><?php echo esc_html( get_post_meta( $blog_page_id, 'hero_title', true ) ) ?></h1>
+<h2 class="hero--subtitle"><?php echo esc_html( get_post_meta( $blog_page_id, 'hero_subtitle', true ) ) ?></h2>
 <p class="hero--description">
-	Um lugar para você ficar informado. Tudo sobre estratégias, inovação e tecnologia.
+	<?php echo wp_kses_post( get_post_meta( $blog_page_id, 'hero_text', true ) ) ?>
 </p>
