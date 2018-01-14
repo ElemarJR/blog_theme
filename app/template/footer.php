@@ -3,7 +3,9 @@
 <footer id="colophon" class="site-footer">
 	<div class="site-info container">
 		<div class="site-branding">
-			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+			<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+			</a>	
 		</div><!-- .site-branding -->
 
 		<div class="follow-us">
@@ -12,9 +14,11 @@
 		</div>
 
 		<div class="contact-info">
-			<p>+55 (51) 99942 0609</p>
+			<p><?php echo esc_html( pll__( 'phone' ) ) ?></p>
 			<p>
-				<a href="mailto:falecom@elemarjr.com">falecom@elemarjr.com</a>
+				<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
+					<?php echo esc_html( pll__( 'email' ) ) ?>
+				</a>
 			</p>
 		</div>
 	</div><!-- .site-info -->

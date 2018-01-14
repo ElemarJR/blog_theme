@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-01-09T13:28:36+00:00\n"
-"PO-Revision-Date: 2018-01-09T13:28:36+00:00\n"
+"POT-Creation-Date: 2018-01-14T18:31:05+00:00\n"
+"PO-Revision-Date: 2018-01-14T18:31:05+00:00\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Domain: elemarjr\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
-#: ./app/template/comments.php:43
+#: ./app/template/comments.php:48
 msgid "Comments are closed."
 msgstr ""
 
@@ -33,15 +33,24 @@ msgstr ""
 msgid "See more"
 msgstr ""
 
+#: ./app/template/page-templates/contact.php:38
+#: ./app/template/page-templates/contact.php:39
+msgid "Your Message"
+msgstr ""
+
 #: ./app/template/page-templates/contact.php:42
 msgid "Send"
+msgstr ""
+
+#: ./app/template/page-templates/contact.php:51
+msgid "Phone"
 msgstr ""
 
 #: ./app/template/template-parts/blog/single/footer-meta.php:3
 msgid "Tags"
 msgstr ""
 
-#: ./app/template/template-parts/blog/single/footer-meta.php:8
+#: ./app/template/template-parts/blog/single/footer-meta.php:7
 msgid "Share"
 msgstr ""
 
@@ -49,7 +58,7 @@ msgstr ""
 msgid "Loading posts..."
 msgstr ""
 
-#: ./app/template/template-parts/blog/category-nav.php:13
+#: ./app/template/template-parts/blog/category-nav.php:20
 msgid "Show All"
 msgstr ""
 
@@ -57,99 +66,130 @@ msgstr ""
 msgid "Reading time:"
 msgstr ""
 
-#: ./app/template/footer.php:10
+#: ./app/template/footer.php:12
 msgid "Follow us"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:49
-msgid "Purpose"
+#: ./src/Integration/Polylang/Polylang.php:41
+msgid "Contact Phone"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:57
-msgid "Icon Class 1"
+#: ./src/Integration/Polylang/Polylang.php:42
+msgid "Contact Email"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:63
-msgid "Text 1"
+#: ./src/Integration/ACF/Pages/Blog.php:65
+#: ./src/Integration/ACF/Pages/HomePage.php:50
+#: ./src/Integration/ACF/Pages/About.php:49
+msgid "Hero"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:69
-msgid "Icon Class 2"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/HomePage.php:75
-msgid "Text 2"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/HomePage.php:88
-#: ./src/Integration/ACF/Pages/HomePage.php:95
-msgid "Quote"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/HomePage.php:108
-msgid "Blog"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/HomePage.php:115
-#: ./src/Integration/ACF/Pages/About.php:61
-#: ./src/Integration/ACF/Pages/About.php:79
-#: ./src/Integration/ACF/Pages/About.php:97
-#: ./src/Integration/ACF/Pages/About.php:115
-#: ./src/Integration/ACF/Pages/About.php:133
-msgid "Text"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/HomePage.php:116
-msgid "Text after the section title"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/About.php:48
-msgid "Sections"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/About.php:55
-#: ./src/Integration/ACF/Pages/About.php:61
-#: ./src/Integration/ACF/Pages/About.php:67
-msgid "My Abilities"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/About.php:55
-#: ./src/Integration/ACF/Pages/About.php:73
-#: ./src/Integration/ACF/Pages/About.php:91
-#: ./src/Integration/ACF/Pages/About.php:109
-#: ./src/Integration/ACF/Pages/About.php:127
+#: ./src/Integration/ACF/Pages/Blog.php:72
+#: ./src/Integration/ACF/Pages/HomePage.php:58
+#: ./src/Integration/ACF/Pages/About.php:76
+#: ./src/Integration/ACF/Pages/About.php:94
+#: ./src/Integration/ACF/Pages/About.php:112
+#: ./src/Integration/ACF/Pages/About.php:130
+#: ./src/Integration/ACF/Pages/About.php:148
 msgid "Title"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:67
-#: ./src/Integration/ACF/Pages/About.php:85
-#: ./src/Integration/ACF/Pages/About.php:103
-#: ./src/Integration/ACF/Pages/About.php:121
-#: ./src/Integration/ACF/Pages/About.php:139
+#: ./src/Integration/ACF/Pages/Blog.php:78
+msgid "Subtitle"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/Blog.php:84
+#: ./src/Integration/ACF/Pages/HomePage.php:64
+#: ./src/Integration/ACF/Pages/HomePage.php:155
+#: ./src/Integration/ACF/Pages/About.php:56
+#: ./src/Integration/ACF/Pages/About.php:82
+#: ./src/Integration/ACF/Pages/About.php:100
+#: ./src/Integration/ACF/Pages/About.php:118
+#: ./src/Integration/ACF/Pages/About.php:136
+#: ./src/Integration/ACF/Pages/About.php:154
+msgid "Text"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:70
+msgid "Button Label"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:76
+msgid "Button URL"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:89
+msgid "Purpose"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:97
+msgid "Icon Class 1"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:103
+msgid "Text 1"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:109
+msgid "Icon Class 2"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:115
+msgid "Text 2"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:128
+#: ./src/Integration/ACF/Pages/HomePage.php:135
+msgid "Quote"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:148
+msgid "Blog"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:156
+msgid "Text after the section title"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:69
+msgid "Sections"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:76
+#: ./src/Integration/ACF/Pages/About.php:82
+#: ./src/Integration/ACF/Pages/About.php:88
+msgid "My Abilities"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:88
+#: ./src/Integration/ACF/Pages/About.php:106
+#: ./src/Integration/ACF/Pages/About.php:124
+#: ./src/Integration/ACF/Pages/About.php:142
+#: ./src/Integration/ACF/Pages/About.php:160
 msgid "Image"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:73
-#: ./src/Integration/ACF/Pages/About.php:79
-#: ./src/Integration/ACF/Pages/About.php:85
+#: ./src/Integration/ACF/Pages/About.php:94
+#: ./src/Integration/ACF/Pages/About.php:100
+#: ./src/Integration/ACF/Pages/About.php:106
 msgid "My Clients"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:91
-#: ./src/Integration/ACF/Pages/About.php:97
-#: ./src/Integration/ACF/Pages/About.php:103
+#: ./src/Integration/ACF/Pages/About.php:112
+#: ./src/Integration/ACF/Pages/About.php:118
+#: ./src/Integration/ACF/Pages/About.php:124
 msgid "My Experience"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:109
-#: ./src/Integration/ACF/Pages/About.php:115
-#: ./src/Integration/ACF/Pages/About.php:121
+#: ./src/Integration/ACF/Pages/About.php:130
+#: ./src/Integration/ACF/Pages/About.php:136
+#: ./src/Integration/ACF/Pages/About.php:142
 msgid "RavenDB"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:127
-#: ./src/Integration/ACF/Pages/About.php:133
-#: ./src/Integration/ACF/Pages/About.php:139
+#: ./src/Integration/ACF/Pages/About.php:148
+#: ./src/Integration/ACF/Pages/About.php:154
+#: ./src/Integration/ACF/Pages/About.php:160
 msgid "Most Valuable Professional"
 msgstr ""
 

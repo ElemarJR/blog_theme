@@ -27,16 +27,16 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
 		<form action="#" method="POST" class="contact--form form">
 			<label for="" class="form--half">
-				<span class="screen-reader-text">Nome</span>
-				<input type="text" placeholder="Nome" />
+				<span class="screen-reader-text"><?php esc_html_e( 'Name' ) ?></span>
+				<input type="text" placeholder="<?php esc_attr_e( 'Name' ) ?>" />
 			</label>
 			<label for="" class="form--half">
-				<span class="screen-reader-text">E-mail</span>
-				<input type="text" placeholder="E-mail" />
+				<span class="screen-reader-text"><?php esc_html_e( 'Email' ) ?></span>
+				<input type="text" placeholder="<?php esc_attr_e( 'Email' ) ?>" />
 			</label>
 			<label for="">
-				<span class="screen-reader-text">Mensagem</span>
-				<textarea placeholder="Sua mensagem"></textarea>
+				<span class="screen-reader-text"><?php esc_html_e( 'Your Message', 'elemarjr' ) ?></span>
+				<textarea placeholder="<?php esc_attr_e( 'Your Message', 'elemarjr' ) ?>"></textarea>
 			</label>
 			<div class="form--submit-wrapper">
 				<input type="submit" class="button button__tiffany" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ) ?>" />
@@ -48,16 +48,18 @@ get_header(); ?>
 				<div class="contact--info--item">
 					<i class="bordered-icon bordered-icon__white bordered-icon__big i-phone"></i>
 					<div class="contact--info--data">
-						<strong>Fone</strong>
-						+55 (51) 99942-0609
+						<strong><?php esc_html_e( 'Phone', 'elemarjr' ) ?></strong>
+						<?php echo esc_html( pll__( 'phone' ) ) ?>
 					</div>
 				</div>
 				
 				<div class="contact--info--item">
 					<i class="bordered-icon bordered-icon__white bordered-icon__big i-mail-filled"></i>
 					<div class="contact--info--data">
-						<strong>E-mail</strong>
-						<a href="#">falecom@elemarjr.com</a>
+						<strong><?php esc_html_e( 'Email' ) ?></strong>
+						<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
+							<?php echo esc_html( pll__( 'email' ) ) ?>
+						</a>
 					</div>
 				</div>
 			</div>
