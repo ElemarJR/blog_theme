@@ -25,7 +25,8 @@ get_header(); ?>
 	<?php
 		$container->set( 'post_list.query', $wp_query );
 		$container->set( 'post_list.extra_class', '' );
-		get_template_part( 'template-parts/blog/post-list' );
+		$template = $wp_query->have_posts ? '' : 'empty';
+		get_template_part( 'template-parts/blog/post-list', $template );
 	?>
 
 	<div class="posts-nav">
