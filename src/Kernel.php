@@ -47,6 +47,7 @@ class Kernel {
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
 			\Aztec\Pages\NotFound::class,
+			\Aztec\Pages\Search::class,
 			
 			\Aztec\Performance\Css::class,
 			
