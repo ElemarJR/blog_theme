@@ -65,13 +65,13 @@ button
     background-position center center
     background-size cover
     height 100vh
+    min-height 500px
     margin-top '-%s' % $sm-nav-height
     padding-top $sm-nav-height
 
     @media screen and ( min-width $nav-breakpoint )
         margin-top '-%s' % $sm-nav-height-breakpoint
         padding-top $sm-nav-height-breakpoint
-        min-height auto
 
     /.single-post &
         position relative
@@ -86,6 +86,9 @@ button
             right 0
             top 0
             width 100%
+
+    /.site-header__no-hero &
+        min-height auto
 
     /.top-header-wrapper
         border-bottom 1px solid rgba( $white, .7 )
@@ -270,3 +273,7 @@ button
     &--link
         color $white
         text-decoration none
+
+.site-content
+.site-footer
+    visibility hidden
