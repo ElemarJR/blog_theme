@@ -28,7 +28,7 @@ class BackgroundImage extends Base {
 	 */
 	public function get_header_bg_image( $display_hero ) {
 		if( ! $display_hero ) {
-			return '';
+			return array();
 		}
 		
 		$image_urls = false;
