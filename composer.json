@@ -20,6 +20,7 @@
 		"wpackagist-plugin/polylang" : "~2.2",
 		"wpackagist-plugin/post-thumbnail-editor" : "~2.0",
 		"wpackagist-plugin/tawkto-live-chat" : "^0.3",
+		"wpackagist-plugin/wordpress-seo" : "^6.1",
 		"wpackagist-plugin/wp-github-sync" : "~2.0"
 	},
 	"require-dev" : {

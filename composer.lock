@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc5ac5fb620216f6c02843868cc00a52",
+    "content-hash": "bab659dc120113d04a48a086b8727b66",
     "packages": [
         {
             "name": "aaemnnosttv/wp-cli-dotenv-command",
@@ -3880,6 +3880,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/tawkto-live-chat/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "6.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/6.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.6.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-plugin/wp-github-sync",
