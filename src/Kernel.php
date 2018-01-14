@@ -44,6 +44,8 @@ class Kernel {
 			
 			\Aztec\Integration\Polylang\Polylang::class,
 			
+			\Aztec\Integration\YoastSEO\YoastSEO::class,
+			
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
 			\Aztec\Pages\NotFound::class,
