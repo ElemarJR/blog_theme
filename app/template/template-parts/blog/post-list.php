@@ -1,6 +1,6 @@
 <?php 
 
-global $container, $wp_query;
+global $container;
 $query = $container->get( 'post_list.query' );
 $extra_class = $container->get( 'post_list.extra_class' );
 
