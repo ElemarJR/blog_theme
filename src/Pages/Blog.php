@@ -24,8 +24,9 @@ class Blog extends Base {
 		add_filter( 'elemarjr_display_breadcrumb', $this->callback( 'display_breadcrumb' ) );
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
 		add_filter( 'excerpt_more', $this->callback( 'excerpt_more' ) );
-		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
+		add_filter( 'nav_menu_css_class', $this->callback( 'nav_menu_css_class' ), 10, 4 ); 
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
+		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 	}
 	
 	/**
@@ -124,5 +125,30 @@ class Blog extends Base {
 	
 	public function nav_link_class( $attr ) {
 		return $attr . ' class="button"';
+	}
+	
+	/**
+	 * Add current menu item classes for all pages related with the blog
+	 * 
+	 * @param array     $classes The CSS classes that are applied to the menu item's `<li>` element.
+	 * @param \WP_Post  $item    The current menu item.
+	 * @param \stdClass $args    An object of wp_nav_menu() arguments.
+	 * @param int       $depth   Depth of menu item. Used for padding.
+	 * @return array The CSS classes adding current classes if internal blog page.
+	 */
+	public function nav_menu_css_class( $classes, $item, $args, $depth ) {
+		if( ! in_array( $item->object_id, $this->get_pages_id() ) ) {
+			return $classes;
+		}
+		
+		if ( ! ( $this->is_post_list() || is_single() ) ) {
+			return $classes;
+		}
+
+		$classes[] = 'current-menu-item';
+		$classes[] = 'current_page_item';
+		$classes[] = 'current_page_parent';
+		
+		return $classes;
 	}
 }
