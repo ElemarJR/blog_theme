@@ -25,8 +25,8 @@ get_header(); ?>
 			the_post();
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
-		<h2 class="contact--title">Deixe sua mensagem</h2>
-		<p class="contact--description">Pellentesque pulvinar purus ligula, at suscipit ligula feugiat quis. Curabitur et posuere metus. Nulla eros lacus, venenatis quis varius a, pharetra eu mi. Vestibulum suscipit quam aliquet, cursus mi et, fringilla sapien. Etiam accumsan enim eget nunc molestie elementum</p>
+		<h2 class="contact--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'title', true  ) ) ?></h2>
+		<p class="contact--description"><?php echo wp_kses_post( get_post_meta( get_the_ID(), 'description', true  ) ) ?></p>
 
 		<form action="#" method="POST" class="contact--form form">
 			<label for="">

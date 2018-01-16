@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-14T18:31:05+00:00\n"
-"PO-Revision-Date: 2018-01-14 16:59-0200\n"
+"POT-Creation-Date: 2018-01-16T23:43:57+00:00\n"
+"PO-Revision-Date: 2018-01-16 21:51-0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -14,15 +14,27 @@ msgstr ""
 "X-Domain: elemarjr\n"
 "X-Generator: Poedit 2.0.5\n"
 
-#: app/template/index.php:32
+#: app/template/404.php:17
+msgid "Page not found"
+msgstr "Página não encontrada"
+
+#: app/template/404.php:19
+msgid "Sorry! That page doesn't seem to exist."
+msgstr "Desculpe! Esta página não parece existir."
+
+#: app/template/404.php:22
+msgid "Back to home"
+msgstr "Voltar para página inicial"
+
+#: app/template/index.php:33
 msgid "Previous Page"
 msgstr "Página Anterior"
 
-#: app/template/index.php:32
+#: app/template/index.php:33
 msgid "Next Page"
 msgstr "Próxima Página"
 
-#: app/template/comments.php:48
+#: app/template/comments.php:45
 msgid "Comments are closed."
 msgstr "Comentários estão fechados."
 
@@ -34,18 +46,14 @@ msgstr "Pular para o conteúdo"
 msgid "See more"
 msgstr "Veja mais"
 
-#: app/template/page-templates/contact.php:38
-#: app/template/page-templates/contact.php:39
+#: app/template/page-templates/contact.php:41
+#: app/template/page-templates/contact.php:42
 msgid "Your Message"
 msgstr "Sua mensagem"
 
-#: app/template/page-templates/contact.php:42
+#: app/template/page-templates/contact.php:45
 msgid "Send"
 msgstr "Enviar"
-
-#: app/template/page-templates/contact.php:51
-msgid "Phone"
-msgstr "Fone"
 
 #: app/template/template-parts/blog/single/footer-meta.php:3
 msgid "Tags"
@@ -67,7 +75,7 @@ msgstr "Mostrar tudo"
 msgid "Reading time:"
 msgstr "Tempo de leitura:"
 
-#: app/template/footer.php:12
+#: app/template/footer.php:15
 msgid "Follow us"
 msgstr "Siga-nos"
 
@@ -79,12 +87,11 @@ msgstr "Telefone de contato"
 msgid "Contact Email"
 msgstr "E-mail de contato"
 
-#: src/Integration/ACF/Pages/Blog.php:65
-#: src/Integration/ACF/Pages/HomePage.php:50
-#: src/Integration/ACF/Pages/About.php:49
-msgid "Hero"
-msgstr "Hero"
+#: src/Integration/ACF/Pages/Contact.php:48
+msgid "Body"
+msgstr "Corpo"
 
+#: src/Integration/ACF/Pages/Contact.php:55
 #: src/Integration/ACF/Pages/Blog.php:72
 #: src/Integration/ACF/Pages/HomePage.php:58
 #: src/Integration/ACF/Pages/About.php:76
@@ -94,6 +101,16 @@ msgstr "Hero"
 #: src/Integration/ACF/Pages/About.php:148
 msgid "Title"
 msgstr "Título"
+
+#: src/Integration/ACF/Pages/Contact.php:61
+msgid "Description"
+msgstr "Descrição"
+
+#: src/Integration/ACF/Pages/Blog.php:65
+#: src/Integration/ACF/Pages/HomePage.php:50
+#: src/Integration/ACF/Pages/About.php:49
+msgid "Hero"
+msgstr "Hero"
 
 #: src/Integration/ACF/Pages/Blog.php:78
 msgid "Subtitle"
@@ -201,3 +218,6 @@ msgstr "Primário"
 #: src/Setup/Navigation.php:32
 msgid "Social Menu"
 msgstr "Menu Social"
+
+#~ msgid "Phone"
+#~ msgstr "Fone"
