@@ -13,10 +13,13 @@
 
         &--item
             border 1px solid $gray-light
-            color $red
+            color $gray
             height 100%
             padding 30px
             text-align center
+
+            strong
+                color $red
 
             &:first-child
                 margin-bottom 20px
@@ -49,8 +52,10 @@
             $icon-size = 26px
             $x-space = 20px
             $y-space = 60px
+            display inline-block
             padding 70px 55px
             position relative
+            width 615px
 
             &:before
                 icon-font()
@@ -69,7 +74,7 @@
                 right $x-space
 
     &--blog
-        margin-bottom 50px
+        padding-bottom 50px
         margin-top 50px
 
         &--header
