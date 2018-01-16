@@ -1,0 +1,14 @@
+.gallery
+    $gallery-gutter = 40px
+    display flex
+    flex-wrap wrap
+    margin-left - ( $gallery-gutter / 2 )
+
+    &-item
+        margin 0
+        padding ( $gallery-gutter / 2 )
+        text-align center
+
+        for $i in ( 1..9 )
+            ^[0]-columns-{$i} &
+                width ( 100% / $i )
