@@ -35,62 +35,65 @@ $display_hero = $container->get( 'display_hero' );
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
-	<?php
-		$bg_images = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
-		$classes = $container->get( Template::class )->header_classes( $display_hero );
-	?>
-	<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
-		foreach ( $bg_images as $name => $url ) :
-			echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
-		endforeach;
-	?>>
-		<div class="top-header-wrapper">
-			<div class="top-header container">
-				<div class="site-branding">
-					<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
-					</a>
-				</div><!-- .site-branding -->
+	<div class="top-header-wrapper">
+		<div class="top-header container">
+			<div class="site-branding">
+				<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+				</a>
+			</div><!-- .site-branding -->
 
-				<div class="header-right">
-					<div id="site-search" class="site-search">
-						<button class="header-toogle-button search-toggle" aria-controls="search" aria-expanded="false"></button>
-						<?php get_search_form() ?>
-					</div><!-- #site-search -->
+			<div class="header-right">
+				<div id="site-search" class="site-search">
+					<button class="header-toogle-button search-toggle" aria-controls="search" aria-expanded="false"></button>
+					<?php get_search_form() ?>
+				</div><!-- #site-search -->
 
-					<nav id="site-navigation" class="main-navigation">
-						<button class="header-toogle-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
-								'depth'          => 1,
-							) )
-						?>
-					</nav><!-- #site-navigation -->
-				</div>
+				<nav id="site-navigation" class="main-navigation">
+					<button class="header-toogle-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+							'depth'          => 1,
+						) )
+					?>
+				</nav><!-- #site-navigation -->
 			</div>
 		</div>
+	</div>
 
-		<?php 
-			if( $container->get( 'display_breadcrumb' ) ) :
-				get_template_part( 'template-parts/blog/breadcrumb' );
-			endif;
+	<div class="site-header--wrapper">
+		<?php
+			$bg_images = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
+			$classes = $container->get( Template::class )->header_classes( $display_hero );
 		?>
-
-		<?php if( $display_hero ) : ?>
-		<div class="hero--wrapper">
-			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
-			<div class="<?php echo esc_attr( 'container hero hero__' . $hero_template ) ?>">
-				<div class="hero--container">
-					<?php get_template_part( 'template-parts/hero/hero', $hero_template )  ?>
+		<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
+			foreach ( $bg_images as $name => $url ) :
+				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
+			endforeach;
+		?>>
+	
+			<?php 
+				if( $container->get( 'display_breadcrumb' ) ) :
+					get_template_part( 'template-parts/blog/breadcrumb' );
+				endif;
+			?>
+	
+			<?php if( $display_hero ) : ?>
+			<div class="hero--wrapper">
+				<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
+				<div class="<?php echo esc_attr( 'container hero hero__' . $hero_template ) ?>">
+					<div class="hero--container">
+						<?php get_template_part( 'template-parts/hero/hero', $hero_template )  ?>
+					</div>
+					<button class="hero--scroll-button mouse"></button>
 				</div>
-				<button class="hero--scroll-button i-mouse"></button>
 			</div>
-		</div>
-		<?php endif; ?>
-		
-	</header><!-- #masthead -->
+			<?php endif; ?>
+			
+		</header><!-- #masthead -->
+	</div>
 
 	<?php 
 		// @todo pass this code to `src`

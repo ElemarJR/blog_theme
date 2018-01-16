@@ -9,7 +9,9 @@ define([],function () {
 		$topHeader = jQuery( '.top-header-wrapper' ),
 		headerStickyClass = 'top-header-wrapper__sticky',
 		$body = jQuery( 'body' ),
-		bodyStickyClass = 'sticky';
+		bodyStickyClass = 'sticky',
+		$heroContainer = $siteHeader.find( '.hero--container' ),
+		heroContainerBottom = parseInt( $heroContainer.css( 'bottom' ) );
 
 	/*
 	 * Hide the navigation when open the search
@@ -34,7 +36,25 @@ define([],function () {
 				$body.removeClass( bodyStickyClass );
 				$topHeader.removeClass( headerStickyClass );
 			}
-		} )
+
+			var ymin = 0,
+				ymax = $siteHeader.height(),
+				scrollPos = jQuery(this).scrollTop();
+
+			if( scrollPos <= ymax ) {
+				var normalized = normalize( scrollPos, ymax, ymin );
+				console.log(normalized);
+				jQuery('.site-header')
+					.css({
+						'background-position' : '50% ' + ( ymax - ( ( normalized * ymax ) / 4 ) ) + 'px'
+					})
+					.find( '.hero--container' )
+						.css({
+							'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + "px",
+							'opacity': 1 - normalized
+						});
+			}
+		})
 		.trigger( 'scroll' )
 		.on( 'resize', function() {
 			var bg = $siteHeader.data('bg-header-sm');
@@ -51,4 +71,8 @@ define([],function () {
 
 			$siteHeader.css( 'background-image', 'url("' + bg + '")' );
 		} );
+
+	function normalize( val, max, min ) {
+		return ( val - min ) / ( max - min );
+	}
 });
