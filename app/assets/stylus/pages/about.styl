@@ -2,6 +2,19 @@
     &--row
         padding 90px 0
 
+        ul
+            padding-left 0
+
+        li
+            list-style none
+            margin-bottom 3px
+
+            &:before
+                color $tiffany
+                content i-check
+                icon-font()
+                margin-right 10px
+
         &--container
             @media screen and ( min-width $screen-md )
                 align-items center
