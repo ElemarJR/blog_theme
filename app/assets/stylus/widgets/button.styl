@@ -1,5 +1,5 @@
 a.button
-input[type="submit"]
+input[type="submit"].button
     $height = 56px
     background $red
     border 2px solid $red
@@ -16,7 +16,6 @@ input[type="submit"]
         border-color $white
         text-decoration none
 
-a.button
     &__bordered
         background transparent
         border 1px solid $white
@@ -27,9 +26,9 @@ a.button
 
     &__tiffany
         background $tiffany
-        border-color $tiffany
+        border 0
 
         &:hover
-            border-color $red
-            color $red
-
+            background-color $white
+            border-color $tiffany
+            color $tiffany

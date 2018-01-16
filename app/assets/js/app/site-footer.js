@@ -3,12 +3,18 @@
  */
 define([],function () {
 	jQuery( window ).on( 'resize', function() {
-		var $body = jQuery('body');
+		var $window = jQuery( window ),
+			$body = jQuery( 'body' ),
+			$siteContent = jQuery( '.site-content' ),
+			$footer = jQuery( '.site-footer' ),
+			windowHeight = $window.height();
 
-		if( $body.outerHeight() < jQuery( window ).height() ) {
+		if( $body.outerHeight() < windowHeight ) {
 			$body.addClass( 'footer-fixed' );
+			$siteContent.height( windowHeight - $footer.outerHeight() );
 		} else {
 			$body.removeClass( 'footer-fixed' );
+			$siteContent.css( 'height', 'auto' );
 		}
 	} );
 });

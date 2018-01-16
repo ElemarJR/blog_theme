@@ -50,21 +50,6 @@ define([],function () {
 			}
 		})
 		.trigger( 'scroll' )
-		.on( 'resize', function() {
-			var bg = $siteHeader.data('bg-header-sm');
-
-			if( '' !== bg ) {
-				$siteHeader.css( 'background-image', 'url("' + bg + '")' );
-			}
-
-			if( jQuery( this ).width() >= 768 ) {
-				bg = $siteHeader.data('bg-header-lg');
-			} else if( jQuery( this ).width() >= 480 ) {
-				bg = $siteHeader.data('bg-header-md');
-			}
-
-			$siteHeader.css( 'background-image', 'url("' + bg + '")' );
-		} );
 
 	function normalize( val, max, min ) {
 		return ( val - min ) / ( max - min );

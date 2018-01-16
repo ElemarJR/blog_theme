@@ -49,7 +49,7 @@ class Template extends Base {
 		$classes[] = $this->container->get( HelperTemplate::class )->get_template_name();
 		
 		if( ! $this->container->get( 'display_hero' ) ) {
-			$classes[] = 'site-header__no-hero';
+			$classes[] = 'no-hero';
 		}
 		
 		return $classes;

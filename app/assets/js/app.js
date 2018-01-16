@@ -23,6 +23,7 @@ requirejs([
     'app/animation',
     'app/font',
     'app/hero',
+    'app/image-bg',
     'app/post-list',
     'app/scroll-button',
     'app/site-footer',

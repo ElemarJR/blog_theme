@@ -1,5 +1,4 @@
 .contact
-    $element-space = 45px
     background $navy
     color $white
     position relative
@@ -11,58 +10,16 @@
         position relative
         z-index 1
 
-    .site-content
-        margin-bottom $element-space
-        margin-top $element-space
-
     &--container
-        @media screen and ( min-width $screen-lg )
-            display flex
-            justify-content space-between
+        max-width 700px
+        padding-bottom 50px
 
-    &--form
-        margin 0 auto $element-space
-        max-width 600px
+    h2&--title
+        color $red
+        font-size 46px
+        text-transform uppercase
 
-        @media screen and ( min-width $screen-lg )
-            flex 0 0 500px
-            margin 0
+    &--description
+        line-height 1.4em
+        max-width 450px
 
-    &--info
-        @media screen and ( min-width $screen-lg )
-            flex 0 0 600px
-
-        &--contact
-            @media screen and ( min-width $screen-md )
-                display flex
-                justify-content center
-
-            @media screen and ( min-width $screen-lg )
-                flex 0 0 850px
-                justify-content flex-start
-
-        &--item
-            align-items center
-            display flex
-            margin-top $element-space
-
-            @media screen and ( min-width $screen-md )
-                padding 0 15px
-
-            @media screen and ( min-width $screen-lg )
-                padding 0
-                width 50%
-
-        &--data
-            margin-left 15px
-
-            strong
-                display block
-
-        &--social
-            margin-top $element-space
-            text-align center
-
-            a:hover
-                color $red
-                text-decoration none

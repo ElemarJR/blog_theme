@@ -1,5 +1,15 @@
 .site-content
-    background $white
+    background-color $white
+    image-bg()
     position relative
     visibility visible
     z-index 10
+
+    /.no-hero &
+        padding-top $sm-nav-height
+
+        @media screen and ( min-width $nav-breakpoint )
+            padding-top $sm-nav-height-breakpoint
+
+        /.sticky&
+            padding-top $sm-nav-height-sticky

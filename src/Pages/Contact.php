@@ -25,6 +25,7 @@ class Contact extends Base {
 	 */
 	public function init() {
 		add_filter( 'elemarjr_display_hero', $this->callback( 'hide_hero' ) );
+		add_filter( 'elemarjr_site_content_bg', $this->callback( 'site_content_bg' ) );
 	}
 	
 	/**
@@ -35,6 +36,20 @@ class Contact extends Base {
 	public function hide_hero( $show ) {
 		if( is_page_template( $this->template ) ) {
 			return false;
+		}
+		
+		return $show;
+	}
+	
+	/**
+	 * Show featured image as background
+	 * 
+	 * @param boolean $show Show featured image as background.
+	 * @return boolean Show if is this template, false otherwise.
+	 */
+	public function site_content_bg( $show ) {
+		if( is_page_template( $this->template ) ) {
+			return true;
 		}
 		
 		return $show;

@@ -204,18 +204,11 @@ button
                     color $red
 
 .site-header
-    background-position center center
-    background-size cover
     height 100%
-    // margin-top '-%s' % $sm-nav-height
-    // padding-top $sm-nav-height
+    image-bg()
     position fixed
     width 100%
     z-index 2
-
-    // @media screen and ( min-width $nav-breakpoint )
-    //     margin-top '-%s' % $sm-nav-height-breakpoint
-    //     padding-top $sm-nav-height-breakpoint
 
     &--wrapper
         background-color $purple
@@ -225,6 +218,18 @@ button
         relative left top
         width 100vw
         z-index 2
+
+        /.no-hero &
+            height $sm-nav-height
+            min-height auto
+            position fixed
+            z-index 20
+
+            @media screen and ( min-width $nav-breakpoint )
+                height $sm-nav-height-breakpoint
+
+            /.sticky&
+                height $sm-nav-height-sticky
 
     /.single-post &
         position relative
@@ -240,14 +245,8 @@ button
             top 0
             width 100%
 
-    /.site-header__no-hero &
-        min-height auto
-
     &__no-hero
         height auto
-
-        &:before
-            content none
 
 // Hero
 .hero

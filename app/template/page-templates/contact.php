@@ -25,12 +25,15 @@ get_header(); ?>
 			the_post();
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
+		<h2 class="contact--title">Deixe sua mensagem</h2>
+		<p class="contact--description">Pellentesque pulvinar purus ligula, at suscipit ligula feugiat quis. Curabitur et posuere metus. Nulla eros lacus, venenatis quis varius a, pharetra eu mi. Vestibulum suscipit quam aliquet, cursus mi et, fringilla sapien. Etiam accumsan enim eget nunc molestie elementum</p>
+
 		<form action="#" method="POST" class="contact--form form">
-			<label for="" class="form--half">
+			<label for="">
 				<span class="screen-reader-text"><?php esc_html_e( 'Name' ) ?></span>
 				<input type="text" placeholder="<?php esc_attr_e( 'Name' ) ?>" />
 			</label>
-			<label for="" class="form--half">
+			<label for="">
 				<span class="screen-reader-text"><?php esc_html_e( 'Email' ) ?></span>
 				<input type="text" placeholder="<?php esc_attr_e( 'Email' ) ?>" />
 			</label>
@@ -42,31 +45,6 @@ get_header(); ?>
 				<input type="submit" class="button button__tiffany" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ) ?>" />
 			</div>
 		</form>
-
-		<div class="contact--info">
-			<div class="contact--info--contact">
-				<div class="contact--info--item">
-					<i class="bordered-icon bordered-icon__white bordered-icon__big i-phone"></i>
-					<div class="contact--info--data">
-						<strong><?php esc_html_e( 'Phone', 'elemarjr' ) ?></strong>
-						<?php echo esc_html( pll__( 'phone' ) ) ?>
-					</div>
-				</div>
-				
-				<div class="contact--info--item">
-					<i class="bordered-icon bordered-icon__white bordered-icon__big i-mail-filled"></i>
-					<div class="contact--info--data">
-						<strong><?php esc_html_e( 'Email' ) ?></strong>
-						<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
-							<?php echo esc_html( pll__( 'email' ) ) ?>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="contact--info--social">
-				<?php get_template_part( 'template-parts/social-menu') ?>
-			</div>
-		</div>
 	</article>
 	<?php endwhile; ?>
 </main>

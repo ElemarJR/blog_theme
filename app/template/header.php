@@ -65,7 +65,7 @@ $display_hero = $container->get( 'display_hero' );
 
 	<div class="site-header--wrapper">
 		<?php
-			$bg_images = $container->get( BackgroundImage::class )->get_header_bg_image( $display_hero );
+			$bg_images = $display_hero ? $container->get( BackgroundImage::class )->get_bg_images() : array();
 			$classes = $container->get( Template::class )->header_classes( $display_hero );
 		?>
 		<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
@@ -73,7 +73,6 @@ $display_hero = $container->get( 'display_hero' );
 				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
 			endforeach;
 		?>>
-	
 			<?php 
 				if( $container->get( 'display_breadcrumb' ) ) :
 					get_template_part( 'template-parts/blog/breadcrumb' );
@@ -95,9 +94,16 @@ $display_hero = $container->get( 'display_hero' );
 		</header><!-- #masthead -->
 	</div>
 
-	<?php 
-		// @todo pass this code to `src`
-		$containerized = ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) );
+	<?php
+		$bg_images = apply_filters( 'elemarjr_site_content_bg', false ) ? 
+			$container->get( BackgroundImage::class )->get_bg_images() : 
+			array();
 	?>
-	<div id="content" class="site-content">
+	<div id="content" class="site-content"<?php
+			foreach ( $bg_images as $name => $url ) :
+				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
+			endforeach;
+		?>>
+		<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
 		<div class="container">
+		<?php endif; ?>

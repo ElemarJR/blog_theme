@@ -19,18 +19,14 @@ use Aztec\Setup\Thumbnail;
 class BackgroundImage extends Base {
 	
 	/**
-	 * Get the header background image url
+	 * Get the page background image urls
 	 * 
 	 * It will be returned the fallback image if the any image was loaded for
 	 * the current request.
 	 * 
 	 * @return string The header backgorund image URL.
 	 */
-	public function get_header_bg_image( $display_hero ) {
-		if( ! $display_hero ) {
-			return array();
-		}
-		
+	public function get_bg_images() {		
 		$image_urls = false;
 		if ( is_page() || is_single() ) {
 			$image_urls = $this->get_post_featured_image();
