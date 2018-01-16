@@ -10,16 +10,28 @@
  * @version 0.1.0
  */
 
+global $container;
+
 get_header(); ?>
 
 	<main>
 		<?php
-		while ( have_posts() ) :
-			the_post();
-?>
+			while ( have_posts() ) :
+				the_post();
+		?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php the_content(); ?>
-			
+			<div class="post--content">
+				<?php 
+					the_content();
+					
+					wp_link_pages( array(
+						'next_or_number' => 'next',
+						'before' => '<div class="posts-nav">',
+						'after' => '</div>'
+					) );
+				?>
+			</div>
+
 			<?php get_template_part( 'template-parts/blog/single/footer-meta' ); ?>
 
 			<?php comments_template(); ?>

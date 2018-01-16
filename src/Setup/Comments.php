@@ -24,6 +24,7 @@ class Comments extends Base {
 		add_filter( 'comment_form_submit_field', $this->callback( 'comment_form_submit_field' ), 10, 2 );
 		add_filter( 'comment_form_field_author', $this->callback( 'open_comment_meta' ) );
 		add_filter( 'comment_form_field_url', $this->callback( 'close_comment_meta' ) );
+		add_filter( 'elemar_comments_navigation_template', $this->callback( 'comments_navigation_template' ) );
 	}
 	
 	public function enqueue_comments_reply() {
@@ -50,7 +51,7 @@ class Comments extends Base {
 	 * @param array $fields The default comment fields.
 	 * @return array The default comment fields overrode.
 	 */
-	function comment_form_fields( $fields ) {
+	public function comment_form_fields( $fields ) {
 		/*
 		 * Capturing groups
 		 * 1:  Start `p` tag. E.g,: <p class="comment-form-email">
@@ -97,7 +98,7 @@ class Comments extends Base {
 		);
 	}
 	
-	function comment_form_submit_field( $submit_field, $args ) {
+	public function comment_form_submit_field( $submit_field, $args ) {
 		/*
 		 * Capturing groups
 		 * 1:  `<p class="form-submit">`
@@ -116,5 +117,20 @@ class Comments extends Base {
 		);
 		
 		return $submit_field;
+	}
+	
+	public function comments_navigation_template( $template ) {
+		$template = preg_replace(
+			'/(<div class="nav-links)(">)/',
+			'$1 posts-nav$2',
+			$template
+		);
+		$template = preg_replace(
+			'/(<div class="nav-(?>.*?")>)(<a(?>.*?h)ref="(?>.*?"))((?>.*?<\/a>))(<\/div>)/',
+			'$2 class="button"$3',
+			$template
+		);		
+		
+		return $template;
 	}
 }

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -11,6 +12,7 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
+	<?php if ( have_comments() ) : ?>
 	<div class="comments-area--number">
 		<?php 
 			$n = get_comments_number();
@@ -24,28 +26,23 @@ if ( post_password_required() ) {
 			echo esc_html( $comments_string );
 		?>
 	</div>
-
-	<?php
-		if ( have_comments() ) :
-			the_comments_navigation();
-	?>
+	
 	<ol class="comment-list">
 		<?php
 			wp_list_comments( array(
 				'style'      => 'ol',
 				'short_ping' => true,
-				'per_page'   => -1,
 				'avatar_size' => 64,
 			) );
 		?>
 	</ol><!-- .comment-list -->
 
 	<?php
-			the_comments_navigation();
+			echo wp_kses_post( apply_filters( 'elemar_comments_navigation_template', get_the_comments_navigation() ) );
 
 			// If comments are closed and there are comments, let's leave a little note, shall we?
 			if ( ! comments_open() ) : ?>
-				<p class="comments-area--number--no-comments"><?php esc_html_e( 'Comments are closed.', 'elemarjr' ); ?></p>
+				<p class="comments-area--closed"><?php esc_html_e( 'Comments are closed.', 'elemarjr' ); ?></p>
 			<?php
 			endif;
 

@@ -1,3 +1,17 @@
 .posts-nav
     margin-bottom 100px
     text-align center
+
+    .button
+        &:first-child
+            display inline-block
+            margin 0 10px 20px
+
+            @media screen and ( min-width $screen-md )
+                margin-bottom 0
+
+    /.single-post &
+        margin-bottom 0
+
+    /.comment-navigation &
+        margin-bottom 20px

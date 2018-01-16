@@ -50,6 +50,7 @@ class Kernel {
 			\Aztec\Pages\Contact::class,
 			\Aztec\Pages\NotFound::class,
 			\Aztec\Pages\Search::class,
+			\Aztec\Pages\Single::class,
 			
 			\Aztec\Performance\Css::class,
 			
