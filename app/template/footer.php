@@ -1,3 +1,6 @@
+	<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
+	</div><!-- .container -->
+	<?php endif; ?>
 </div><!-- #site-content -->
 
 <footer id="colophon" class="site-footer">

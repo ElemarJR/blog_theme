@@ -98,6 +98,6 @@ $display_hero = $container->get( 'display_hero' );
 	<?php 
 		// @todo pass this code to `src`
 		$containerized = ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) );
-
 	?>
-	<div id="content" class="<?php echo esc_attr( 'site-content' . ( $containerized ? ' container' : '' ) ) ?>">
+	<div id="content" class="site-content">
+		<div class="container">

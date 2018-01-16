@@ -43,16 +43,10 @@ define([],function () {
 
 			if( scrollPos <= ymax ) {
 				var normalized = normalize( scrollPos, ymax, ymin );
-				console.log(normalized);
-				jQuery('.site-header')
-					.css({
-						'background-position' : '50% ' + ( ymax - ( ( normalized * ymax ) / 4 ) ) + 'px'
-					})
-					.find( '.hero--container' )
-						.css({
-							'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + "px",
-							'opacity': 1 - normalized
-						});
+				$heroContainer.css({
+					'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + "px",
+					'opacity': 1 - normalized
+				});
 			}
 		})
 		.trigger( 'scroll' )
