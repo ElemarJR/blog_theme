@@ -28,7 +28,7 @@ requirejs([
     'app/site-footer',
     'app/site-header',
     'app/site-navigation',
-    'app/site-search',
+    'app/site-search'
 ], function() {
     jQuery( window ).trigger('resize');
 });

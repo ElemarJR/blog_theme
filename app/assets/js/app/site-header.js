@@ -7,7 +7,7 @@ define([],function () {
 	 */
 	var $siteHeader = jQuery( '.site-header' ),
 		$topHeader = jQuery( '.top-header-wrapper' ),
-		headerStickyClass = 'top-header-wrapper__sticky'
+		headerStickyClass = 'top-header-wrapper__sticky',
 		$body = jQuery( 'body' ),
 		bodyStickyClass = 'sticky';
 

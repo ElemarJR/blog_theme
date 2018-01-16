@@ -4,7 +4,7 @@
 define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 	function fade( $element ) {
 		$element
-			.addClass( 'animated fadeInUp' )
+			.addClass( 'animated fadeInUp' );
 	}
 
 	function typed( $element ) {
