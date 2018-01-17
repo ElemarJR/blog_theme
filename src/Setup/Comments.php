@@ -129,7 +129,7 @@ class Comments extends Base {
 			'/(<div class="nav-(?>.*?")>)(<a(?>.*?h)ref="(?>.*?"))((?>.*?<\/a>))(<\/div>)/',
 			'$2 class="button"$3',
 			$template
-		);		
+		);
 		
 		return $template;
 	}

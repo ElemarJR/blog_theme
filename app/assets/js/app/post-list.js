@@ -17,10 +17,10 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 					});
 
 				if( jQuery( item ).children().length > 3 ) {
-					new Masonry( instance.elements[0], {
+					var msnry = new Masonry( instance.elements[0], {
 						itemSelector: '.post',
 						fitWidth: true
-					});
+					} );
 				}
 
 				$this
@@ -30,9 +30,8 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 						.addClass('animated fadeOutDown')
 						.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 							jQuery( this ).hide();
+							jQuery( window ).trigger( 'resize' ); // trigger resize to adjust the footer
 						});
-
-				jQuery( window ).trigger( 'resize' );
 			});
 	});
 });
