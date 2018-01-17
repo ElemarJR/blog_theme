@@ -14,6 +14,12 @@ define([],function () {
 		heroContainerBottom = parseInt( $heroContainer.css( 'bottom' ) );
 
 	/*
+	 * Define the header here and not use height 100vh to sole the problem with
+	 * sartphones that change the website area after scroll
+	 */
+	jQuery( '.site-header, .site-header--wrapper' ).height( jQuery( window ).height() );
+
+	/*
 	 * Hide the navigation when open the search
 	 */
 	jQuery( '.search-toggle' ).on( 'click', function() {
