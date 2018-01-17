@@ -11,7 +11,7 @@ define([],function () {
 
 		if( $body.outerHeight() < windowHeight ) {
 			$body.addClass( 'footer-fixed' );
-			$siteContent.height( windowHeight - $footer.outerHeight() );
+			$siteContent.css( 'height', windowHeight - $footer.outerHeight() );
 		} else {
 			$body.removeClass( 'footer-fixed' );
 			$siteContent.css( 'height', 'auto' );
