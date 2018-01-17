@@ -99,7 +99,7 @@ button
     cursor pointer
     position absolute
 
-    /.toggled ^[1..-1]
+    /.toggled &
         color $red
 
 .site-search
@@ -122,7 +122,7 @@ button
     .search-form
         display none
 
-        ~/ .toggled ^[2..-1]
+        ~/.toggled ^[1..-1]
             display flex
 
 .main-navigation
@@ -155,7 +155,7 @@ button
             padding-left 20px
             position static
 
-        ~/ .toggled ^[2..-1]
+        ~/.toggled ^[1..-1]
             display block
 
     ul
@@ -262,11 +262,15 @@ button
 
     &--wrapper
         background $red
+        margin-top $sm-nav-height
         position relative
         z-index 10
 
-        /.single-post &
-            background none
+        @media screen and ( min-width $nav-breakpoint )
+            margin-top $sm-nav-height-breakpoint
+
+        /.sticky &
+            margin-top $sm-nav-height-sticky
 
     &--item
         display inline

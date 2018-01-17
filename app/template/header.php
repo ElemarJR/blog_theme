@@ -72,13 +72,7 @@ $display_hero = $container->get( 'display_hero' );
 			foreach ( $bg_images as $name => $url ) :
 				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
 			endforeach;
-		?>>
-			<?php 
-				if( $container->get( 'display_breadcrumb' ) ) :
-					get_template_part( 'template-parts/blog/breadcrumb' );
-				endif;
-			?>
-	
+		?>>	
 			<?php if( $display_hero ) : ?>
 			<div class="hero--wrapper">
 				<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
@@ -93,6 +87,12 @@ $display_hero = $container->get( 'display_hero' );
 			
 		</header><!-- #masthead -->
 	</div>
+	
+	<?php 
+		if( $container->get( 'display_breadcrumb' ) ) :
+			get_template_part( 'template-parts/blog/breadcrumb' );
+		endif;
+	?>
 
 	<?php
 		$bg_images = apply_filters( 'elemarjr_site_content_bg', false ) ? 

@@ -52,6 +52,10 @@ class Template extends Base {
 			$classes[] = 'no-hero';
 		}
 		
+		if( $this->container->get( 'display_breadcrumb' ) ) {
+			$classes[] = 'has-breadcrumb';
+		}
+		
 		return $classes;
 	}
 }
