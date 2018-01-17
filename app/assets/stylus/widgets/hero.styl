@@ -105,12 +105,20 @@
         .typed-cursor
             animation flash 2s infinite
             color $white
+            display none
             font-size 52px
 
+            @media screen and ( min-width $screen-sm )
+                display inline
+
         & ^[0]--container
-            max-width none
-            width 100%
+            font-size 52px
             text-align center
+
+            @media screen and ( min-width $screen-sm )
+                font-size 50px
+                max-width none
+                width 100%
 
         & ^[0]--title
             color $white
