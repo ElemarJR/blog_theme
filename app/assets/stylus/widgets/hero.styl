@@ -18,13 +18,18 @@
         max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
         position absolute
 
+        @media screen and ( min-width $screen-sm )
+            bottom 180px
+
     &--title
         color $red
         margin 0
         text-transform uppercase
 
     &--description
-        font-size 22px
+        font-size 18px
+        letter-spacing 1.8px
+        line-height 32px
         margin 0
         text-transform none
 
@@ -65,18 +70,28 @@
                 margin 0 0 33px
 
     ~/__single
+        & .listing-post__categories
+            a
+                font-size 18px
+
         & ^[0]--title
             color $white
+            font-size 40px
+            letter-spacing 4px
+            margin-bottom 49px
             text-transform uppercase
             max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
 
         & ^[0]--meta
+            font-size 22px
+
             &--data
-                display block
+                align-items center
+                display flex
+                float left
                 margin-top 10px
 
                 @media screen and ( min-width $screen-md )
-                    display inline-block
                     margin-right 60px
 
                 &__reading
@@ -96,8 +111,8 @@
                 &:before
                     display inline-block
                     color $tiffany
-                    font-size 24px
-                    vertical-align bottom
+                    font-size 40px
+                    margin-right 16px
 
     ~/__about
         width 100%

@@ -23,6 +23,7 @@ a.comment-reply-link
 
     &--number
         font-weight 700
+        letter-spacing 1.8px
         text-transform uppercase
 
 .comment-body
@@ -60,22 +61,31 @@ a.comment-reply-link
             float none
 
     .fn
+        letter-spacing 1.8px
+
         @media screen and ( min-width $screen-lg )
             &:before
                 content '\A'
                 display block
 
 .comment-content
+
     @media screen and ( min-width $screen-lg )
         flex-grow 2
         margin 0 40px
 
     p
+        font-size 15px
+        letter-spacing 1.5px
+
         &:first-child
             @media screen and ( min-width $screen-lg )
                 margin-top 0
 
 .reply
+    font-size 10px
+    padding 3px 9px
+
     @media screen and ( min-width $screen-md )
         absolute top right
 

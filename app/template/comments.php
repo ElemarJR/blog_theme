@@ -49,6 +49,7 @@ if ( post_password_required() ) {
 		endif; // Check for have_comments().
 
 		comment_form( array(
+			'class_form'   => 'form comment-form',
 			'class_submit' => 'button'
 		) );
 	?>

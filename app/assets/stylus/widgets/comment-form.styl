@@ -1,32 +1,40 @@
-.comment-form
-    .comment-meta
-        @media screen and ( min-width $screen-md )
-            display flex
-            justify-content space-between
-            margin-left -15px
-            padding 15px 15px 0 0
-            width calc( 100% + 30px )
+.form
+    &.comment-form
+        .comment-meta
+            @media screen and ( min-width $screen-md )
+                display flex
+                justify-content space-between
+                margin-left -15px
+                padding 15px 15px 0 0
+                width calc( 100% + 30px )
 
-    input[type=email]
-    input[type=text]
-    input[type=url]
-    textarea
-        border 1px solid $gray
-        padding 20px 25px
-        resize vertical
-        width 100%
+        input[type=email]
+        input[type=text]
+        input[type=url]
+        textarea
+            border 1px solid $gray
+            color $gray
+            resize vertical
 
-    textarea
-        margin-bottom 60px
+            +placeholder()
+                color $white
+                font-size 14px
 
-    .comment-form-author
-    .comment-form-email
-    .comment-form-url
-        margin-bottom 8px
+        textarea
+            margin-bottom 55px
 
-        @media screen and ( min-width $screen-md )
-            margin 0 0 15px 15px
-            width calc( 33.33% - 15px )
+        .comment-form-author
+        .comment-form-email
+        .comment-form-url
+            margin-bottom 8px
 
-    .form-submit
-        text-align center
+            @media screen and ( min-width $screen-md )
+                margin 0 0 15px 15px
+                width calc( 33.33% - 15px )
+
+        .form-submit
+            text-align center
+
+            .button
+                padding-left 23px
+                padding-right 23px

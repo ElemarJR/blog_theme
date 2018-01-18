@@ -13,10 +13,14 @@
 
         &--item
             border 1px solid $gray-light
-            color $gray
             height 100%
-            padding 30px
+            padding 43px
             text-align center
+
+            p
+                color $gray
+                font-size 17px
+                line-height 1.76em
 
             strong
                 color $red
@@ -42,20 +46,21 @@
     &--quote
         background $quote-bg
         color $white
-        font-size 24px
+        font-size 23px
         font-weight 700
-        line-height 1.5em
+        letter-spacing 2.3px
+        line-height 1.52
         text-align center
         width 100vw
 
         &--container
             $icon-size = 26px
             $x-space = 20px
-            $y-space = 60px
+            $y-space = 100px
             display inline-block
-            padding 70px 55px
+            padding 110px 55px
             position relative
-            width 615px
+            max-width 695px
 
             &:before
                 icon-font()
@@ -74,16 +79,18 @@
                 right $x-space
 
     &--blog
-        padding-bottom 50px
-        margin-top 50px
+        padding-bottom 88px
+        margin-top 117px
 
         &--header
         &--footer
             text-align center
 
         &--title
-            font-size 36px
+            font-size 50px
+            letter-spacing 0.6px
             text-transform uppercase
 
         p&--description
-            margin-bottom 60px
+            font-size 15px
+            margin-bottom 62px
