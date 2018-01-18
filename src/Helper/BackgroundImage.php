@@ -49,7 +49,7 @@ class BackgroundImage extends Base {
 	 * @return string|false The post image URL. False if no URL is available.
 	 */
 	public function get_post_featured_image( $post_id = false ) {
-		$image_sizes = $this->container->get( Thumbnail::class )->image_sizes;
+		$image_sizes = $this->container->get( Thumbnail::class )->bg_image_sizes;
 		$images_urls = array();
 		
 		foreach ( $image_sizes as $size ) {

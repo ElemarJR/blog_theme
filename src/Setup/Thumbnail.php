@@ -15,12 +15,12 @@ use DI\Container;
  */
 class Thumbnail extends Base {
 
-	public $image_sizes;
+	public $bg_image_sizes;
 	
 	public function __construct( Container $container ) {
 		parent::__construct( $container );
 		
-		$this->image_sizes = array(
+		$this->bg_image_sizes = array(
 			array(
 				'name' => 'header-sm',
 				'width' => 480,
@@ -58,8 +58,11 @@ class Thumbnail extends Base {
 	 * Add header image sizes
 	 */
 	public function add_image_sizes() {
-		foreach ( $this->image_sizes as $image_size ) {
+		foreach ( $this->bg_image_sizes as $image_size ) {
 			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'], true );
 		}
+		
+		// post listing thumbnail
+		add_image_size( 'post-listing', 348, 230, true );
 	}
 }
