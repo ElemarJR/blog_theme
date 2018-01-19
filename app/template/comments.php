@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 	<div class="comments-area--number">
 		<?php 
-			$n = get_comments_number();
+			$n = (int) get_comments_number();
 			$comments_string = __( 'No Comments' );
 			if( 1 === $n ) {
 				$comments_string = __( '1 Comment' );
