@@ -16,7 +16,7 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 						'visibility' : 'hidden'
 					});
 
-				if( jQuery( item ).children().length > 3 ) {
+				if( jQuery( item ).children().length > 3 && jQuery( window ).width() > 768 ) {
 					new Masonry( instance.elements[0], {
 						itemSelector: '.post',
 						fitWidth: true
