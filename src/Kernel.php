@@ -28,6 +28,8 @@ class Kernel {
 	 */
 	public function __construct( Container $container ) {
 		$this->container = $container;
+		
+		$this->forms();
 	}
 
 	/**
@@ -35,6 +37,9 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Form\Contact::class,
+			\Aztec\Form\Form::class,
+
 			\Aztec\Integration\ACF\ACF::class,
 			\Aztec\Integration\ACF\Pages\About::class,
 			\Aztec\Integration\ACF\Pages\Blog::class,
@@ -71,5 +76,14 @@ class Kernel {
 		foreach ( $init_classes as $class ) {
 			$this->container->get( $class )->init();
 		}
+	}
+	
+	/**
+	 * Define the list of forms of the website
+	 */
+	public function forms() {
+		$this->container->set( 'forms', [
+			\Aztec\Form\Contact::class,
+		] );
 	}
 }

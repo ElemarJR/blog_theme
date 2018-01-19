@@ -17,6 +17,17 @@
  * @version 0.1.0
  */
 
+use Aztec\Form\Contact;
+
+global $container;
+
+/**
+ * 
+ * @var Contact $form
+ */
+$form = $container->get( Contact::class );
+$values = $form->get_flash();
+
 get_header(); ?>
 
 <main>
@@ -28,18 +39,24 @@ get_header(); ?>
 		<h2 class="contact--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'title', true  ) ) ?></h2>
 		<p class="contact--description"><?php echo wp_kses_post( get_post_meta( get_the_ID(), 'description', true  ) ) ?></p>
 
-		<form action="#" method="POST" class="contact--form form">
+		<?php 
+			if ( false !== ( $message_id = $container->get( 'contact.message_id' ) ) ) :
+				get_template_part( 'template-parts/contact/message', 'success' === $message_id ? 'success' : 'error' );
+			endif;
+		?>
+
+		<form action="<?php echo esc_url( $form->get_action() ) ?>" method="POST" class="contact--form form">
 			<label for="">
 				<span class="screen-reader-text"><?php esc_html_e( 'Name' ) ?></span>
-				<input type="text" placeholder="<?php esc_attr_e( 'Name' ) ?>" />
+				<input type="text" name="name" placeholder="<?php echo esc_attr( $form->get_label( 'name' ) ) ?>" value="<?php echo esc_attr( $values['name'] ) ?>" required />
 			</label>
 			<label for="">
 				<span class="screen-reader-text"><?php esc_html_e( 'Email' ) ?></span>
-				<input type="text" placeholder="<?php esc_attr_e( 'Email' ) ?>" />
+				<input type="text" name="email" placeholder="<?php echo esc_attr( $form->get_label( 'email' ) ) ?>" value="<?php echo esc_attr( $values['email'] ) ?>" required />
 			</label>
 			<label for="">
 				<span class="screen-reader-text"><?php esc_html_e( 'Your Message', 'elemarjr' ) ?></span>
-				<textarea placeholder="<?php esc_attr_e( 'Your Message', 'elemarjr' ) ?>"></textarea>
+				<textarea name="message" placeholder="<?php echo esc_attr( $form->get_label( 'message' ) ) ?>" required><?php echo esc_textarea( $values['message'] ) ?></textarea>
 			</label>
 			<div class="form--submit-wrapper">
 				<input type="submit" class="button button__tiffany" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ) ?>" />

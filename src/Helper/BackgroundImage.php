@@ -79,7 +79,7 @@ class BackgroundImage extends Base {
 	 * @return string The fallback image URL.
 	 */
 	public function get_fallback_image() {
-		$image_sizes = $this->container->get( Thumbnail::class )->image_sizes;
+		$image_sizes = $this->container->get( Thumbnail::class )->bg_image_sizes;
 		$images_urls = array();
 		
 		foreach ( $image_sizes as $size ) {

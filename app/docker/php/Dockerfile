@@ -19,7 +19,7 @@
 FROM php:7.1-alpine
 
 # Install alpine packages
-RUN apk add --update autoconf bash build-base mysql-client openssh-client
+RUN apk add --update autoconf bash build-base mysql-client openssh-client ssmtp
 
 # install the PHP extensions we need
 RUN set -ex; \
@@ -30,6 +30,7 @@ RUN set -ex; \
 		libpng-dev \
 		mysql-client \
 		openssh-client \
+		ssmtp \
 	; \
 	\
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
@@ -58,6 +59,13 @@ RUN { \
 # Enable xdebug
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
+
+# Config SSMTP
+RUN { \
+		echo 'mailhub=smtp:1025'; \
+		echo 'UseTLS=NO'; \
+		echo 'FromLineOverride=YES'; \
+	} > /etc/ssmtp/ssmtp.conf
 
 # Override WP-CLI program to open help
 # By default WP-CLI uses 'less -r'. '-r' argument is incompatible on Alpine

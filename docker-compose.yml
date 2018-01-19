@@ -36,6 +36,16 @@ services:
       MYSQL_USER: project
       MYSQL_PASSWORD: project
 
+  # Test SMTP server
+  smtp:
+    image: schickling/mailcatcher
+    restart: always
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+    environment:
+      MAILCATCHER_PORT: 1025
+
   # Run the applicatiion over HTTP on localhost:8080
   server:
     command: wp server --host=0.0.0.0
@@ -47,6 +57,7 @@ services:
       - .:/app:cached
     depends_on:
       - db
+      - smtp
     environment:
       # Run $ sudo ifconfig en0 alias 10.254.254.254 255.255.255.0
       # to create a alias IP for the host machine and connect with Xdebug.

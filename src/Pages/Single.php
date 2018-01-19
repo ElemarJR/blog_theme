@@ -29,8 +29,6 @@ class Single extends Base {
 	 * @return string The link HTML with button class
 	 */
 	public function custom_post_page_link( $link, $i ) {
-		error_log($link);
-// 		return $link;
 		return preg_replace( '/(<a.*href=".*")(.*)/', '$1 class="button"$2', $link );
 	}
 }

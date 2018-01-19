@@ -68,6 +68,22 @@ define( 'LOGGED_IN_SALT', getenv( 'LOGGED_IN_SALT' ) );
 define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) );
 
 /**
+ * WP Mail SMTP + Mailcatcher
+ */
+define('WPMS_ON', true);
+define('WPMS_MAIL_FROM', 'mail@mail.com');
+define('WPMS_MAIL_FROM_NAME', 'Mail Test');
+define('WPMS_MAILER', 'mail'); // Possible values 'smtp', 'mail', or 'sendmail'
+// define('WPMS_SET_RETURN_PATH', 'false'); // Sets $phpmailer->Sender if true
+// define('WPMS_SMTP_HOST', 'localhost'); // The SMTP mail host
+// define('WPMS_SMTP_PORT', 1025); // The SMTP server port number
+// define('WPMS_SSL', ''); // Possible values '', 'ssl', 'tls' - note TLS is not STARTTLS
+// define('WPMS_SMTP_AUTH', true); // True turns on SMTP authentication, false turns it off
+// define('WPMS_SMTP_USER', ''); // SMTP authentication username, only used if WPMS_SMTP_AUTH is true
+// define('WPMS_SMTP_PASS', ''); // SMTP authentication password, only used if WPMS_SMTP_AUTH is true
+
+
+/**
  * WordPress Database Table prefix.
  *
  * You can have multiple installations in one database if you give each

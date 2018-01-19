@@ -11,7 +11,7 @@ define([],function () {
 		$body = jQuery( 'body' ),
 		bodyStickyClass = 'sticky',
 		$heroContainer = $siteHeader.find( '.hero--container' ),
-		heroContainerBottom = parseInt( $heroContainer.css( 'bottom' ) );
+		heroContainerBottom = parseInt( $heroContainer.css( 'bottom' ), 10 );
 
 	if( ! jQuery( 'body' ).hasClass( 'no-hero' ) ) {
 		/*
@@ -52,12 +52,12 @@ define([],function () {
 			if( scrollPos <= ymax ) {
 				var normalized = normalize( scrollPos, ymax, ymin );
 				$heroContainer.css({
-					'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + "px",
+					'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + 'px',
 					'opacity': 1 - normalized
 				});
 			}
 		})
-		.trigger( 'scroll' )
+		.trigger( 'scroll' );
 
 	function normalize( val, max, min ) {
 		return ( val - min ) / ( max - min );

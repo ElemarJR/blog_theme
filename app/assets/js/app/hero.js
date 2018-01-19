@@ -5,7 +5,7 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 	function fade( $element ) {
 		$element
 			.addClass( 'animated fadeInUp' )
-			.one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
+			.one( 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
 				jQuery( this ).removeClass( 'animated fadeInUp' );
 			});
 	}

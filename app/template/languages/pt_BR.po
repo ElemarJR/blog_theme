@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-16T23:43:57+00:00\n"
-"PO-Revision-Date: 2018-01-16 21:51-0200\n"
+"POT-Creation-Date: 2018-01-19T00:30:43+00:00\n"
+"PO-Revision-Date: 2018-01-18 23:02-0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Domain: elemarjr\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: app/template/404.php:17
 msgid "Page not found"
@@ -46,12 +46,11 @@ msgstr "Pular para o conteúdo"
 msgid "See more"
 msgstr "Veja mais"
 
-#: app/template/page-templates/contact.php:41
-#: app/template/page-templates/contact.php:42
+#: app/template/page-templates/contact.php:58 src/Form/Contact.php:31
 msgid "Your Message"
 msgstr "Sua mensagem"
 
-#: app/template/page-templates/contact.php:45
+#: app/template/page-templates/contact.php:62
 msgid "Send"
 msgstr "Enviar"
 
@@ -79,6 +78,26 @@ msgstr "Tempo de leitura:"
 msgid "Follow us"
 msgstr "Siga-nos"
 
+#: src/Form/Contact.php:48
+msgid "Contact"
+msgstr "Contato"
+
+#: src/Form/Contact.php:58
+msgid "Email that receive the contact - (%s)"
+msgstr "E-mail que recebe o contato - (%s)"
+
+#: src/Form/Contact.php:68
+msgid "Email subject - (%s)"
+msgstr "Assunto do e-mail - (%s)"
+
+#: src/Form/Form.php:229
+msgid "Message sent by %s website"
+msgstr "Mensagem enviada pelo site %s"
+
+#: src/Form/Form.php:230
+msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
+msgstr "Enviada por <a href=“%1$s”>%1$s</a>"
+
 #: src/Integration/Polylang/Polylang.php:41
 msgid "Contact Phone"
 msgstr "Telefone de contato"
@@ -87,11 +106,11 @@ msgstr "Telefone de contato"
 msgid "Contact Email"
 msgstr "E-mail de contato"
 
-#: src/Integration/ACF/Pages/Contact.php:48
+#: src/Integration/ACF/Pages/Contact.php:49
 msgid "Body"
 msgstr "Corpo"
 
-#: src/Integration/ACF/Pages/Contact.php:55
+#: src/Integration/ACF/Pages/Contact.php:56
 #: src/Integration/ACF/Pages/Blog.php:72
 #: src/Integration/ACF/Pages/HomePage.php:58
 #: src/Integration/ACF/Pages/About.php:76
@@ -102,9 +121,29 @@ msgstr "Corpo"
 msgid "Title"
 msgstr "Título"
 
-#: src/Integration/ACF/Pages/Contact.php:61
+#: src/Integration/ACF/Pages/Contact.php:62
 msgid "Description"
 msgstr "Descrição"
+
+#: src/Integration/ACF/Pages/Contact.php:75
+msgid "Form"
+msgstr "Formulário"
+
+#: src/Integration/ACF/Pages/Contact.php:82
+msgid "Success"
+msgstr "Sucesso"
+
+#: src/Integration/ACF/Pages/Contact.php:88
+msgid "Error Message: Empty fields"
+msgstr "Mensagem de erro: Campos vazios"
+
+#: src/Integration/ACF/Pages/Contact.php:94
+msgid "Error Message: Spam"
+msgstr "Mensagem de erro: Spam"
+
+#: src/Integration/ACF/Pages/Contact.php:100
+msgid "Error Message: Not sent"
+msgstr "Mensagem de erro: Não enviado"
 
 #: src/Integration/ACF/Pages/Blog.php:65
 #: src/Integration/ACF/Pages/HomePage.php:50

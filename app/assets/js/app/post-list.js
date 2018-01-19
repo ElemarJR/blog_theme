@@ -17,7 +17,7 @@ define( [ 'masonry/masonry', 'imagesloaded/imagesloaded' ], function( Masonry ) 
 					});
 
 				if( jQuery( item ).children().length > 3 ) {
-					var msnry = new Masonry( instance.elements[0], {
+					new Masonry( instance.elements[0], {
 						itemSelector: '.post',
 						fitWidth: true
 					} );
