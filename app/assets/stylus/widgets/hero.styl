@@ -13,13 +13,13 @@
         width 100%
 
     &--container
-        bottom 116px // .scroll-button height + padding
+        bottom 30px
         color $white
         max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
         position absolute
 
         @media screen and ( min-width $screen-sm )
-            bottom 180px
+            bottom 116px // .scroll-button height + padding
 
     &--title
         color $red
@@ -38,8 +38,6 @@
 
     ~/__home
         & ^[0]--container
-            bottom 69px
-
             @media screen and ( min-width $screen-sm )
                 bottom 106px
                 padding 0 55px
@@ -62,14 +60,9 @@
                 margin-bottom 40px
 
             @media screen and ( min-width $screen-md )
-                font-size 61px
-                margin-bottom 55px
                 max-width 600px
 
             @media screen and ( min-width $screen-lg )
-                font-size 58px
-                line-height 1.3em
-                margin-bottom 40px
                 max-width 560px
 
         & ^[0]--description
@@ -85,35 +78,15 @@
                 margin-bottom 48px
 
             @media screen and ( min-width $screen-md )
-                font-size 33px
-                letter-spacing 3.3px
-                margin-bottom 63px
                 max-width 600px
 
             @media screen and ( min-width $screen-lg )
-                font-size 26px
-                letter-spacing 2.6px
-                margin-bottom 26px
                 max-width 650px
 
         & ^[0]--button
             padding 0 34px
 
             @media screen and ( min-width $screen-sm )
-                $button-height = 93px
-                height $button-height
-                font-size 27px
-                line-height $button-height
-                padding 0 56px
-
-            @media screen and ( min-width $screen-md )
-                $button-height = 120px
-                height $button-height
-                font-size 35px
-                line-height $button-height
-                padding 0 65px
-
-            @media screen and ( min-width $screen-lg )
                 $button-height = 93px
                 height $button-height
                 font-size 27px
@@ -150,11 +123,17 @@
 
         & ^[0]--title
             color $white
-            font-size 40px
+            font-size 25px
             letter-spacing 4px
             margin-bottom 49px
             text-transform uppercase
             max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
+
+            @media screen and ( min-width $screen-sm )
+                font-size 30px
+
+            @media screen and ( min-width $screen-md )
+                font-size 40px
 
         & ^[0]--meta
             font-size 22px
@@ -162,11 +141,14 @@
             &--data
                 align-items center
                 display flex
-                float left
                 margin-top 10px
 
-                @media screen and ( min-width $screen-md )
+                @media screen and ( min-width $screen-lg )
+                    float left
                     margin-right 60px
+
+                &__date
+                    height 40px
 
                 &__reading
                     icon( i-time )
