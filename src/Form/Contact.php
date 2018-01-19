@@ -43,7 +43,7 @@ class Contact extends Form {
 	 * @param unknown $wp_customize
 	 */
 	public function customize( \WP_Customize_Manager $wp_customize ) {
-		$section_id = get_theme_mod_section_id();
+		$section_id = $this->get_theme_mod_section_id();
 		$wp_customize->add_section( $section_id, array(
 			'title' => __( 'Contact', 'elemarjr' ),
 			'priority' => 190,
