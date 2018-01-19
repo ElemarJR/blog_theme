@@ -28,9 +28,9 @@ class Kernel {
 	 */
 	public function __construct( Container $container ) {
 		$this->container = $container;
-		
-		$this->forms();
 	}
+	
+	
 
 	/**
 	 * Load classes that add or remove hooks
@@ -76,6 +76,8 @@ class Kernel {
 		foreach ( $init_classes as $class ) {
 			$this->container->get( $class )->init();
 		}
+		
+		$this->forms();
 	}
 	
 	/**

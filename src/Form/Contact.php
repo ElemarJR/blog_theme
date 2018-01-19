@@ -23,7 +23,14 @@ class Contact extends Form {
 		parent::__construct( $container );
 
 		$this->slug = 'contact';
-
+	}
+	
+	public function init() {
+		add_action( 'customize_register', $this->callback( 'customize' ) );
+		add_action( 'init', $this->callback( 'set_fields' ) );
+	}
+	
+	public function set_fields() {
 		$this->fields = array(
 			'name' => __( 'Name' ),
 			'email' => __( 'Email' ),
@@ -32,10 +39,6 @@ class Contact extends Form {
 				'type' => 'textarea',
 			),
 		);
-	}
-	
-	public function init() {
-		add_action( 'customize_register', $this->callback( 'customize' ) );
 	}
 	
 	/**

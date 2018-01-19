@@ -244,7 +244,7 @@ class Form extends Base {
 		
 		foreach( array_keys( $this->fields ) as $field ) {
 			if( empty( $_POST[ $field ] ) ) {
-				$values[ $field ] = false;
+				$values[ $field ] = '';
 				continue;
 			}
 			

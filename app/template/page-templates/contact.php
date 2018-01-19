@@ -47,15 +47,15 @@ get_header(); ?>
 
 		<form action="<?php echo esc_url( $form->get_action() ) ?>" method="POST" class="contact--form form">
 			<label for="">
-				<span class="screen-reader-text"><?php esc_html_e( 'Name' ) ?></span>
+				<span class="screen-reader-text"><?php esc_html_e( $form->get_label( 'name' ) ) ?></span>
 				<input type="text" name="name" placeholder="<?php echo esc_attr( $form->get_label( 'name' ) ) ?>" value="<?php echo esc_attr( $values['name'] ) ?>" required />
 			</label>
 			<label for="">
-				<span class="screen-reader-text"><?php esc_html_e( 'Email' ) ?></span>
+				<span class="screen-reader-text"><?php esc_html_e( $form->get_label( 'email' ) ) ?></span>
 				<input type="text" name="email" placeholder="<?php echo esc_attr( $form->get_label( 'email' ) ) ?>" value="<?php echo esc_attr( $values['email'] ) ?>" required />
 			</label>
 			<label for="">
-				<span class="screen-reader-text"><?php esc_html_e( 'Your Message', 'elemarjr' ) ?></span>
+				<span class="screen-reader-text"><?php esc_html_e(  $form->get_label( 'message' ) ) ?></span>
 				<textarea name="message" placeholder="<?php echo esc_attr( $form->get_label( 'message' ) ) ?>" required><?php echo esc_textarea( $values['message'] ) ?></textarea>
 			</label>
 			<div class="form--submit-wrapper">
