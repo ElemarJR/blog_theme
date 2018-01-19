@@ -37,17 +37,91 @@
         margin 0
 
     ~/__home
+        & ^[0]--container
+            bottom 69px
+
+            @media screen and ( min-width $screen-sm )
+                bottom 106px
+                padding 0 55px
+
+            @media screen and ( min-width $screen-md )
+                bottom 122px
+                padding 0 60px
+
+            @media screen and ( min-width $screen-lg )
+                bottom 55px
+
         & ^[0]--title
-            font-size 29px
-            margin-bottom 45px
+            font-size 30px
+            font-weight 300
+            margin-bottom 25px
             max-width 690px
 
             @media screen and ( min-width $screen-sm )
-                font-size 40px
+                font-size 49px
+                margin-bottom 40px
+
+            @media screen and ( min-width $screen-md )
+                font-size 61px
+                margin-bottom 55px
+                max-width 600px
+
+            @media screen and ( min-width $screen-lg )
+                font-size 58px
+                line-height 1.3em
+                margin-bottom 40px
+                max-width 560px
 
         & ^[0]--description
-            margin-bottom 60px
+            letter-spacing 1.6px
+            line-height 1.62em
+            margin-bottom 29px
             max-width 450px
+
+            @media screen and ( min-width $screen-sm )
+                font-size 25px
+                letter-spacing 2.5px
+                line-height 1.68
+                margin-bottom 48px
+
+            @media screen and ( min-width $screen-md )
+                font-size 33px
+                letter-spacing 3.3px
+                margin-bottom 63px
+                max-width 600px
+
+            @media screen and ( min-width $screen-lg )
+                font-size 26px
+                letter-spacing 2.6px
+                margin-bottom 26px
+                max-width 650px
+
+        & ^[0]--button
+            padding 0 34px
+
+            @media screen and ( min-width $screen-sm )
+                $button-height = 93px
+                height $button-height
+                font-size 27px
+                line-height $button-height
+                padding 0 56px
+
+            @media screen and ( min-width $screen-md )
+                $button-height = 120px
+                height $button-height
+                font-size 35px
+                line-height $button-height
+                padding 0 65px
+
+            @media screen and ( min-width $screen-lg )
+                $button-height = 93px
+                height $button-height
+                font-size 27px
+                line-height $button-height
+                padding 0 56px
+
+        .mouse
+            display none
 
     ~/__blog
         text-transform uppercase
