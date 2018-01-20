@@ -37,18 +37,6 @@
         margin 0
 
     ~/__home
-        & ^[0]--container
-            @media screen and ( min-width $screen-sm )
-                bottom 106px
-                padding 0 55px
-
-            @media screen and ( min-width $screen-md )
-                bottom 122px
-                padding 0 60px
-
-            @media screen and ( min-width $screen-lg )
-                bottom 55px
-
         & ^[0]--title
             font-size 30px
             font-weight 300
@@ -63,6 +51,7 @@
                 max-width 600px
 
             @media screen and ( min-width $screen-lg )
+                margin-bottom 20px
                 max-width 560px
 
         & ^[0]--description
@@ -81,6 +70,7 @@
                 max-width 600px
 
             @media screen and ( min-width $screen-lg )
+                margin-bottom 30px
                 max-width 650px
 
         & ^[0]--button
@@ -92,9 +82,6 @@
                 font-size 27px
                 line-height $button-height
                 padding 0 56px
-
-        .mouse
-            display none
 
     ~/__blog
         text-transform uppercase
