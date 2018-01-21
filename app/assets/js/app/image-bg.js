@@ -10,7 +10,7 @@ define([],function () {
 				var $item = jQuery( item ),
 					bg = $item.data( 'bg-header-sm' );
 
-				if( "undefined" === typeof bg ) {
+				if( 'undefined' === typeof bg ) {
 					return true;
 				}
 
