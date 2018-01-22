@@ -47,6 +47,10 @@ class Blog extends Base {
 	 *                        False, otherwise.
 	 */
 	public function get_current_language_id() {
+		if( ! $this->container->get( Polylang::class )->is_active() ) {
+			return $this->get_id();
+		}
+		
 		return pll_get_post( $this->get_id() );
 	}
 	
