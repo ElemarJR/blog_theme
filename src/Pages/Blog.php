@@ -8,6 +8,7 @@
 namespace Aztec\Pages;
 
 use Aztec\Base;
+use Aztec\Integration\Polylang\Polylang;
 
 /**
  * Posts listing pages features manipulation
@@ -55,6 +56,10 @@ class Blog extends Base {
 	 * @return array|number|false|NULL
 	 */
 	public function get_pages_id() {
+		if( ! $this->container->get( Polylang::class )->is_active() ) {
+			return array();
+		}
+		
 		$pages_id = array();
 
 		if( $main_page_id = $this->get_id() ) {

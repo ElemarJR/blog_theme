@@ -9,6 +9,7 @@ namespace Aztec\Form;
 
 use Aztec\Base;
 use DI\Container;
+use Aztec\Integration\Polylang\Polylang;
 
 /**
  * Manage the compare properties system
@@ -96,8 +97,13 @@ class Form extends Base {
 	 *
 	 * @todo Validate if mail was sent
 	 */
-	public function process_form() {
+	public function process_form() {		
 		if ( false !== ( $form_slug = get_query_var( $this->query_var, false ) ) ) {
+			if( ! $this->container->get( Polylang::class )->is_active() ) {
+				wp_safe_redirect( add_query_arg( 'message', 'not-sent', $_SERVER['HTTP_REFERER'] ) );
+				exit;
+			}
+			
 			foreach ( $this->container->get( 'forms' ) as $form ) {
 				$form_object = $this->container->get( $form );
 				if ( $form_slug === $form_object->get_slug() ) {					

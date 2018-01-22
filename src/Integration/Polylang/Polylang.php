@@ -41,4 +41,8 @@ class Polylang extends Base {
 		pll_register_string( __( 'Contact Phone', 'elemarjr' ), 'phone', $group, false );
 		pll_register_string( __( 'Contact Email', 'elemarjr' ), 'email', $group, false );
 	}
+	
+	public function is_active() {
+		return function_exists( 'PLL' );
+	}
 }

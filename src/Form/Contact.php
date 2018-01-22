@@ -8,6 +8,7 @@
 namespace Aztec\Form;
 
 use DI\Container;
+use Aztec\Integration\Polylang\Polylang;
 
 /**
  * Contact form
@@ -46,6 +47,10 @@ class Contact extends Form {
 	 * @param unknown $wp_customize
 	 */
 	public function customize( \WP_Customize_Manager $wp_customize ) {
+		if( ! $this->container->get( Polylang::class )->is_active() ) {
+			return $wp_customize;
+		}
+		
 		$section_id = $this->get_theme_mod_section_id();
 		$wp_customize->add_section( $section_id, array(
 			'title' => __( 'Contact', 'elemarjr' ),

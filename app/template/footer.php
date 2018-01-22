@@ -1,3 +1,11 @@
+<?php 
+
+use Aztec\Integration\Polylang\Polylang;
+
+global $container;
+
+?>
+
 	<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
 	</div><!-- .container -->
 	<?php endif; ?>
@@ -17,12 +25,14 @@
 		</div>
 
 		<div class="contact-info">
+			<?php if( $container->get( Polylang::class )->is_active() )  : ?>
 			<p><?php echo esc_html( pll__( 'phone' ) ) ?></p>
 			<p>
 				<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
 					<?php echo esc_html( pll__( 'email' ) ) ?>
 				</a>
 			</p>
+			<?php endif; ?>
 		</div>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
