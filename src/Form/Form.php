@@ -129,8 +129,8 @@ class Form extends Base {
 					
 					if( 'success' === $message ) {
 						$sent = wp_mail(
-							'pittol@aztecweb.net', // @todo configure this data in admin
-							'Assunto do e-mail',
+							$email,
+							$subject,
 							$form_object->get_message(),
 							array(
 								'Content-Type: text/html; charset=UTF-8',
