@@ -6,8 +6,11 @@ define(['webfontloader/webfontloader'],function (WebFont) {
 		google: {
 			families: ['Open Sans:300,700']
 		},
-		active: function() {
-			jQuery( window ).trigger( 'fontloaded' );
-		}
+		active: triggerLoaded,
+		inactive: triggerLoaded
 	});
+
+	function triggerLoaded() {
+		jQuery( window ).trigger( 'fontloaded' );
+	}
 });
