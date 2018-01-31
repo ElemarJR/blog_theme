@@ -20,7 +20,9 @@ class Twitter extends \WPSEO_Twitter {
 	 * 
 	 * @param string $img The image url
 	 */
-	public function image_tag( $img ) {		
-		$this->image_output( $img );
+	public function image_tag( $img ) {
+		if( is_category() || is_tax() || is_tag() ) {
+			$this->image_output( $img );
+		}
 	}
 }
