@@ -46,7 +46,7 @@ button
     &.full
         padding 0
 
-    @media screen and ( min-width $screen-lg )
+    @media screen and ( min-width ( $screen-lg + ( $container-padding * 2 ) ) )
         padding-left 0
         padding-right 0
         width $screen-lg
