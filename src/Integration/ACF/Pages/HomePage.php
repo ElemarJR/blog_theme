@@ -49,7 +49,6 @@ class HomePage {
 			'key' => 'home_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
-			// @todo Use repeater instead two fixed fields
 			'fields' => array(
 				array(
 					'type' => 'text',
@@ -90,6 +89,12 @@ class HomePage {
 			'hide_on_screen' => array( 'the_content' ),
 			// @todo Use repeater instead two fixed fields
 			'fields' => array(
+				array(
+					'type' => 'url',
+					'key' => 'purpose_link',
+					'name' => 'purpose_link',
+					'label' => __( 'Destination URL', 'elemarjr' ),
+				),
 				array(
 					'type' => 'text',
 					'key' => 'purpose_icon_1',

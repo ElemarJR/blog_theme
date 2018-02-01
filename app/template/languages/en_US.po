@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-01-19T00:30:43+00:00\n"
-"PO-Revision-Date: 2018-01-19T00:30:43+00:00\n"
+"POT-Creation-Date: 2018-02-01T19:20:16+00:00\n"
+"PO-Revision-Date: 2018-02-01T19:20:16+00:00\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Domain: elemarjr\n"
@@ -41,13 +41,8 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: ./app/template/page-templates/home.php:79
+#: ./app/template/page-templates/home.php:80
 msgid "See more"
-msgstr ""
-
-#: ./app/template/page-templates/contact.php:58
-#: ./src/Form/Contact.php:31
-msgid "Your Message"
 msgstr ""
 
 #: ./app/template/page-templates/contact.php:62
@@ -74,27 +69,31 @@ msgstr ""
 msgid "Reading time:"
 msgstr ""
 
-#: ./app/template/footer.php:15
+#: ./app/template/footer.php:23
 msgid "Follow us"
 msgstr ""
 
-#: ./src/Form/Contact.php:48
+#: ./src/Form/Contact.php:39
+msgid "Your Message"
+msgstr ""
+
+#: ./src/Form/Contact.php:56
 msgid "Contact"
 msgstr ""
 
-#: ./src/Form/Contact.php:58
+#: ./src/Form/Contact.php:66
 msgid "Email that receive the contact - (%s)"
 msgstr ""
 
-#: ./src/Form/Contact.php:68
+#: ./src/Form/Contact.php:76
 msgid "Email subject - (%s)"
 msgstr ""
 
-#: ./src/Form/Form.php:229
+#: ./src/Form/Form.php:235
 msgid "Message sent by %s website"
 msgstr ""
 
-#: ./src/Form/Form.php:230
+#: ./src/Form/Form.php:236
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr ""
 
@@ -112,7 +111,7 @@ msgstr ""
 
 #: ./src/Integration/ACF/Pages/Contact.php:56
 #: ./src/Integration/ACF/Pages/Blog.php:72
-#: ./src/Integration/ACF/Pages/HomePage.php:58
+#: ./src/Integration/ACF/Pages/HomePage.php:57
 #: ./src/Integration/ACF/Pages/About.php:76
 #: ./src/Integration/ACF/Pages/About.php:94
 #: ./src/Integration/ACF/Pages/About.php:112
@@ -156,8 +155,8 @@ msgid "Subtitle"
 msgstr ""
 
 #: ./src/Integration/ACF/Pages/Blog.php:84
-#: ./src/Integration/ACF/Pages/HomePage.php:64
-#: ./src/Integration/ACF/Pages/HomePage.php:155
+#: ./src/Integration/ACF/Pages/HomePage.php:63
+#: ./src/Integration/ACF/Pages/HomePage.php:160
 #: ./src/Integration/ACF/Pages/About.php:56
 #: ./src/Integration/ACF/Pages/About.php:82
 #: ./src/Integration/ACF/Pages/About.php:100
@@ -167,44 +166,48 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:70
+#: ./src/Integration/ACF/Pages/HomePage.php:69
 msgid "Button Label"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:76
+#: ./src/Integration/ACF/Pages/HomePage.php:75
 msgid "Button URL"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:89
+#: ./src/Integration/ACF/Pages/HomePage.php:88
 msgid "Purpose"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:97
+#: ./src/Integration/ACF/Pages/HomePage.php:96
+msgid "Destination URL"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/HomePage.php:102
 msgid "Icon Class 1"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:103
+#: ./src/Integration/ACF/Pages/HomePage.php:108
 msgid "Text 1"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:109
+#: ./src/Integration/ACF/Pages/HomePage.php:114
 msgid "Icon Class 2"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:115
+#: ./src/Integration/ACF/Pages/HomePage.php:120
 msgid "Text 2"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:128
-#: ./src/Integration/ACF/Pages/HomePage.php:135
+#: ./src/Integration/ACF/Pages/HomePage.php:133
+#: ./src/Integration/ACF/Pages/HomePage.php:140
 msgid "Quote"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:148
+#: ./src/Integration/ACF/Pages/HomePage.php:153
 msgid "Blog"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/HomePage.php:156
+#: ./src/Integration/ACF/Pages/HomePage.php:161
 msgid "Text after the section title"
 msgstr ""
 

@@ -29,23 +29,24 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--purpose container">
 			<div class="front-page--purpose--wrapper">
+				<?php $purpose_link = get_post_meta( get_the_ID(), 'purpose_link', true ) ?>
 				<div class="front-page--purpose--item--wrapper wow fadeInUpBig">
-					<div class="front-page--purpose--item">
+					<a href="<?php echo esc_url( $purpose_link ) ?>" class="front-page--purpose--item">
 						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ) ?>
 						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
-						<p>
+						<span>
 							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ) ?>
-						</p>
-					</div>
+						</span>
+					</a>
 				</div>
 				<div class="front-page--purpose--item--wrapper wow fadeInUpBig">
-					<div class="front-page--purpose--item">
+					<a href="<?php echo esc_url( $purpose_link ) ?>" class="front-page--purpose--item">
 						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ) ?>
 						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
-						<p>
+						<span>
 							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ) ?>
-						</p>
-					</div>
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>

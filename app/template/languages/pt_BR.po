@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-19T00:30:43+00:00\n"
-"PO-Revision-Date: 2018-01-19 11:47-0200\n"
+"POT-Creation-Date: 2018-02-01T19:20:16+00:00\n"
+"PO-Revision-Date: 2018-02-01 17:28-0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -42,13 +42,9 @@ msgstr "Comentários estão fechados."
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: app/template/page-templates/home.php:79
+#: app/template/page-templates/home.php:80
 msgid "See more"
 msgstr "Veja mais"
-
-#: app/template/page-templates/contact.php:58 src/Form/Contact.php:31
-msgid "Your Message"
-msgstr "Sua mensagem"
 
 #: app/template/page-templates/contact.php:62
 msgid "Send"
@@ -74,27 +70,31 @@ msgstr "Mostrar tudo"
 msgid "Reading time:"
 msgstr "Tempo de leitura:"
 
-#: app/template/footer.php:15
+#: app/template/footer.php:23
 msgid "Follow us"
 msgstr "Siga-nos"
 
-#: src/Form/Contact.php:48
+#: src/Form/Contact.php:39
+msgid "Your Message"
+msgstr "Sua mensagem"
+
+#: src/Form/Contact.php:56
 msgid "Contact"
 msgstr "Contato"
 
-#: src/Form/Contact.php:58
+#: src/Form/Contact.php:66
 msgid "Email that receive the contact - (%s)"
 msgstr "E-mail que recebe o contato - (%s)"
 
-#: src/Form/Contact.php:68
+#: src/Form/Contact.php:76
 msgid "Email subject - (%s)"
 msgstr "Assunto do e-mail - (%s)"
 
-#: src/Form/Form.php:229
+#: src/Form/Form.php:235
 msgid "Message sent by %s website"
 msgstr "Mensagem enviada pelo site %s"
 
-#: src/Form/Form.php:230
+#: src/Form/Form.php:236
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr "Enviada por <a href=“%1$s”>%1$s</a>"
 
@@ -112,7 +112,7 @@ msgstr "Corpo"
 
 #: src/Integration/ACF/Pages/Contact.php:56
 #: src/Integration/ACF/Pages/Blog.php:72
-#: src/Integration/ACF/Pages/HomePage.php:58
+#: src/Integration/ACF/Pages/HomePage.php:57
 #: src/Integration/ACF/Pages/About.php:76
 #: src/Integration/ACF/Pages/About.php:94
 #: src/Integration/ACF/Pages/About.php:112
@@ -156,8 +156,8 @@ msgid "Subtitle"
 msgstr "Sub-título"
 
 #: src/Integration/ACF/Pages/Blog.php:84
-#: src/Integration/ACF/Pages/HomePage.php:64
-#: src/Integration/ACF/Pages/HomePage.php:155
+#: src/Integration/ACF/Pages/HomePage.php:63
+#: src/Integration/ACF/Pages/HomePage.php:160
 #: src/Integration/ACF/Pages/About.php:56
 #: src/Integration/ACF/Pages/About.php:82
 #: src/Integration/ACF/Pages/About.php:100
@@ -167,44 +167,48 @@ msgstr "Sub-título"
 msgid "Text"
 msgstr "Texto"
 
-#: src/Integration/ACF/Pages/HomePage.php:70
+#: src/Integration/ACF/Pages/HomePage.php:69
 msgid "Button Label"
 msgstr "Rótulo do botão"
 
-#: src/Integration/ACF/Pages/HomePage.php:76
+#: src/Integration/ACF/Pages/HomePage.php:75
 msgid "Button URL"
 msgstr "URL do botão"
 
-#: src/Integration/ACF/Pages/HomePage.php:89
+#: src/Integration/ACF/Pages/HomePage.php:88
 msgid "Purpose"
 msgstr "Propósito"
 
-#: src/Integration/ACF/Pages/HomePage.php:97
+#: src/Integration/ACF/Pages/HomePage.php:96
+msgid "Destination URL"
+msgstr "URL de destino"
+
+#: src/Integration/ACF/Pages/HomePage.php:102
 msgid "Icon Class 1"
 msgstr "Classe do ícone 1"
 
-#: src/Integration/ACF/Pages/HomePage.php:103
+#: src/Integration/ACF/Pages/HomePage.php:108
 msgid "Text 1"
 msgstr "Texto 1"
 
-#: src/Integration/ACF/Pages/HomePage.php:109
+#: src/Integration/ACF/Pages/HomePage.php:114
 msgid "Icon Class 2"
 msgstr "Classe do ícone 2"
 
-#: src/Integration/ACF/Pages/HomePage.php:115
+#: src/Integration/ACF/Pages/HomePage.php:120
 msgid "Text 2"
 msgstr "Texto 2"
 
-#: src/Integration/ACF/Pages/HomePage.php:128
-#: src/Integration/ACF/Pages/HomePage.php:135
+#: src/Integration/ACF/Pages/HomePage.php:133
+#: src/Integration/ACF/Pages/HomePage.php:140
 msgid "Quote"
 msgstr "Citação"
 
-#: src/Integration/ACF/Pages/HomePage.php:148
+#: src/Integration/ACF/Pages/HomePage.php:153
 msgid "Blog"
 msgstr "Blog"
 
-#: src/Integration/ACF/Pages/HomePage.php:156
+#: src/Integration/ACF/Pages/HomePage.php:161
 msgid "Text after the section title"
 msgstr "Texto após o título da seção"
 
