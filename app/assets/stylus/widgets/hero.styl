@@ -13,13 +13,10 @@
         width 100%
 
     &--container
-        bottom 30px
+        bottom 116px // .scroll-button height + padding
         color $white
         max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
         position absolute
-
-        @media screen and ( min-width $screen-sm )
-            bottom 116px // .scroll-button height + padding
 
     &--title
         color $red
@@ -32,12 +29,6 @@
         line-height 32px
         margin 0
         text-transform none
-
-        @media screen and ( min-width $screen-lg )
-            display none
-
-        @media screen and ( min-width $screen-lg ) and ( min-height 774px )
-            display block
 
     &--button
         margin 0

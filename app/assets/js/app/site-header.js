@@ -45,16 +45,18 @@ define([],function () {
 				$topHeader.removeClass( headerStickyClass );
 			}
 
-			var ymin = 0,
-				ymax = $siteHeader.height(),
-				scrollPos = jQuery(this).scrollTop();
+			if ( jQuery( '.site-header' ).hasClass( 'site-header__parallax' ) ) {
+				var ymin = 0,
+					ymax = $siteHeader.height(),
+					scrollPos = jQuery(this).scrollTop();
 
-			if( scrollPos <= ymax ) {
-				var normalized = normalize( scrollPos, ymax, ymin );
-				$heroContainer.css({
-					'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + 'px',
-					'opacity': 1 - normalized
-				});
+				if( scrollPos <= ymax ) {
+					var normalized = normalize( scrollPos, ymax, ymin );
+					$heroContainer.css({
+						'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + 'px',
+						'opacity': 1 - normalized
+					} );
+				}
 			}
 		})
 		.trigger( 'scroll' );

@@ -60,11 +60,13 @@ class Template {
 	public function header_classes( $display_hero ) {
 		$classes = array();
 		$classes[] = 'site-header';
-		
+
 		if( ! $display_hero ) {
 			$classes[] = 'site-header__no-hero';
+		} else {
+			$classes[] = 'site-header__parallax';
 		}
-			
+
 		return implode( ' ', $classes );
 	}
 }
