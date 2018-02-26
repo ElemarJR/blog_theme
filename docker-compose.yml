@@ -9,7 +9,7 @@ services:
     build:
       context: ./app/docker/php
     volumes:
-      - .:/app:cached
+      - .:/app
       - ./.ssh:/root/.ssh
     depends_on:
       - db
@@ -18,7 +18,7 @@ services:
   composer:
     image: composer
     volumes:
-      - .:/app:cached
+      - .:/app
       # Map local user Composer directory with container for cache packages
       - ~/.docker_cache/composer:/root/composer
 
@@ -28,7 +28,7 @@ services:
     ports:
         - "3306:3306"
     volumes:
-       - ./database:/var/lib/mysql:cached
+       - ./database:/var/lib/mysql
        - ./app/initdb:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -54,7 +54,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/app:cached
+      - .:/app
     depends_on:
       - db
       - smtp
@@ -70,7 +70,7 @@ services:
     build:
       context: ./app/docker/node
     volumes:
-      - .:/app:cached
+      - .:/app
 
   # Watch changes in the project and update the files local server
   watch:
@@ -80,4 +80,4 @@ services:
     ports:
       - "35729:35729"
     volumes:
-      - .:/app:cached
+      - .:/app
