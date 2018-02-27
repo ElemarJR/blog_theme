@@ -45,6 +45,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\Blog::class,
 			\Aztec\Integration\ACF\Pages\Contact::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
+			\Aztec\Integration\ACF\PostType\Testimonial::class,
 			
 			\Aztec\Integration\AddThis\AddThis::class,
 			
@@ -59,6 +60,8 @@ class Kernel {
 			\Aztec\Pages\Single::class,
 			
 			\Aztec\Performance\Css::class,
+
+			\Aztec\PostType\Testimonial::class,
 			
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\Comments::class,

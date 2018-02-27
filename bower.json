@@ -8,6 +8,7 @@
     "animate.css": "^3.5.2",
     "wow": "wowjs#^1.1.2",
     "imagesloaded": "^4.1.4",
-    "typed.js": "^2.0.6"
+    "typed.js": "^2.0.6",
+    "swiper": "^4.1.6"
   }
 }

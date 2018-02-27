@@ -1,4 +1,6 @@
 <?php
+use Aztec\PostType\Testimonial;
+
 /**
  * The template for displaying all pages
  *
@@ -55,6 +57,26 @@ get_header(); ?>
 			<div class="front-page--quote--container container wow fadeInUpBig">
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ) ?>
 			</div>
+		</div>
+		
+		<div class="front-page--testimonial container">
+			<?php
+				$posts = $container->get( Testimonial::class )->get_testimonials();
+				foreach ( $posts as $post ) : setup_postdata( $post );
+			?>
+			<h3><?php the_title() ?></h3>
+			<?php 
+				echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) );
+				$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
+				echo esc_html( wp_get_attachment_image_url( $photo_id ) );
+			?>
+			
+			
+			
+			<?php 
+				endforeach;
+				wp_reset_postdata();
+			?>
 		</div>
 		
 		<div class="front-page--blog container">
