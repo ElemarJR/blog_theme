@@ -9,6 +9,9 @@ global $container;
 	<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
 	</div><!-- .container -->
 	<?php endif; ?>
+	
+	<?php get_template_part( 'template-parts/newsletter/form' ) ?>
+
 </div><!-- #site-content -->
 
 <footer id="colophon" class="site-footer">

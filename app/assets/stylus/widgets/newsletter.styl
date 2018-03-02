@@ -1,0 +1,119 @@
+.newsletter
+    background $tiffany
+    padding-top 55px
+    padding-bottom 55px
+    
+
+    h2&--title
+        color $purple
+        font-size 27px
+        line-height 1.63
+        letter-spacing 2.7px
+        text-align center
+    
+    h4&--divisortitle
+        color white
+        font-size 15px
+        font-weight normal
+        line-height 2.8
+        letter-spacing 1.5px
+        text-align center
+    
+    p&--subtitle
+        font-size 23px
+        letter-spacing 2.3px
+        line-height 1.22
+        text-align center
+    
+    input[type="text"]
+        margin-bottom: 5px;
+
+    input&--submit
+        background $white
+        border-radius 4px
+        margin-top 2px
+        height 56px
+        width 100%
+    
+    label
+        display: block;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+        input[type="checkbox"]
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        
+        .checkmark
+            position: absolute;
+            top: 12.5px;
+            right: 10px;
+            height: 25px;
+            width: 25px;
+            background-color: transparent;
+            border: 1px solid #fff
+
+    div&--interest:hover
+        background #92e1d5
+        border 1px solid transparent
+        
+        span
+            color $purple
+        
+        input ~ .checkmark
+            border 1px solid $purple
+        
+    div&--interest:hover input ~ .checkmark
+        // background #ccc
+        
+    div&--interest input:checked ~ .checkmark
+        background-color $purple
+        border unset
+    
+    .checkmark:after
+        content: "";
+        position: absolute;
+        display: none;
+    
+    div&--interest input:checked ~ .checkmark:after
+        display block
+
+    div .checkmark:after
+        left: 9px;
+        top: 1px;
+        width: 9px;
+        height: 18px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+    div&--interest
+        background-color transparent
+        border 1px solid #fff
+        color #fff
+        height 52px
+        padding 0 10px
+        width 100%
+        margin-bottom 5px
+        
+        input[type="checkbox"]
+            float right
+            height 52px
+        span
+            line-height 52px
+            
+    .interes--selected
+        background #b3eae2
+        
+        .newsletter--interest
+            border unset
+            
+        .newsletter--interest > span
+            color: $gray-dark
