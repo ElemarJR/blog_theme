@@ -85,13 +85,26 @@
     
     @media screen and ( min-width $screen-lg )
         width 1139px
+        padding-left 10%
+        padding-right 10%
         
-        // &--nome
-        //     display flex
+        p&--subtitle
+            padding 0 0;
+        
+        div&--col-6
+            display flex
             
-        //     input[type="text"]
-        //         background red
-        //         width 50%
+            input[type="text"] 
+                width calc(50% - 5px)
+            
+            .col-6
+                margin-right 10px
+        label
+            width calc(50% - 5px)
+            
+        label:first-child
+            margin-right 10px
+            
 
     label
         display: block;

@@ -10,7 +10,7 @@ global $container;
 	</div><!-- .container -->
 	<?php endif; ?>
 	
-	<?php get_template_part( 'template-parts/newsletter/form' ) ?>
+	<?php if (! is_page_template( 'page-templates/contact.php' ) ) { get_template_part( 'template-parts/newsletter/form' ); } ?>
 
 </div><!-- #site-content -->
 
