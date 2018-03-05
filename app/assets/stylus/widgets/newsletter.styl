@@ -3,14 +3,13 @@
     padding-top 55px
     padding-bottom 55px
     
-
     h2&--title
         color $purple
         font-size 27px
         line-height 1.63
         letter-spacing 2.7px
         text-align center
-    
+        
     h4&--divisortitle
         color white
         font-size 15px
@@ -18,23 +17,82 @@
         line-height 2.8
         letter-spacing 1.5px
         text-align center
-    
+        
     p&--subtitle
         font-size 23px
         letter-spacing 2.3px
         line-height 1.22
         text-align center
-    
+        
     input[type="text"]
         margin-bottom: 5px;
-
-    input&--submit
-        background $white
-        border-radius 4px
-        margin-top 2px
-        height 56px
+        text-align center
+        
+    div&--interest
+        background-color transparent
+        border 1px solid #fff
+        color #fff
+        height 52px
+        padding 0 10px
         width 100%
+        margin-bottom 5px
+        
+        input[type="checkbox"]
+            float right
+            height 52px
+        span
+            line-height 52px
+            
+    @media screen and ( max-width $screen-sm )
+        // padding-right 20px
+        // padding-left 20px
+        
+    @media screen and ( min-width 600px )
+        padding-right 46px
+        padding-left 46px
+        width 600px
+        margin-bottom 80px
+        
+        h2&--title
+            font-size 32px
+            line-height 1.66
+            letter-spacing 3.2px
     
+        p&--subtitle
+            font-size 30px
+            line-height 1.2
+            letter-spacing 3px
+            padding 0 42px
+            margin-bottom 52px
+        
+        input[type="text"]
+            margin-bottom: 10px;
+        
+        div&--interest
+            margin-bottom 10px
+            padding 0 27px
+            
+    @media screen and ( min-width 800px )
+        h2&--title
+            font-size 34px
+            line-height 1.56
+            letter-spacing 3.4px
+
+        p&--subtitle
+            font-size 32px
+            line-height 1.13
+            letter-spacing 3.2px
+    
+    @media screen and ( min-width $screen-lg )
+        width 1139px
+        
+        // &--nome
+        //     display flex
+            
+        //     input[type="text"]
+        //         background red
+        //         width 50%
+
     label
         display: block;
         position: relative;
@@ -68,9 +126,6 @@
         input ~ .checkmark
             border 1px solid $purple
         
-    div&--interest:hover input ~ .checkmark
-        // background #ccc
-        
     div&--interest input:checked ~ .checkmark
         background-color $purple
         border unset
@@ -94,21 +149,6 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
 
-    div&--interest
-        background-color transparent
-        border 1px solid #fff
-        color #fff
-        height 52px
-        padding 0 10px
-        width 100%
-        margin-bottom 5px
-        
-        input[type="checkbox"]
-            float right
-            height 52px
-        span
-            line-height 52px
-            
     .interes--selected
         background #b3eae2
         
@@ -117,3 +157,6 @@
             
         .newsletter--interest > span
             color: $gray-dark
+            
+    .form--submit-wrapper
+        text-align center

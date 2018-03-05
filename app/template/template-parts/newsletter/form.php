@@ -5,11 +5,12 @@
 		<span class="screen-reader-text">Digite seu e-mail</span>
 		<input type="text" name="email" placeholder="Digite seu e-mail">
 
-		<span class="screen-reader-text">Nome</span>
-		<input type="text" name="email" placeholder="Nome">
-
-		<span class="screen-reader-text">Sobrenome</span>
-		<input type="text" name="email" placeholder="Sobrenome">
+		<div class="newsletter--nome">
+			<span class="screen-reader-text">Nome</span>
+			<input class="col-6" type="text" name="email" placeholder="Nome">
+			<span class="screen-reader-text">Sobrenome</span>
+			<input type="text" name="email" placeholder="Sobrenome">
+		</div>
 
 		<h4 class="newsletter--divisortitle"> CONTEÚDO DE INTERESSE </h4>
 
