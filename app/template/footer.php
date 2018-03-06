@@ -10,8 +10,11 @@ global $container;
 	</div><!-- .container -->
 	<?php endif; ?>
 	
-	<?php if (! is_page_template( 'page-templates/contact.php' ) ) : get_template_part( 'template-parts/newsletter/form' ); ?>
-	<?php endif; ?>
+	<?php 
+		if (! is_page_template( 'page-templates/contact.php' ) ) : 
+			get_template_part( 'template-parts/newsletter/form' );
+		endif;
+	?>
 
 </div><!-- #site-content -->
 

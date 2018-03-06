@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01T19:20:16+00:00\n"
-"PO-Revision-Date: 2018-02-01 17:28-0200\n"
+"POT-Creation-Date: 2018-03-06T15:12:35+00:00\n"
+"PO-Revision-Date: 2018-03-06 12:19-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -42,7 +42,7 @@ msgstr "Comentários estão fechados."
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: app/template/page-templates/home.php:80
+#: app/template/page-templates/home.php:102
 msgid "See more"
 msgstr "Veja mais"
 
@@ -66,11 +66,58 @@ msgstr "Carregando posts…"
 msgid "Show All"
 msgstr "Mostrar tudo"
 
+#: app/template/template-parts/newsletter/form.php:2
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: app/template/template-parts/newsletter/form.php:3
+msgid "Stay informed with our publications"
+msgstr "Mantenha-se informado com nossas publicações"
+
+#: app/template/template-parts/newsletter/form.php:5
+#: app/template/template-parts/newsletter/form.php:6
+msgid "Type your email"
+msgstr "Digite seu e-mail"
+
+#: app/template/template-parts/newsletter/form.php:9
+#: app/template/template-parts/newsletter/form.php:10
+msgid "First Name"
+msgstr "Nome"
+
+#: app/template/template-parts/newsletter/form.php:11
+#: app/template/template-parts/newsletter/form.php:12
+msgid "Last Name"
+msgstr "Sobrenome"
+
+#: app/template/template-parts/newsletter/form.php:15
+msgid "Content of Interest"
+msgstr "Conteúdo de interesse"
+
+#: app/template/template-parts/newsletter/form.php:24
+msgid "Eventos em que irei palestrar"
+msgstr "Events in which I will speak"
+
+#: app/template/template-parts/newsletter/form.php:32
+msgid "English content"
+msgstr "Conteúdo em inglês"
+
+#: app/template/template-parts/newsletter/form.php:42
+msgid "Portuguese content"
+msgstr "Conteúdo em Português"
+
+#: app/template/template-parts/newsletter/form.php:50
+msgid "Offers and Promotions"
+msgstr "Ofertas e Promoções"
+
+#: app/template/template-parts/newsletter/form.php:58
+msgid "Subscribe"
+msgstr "Inscrever-se"
+
 #: app/template/template-parts/hero/hero-single.php:15
 msgid "Reading time:"
 msgstr "Tempo de leitura:"
 
-#: app/template/footer.php:23
+#: app/template/footer.php:30
 msgid "Follow us"
 msgstr "Siga-nos"
 
@@ -254,6 +301,23 @@ msgstr "RavenDB"
 msgid "Most Valuable Professional"
 msgstr "Most Valuable Professional"
 
+#: src/Integration/ACF/PostType/Testimonial.php:48
+#: src/PostType/Testimonial.php:33
+msgid "Testimonial"
+msgstr "Recomendação"
+
+#: src/Integration/ACF/PostType/Testimonial.php:54
+msgid "Position"
+msgstr "Cargo"
+
+#: src/Integration/ACF/PostType/Testimonial.php:60
+msgid "Photo"
+msgstr "Foto"
+
+#: src/Integration/ACF/PostType/Testimonial.php:66
+msgid "Company Logo"
+msgstr "Logo da Empresa"
+
 #: src/Setup/Navigation.php:31
 msgid "Primary"
 msgstr "Primário"
@@ -261,6 +325,47 @@ msgstr "Primário"
 #: src/Setup/Navigation.php:32
 msgid "Social Menu"
 msgstr "Menu Social"
+
+#: src/PostType/Testimonial.php:32
+msgid "Testimonials"
+msgstr "Recomendações"
+
+#: src/PostType/Testimonial.php:34
+msgctxt "testimonial"
+msgid "Add New"
+msgstr "Adicionar Nova"
+
+#: src/PostType/Testimonial.php:35
+msgid "Add New Testimonial"
+msgstr "Adicionar Nova Recomendação"
+
+#: src/PostType/Testimonial.php:36
+msgid "New Testimonial"
+msgstr "Nova Recomendação"
+
+#: src/PostType/Testimonial.php:37
+msgid "Edit Testimonial"
+msgstr "Editar Recomendação"
+
+#: src/PostType/Testimonial.php:38
+msgid "View Testimonial"
+msgstr "Ver Recomendação"
+
+#: src/PostType/Testimonial.php:39
+msgid "All Testimonials"
+msgstr "Todas Recomendações"
+
+#: src/PostType/Testimonial.php:40
+msgid "Search Testimonials"
+msgstr "Procurar Recomendações"
+
+#: src/PostType/Testimonial.php:41
+msgid "No testimonials found."
+msgstr "Nenhuma recomendação encontrada."
+
+#: src/PostType/Testimonial.php:42
+msgid "No testimonials found in Trash."
+msgstr "Nenhuma recomendação encontrada na lixeira."
 
 #~ msgid "Phone"
 #~ msgstr "Fone"

@@ -1,16 +1,17 @@
+// @todo Review all code and use the Stylus project standard code
 .newsletter
     background $tiffany
     margin-top 50px
     padding-top 55px
     padding-bottom 55px
-    
+
     h2&--title
         color $purple
         font-size 27px
         line-height 1.63
         letter-spacing 2.7px
         text-align center
-        
+
     h4&--divisortitle
         color white
         font-size 15px
@@ -18,17 +19,18 @@
         line-height 2.8
         letter-spacing 1.5px
         text-align center
-        
+
     p&--subtitle
         font-size 23px
         letter-spacing 2.3px
         line-height 1.22
         text-align center
-        
-    input[type="text"]
+
+    input[type='text'],
+    input[type='email']
         margin-bottom: 5px;
         text-align center
-        
+
     div&--interest
         background-color transparent
         border 1px solid #fff
@@ -37,7 +39,7 @@
         padding 0 10px
         width 100%
         margin-bottom 5px
-        
+
         input[type="checkbox"]
             float right
             height 52px
@@ -45,36 +47,36 @@
             line-height 52px
     label
         height 52px
-            
+
     @media screen and ( max-width $screen-sm )
         // padding-right 20px
         // padding-left 20px
-        
+
     @media screen and ( min-width 600px )
         padding-right 46px
         padding-left 46px
         width 600px
         margin-bottom 80px
-        
+
         h2&--title
             font-size 32px
             line-height 1.66
             letter-spacing 3.2px
-    
+
         p&--subtitle
             font-size 30px
             line-height 1.2
             letter-spacing 3px
             padding 0 42px
             margin-bottom 52px
-        
+
         input[type="text"]
             margin-bottom: 10px;
-        
+
         div&--interest
             margin-bottom 10px
             padding 0 27px
-            
+
     @media screen and ( min-width 800px )
         h2&--title
             font-size 34px
@@ -85,29 +87,28 @@
             font-size 32px
             line-height 1.13
             letter-spacing 3.2px
-    
+
     @media screen and ( min-width $screen-lg )
         width 1139px
         padding-left 10%
         padding-right 10%
-        
+
         p&--subtitle
             padding 0 0;
-        
+
         div&--col-6
             display flex
-            
+
             input[type="text"] 
                 width calc(50% - 5px)
-            
+
             .col-6
                 margin-right 10px
         label
             width calc(50% - 5px)
-            
+
         label:first-child
             margin-right 10px
-            
 
     label
         display: block;
@@ -117,12 +118,12 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        
+
         input[type="checkbox"]
             position: absolute;
             opacity: 0;
             cursor: pointer;
-        
+
         .checkmark
             position: absolute;
             top: 12.5px;
@@ -135,22 +136,22 @@
     div&--interest:hover
         background #92e1d5
         border 1px solid transparent
-        
+
         span
             color $purple
-        
+
         input ~ .checkmark
             border 1px solid $purple
-        
+
     div&--interest input:checked ~ .checkmark
         background-color $purple
         border unset
-    
+
     .checkmark:after
         content: "";
         position: absolute;
         display: none;
-    
+
     div&--interest input:checked ~ .checkmark:after
         display block
 
@@ -167,12 +168,12 @@
 
     .interes--selected
         background #b3eae2
-        
+
         .newsletter--interest
             border unset
-            
+
         .newsletter--interest > span
             color: $gray-dark
-            
+
     .form--submit-wrapper
         text-align center
