@@ -30,7 +30,7 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 			} );
 		} )
 		.on( 'resize', function() {
-			var $heroContainer = jQuery( '.hero--container' );
+			var $heroContainer = jQuery( '.hero--container' ),
 				topHeaderHeight = jQuery( '.top-header-wrapper' ).outerHeight(),
 				vOffset = 50,
 				heroContainerHeight = $heroContainer.height(),
@@ -54,7 +54,7 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 					'opacity' : 1,
 					'padding-bottom' : vOffset,
 					'padding-top' : topHeaderHeight + vOffset,
-					'position' : 'static',
+					'position' : 'static'
 				} );
 			}
 		} );
