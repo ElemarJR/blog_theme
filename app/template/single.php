@@ -33,6 +33,8 @@ get_header(); ?>
 			</div>
 
 			<?php get_template_part( 'template-parts/blog/single/footer-meta' ); ?>
+			
+			<?php get_template_part( 'template-parts/blog/single/post-nav' ); ?>
 
 			<?php comments_template(); ?>
 		</article>
