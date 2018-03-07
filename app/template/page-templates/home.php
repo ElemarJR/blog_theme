@@ -59,6 +59,7 @@ get_header(); ?>
 			</div>
 		</div>
 		
+		<?php /**
 		<div class="front-page--testimonial container">
 			<?php
 				$posts = $container->get( Testimonial::class )->get_testimonials();
@@ -78,6 +79,7 @@ get_header(); ?>
 				wp_reset_postdata();
 			?>
 		</div>
+		*/ ?>
 		
 		<div class="front-page--blog container">
 			<div class="front-page--blog--header">
