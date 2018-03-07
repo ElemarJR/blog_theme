@@ -24,6 +24,7 @@ requirejs([
     'app/font',
     'app/hero',
     'app/image-bg',
+    'app/newsletter',
     'app/post-list',
     'app/scroll-button',
     'app/site-footer',
