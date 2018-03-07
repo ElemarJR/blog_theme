@@ -29,7 +29,8 @@ requirejs([
     'app/site-footer',
     'app/site-header',
     'app/site-navigation',
-    'app/site-search'
+    'app/site-search',
+    'app/testimonial'
 ], function() {
     jQuery( window ).trigger('resize');
 });
