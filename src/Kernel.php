@@ -45,6 +45,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\Blog::class,
 			\Aztec\Integration\ACF\Pages\Contact::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
+			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
 			\Aztec\Integration\ACF\PostType\Testimonial::class,
 			
 			\Aztec\Integration\AddThis\AddThis::class,
@@ -55,6 +56,7 @@ class Kernel {
 			
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
+			\Aztec\Pages\NewsletterForm::class,
 			\Aztec\Pages\NotFound::class,
 			\Aztec\Pages\Search::class,
 			\Aztec\Pages\Single::class,

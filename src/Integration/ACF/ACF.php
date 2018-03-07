@@ -28,6 +28,6 @@ class ACF extends Base {
 	 * Remove ACF admin menu in favour of hard-coded custom fields
 	 */
 	public function remove_admin_menu() {
-		remove_menu_page( 'edit.php?post_type=acf-field-group' );
+// 		remove_menu_page( 'edit.php?post_type=acf-field-group' );
 	}
 }
