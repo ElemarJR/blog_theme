@@ -29,8 +29,6 @@ class Kernel {
 	public function __construct( Container $container ) {
 		$this->container = $container;
 	}
-	
-	
 
 	/**
 	 * Load classes that add or remove hooks
@@ -46,6 +44,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\Contact::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
+			\Aztec\Integration\ACF\Pages\Page::class,
 			\Aztec\Integration\ACF\PostType\Testimonial::class,
 			
 			\Aztec\Integration\AddThis\AddThis::class,

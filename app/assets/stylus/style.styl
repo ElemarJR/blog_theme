@@ -5,8 +5,10 @@
 @import '../font-icon'
 @import '../../../bower_components/wow/css/libs/animate.css'
 
-.single-post .hentry
-    @import 'content/*'
+.single-post,
+.page-template-default
+    .hentry
+        @import 'content/*'
 
 @import 'structure'
 @import 'widgets/*'

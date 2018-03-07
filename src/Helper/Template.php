@@ -31,7 +31,7 @@ class Template {
 			return 'front-page';
 		}
 		
-		return 'blog';
+		return 'page';
 	}
 	
 	/**
