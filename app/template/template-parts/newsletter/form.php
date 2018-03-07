@@ -4,13 +4,13 @@
 		<p class="newsletter--subtitle"><?php esc_html_e( 'Stay informed with our publications', 'elemarjr' ); ?></p>
 		<form class="form newsletter--form" method="post" action="https://elemarjr.us17.list-manage.com/subscribe/post?u=0ea74f86198646647c46d29cf&amp;id=cd82e1ff48" target="_blank">
 			<span class="screen-reader-text"><?php esc_html_e( 'Type your email', 'elemarjr' ); ?></span>
-			<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Type your email', 'elemarjr' ); ?>">
+			<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Type your email', 'elemarjr' ); ?>" required>
 
 			<div class="newsletter--col-6">
 				<span class="screen-reader-text"><?php esc_html_e( 'First Name', 'elemarjr' ); ?></span>
-				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'First Name', 'elemarjr' ); ?>">
+				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'First Name', 'elemarjr' ); ?>" required>
 				<span class="screen-reader-text"><?php esc_html_e( 'Last Name', 'elemarjr' ); ?></span>
-				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Last Name', 'elemarjr' ); ?>">
+				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Last Name', 'elemarjr' ); ?>" required>
 			</div>
 
 			<h4 class="newsletter--divisortitle"><?php esc_html_e( 'Content of Interest', 'elemarjr' ); ?></h4>		
