@@ -64,5 +64,8 @@ class Thumbnail extends Base {
 		
 		// post listing thumbnail
 		add_image_size( 'post-listing', 348, 230, true );
+		
+		// previous and next post nav thumbnail
+		add_image_size( 'post-nav', 116, 84, true );
 	}
 }
