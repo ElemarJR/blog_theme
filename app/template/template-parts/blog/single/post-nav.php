@@ -15,7 +15,7 @@ if( $previous_post = get_adjacent_post( false, '', true ) ) {
 
 ?>
 	<a class="link-previous" href="<?php echo $post_link; ?>" title="">
-		<i class="i-arrow-right"></i>
+		<i class="i-arrow-left"></i>
 		Anterior
 	</a>
 
@@ -43,7 +43,7 @@ if( $next_post = get_adjacent_post( false, '', false ) ) {
 
 	<a class="posts-nav-link--next" href="<?php echo $post_link; ?>" title="">
 		<img class="posts-nav-img" src="<?php echo $image_url; ?>" alt="">
-		<div class="posts-nav-title-wrapper">
+		<div class="posts-nav-title-wrapper linhk-wrapper-next">
 			<p class="posts-nav-title"><?php echo $title ?></p>
 			<p class="posts-nav-link--cursor"> Próximo </p>
 		</div>

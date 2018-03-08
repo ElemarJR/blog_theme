@@ -60,6 +60,11 @@
     &--previous
         float left
 
+        &:hover
+            .posts-nav-title,
+            .posts-nav-link--cursor
+                color $red;
+
         .posts-nav-img
             float left
 
@@ -70,6 +75,11 @@
 
     &--next
         float right
+
+        &:hover
+            .posts-nav-title,
+            .posts-nav-link--cursor
+                color $red;
 
         .posts-nav-img
             float right
@@ -99,4 +109,3 @@
         padding-left 19px
         padding-right 19px
         padding-top 10px
-        // text-align right
