@@ -71,6 +71,7 @@ class Kernel {
 			\Aztec\Setup\HttpHeader::class,
 			\Aztec\Setup\Html5::class,
 			\Aztec\Setup\Navigation::class,
+			\Aztec\Setup\Rss::class,
 			\Aztec\Setup\Template::class,
 			\Aztec\Setup\Title::class,
 			\Aztec\Setup\Textdomain::class,
