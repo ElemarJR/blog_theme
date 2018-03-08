@@ -1,0 +1,102 @@
+.posts-nav-link
+    height 10px
+    margin-top 34px
+    width 100%
+
+    @media screen and ( min-width $screen-sm )
+        height 30px
+
+    @media screen and ( min-width $screen-md )
+        height 50px
+
+    @media screen and ( min-width $screen-lg )
+        height 100px
+        margin-top 63px
+
+    .link-previous
+        text-align left
+        float left
+
+    .link-next
+        float right
+        text-align right
+
+    .link-next,
+    .link-previous
+        color $gray !important
+        font-weight 600
+
+        @media screen and ( min-width $screen-sm )
+            font-size 25px
+            letter-spacing 2.5px
+            line-height 1.96
+
+        @media screen and ( min-width $screen-md )
+            font-size 31px
+            letter-spacing 3.1px
+            line-height 2
+
+        @media screen and ( min-width $screen-lg )
+            display none
+
+    &--previous,
+    &--next
+        display none
+        font-weight 600
+        letter-spacing 1.5px
+        line-height 2
+
+        @media screen and ( min-width $screen-lg )
+            display block
+
+        .posts-nav-title-wrapper
+            display inline-block
+
+            p
+                font-size 15px !important
+                margin 0 !important
+                width 350px
+
+    &--previous
+        float left
+
+        .posts-nav-img
+            float left
+
+        .posts-nav-title
+            padding-left 19px
+            padding-top 20px
+            text-align left
+
+    &--next
+        float right
+
+        .posts-nav-img
+            float right
+
+        .posts-nav-title-wrapper
+            float right
+
+            .posts-nav-title
+                padding-right 19px
+                padding-top 20px
+                text-align right
+
+        .posts-nav-link--cursor
+            text-align right
+
+    .posts-nav-title
+        color $seal
+        font-size 15px
+        font-weight bold
+        line-height 1.53
+        text-transform uppercase
+
+    .posts-nav-link--cursor
+        color $gray
+        font-size 14px
+        letter-spacing 1.4px
+        padding-left 19px
+        padding-right 19px
+        padding-top 10px
+        // text-align right

@@ -89,7 +89,7 @@
         @media screen and ( min-width $screen-lg )
             display flex
 
-        input[type="text"]
+        input[type='text']
             @media screen and ( min-width $screen-lg )
                     width calc(50% - 5px)
 
@@ -115,14 +115,14 @@
 
     &--interest
         background-color transparent
-        border 1px solid #fff
-        color #fff
+        border 1px solid $white
+        color $white
         height 54px
-        padding 0 10px
         margin-bottom 5px
+        padding 0 10px
         width 100%
 
-        input[type="checkbox"]
+        input[type='checkbox']
             float right
             height 54px
         span
@@ -148,14 +148,14 @@
             @media screen and ( min-width $screen-lg )
                 margin-right 10px
 
-        input[type="checkbox"]
+        input[type='checkbox']
             cursor pointer
-            position absolute
             opacity 0
+            position absolute
 
         .checkmark
             background-color transparent
-            border 1px solid #fff
+            border 1px solid $white
             height 15px
             position absolute
             right 15px
@@ -193,9 +193,9 @@
 
     .checkmark
         &:after
-            content ""
-            position absolute
+            content ''
             display none
+            position absolute
 
     &--interest
         input
@@ -208,10 +208,10 @@
         &:after
             border solid $white
             border-width 0 1px 1px 0
-            left 5px
             height 11px
-            transform rotate(45deg)
+            left 5px
             top 1px
+            transform rotate(45deg)
             width 6px
 
             @media screen and ( min-width $screen-sm )
@@ -227,7 +227,7 @@
                 width 5px
 
     .interes--selected
-        background #b3eae2
+        background $cruise
 
         .newsletter--interest
             border unset
