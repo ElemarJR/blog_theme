@@ -46,24 +46,24 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
 			\Aztec\Integration\ACF\Pages\Page::class,
 			\Aztec\Integration\ACF\PostType\Testimonial::class,
-			
+
 			\Aztec\Integration\AddThis\AddThis::class,
-			
+
 			\Aztec\Integration\Polylang\Polylang::class,
-			
+
 			\Aztec\Integration\YoastSEO\YoastSEO::class,
-			
+
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Contact::class,
 			\Aztec\Pages\NewsletterForm::class,
 			\Aztec\Pages\NotFound::class,
 			\Aztec\Pages\Search::class,
 			\Aztec\Pages\Single::class,
-			
+
 			\Aztec\Performance\Css::class,
 
 			\Aztec\PostType\Testimonial::class,
-			
+
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\Comments::class,
 			\Aztec\Setup\DisableEmoji::class,
@@ -76,15 +76,17 @@ class Kernel {
 			\Aztec\Setup\Title::class,
 			\Aztec\Setup\Textdomain::class,
 			\Aztec\Setup\Thumbnail::class,
+
+			\Aztec\Shortcode\Twitter::class,
 		];
 
 		foreach ( $init_classes as $class ) {
 			$this->container->get( $class )->init();
 		}
-		
+
 		$this->forms();
 	}
-	
+
 	/**
 	 * Define the list of forms of the website
 	 */
