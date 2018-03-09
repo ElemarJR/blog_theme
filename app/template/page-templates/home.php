@@ -79,8 +79,8 @@ get_header(); ?>
             				<i class="i-left-quote quote"></i>
             				<!-- <span class="quote">"</span> -->
                 			<?php the_content() ?>
-                    		<hr class="testimonial-divisor">
                     		<div class="footer">
+                    		<hr class="testimonial-divisor">
 	                    		<div class="info-author">
 	                    			<p class="testimonial-author"> <?php the_title() ?> </p>
 	                    			<p class="testimonial-author-position"> <?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?> </p>

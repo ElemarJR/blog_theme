@@ -18,7 +18,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
                 }
               },
               autoplay: {
-    			delay: 40000,
+    			delay: 4000,
   			  },
             centeredSlides: true,
             loop: true,
@@ -33,5 +33,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
     maxHeight = Math.max( jQuery(this).height(), maxHeight );
   });
   jQuery( '.slider-content' ).height( maxHeight );
+
+  jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
 
 });
