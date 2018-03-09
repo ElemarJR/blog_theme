@@ -18,7 +18,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
                 }
               },
               autoplay: {
-    			delay: 5000,
+    			delay: 40000,
   			  },
             centeredSlides: true,
             loop: true,
@@ -26,4 +26,12 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
               el: '.swiper-pagination',
             }
         });
+
+  let maxHeight = 0;
+
+  jQuery( '.slider-content' ).each(function() {
+    maxHeight = Math.max( jQuery(this).height(), maxHeight );
+  });
+  jQuery( '.slider-content' ).height( maxHeight );
+
 });

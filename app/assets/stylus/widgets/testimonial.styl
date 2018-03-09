@@ -3,14 +3,6 @@
     padding 0 20px
 
     .swiper-container
-        height 1000px
-
-        @media screen and ( min-width $screen-sm )
-            height 1250px
-
-        @media screen and ( min-width $screen-lg )
-            height 844px
-
         width 100%
 
         .testimonial-title
@@ -41,6 +33,7 @@
 
     .slider-content
         color gray
+        margin-bottom 50px;
 
         p
             color #666666
@@ -51,7 +44,8 @@
             margin unset
             padding-left 70px
             padding-right 25px
-            padding-top 50px
+            padding-top 94px
+            padding-bottom 30px
             text-align left
 
             @media screen and ( min-width $screen-sm )
@@ -59,18 +53,18 @@
                 font-size 28px
                 letter-spacing 1.7px
                 line-height 1.68
-                text-align left
                 padding-left 125px
-
-            @media screen and ( min-width $screen-md )
-                padding-top 100px
+                text-align left
+                padding-top 156px
 
             @media screen and ( min-width $screen-lg )
                 font-size 16px
                 line-height 2.06
                 letter-spacing 1.3px
+                padding-top 96px
+                padding-left 104px
                 text-align left
-                padding-top 102px
+                
 
         .testimonial-author
             color #333333
@@ -80,6 +74,7 @@
             line-height 1.39
             padding-left 49px
             padding-top 30px
+            padding-bottom 2px
             text-align left
             text-transform uppercase
 
@@ -103,6 +98,7 @@
             line-height 1.56
             padding-left 49px
             padding-top 10px
+            padding-bottom 20px
             text-align left
 
             @media screen and ( min-width $screen-sm )
@@ -131,8 +127,7 @@
 
     .quote
         color #62d3c2
-        font-family Ounce
-        font-size 90px
+        font-size 30px
         left 24px
         line-height .68
         position absolute
@@ -140,15 +135,17 @@
         top 100px
 
         @media screen and ( min-width $screen-sm )
-            font-size 147px
+            font-size 52px
             line-height .67
             text-align center
             left 47px
+            top 168px
 
         @media screen and ( min-width $screen-lg )
-            font-size 90px
-            line-height .68
+            font-size 30px
             left 56px
+            line-height .68
+            top 102px
 
     .swiper-slide-active .slider-content
         background white
@@ -169,7 +166,7 @@
             top -90px
             width 172px
 
-        @media screen and ( min-width $screen-sm )
+        @media screen and ( min-width $screen-lg )
             top -53px
             left calc( 50%- 53px )
             height 106px
@@ -189,3 +186,6 @@
             float left
             display inline-block
             width 50%
+    // .footer
+        // bottom 0
+        // position absolute
