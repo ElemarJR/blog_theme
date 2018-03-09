@@ -21,9 +21,9 @@ get_header(); ?>
 		?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post--content">
-				<?php 
+				<?php
 					the_content();
-					
+
 					wp_link_pages( array(
 						'next_or_number' => 'next',
 						'before' => '<div class="posts-nav">',
@@ -33,7 +33,7 @@ get_header(); ?>
 			</div>
 
 			<?php get_template_part( 'template-parts/blog/single/footer-meta' ); ?>
-			
+
 			<?php get_template_part( 'template-parts/blog/single/post-nav' ); ?>
 
 			<?php comments_template(); ?>
