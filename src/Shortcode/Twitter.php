@@ -20,9 +20,8 @@ class Twitter extends Base {
 	}
 
 	function tweetAbout( $atts, $content = null ) {
-
 		$url = "https://twitter.com/intent/tweet?text={$content}&url=".home_url( '/?p=' . get_the_ID() ). "&via=elemarjr";
-		return '<a href="' . esc_url( $url ) . '">' . $content . '</a>';
+		return '<a href="' . esc_url( $url ) . '">' . $content . '<i class="i-twitter"></i></a>';
 	}
 
 	public function enqueue_script() {
