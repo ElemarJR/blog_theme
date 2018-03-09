@@ -8,7 +8,7 @@ use Aztec\PostType\Testimonial;
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
- * 
+ *
  * Template name: Home
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -52,53 +52,70 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="front-page--quote">
 			<div class="front-page--quote--container container wow fadeInUpBig">
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ) ?>
 			</div>
 		</div>
-		
-		<?php /**
-		<div class="front-page--testimonial container">
-			<?php
-				$posts = $container->get( Testimonial::class )->get_testimonials();
-				foreach ( $posts as $post ) : setup_postdata( $post );
-			?>
-			<h3><?php the_title() ?></h3>
-			<?php 
-				echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) );
-				$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
-				echo esc_html( wp_get_attachment_image_url( $photo_id ) );
-			?>
-			
-			
-			
-			<?php 
-				endforeach;
-				wp_reset_postdata();
-			?>
+
+		<div class="front-page--testimonial">
+    		<div class="swiper-container container">
+        		<h1 class="testimonial-title"> <?php esc_html_e( 'Testimonials', 'elemarjr' ); ?> </h1>
+        		<div class="swiper-wrapper">
+
+					<?php
+						$posts = $container->get( Testimonial::class )->get_testimonials();
+						foreach ( $posts as $post ) : setup_postdata( $post );
+					?>
+
+					<?php
+						$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
+						$logo_id = get_post_meta( get_the_ID(), 'testimonial_logo', true );
+					?>
+					<div class="swiper-slide">
+                		<div class="slider-content">
+							<img class="testimonial-foto" src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
+            				<span class="quote">"</span>
+                			<?php the_content() ?>
+                    		<hr class="testimonial-divisor">
+                    		<div class="info-author">
+                    			<p class="testimonial-author"> <?php the_title() ?> </p>
+                    			<p class="testimonial-author-position"> <?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?> </p>
+                    		</div>
+								<img class="company-logo" src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id ) ); ?>" alt="">
+                    	</div>
+                    </div>
+
+
+					<?php
+						endforeach;
+						wp_reset_postdata();
+					?>
+        		</div>
+    			<div class="swiper-pagination"></div>
+    		</div>
 		</div>
-		*/ ?>
-		
+		<!-- end testimonial -->
+
 		<div class="front-page--blog container">
 			<div class="front-page--blog--header">
 				<h2 class="front-page--blog--title">Blog</h2>
-				
+
 				<p class="front-page--blog--description">
 					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'blog_text', true ) ) ?>
 				</p>
 			</div>
-			
-			<?php 
+
+			<?php
 				$query = new WP_Query( array(
-					'posts_per_page' => 4,	
+					'posts_per_page' => 4,
 				) );
 				$container->set( 'post_list.query', $query );
 				$container->set( 'post_list.extra_class', 'front-page--blog--list' );
 				get_template_part( 'template-parts/blog/post-list' );
 			?>
-			
+
 			<div class="front-page--blog--footer">
 				<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
 					<?php echo esc_html_e( 'See more', 'elemarjr' ) ?>

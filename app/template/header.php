@@ -30,6 +30,11 @@ $display_hero = $container->get( 'display_hero' );
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 <?php wp_head(); ?>
+
+<!-- FIXME ONDE COLOCAR O .CSS/ -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css">
+
+
 </head>
 <body <?php body_class(); ?> data-bg="">
 <div id="page" class="site">
