@@ -30,6 +30,7 @@ $display_hero = $container->get( 'display_hero' );
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 <?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?> data-bg="">
 <div id="page" class="site">
