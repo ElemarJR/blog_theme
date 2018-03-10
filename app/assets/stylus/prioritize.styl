@@ -29,7 +29,7 @@ img
 
 button
     background none
-    border 0
+    border none
 
 // Helper classes
 
@@ -62,8 +62,8 @@ button
 // Header
 .top-header-wrapper
     border-bottom 1px solid rgba( $white, .7 )
-    height $sm-nav-height
     fixed top left
+    height $sm-nav-height
     width 100%
     z-index 99
 
@@ -109,7 +109,7 @@ button
 
     /.search-toggle
         background transparent
-        border 0
+        border none
         font-size 26px
         icon( i-search )
         right 83px
@@ -128,7 +128,7 @@ button
 .main-navigation
     /.menu-toggle
         background-color transparent
-        border 0
+        border none
         font-size 46px
         icon( i-menu )
         padding 0
@@ -213,9 +213,10 @@ button
     &--wrapper
         background-color $purple
         height 100vh
+        left 0
         min-height 500px
         position relative
-        relative left top
+        right 0
         width 100vw
         z-index 2
 
