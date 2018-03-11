@@ -9,9 +9,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         speed: 800,
         slidesPerView: 2,
         spaceBetween: 100,
-        // Responsive breakpoints
         breakpoints: {
-            // when window width is <= 800px
             1366: {
                 slidesPerView: 1,
                 spaceBetween: 50
@@ -19,13 +17,15 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         },
 
         on: {
-            resize: function () {
-                console.log('swiper initialized');
-                jQuery(window).resize(function(){location.reload();});
-                },
+            init: function () {
+                fixSliderHeight();
             },
+            resize: function () {
+                fixSliderHeight();
+            },
+        },
         autoplay: {
-            delay: 4000,
+            delay: 40000,
         },
         centeredSlides: true,
         loop: true,
@@ -34,13 +34,19 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         }
     });
 
-  let maxHeight = 0;
 
-  jQuery( '.slider-content' ).each(function() {
-    maxHeight = Math.max( jQuery(this).height(), maxHeight );
-  });
-  jQuery( '.slider-content' ).height( maxHeight );
+    function fixSliderHeight()
+    {
+        let maxHeight = 0;
 
-  jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
+        jQuery( '.slider-content' ).css('height', 'unset');
+        jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
 
+        jQuery( '.slider-content' ).each(function() {
+            maxHeight = Math.max( jQuery(this).height(), maxHeight );
+        });
+
+        jQuery( '.slider-content' ).height( maxHeight );
+        jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
+    }
 });
