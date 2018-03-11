@@ -4,36 +4,49 @@
 define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
 
 	var swiper = new Swiper({
-            el: '.swiper-container',
-            initialSlide: 0,
-            speed: 800,
-            slidesPerView: 2,
-              spaceBetween: 100,
-              // Responsive breakpoints
-              breakpoints: {
-                // when window width is <= 800px
-                1366: {
-                  slidesPerView: 1,
-                  spaceBetween: 50
-                }
-              },
-              autoplay: {
-    			delay: 4000,
-  			  },
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
+        el: '.swiper-container',
+        initialSlide: 0,
+        speed: 800,
+        slidesPerView: 2,
+        spaceBetween: 100,
+        breakpoints: {
+            1366: {
+                slidesPerView: 1,
+                spaceBetween: 50
             }
+        },
+
+        on: {
+            init: function () {
+                fixSliderHeight();
+            },
+            resize: function () {
+                fixSliderHeight();
+            },
+        },
+        autoplay: {
+            delay: 40000,
+        },
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+
+    function fixSliderHeight()
+    {
+        let maxHeight = 0;
+
+        jQuery( '.slider-content' ).css('height', 'unset');
+        jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
+
+        jQuery( '.slider-content' ).each(function() {
+            maxHeight = Math.max( jQuery(this).height(), maxHeight );
         });
 
-  let maxHeight = 0;
-
-  jQuery( '.slider-content' ).each(function() {
-    maxHeight = Math.max( jQuery(this).height(), maxHeight );
-  });
-  jQuery( '.slider-content' ).height( maxHeight );
-
-  jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
-
+        jQuery( '.slider-content' ).height( maxHeight );
+        jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
+    }
 });
