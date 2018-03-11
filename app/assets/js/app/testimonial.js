@@ -12,7 +12,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
               // Responsive breakpoints
               breakpoints: {
                 // when window width is <= 800px
-                800: {
+                1366: {
                   slidesPerView: 1,
                   spaceBetween: 50
                 }
