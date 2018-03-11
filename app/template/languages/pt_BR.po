@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-09T15:20:18+00:00\n"
-"PO-Revision-Date: 2018-03-09 12:26-0300\n"
+"PO-Revision-Date: 2018-03-09 15:31-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -61,12 +61,12 @@ msgstr "Compartilhe"
 #: app/template/template-parts/blog/single/post-nav.php:19
 #: app/template/template-parts/blog/single/post-nav.php:26
 msgid "Previous"
-msgstr "Próximo"
+msgstr "Anterior"
 
 #: app/template/template-parts/blog/single/post-nav.php:40
 #: app/template/template-parts/blog/single/post-nav.php:48
 msgid "Next"
-msgstr "Anterior"
+msgstr "Próximo"
 
 #: app/template/template-parts/blog/post-list.php:9
 msgid "Loading posts..."
