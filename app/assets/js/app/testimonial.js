@@ -2,7 +2,6 @@
  * Manipulate header to show after load the font
  */
 define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
-    var maxHeight = 0;
 
 	var swiper = new Swiper({
         el: '.swiper-container',
@@ -26,20 +25,29 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             },
         },
         autoplay: {
-            delay: 4000,
+            delay: 40000,
         },
         centeredSlides: true,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
-            clickable: true,
         }
     });
+});
 
 
-    function fixSliderHeight()
+jQuery( window ).resize(function() {
+    setTimeout(function(){ fixSliderHeight(); }, 300);
+});
+
+
+function fixSliderHeight()
     {
+        if (typeof maxHeight === 'undefined' || maxHeight === null) {
+           var maxHeight = 0
+        }
         maxHeight = 0;
+
         jQuery( '.slider-content' ).css('height', 'unset');
         jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
 
@@ -50,10 +58,3 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         jQuery( '.slider-content' ).height( maxHeight );
         jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
     }
-
-    jQuery(window).bind('resizeEnd', function() {
-        fixSliderHeight();
-    });
-
-    fixSliderHeight();
-});
