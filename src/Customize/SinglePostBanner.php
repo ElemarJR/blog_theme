@@ -80,6 +80,20 @@ class SinglePostBanner extends Base {
 				'section' => $section_id,
 				'type' => 'url',
 			) );
+			
+			$background_id = $this->get_theme_mod_control_id( $lang, 'background' );
+			$wp_customize->add_setting( $background_id, array(
+				'default' => '',
+			) );
+			$wp_customize->add_control( new \WP_Customize_Image_Control(
+				$wp_customize,
+				$background_id,
+				array(
+					'label' => sprintf( __( 'Background Image - (%s)', 'elemarjr' ), $lang->locale ),
+					'section'    => $section_id,
+					'settings'   => $background_id,
+				)
+			) );
 		}
 	}
 	
