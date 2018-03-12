@@ -27,7 +27,7 @@ $bg_images = $spb->get_background_images( $lang );
 			endforeach;
 		?>>
 	<div class="banner-contact--text">
-		<?php echo wp_kses_post( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
+		<?php echo wp_kses_post( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'text' ) ) ); ?>
 	</div>
 
 	<?php $button_label = get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'label' ) ); ?>
