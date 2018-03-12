@@ -25,7 +25,11 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             },
         },
         autoplay: {
-            delay: 40000,
+            delay: 4000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         centeredSlides: true,
         loop: true,
@@ -58,4 +62,7 @@ function fixSliderHeight()
 
         jQuery( '.slider-content' ).height( maxHeight );
         jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
+
+        jQuery( '.testimonial-nav' ).css('width', 'calc(50% - '+jQuery( '.slider-content' ).width() /2+'px )');
+
     }

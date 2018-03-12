@@ -98,6 +98,8 @@ get_header(); ?>
         		</div>
     			<div class="swiper-pagination"></div>
     		</div>
+			<div class="swiper-button-next testimonial-nav"></div>
+    		<div class="swiper-button-prev testimonial-nav"></div>
 		</div>
 		<!-- end testimonial -->
 
