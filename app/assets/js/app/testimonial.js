@@ -33,11 +33,20 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             el: '.swiper-pagination',
         }
     });
+});
 
 
-    function fixSliderHeight()
+jQuery( window ).resize(function() {
+    setTimeout(function(){ fixSliderHeight(); }, 300);
+});
+
+
+function fixSliderHeight()
     {
-        let maxHeight = 0;
+        if (typeof maxHeight === 'undefined' || maxHeight === null) {
+           var maxHeight = 0
+        }
+        maxHeight = 0;
 
         jQuery( '.slider-content' ).css('height', 'unset');
         jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
@@ -49,4 +58,3 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         jQuery( '.slider-content' ).height( maxHeight );
         jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
     }
-});
