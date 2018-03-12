@@ -47,22 +47,22 @@ jQuery( window ).resize(function() {
 
 
 function fixSliderHeight()
-    {
-        if (typeof maxHeight === 'undefined' || maxHeight === null) {
-           var maxHeight = 0
-        }
-        maxHeight = 0;
-
-        jQuery( '.slider-content' ).css('height', 'unset');
-        jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
-
-        jQuery( '.slider-content' ).each(function() {
-            maxHeight = Math.max( jQuery(this).height(), maxHeight );
-        });
-
-        jQuery( '.slider-content' ).height( maxHeight );
-        jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
-
-        jQuery( '.testimonial-nav' ).css('width', 'calc(50% - '+jQuery( '.slider-content' ).width() /2+'px )');
-
+{
+    if (typeof maxHeight === 'undefined' || maxHeight === null) {
+       var maxHeight = 0
     }
+    maxHeight = 0;
+
+    jQuery( '.slider-content' ).css('height', 'unset');
+    jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
+
+    jQuery( '.slider-content' ).each(function() {
+        maxHeight = Math.max( jQuery(this).height(), maxHeight );
+    });
+
+    jQuery( '.slider-content' ).height( maxHeight );
+    jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
+
+    jQuery( '.testimonial-nav' ).css('width', 'calc(50% - '+jQuery( '.slider-content' ).width() /2+'px )');
+
+}
