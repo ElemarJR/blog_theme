@@ -21,6 +21,7 @@ if (typeof jQuery === 'function') {
 // start the application
 requirejs([
     'app/animation',
+    'app/customize-editor-control',
     'app/font',
     'app/hero',
     'app/image-bg',

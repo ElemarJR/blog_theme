@@ -35,6 +35,8 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Customize\SinglePostBanner::class,
+			
 			\Aztec\Form\Contact::class,
 			\Aztec\Form\Form::class,
 
