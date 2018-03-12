@@ -77,7 +77,6 @@ get_header(); ?>
                 		<div class="slider-content">
 							<img class="testimonial-foto" src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
             				<i class="i-left-quote quote"></i>
-            				<!-- <span class="quote">"</span> -->
                 			<?php the_content() ?>
                     		<div class="footer">
                     		<hr class="testimonial-divisor">
@@ -85,7 +84,7 @@ get_header(); ?>
 	                    			<p class="testimonial-author"> <?php the_title() ?> </p>
 	                    			<p class="testimonial-author-position"> <?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?> </p>
 	                    		</div>
-								<img class="company-logo" src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id ) ); ?>" alt="">
+								<img class="company-logo" src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id, 'testimonial-logo' ) ); ?>" alt="">
                     		</div>
                     	</div>
                     </div>
