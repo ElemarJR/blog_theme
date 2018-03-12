@@ -70,8 +70,8 @@ $display_hero = $container->get( 'display_hero' );
 			$classes = $container->get( Template::class )->header_classes( $display_hero );
 		?>
 		<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
-			foreach ( $bg_images as $name => $url ) :
-				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
+			foreach ( $bg_images as $size => $url ) :
+				echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
 			endforeach;
 		?>>	
 			<?php if( $display_hero ) : ?>

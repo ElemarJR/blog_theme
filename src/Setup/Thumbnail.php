@@ -17,24 +17,50 @@ class Thumbnail extends Base {
 
 	public $bg_image_sizes;
 	
+	public $post_single_banner_image_sizes;
+	
 	public function __construct( Container $container ) {
 		parent::__construct( $container );
 		
 		$this->bg_image_sizes = array(
 			array(
 				'name' => 'header-sm',
+				'size' => 'sm',
 				'width' => 480,
 				'height' => 760,
 			),
 			array(
 				'name' => 'header-md',
+				'size' => 'md',
 				'width' => 768,
 				'height' => 984,
 			),
 			array(
 				'name' => 'header-lg',
+				'size' => 'lg',
 				'width' => 1440,
 				'height' => 900,
+			),
+		);
+		
+		$this->post_single_banner_image_sizes = array(
+			array(
+				'name' => 'post-single-banner-sm',
+				'size' => 'sm',
+				'width' => 480,
+				'height' => 0,
+			),
+			array(
+				'name' => 'post-single-banner-md',
+				'size' => 'md',
+				'width' => 768,
+				'height' => 0,
+			),
+			array(
+				'name' => 'post-single-banner-lg',
+				'size' => 'lg',
+				'width' => 1190,
+				'height' => 0,
 			),
 		);
 	}
@@ -60,6 +86,10 @@ class Thumbnail extends Base {
 	public function add_image_sizes() {
 		foreach ( $this->bg_image_sizes as $image_size ) {
 			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'], true );
+		}
+		
+		foreach ( $this->post_single_banner_image_sizes as $image_size ) {
+			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'] );
 		}
 		
 		// post listing thumbnail

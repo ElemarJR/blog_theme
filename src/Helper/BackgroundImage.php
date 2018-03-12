@@ -53,7 +53,7 @@ class BackgroundImage extends Base {
 		$images_urls = array();
 		
 		foreach ( $image_sizes as $size ) {
-			$images_urls[ $size['name'] ] = get_the_post_thumbnail_url( $post_id, $size['name'] );
+			$images_urls[ $size['size'] ] = get_the_post_thumbnail_url( $post_id, $size['name'] );
 		}
 		
 		return $images_urls;
@@ -83,7 +83,7 @@ class BackgroundImage extends Base {
 		$images_urls = array();
 		
 		foreach ( $image_sizes as $size ) {
-			$images_urls[ $size['name'] ] = get_template_directory_uri() . '/assets/images/header/fallback.jpg';
+			$images_urls[ $size['size'] ] = get_template_directory_uri() . '/assets/images/header/fallback.jpg';
 		}
 		
 		return $images_urls;

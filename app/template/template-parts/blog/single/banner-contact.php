@@ -15,19 +15,23 @@ $spb = $container->get( SinglePostBanner::class );
  */
 $lang = PLL()->curlang;
 
-?>
-<div class="banner-contact">
-	<div class="banner-contact--content">
-		<h2 class="banner-contact--title">
-			<?php echo wp_kses_post( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
-		</h2>
-		<h4 class="banner-contact--subtitle">
-			<?php echo wp_kses_post( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'text' ) ) ); ?>
-		</h4>
+/**
+ * Get banner background image
+ */
+$bg_images = $spb->get_background_images( $lang );
 
-		<?php $button_label = get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'label' ) ); ?>
-		<a class="button button__tiffany" href="<?php echo esc_url( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'url' ) ) ) ?>" title="<?php echo esc_attr( $button_label ); ?>">
-			<?php echo esc_html( $button_label ); ?>
-		</a>
+?>
+<div class="banner-contact"<?php
+			foreach ( $bg_images as $size => $url ) :
+				echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
+			endforeach;
+		?>>
+	<div class="banner-contact--text">
+		<?php echo wp_kses_post( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
 	</div>
+
+	<?php $button_label = get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'label' ) ); ?>
+	<a class="button button__tiffany" href="<?php echo esc_url( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'url' ) ) ) ?>" title="<?php echo esc_attr( $button_label ); ?>">
+		<?php echo esc_html( $button_label ); ?>
+	</a>
 </div>
