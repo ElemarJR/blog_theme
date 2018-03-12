@@ -23,6 +23,7 @@ class Polylang extends Base {
 	public function init() {
 		add_filter( 'admin_init', $this->callback( 'register_strings' ) );
 		add_filter( 'pll_the_languages_args', $this->callback( 'display_language_slug' ) );
+		add_filter( 'pll_get_post_types', $this->callback( 'custom_post_type_support' ) );
 	}
 
 	/**
@@ -44,5 +45,10 @@ class Polylang extends Base {
 	
 	public function is_active() {
 		return function_exists( 'PLL' );
+	}
+	
+	public function custom_post_type_support( $post_types ) {
+		$post_types['testimonial'] = 'testimonial';
+		return $post_types;
 	}
 }
