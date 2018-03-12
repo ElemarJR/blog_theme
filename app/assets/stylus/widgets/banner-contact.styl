@@ -1,96 +1,43 @@
 .banner-contact
-    background: url("http://www.elemarjr.com/wp-content/uploads/2018/01/SOBRE_overlay-1440x900.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height 300px
-    margin-left: -20px;
+    background-color #000
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+    margin-left -20px
     margin-top 40px
+    padding 40px 30px
     text-transform uppercase
     width calc( 100% + 40px )
 
     @media screen and ( min-width $screen-sm )
-        height 484px
-
-    @media screen and ( min-width $screen-md )
-        height 559px
+        padding 65px 50px
 
     @media screen and ( min-width $screen-lg )
-        height 264px
+        margin-left 0
+        padding 60px
 
-    &--content
-        padding-left 31px
-
-        @media screen and ( min-width $screen-sm )
-            padding-left 51px
-
-        @media screen and ( min-width $screen-md )
-            padding-left 83px
-
-        @media screen and ( min-width $screen-lg )
-            padding-left 60px
-
-    &--title
+    &--text
         color $white
         font-size 27px !important
-        letter-spacing normal
-        line-height 1.56
-        margin-bottom unset
-        padding-top 25px
-        text-align left
-        width 400px
-
-        @media screen and ( min-width $screen-sm )
-            font-size 38px !important
-            line-height 1.51
-            padding-top 65px
-            text-align left
-
-        @media screen and ( min-width $screen-md )
-            font-size 52px !important
-            line-height 1.46
-            padding-top 81px
-
-        @media screen and ( min-width $screen-lg )
-            font-size 27px !important
-            line-height 1.59
-            width unset
-            padding-top 49px
-
-    &--subtitle
-        color $white
-        font-size 24px !important
-        font-weight 300
-        letter-spacing 0.4px
-        line-height 1.56
-        margin-top 23px
-        margin-bottom 23px
+        letter-spacing 0.5px
+        line-height 1.5
+        margin-bottom 20px
         text-align left
 
         @media screen and ( min-width $screen-sm )
-            font-size 34px !important
-            line-height 1.51
-            letter-spacing 0.6px
-            margin-top 36px
-            margin-bottom 38px
-            text-align left
-            width 460px
+            font-size 45px !important
+            margin-bottom 35px
 
         @media screen and ( min-width $screen-md )
             font-size 52px !important
-            line-height 1.46
-            font-weight 300
-            letter-spacing 0.7px
-            margin-top 37px
-            margin-bottom 60px
-            text-align left
-            width 610px
+            margin-bottom 65px
 
         @media screen and ( min-width $screen-lg )
             font-size 27px !important
-            line-height 1.67
-            font-weight 300
-            letter-spacing 0.4px
-            text-align left
-            margin-top 10px
-            margin-bottom 43px
+            margin-bottom 40px
+
+    .button
+        padding 0 36px !important
+
+        @media screen and ( min-width $screen-sm )
+            padding 0 72px !important
