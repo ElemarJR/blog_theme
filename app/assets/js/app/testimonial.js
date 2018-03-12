@@ -31,6 +31,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
+            clickable: 'true',
         }
     });
 });
