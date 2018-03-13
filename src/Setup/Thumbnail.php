@@ -99,6 +99,6 @@ class Thumbnail extends Base {
 		add_image_size( 'post-nav', 116, 84, true );
 		
 		// testimonial logo
-		add_image_size( 'testimonial-logo', 200, 100 );
+		add_image_size( 'testimonial-logo', 200, 44 );
 	}
 }
