@@ -50,7 +50,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             }
         },
         autoplay: {
-            delay: 40000,
+            delay: 20000,
         },
         navigation: {
             nextEl: '.swiper-button-next',
