@@ -1,41 +1,48 @@
 .front-page--testimonial
     background #f1f1f1
-    position relative
-    padding 0 20px
+    padding 45px 20px 0
+
+    @media screen and ( min-width $screen-sm )
+        padding-top 80px
+
+    .testimonial-title
+        color #1a1a1a
+        font-size 30px
+        font-weight bold
+        margin 0 0 38px
+        text-align center
+        text-transform uppercase
+
+        @media screen and ( min-width $screen-sm )
+            font-size 42px
+            line-height 1.58
+            margin-bottom 75px
+            text-align center
+
+        @media screen and ( min-width $screen-lg )
+            font-size 50px
+            font-weight bold
+            line-height 1.22
 
     .swiper-container
         width 100%
 
-        .testimonial-title
-            color #1a1a1a
-            font-size 30px
-            font-weight bold
-            text-align center
-            text-transform uppercase
-
-            @media screen and ( min-width $screen-sm )
-              font-size 42px
-              line-height 1.58
-              text-align center
-
-            @media screen and ( min-width $screen-lg )
-                font-size 50px
-                font-weight bold
-                line-height 1.22
-
-    .swiper-wrapper
-        height unset
-
     .swiper-slide
-        margin-top 50px
+        height auto
         opacity 0.4
-
-        @media screen and ( min-width $screen-sm )
-            margin-top 100px
 
     .slider-content
         color gray
-        margin-bottom 50px;
+        position relative
+
+        &--wrapper
+            padding-top 53px
+
+            @media screen and ( min-width $screen-sm )
+                padding-top 90px
+
+            @media screen and ( min-width $screen-lg )
+                padding-top 53px
 
         p
             color #666666
@@ -73,8 +80,6 @@
             font-weight bold
             letter-spacing 1.8px
             line-height 1.39
-            padding-left 49px
-            padding-top 30px
             padding-bottom 2px
             text-align left
             text-transform uppercase
@@ -83,7 +88,6 @@
                 font-size 30px
                 line-height 1.37
                 letter-spacing 3px
-                padding-left 80 px
 
             @media screen and ( min-width $screen-lg )
                 font-size 14px
@@ -97,34 +101,25 @@
             font-weight 300
             letter-spacing 1.6px
             line-height 1.56
-            padding-left 49px
-            padding-top 10px
-            padding-bottom 20px
-            text-align left
+            margin-bottom 20px
 
             @media screen and ( min-width $screen-sm )
                 font-size 26px
                 line-height 1.58
                 letter-spacing 2.6px
-                padding-left 80px
 
             @media screen and ( min-width $screen-lg )
                 font-size 13px
                 line-height 1.69
                 letter-spacing 1.3px
-                text-align left
-                margin-bottom 50px
-
+                margin-bottom 0
 
         .company-logo
-            padding-left 49px
-            padding-top 20px
-            width 100px
-            margin-bottom 55px
-
-            @media screen and ( min-width $screen-sm )
-                padding-left 80 px
-                width 150px
+            @media screen and ( min-width $screen-lg )
+                bottom 0
+                padding-bottom inherit
+                position absolute
+                right 0
 
     .quote
         color #62d3c2
@@ -160,39 +155,50 @@
         background red
         border-radius 50%
         height 106px
-        left calc( 50%- 53px )
+        left calc( 50% - 53px )
         position absolute
         top -53px
         width 106px
 
         @media screen and ( min-width $screen-sm )
             height 172px
-            left calc( 50%- 70px )
+            left calc( 50% - 70px )
             top -90px
             width 172px
 
         @media screen and ( min-width $screen-lg )
             top -53px
-            left calc( 50%- 53px )
+            left calc( 50% - 53px )
             height 106px
             width 106px
 
-    .testimonial-divisor
-        border none
+    .footer
         border-top 1px solid #e0e0e0
-        height 1px
-        width 80%
+        margin 0 20px
+        padding 33px 29px 55px
 
         @media screen and ( min-width $screen-sm )
-            margin-top 34px
+            margin 0 34px
+            padding 33px 46px 70px
 
-    .info-author
+        @media screen and ( min-width $screen-md )
+            margin 0 45px
+            padding 56px 62px 80px
+
         @media screen and ( min-width $screen-lg )
-            float left
-            display inline-block
-            width 68%
-    .footer
-        width 100%
+            margin 0 60px
+            padding 35px 0
+            position relative
+
+    .swiper-pagination
+        margin-top 25px
+
+        @media screen and ( min-width $screen-sm )
+            margin-top 65px
+
+    .swiper-container-horizontal
+        > .swiper-pagination-bullets
+            bottom auto
 
     .swiper-pagination-bullet
         border solid 1px #f0514b !important

@@ -1,21 +1,23 @@
+var swiper;
+
 /**
  * Manipulate header to show after load the font
  */
 define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
+    var $testimonial = jQuery('.front-page--testimonial');
 
-	var swiper = new Swiper({
+	swiper = new Swiper({
         el: '.swiper-container',
         initialSlide: 0,
         speed: 800,
         slidesPerView: 2,
         spaceBetween: 100,
         breakpoints: {
-            1190: {
+            1189: {
                 slidesPerView: 1,
                 spaceBetween: 50
             }
         },
-
         on: {
             init: function () {
                 fixSliderHeight();
@@ -38,9 +40,13 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
 
                 jQuery('.swiper-slide-active').find( '.slider-content .footer').show();
                 jQuery('.swiper-slide-active').find( '.slider-content .testimonial-foto').show();
-            },
-            transitionEnd: function(){
-                // alert(1);
+
+                // set the position of bullets
+                var height = $testimonial
+                                .find('.swiper-slide-active')
+                                    .find('.slider-content--wrapper')
+                                        .outerHeight( true );
+                $testimonial.find( '.swiper-pagination' ).css('top', height + 'px' );
             }
         },
         autoplay: {
@@ -57,31 +63,29 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             clickable: 'true',
         }
     });
-});
 
-
-jQuery( window ).resize(function() {
-    setTimeout(function(){ fixSliderHeight(); }, 300);
-});
-
-
-function fixSliderHeight()
-{
-    if (typeof maxHeight === 'undefined' || maxHeight === null) {
-       var maxHeight = 0
-    }
-    maxHeight = 0;
-
-    jQuery( '.slider-content' ).css('height', 'unset');
-    jQuery( '.footer' ).css({"position": "unset", "bottom": "0px"});
-
-    jQuery( '.slider-content' ).each(function() {
-        maxHeight = Math.max( jQuery(this).height(), maxHeight );
+    jQuery( window ).resize(function() {
+        setTimeout(function(){ fixSliderHeight(); }, 300);
     });
 
-    jQuery( '.slider-content' ).height( maxHeight );
-    jQuery( '.footer' ).css({"position": "absolute", "bottom": "30px"});
 
-    jQuery( '.testimonial-nav' ).css('width', 'calc(50% - '+jQuery( '.slider-content' ).width() /2+'px )');
+    function fixSliderHeight() {
+        var maxHeight = 0,
+            bulletsOffset = 29;
 
-}
+        if ( jQuery( window ).width() >= 480 ) {
+            bulletsOffset = 60;
+        }
+
+        $testimonial
+            .find( '.swiper-slide' ).each(function() {
+                maxHeight = Math.max( jQuery( this ).outerHeight( true ), maxHeight );
+            })
+            .end()
+            .find( '.swiper-container' )
+                .height( maxHeight + bulletsOffset );
+
+
+        jQuery( '.testimonial-nav' ).css('width', 'calc(50% - '+jQuery( '.slider-content' ).width() /2+'px )');
+    }
+});
