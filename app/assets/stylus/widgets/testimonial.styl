@@ -1,5 +1,6 @@
 .front-page--testimonial
     background #f1f1f1
+    position relative
     padding 0 20px
 
     .swiper-container
@@ -65,7 +66,6 @@
                 padding-top 96px
                 padding-left 104px
                 text-align left
-                
 
         .testimonial-author
             color #333333
@@ -125,10 +125,6 @@
             @media screen and ( min-width $screen-sm )
                 padding-left 80 px
                 width 150px
-            
-            @media screen and ( min-width $screen-lg )
-                // margin-right 50px
-                // float right
 
     .quote
         color #62d3c2
@@ -207,3 +203,12 @@
 
     .swiper-pagination-bullet-active
         background #f0514b
+
+    .testimonial-nav
+        height 100%
+        margin unset
+        top 0
+        background transparent
+
+    .swiper-button-next
+        float right
