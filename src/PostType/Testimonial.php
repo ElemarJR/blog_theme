@@ -51,7 +51,8 @@ class Testimonial extends Base {
 		$query = new \WP_Query( array(
 			'post_type' => 'testimonial',
 			'order' => 'ASC',
-			'orderby' => 'menu_order'
+			'orderby' => 'menu_order',
+			'posts_per_page' => -1,
 		) );
 		
 		return $query->posts;

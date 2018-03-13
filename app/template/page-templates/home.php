@@ -59,45 +59,48 @@ get_header(); ?>
 			</div>
 		</div>
 
+		<?php 
+			$posts = $container->get( Testimonial::class )->get_testimonials();
+			if ( 0 < count( $posts ) ) :
+		?>
 		<div class="front-page--testimonial">
-        	<h1 class="testimonial-title"><?php esc_html_e( 'Testimonials', 'elemarjr' ); ?></h1>
-
-    		<div class="swiper-container container">
-        		<div class="swiper-wrapper">
-					<?php
-						$posts = $container->get( Testimonial::class )->get_testimonials();
-						foreach ( $posts as $post ) : setup_postdata( $post );
-							$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
-							$logo_id = get_post_meta( get_the_ID(), 'testimonial_logo', true );
-					?>
-					<div class="swiper-slide">
-                		<div class="slider-content--wrapper">
-	                		<div class="slider-content">
-								<img class="testimonial-foto" src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
-	            				<i class="i-left-quote quote"></i>
-	                			<?php the_content() ?>
-	                    		<div class="footer">
-		                    		<div class="info-author">
-		                    			<div class="testimonial-author"><?php the_title() ?></div>
-		                    			<div class="testimonial-author-position"><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?></div>
+	        	<h1 class="testimonial-title"><?php esc_html_e( 'Testimonials', 'elemarjr' ); ?></h1>
+	
+	    		<div class="swiper-container container">
+	        		<div class="swiper-wrapper">
+						<?php
+							foreach ( $posts as $post ) : setup_postdata( $post );
+								$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
+								$logo_id = get_post_meta( get_the_ID(), 'testimonial_logo', true );
+						?>
+						<div class="swiper-slide">
+	                		<div class="slider-content--wrapper">
+		                		<div class="slider-content">
+									<img class="testimonial-foto" src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
+		            				<i class="i-left-quote quote"></i>
+		                			<?php the_content() ?>
+		                    		<div class="footer">
+			                    		<div class="info-author">
+			                    			<div class="testimonial-author"><?php the_title() ?></div>
+			                    			<div class="testimonial-author-position"><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?></div>
+			                    		</div>
+										<img class="company-logo" src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id, 'testimonial-logo' ) ); ?>" alt="">
 		                    		</div>
-									<img class="company-logo" src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id, 'testimonial-logo' ) ); ?>" alt="">
-	                    		</div>
-	                    	</div>
+		                    	</div>
+		                    </div>
 	                    </div>
-                    </div>
-					<?php
-						endforeach;
-						wp_reset_postdata();
-					?>
-        		</div>
-    			<div class="swiper-pagination"></div>
-
-    		</div>
-			<div class="swiper-button-next testimonial-nav"></div>
-    		<div class="swiper-button-prev testimonial-nav"></div>
+						<?php
+							endforeach;
+							wp_reset_postdata();
+						?>
+	        		</div>
+	    			<div class="swiper-pagination"></div>
+	
+	    		</div>
+				<div class="swiper-button-next testimonial-nav"></div>
+	    		<div class="swiper-button-prev testimonial-nav"></div>
 		</div>
-		<!-- end testimonial -->
+		<?php endif; ?>
 
 		<div class="front-page--blog container">
 			<div class="front-page--blog--header">
