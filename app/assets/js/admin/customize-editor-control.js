@@ -1,5 +1,5 @@
 ( function( $ ) {
-	"use strict";
+	'use strict';
 
 	window.onload = function() {
 
@@ -24,7 +24,7 @@
 				oldValue = textarea.value;
 				newValue = wp.editor.getContent( id );
 
-				if ( oldValue == newValue ) {
+				if ( oldValue === newValue ) {
 					continue;
 				}
 
@@ -32,5 +32,5 @@
 				$( textarea ).trigger( 'change' );
 			}
 		}, 500 );
-	}
+	};
 })( jQuery );

@@ -47,17 +47,17 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             }
         },
         autoplay: {
-            delay: 20000,
+            delay: 20000
         },
         navigation: {
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev'
         },
         centeredSlides: true,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
-            clickable: 'true',
+            clickable: 'true'
         }
     });
 
