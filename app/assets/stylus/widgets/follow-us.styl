@@ -12,10 +12,20 @@
         list-style none
         reset-box-model()
 
-        li
+        .menu-item
             display inline-block
             font-size 36px
             margin 0 10px
+            position relative
 
             @media screen and ( min-width $footer-breakpoint )
                 font-size 24px
+
+            a
+                &:after
+                    content attr( title )
+                    font-size 14px
+                    left 0
+                    position absolute
+                    top calc( 100% - 8px )
+                    width 100%
