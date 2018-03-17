@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-09T15:20:18+00:00\n"
-"PO-Revision-Date: 2018-03-09 15:31-0300\n"
+"POT-Creation-Date: 2018-03-17T12:17:00+00:00\n"
+"PO-Revision-Date: 2018-03-17 09:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -38,11 +38,15 @@ msgstr "Próxima Página"
 msgid "Comments are closed."
 msgstr "Comentários estão fechados."
 
-#: app/template/header.php:36
+#: app/template/header.php:37
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: app/template/page-templates/home.php:104
+#: app/template/page-templates/home.php:67 src/PostType/Testimonial.php:32
+msgid "Testimonials"
+msgstr "Recomendações"
+
+#: app/template/page-templates/home.php:125
 msgid "See more"
 msgstr "Veja mais"
 
@@ -76,54 +80,46 @@ msgstr "Carregando posts…"
 msgid "Show All"
 msgstr "Mostrar tudo"
 
-#: app/template/template-parts/newsletter/form.php:3
-msgid "Newsletter"
-msgstr "Newsletter"
-
-#: app/template/template-parts/newsletter/form.php:4
-msgid "Stay informed with our publications"
-msgstr "Mantenha-se informado com nossas publicações"
-
-#: app/template/template-parts/newsletter/form.php:6
-#: app/template/template-parts/newsletter/form.php:7
+#: app/template/template-parts/newsletter/form.php:25
+#: app/template/template-parts/newsletter/form.php:26
 msgid "Type your email"
 msgstr "Digite seu e-mail"
 
-#: app/template/template-parts/newsletter/form.php:10
-#: app/template/template-parts/newsletter/form.php:11
+#: app/template/template-parts/newsletter/form.php:29
+#: app/template/template-parts/newsletter/form.php:30
 msgid "First Name"
 msgstr "Nome"
 
-#: app/template/template-parts/newsletter/form.php:12
-#: app/template/template-parts/newsletter/form.php:13
+#: app/template/template-parts/newsletter/form.php:31
+#: app/template/template-parts/newsletter/form.php:32
 msgid "Last Name"
 msgstr "Sobrenome"
 
-#: app/template/template-parts/newsletter/form.php:16
+#: app/template/template-parts/newsletter/form.php:35
 msgid "Content of Interest"
 msgstr "Conteúdo de interesse"
 
-#: app/template/template-parts/newsletter/form.php:25
+#: app/template/template-parts/newsletter/form.php:44
 msgid "Events in which I will speak"
 msgstr "Eventos em que irei palestrar"
 
-#: app/template/template-parts/newsletter/form.php:33
+#: app/template/template-parts/newsletter/form.php:52
 msgid "English content"
 msgstr "Conteúdo em inglês"
 
-#: app/template/template-parts/newsletter/form.php:43
+#: app/template/template-parts/newsletter/form.php:62
 msgid "Portuguese content"
 msgstr "Conteúdo em Português"
 
-#: app/template/template-parts/newsletter/form.php:51
+#: app/template/template-parts/newsletter/form.php:70
 msgid "Offers and Promotions"
 msgstr "Ofertas e Promoções"
 
-#: app/template/template-parts/newsletter/form.php:59
+#: app/template/template-parts/newsletter/form.php:78
 msgid "Select at least one interest"
 msgstr "Selecione pelo menos um interesse"
 
-#: app/template/template-parts/newsletter/form.php:63
+#: app/template/template-parts/newsletter/form.php:82
 msgid "Subscribe"
 msgstr "Inscrever-se"
 
@@ -159,11 +155,11 @@ msgstr "Mensagem enviada pelo site %s"
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr "Enviada por <a href=“%1$s”>%1$s</a>"
 
-#: src/Integration/Polylang/Polylang.php:41
+#: src/Integration/Polylang/Polylang.php:42
 msgid "Contact Phone"
 msgstr "Telefone de contato"
 
-#: src/Integration/Polylang/Polylang.php:42
+#: src/Integration/Polylang/Polylang.php:43
 msgid "Contact Email"
 msgstr "E-mail de contato"
 
@@ -178,11 +174,12 @@ msgstr "Corpo"
 #: src/Integration/ACF/Pages/Contact.php:56
 #: src/Integration/ACF/Pages/Blog.php:72 src/Integration/ACF/Pages/Page.php:57
 #: src/Integration/ACF/Pages/HomePage.php:57
-#: src/Integration/ACF/Pages/About.php:76
-#: src/Integration/ACF/Pages/About.php:94
-#: src/Integration/ACF/Pages/About.php:112
-#: src/Integration/ACF/Pages/About.php:130
-#: src/Integration/ACF/Pages/About.php:148
+#: src/Integration/ACF/Pages/About.php:64
+#: src/Integration/ACF/Pages/About.php:141
+#: src/Integration/ACF/Pages/About.php:159
+#: src/Integration/ACF/Pages/About.php:177
+#: src/Integration/ACF/Pages/About.php:195
+#: src/Integration/ACF/Pages/About.php:213
 msgid "Title"
 msgstr "Título"
 
@@ -212,7 +209,7 @@ msgstr "Mensagem de erro: Não enviado"
 
 #: src/Integration/ACF/Pages/Blog.php:65 src/Integration/ACF/Pages/Page.php:51
 #: src/Integration/ACF/Pages/HomePage.php:50
-#: src/Integration/ACF/Pages/About.php:49
+#: src/Integration/ACF/Pages/About.php:114
 msgid "Hero"
 msgstr "Hero"
 
@@ -223,12 +220,13 @@ msgstr "Sub-título"
 #: src/Integration/ACF/Pages/Blog.php:84 src/Integration/ACF/Pages/Page.php:69
 #: src/Integration/ACF/Pages/HomePage.php:63
 #: src/Integration/ACF/Pages/HomePage.php:160
-#: src/Integration/ACF/Pages/About.php:56
-#: src/Integration/ACF/Pages/About.php:82
-#: src/Integration/ACF/Pages/About.php:100
-#: src/Integration/ACF/Pages/About.php:118
-#: src/Integration/ACF/Pages/About.php:136
-#: src/Integration/ACF/Pages/About.php:154
+#: src/Integration/ACF/Pages/About.php:70
+#: src/Integration/ACF/Pages/About.php:121
+#: src/Integration/ACF/Pages/About.php:147
+#: src/Integration/ACF/Pages/About.php:165
+#: src/Integration/ACF/Pages/About.php:183
+#: src/Integration/ACF/Pages/About.php:201
+#: src/Integration/ACF/Pages/About.php:219
 msgid "Text"
 msgstr "Texto"
 
@@ -277,45 +275,82 @@ msgstr "Blog"
 msgid "Text after the section title"
 msgstr "Texto após o título da seção"
 
-#: src/Integration/ACF/Pages/About.php:69
-msgid "Sections"
-msgstr "Seções"
+#: src/Integration/ACF/Pages/About.php:50
+msgid "Page Sections"
+msgstr "Seções da Página"
 
 #: src/Integration/ACF/Pages/About.php:76
-#: src/Integration/ACF/Pages/About.php:82
-#: src/Integration/ACF/Pages/About.php:88
-msgid "My Abilities"
-msgstr "Minhas habilidades"
-
-#: src/Integration/ACF/Pages/About.php:88
-#: src/Integration/ACF/Pages/About.php:106
-#: src/Integration/ACF/Pages/About.php:124
-#: src/Integration/ACF/Pages/About.php:142
-#: src/Integration/ACF/Pages/About.php:160
+#: src/Integration/ACF/Pages/About.php:153
+#: src/Integration/ACF/Pages/About.php:171
+#: src/Integration/ACF/Pages/About.php:189
+#: src/Integration/ACF/Pages/About.php:207
+#: src/Integration/ACF/Pages/About.php:225
 msgid "Image"
 msgstr "Imagem"
 
-#: src/Integration/ACF/Pages/About.php:94
-#: src/Integration/ACF/Pages/About.php:100
-#: src/Integration/ACF/Pages/About.php:106
+#: src/Integration/ACF/Pages/About.php:83
+msgid "Image Position"
+msgstr "Posição da imagem"
+
+#: src/Integration/ACF/Pages/About.php:85
+msgid "Left"
+msgstr "Esquerda"
+
+#: src/Integration/ACF/Pages/About.php:86
+msgid "Right"
+msgstr "Direita"
+
+#: src/Integration/ACF/Pages/About.php:93
+msgid "Color Scheme"
+msgstr "Esquema de cores"
+
+#: src/Integration/ACF/Pages/About.php:95
+msgid "Background White and Title Blue"
+msgstr "Fundo Branco e Título Azul"
+
+#: src/Integration/ACF/Pages/About.php:96
+msgid "Background White and Title Red"
+msgstr "Fundo Branco e Título Azul"
+
+#: src/Integration/ACF/Pages/About.php:97
+msgid "Background Gray and Title Blue"
+msgstr "Fundo Cinza e Título Azul"
+
+#: src/Integration/ACF/Pages/About.php:98
+msgid "Background Tiffany and Title White"
+msgstr "Fundo Tiffany e Título Branco"
+
+#: src/Integration/ACF/Pages/About.php:134
+msgid "Sections"
+msgstr "Seções"
+
+#: src/Integration/ACF/Pages/About.php:141
+#: src/Integration/ACF/Pages/About.php:147
+#: src/Integration/ACF/Pages/About.php:153
+msgid "My Abilities"
+msgstr "Minhas habilidades"
+
+#: src/Integration/ACF/Pages/About.php:159
+#: src/Integration/ACF/Pages/About.php:165
+#: src/Integration/ACF/Pages/About.php:171
 msgid "My Clients"
 msgstr "Meus Clientes"
 
-#: src/Integration/ACF/Pages/About.php:112
-#: src/Integration/ACF/Pages/About.php:118
-#: src/Integration/ACF/Pages/About.php:124
+#: src/Integration/ACF/Pages/About.php:177
+#: src/Integration/ACF/Pages/About.php:183
+#: src/Integration/ACF/Pages/About.php:189
 msgid "My Experience"
 msgstr "Minha Experiência"
 
-#: src/Integration/ACF/Pages/About.php:130
-#: src/Integration/ACF/Pages/About.php:136
-#: src/Integration/ACF/Pages/About.php:142
+#: src/Integration/ACF/Pages/About.php:195
+#: src/Integration/ACF/Pages/About.php:201
+#: src/Integration/ACF/Pages/About.php:207
 msgid "RavenDB"
 msgstr "RavenDB"
 
-#: src/Integration/ACF/Pages/About.php:148
-#: src/Integration/ACF/Pages/About.php:154
-#: src/Integration/ACF/Pages/About.php:160
+#: src/Integration/ACF/Pages/About.php:213
+#: src/Integration/ACF/Pages/About.php:219
+#: src/Integration/ACF/Pages/About.php:225
 msgid "Most Valuable Professional"
 msgstr "Most Valuable Professional"
 
@@ -343,10 +378,6 @@ msgstr "Primário"
 #: src/Setup/Navigation.php:32
 msgid "Social Menu"
 msgstr "Menu Social"
-
-#: src/PostType/Testimonial.php:32
-msgid "Testimonials"
-msgstr "Recomendações"
 
 #: src/PostType/Testimonial.php:34
 msgctxt "testimonial"
@@ -384,6 +415,40 @@ msgstr "Nenhuma recomendação encontrada."
 #: src/PostType/Testimonial.php:42
 msgid "No testimonials found in Trash."
 msgstr "Nenhuma recomendação encontrada na lixeira."
+
+#: src/Customize/Newsletter.php:37
+msgid "Newletter Form"
+msgstr "Formulário de Newsletter"
+
+#: src/Customize/Newsletter.php:47
+msgid "Title - (%s)"
+msgstr "Título - (%s)"
+
+#: src/Customize/Newsletter.php:57 src/Customize/SinglePostBanner.php:47
+msgid "Text - (%s)"
+msgstr "Texto - (%s)"
+
+#: src/Customize/SinglePostBanner.php:37
+msgid "Single Post Banner"
+msgstr "Banner na Página do Post"
+
+#: src/Customize/SinglePostBanner.php:60
+msgid "Label - (%s)"
+msgstr "Rótulo - (%s)"
+
+#: src/Customize/SinglePostBanner.php:70
+msgid "URL - (%s)"
+msgstr "URL - (%s)"
+
+#: src/Customize/SinglePostBanner.php:83
+msgid "Background Image - (%s)"
+msgstr "Imagem de fundo - (%s)"
+
+#~ msgid "Newsletter"
+#~ msgstr "Newsletter"
+
+#~ msgid "Stay informed with our publications"
+#~ msgstr "Mantenha-se informado com nossas publicações"
 
 #~ msgid "Eventos em que irei palestrar"
 #~ msgstr "Events in which I will speak"

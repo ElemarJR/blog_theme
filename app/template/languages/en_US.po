@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-03-09T15:20:18+00:00\n"
-"PO-Revision-Date: 2018-03-09T15:20:18+00:00\n"
+"POT-Creation-Date: 2018-03-17T12:17:00+00:00\n"
+"PO-Revision-Date: 2018-03-17T12:17:00+00:00\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Domain: elemarjr\n"
@@ -37,11 +37,16 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ./app/template/header.php:36
+#: ./app/template/header.php:37
 msgid "Skip to content"
 msgstr ""
 
-#: ./app/template/page-templates/home.php:104
+#: ./app/template/page-templates/home.php:67
+#: ./src/PostType/Testimonial.php:32
+msgid "Testimonials"
+msgstr ""
+
+#: ./app/template/page-templates/home.php:125
 msgid "See more"
 msgstr ""
 
@@ -75,54 +80,46 @@ msgstr ""
 msgid "Show All"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:3
-msgid "Newsletter"
-msgstr ""
-
-#: ./app/template/template-parts/newsletter/form.php:4
-msgid "Stay informed with our publications"
-msgstr ""
-
-#: ./app/template/template-parts/newsletter/form.php:6
-#: ./app/template/template-parts/newsletter/form.php:7
+#: ./app/template/template-parts/newsletter/form.php:25
+#: ./app/template/template-parts/newsletter/form.php:26
 msgid "Type your email"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:10
-#: ./app/template/template-parts/newsletter/form.php:11
+#: ./app/template/template-parts/newsletter/form.php:29
+#: ./app/template/template-parts/newsletter/form.php:30
 msgid "First Name"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:12
-#: ./app/template/template-parts/newsletter/form.php:13
+#: ./app/template/template-parts/newsletter/form.php:31
+#: ./app/template/template-parts/newsletter/form.php:32
 msgid "Last Name"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:16
+#: ./app/template/template-parts/newsletter/form.php:35
 msgid "Content of Interest"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:25
+#: ./app/template/template-parts/newsletter/form.php:44
 msgid "Events in which I will speak"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:33
+#: ./app/template/template-parts/newsletter/form.php:52
 msgid "English content"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:43
+#: ./app/template/template-parts/newsletter/form.php:62
 msgid "Portuguese content"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:51
+#: ./app/template/template-parts/newsletter/form.php:70
 msgid "Offers and Promotions"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:59
+#: ./app/template/template-parts/newsletter/form.php:78
 msgid "Select at least one interest"
 msgstr ""
 
-#: ./app/template/template-parts/newsletter/form.php:63
+#: ./app/template/template-parts/newsletter/form.php:82
 msgid "Subscribe"
 msgstr ""
 
@@ -158,11 +155,11 @@ msgstr ""
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr ""
 
-#: ./src/Integration/Polylang/Polylang.php:41
+#: ./src/Integration/Polylang/Polylang.php:42
 msgid "Contact Phone"
 msgstr ""
 
-#: ./src/Integration/Polylang/Polylang.php:42
+#: ./src/Integration/Polylang/Polylang.php:43
 msgid "Contact Email"
 msgstr ""
 
@@ -178,11 +175,12 @@ msgstr ""
 #: ./src/Integration/ACF/Pages/Blog.php:72
 #: ./src/Integration/ACF/Pages/Page.php:57
 #: ./src/Integration/ACF/Pages/HomePage.php:57
-#: ./src/Integration/ACF/Pages/About.php:76
-#: ./src/Integration/ACF/Pages/About.php:94
-#: ./src/Integration/ACF/Pages/About.php:112
-#: ./src/Integration/ACF/Pages/About.php:130
-#: ./src/Integration/ACF/Pages/About.php:148
+#: ./src/Integration/ACF/Pages/About.php:64
+#: ./src/Integration/ACF/Pages/About.php:141
+#: ./src/Integration/ACF/Pages/About.php:159
+#: ./src/Integration/ACF/Pages/About.php:177
+#: ./src/Integration/ACF/Pages/About.php:195
+#: ./src/Integration/ACF/Pages/About.php:213
 msgid "Title"
 msgstr ""
 
@@ -213,7 +211,7 @@ msgstr ""
 #: ./src/Integration/ACF/Pages/Blog.php:65
 #: ./src/Integration/ACF/Pages/Page.php:51
 #: ./src/Integration/ACF/Pages/HomePage.php:50
-#: ./src/Integration/ACF/Pages/About.php:49
+#: ./src/Integration/ACF/Pages/About.php:114
 msgid "Hero"
 msgstr ""
 
@@ -226,12 +224,13 @@ msgstr ""
 #: ./src/Integration/ACF/Pages/Page.php:69
 #: ./src/Integration/ACF/Pages/HomePage.php:63
 #: ./src/Integration/ACF/Pages/HomePage.php:160
-#: ./src/Integration/ACF/Pages/About.php:56
-#: ./src/Integration/ACF/Pages/About.php:82
-#: ./src/Integration/ACF/Pages/About.php:100
-#: ./src/Integration/ACF/Pages/About.php:118
-#: ./src/Integration/ACF/Pages/About.php:136
-#: ./src/Integration/ACF/Pages/About.php:154
+#: ./src/Integration/ACF/Pages/About.php:70
+#: ./src/Integration/ACF/Pages/About.php:121
+#: ./src/Integration/ACF/Pages/About.php:147
+#: ./src/Integration/ACF/Pages/About.php:165
+#: ./src/Integration/ACF/Pages/About.php:183
+#: ./src/Integration/ACF/Pages/About.php:201
+#: ./src/Integration/ACF/Pages/About.php:219
 msgid "Text"
 msgstr ""
 
@@ -280,45 +279,82 @@ msgstr ""
 msgid "Text after the section title"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:69
-msgid "Sections"
+#: ./src/Integration/ACF/Pages/About.php:50
+msgid "Page Sections"
 msgstr ""
 
 #: ./src/Integration/ACF/Pages/About.php:76
-#: ./src/Integration/ACF/Pages/About.php:82
-#: ./src/Integration/ACF/Pages/About.php:88
-msgid "My Abilities"
-msgstr ""
-
-#: ./src/Integration/ACF/Pages/About.php:88
-#: ./src/Integration/ACF/Pages/About.php:106
-#: ./src/Integration/ACF/Pages/About.php:124
-#: ./src/Integration/ACF/Pages/About.php:142
-#: ./src/Integration/ACF/Pages/About.php:160
+#: ./src/Integration/ACF/Pages/About.php:153
+#: ./src/Integration/ACF/Pages/About.php:171
+#: ./src/Integration/ACF/Pages/About.php:189
+#: ./src/Integration/ACF/Pages/About.php:207
+#: ./src/Integration/ACF/Pages/About.php:225
 msgid "Image"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:94
-#: ./src/Integration/ACF/Pages/About.php:100
-#: ./src/Integration/ACF/Pages/About.php:106
+#: ./src/Integration/ACF/Pages/About.php:83
+msgid "Image Position"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:85
+msgid "Left"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:86
+msgid "Right"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:93
+msgid "Color Scheme"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:95
+msgid "Background White and Title Blue"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:96
+msgid "Background White and Title Red"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:97
+msgid "Background Gray and Title Blue"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:98
+msgid "Background Tiffany and Title White"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:134
+msgid "Sections"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:141
+#: ./src/Integration/ACF/Pages/About.php:147
+#: ./src/Integration/ACF/Pages/About.php:153
+msgid "My Abilities"
+msgstr ""
+
+#: ./src/Integration/ACF/Pages/About.php:159
+#: ./src/Integration/ACF/Pages/About.php:165
+#: ./src/Integration/ACF/Pages/About.php:171
 msgid "My Clients"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:112
-#: ./src/Integration/ACF/Pages/About.php:118
-#: ./src/Integration/ACF/Pages/About.php:124
+#: ./src/Integration/ACF/Pages/About.php:177
+#: ./src/Integration/ACF/Pages/About.php:183
+#: ./src/Integration/ACF/Pages/About.php:189
 msgid "My Experience"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:130
-#: ./src/Integration/ACF/Pages/About.php:136
-#: ./src/Integration/ACF/Pages/About.php:142
+#: ./src/Integration/ACF/Pages/About.php:195
+#: ./src/Integration/ACF/Pages/About.php:201
+#: ./src/Integration/ACF/Pages/About.php:207
 msgid "RavenDB"
 msgstr ""
 
-#: ./src/Integration/ACF/Pages/About.php:148
-#: ./src/Integration/ACF/Pages/About.php:154
-#: ./src/Integration/ACF/Pages/About.php:160
+#: ./src/Integration/ACF/Pages/About.php:213
+#: ./src/Integration/ACF/Pages/About.php:219
+#: ./src/Integration/ACF/Pages/About.php:225
 msgid "Most Valuable Professional"
 msgstr ""
 
@@ -345,10 +381,6 @@ msgstr ""
 
 #: ./src/Setup/Navigation.php:32
 msgid "Social Menu"
-msgstr ""
-
-#: ./src/PostType/Testimonial.php:32
-msgid "Testimonials"
 msgstr ""
 
 #: ./src/PostType/Testimonial.php:34
@@ -386,4 +418,33 @@ msgstr ""
 
 #: ./src/PostType/Testimonial.php:42
 msgid "No testimonials found in Trash."
+msgstr ""
+
+#: ./src/Customize/Newsletter.php:37
+msgid "Newletter Form"
+msgstr ""
+
+#: ./src/Customize/Newsletter.php:47
+msgid "Title - (%s)"
+msgstr ""
+
+#: ./src/Customize/Newsletter.php:57
+#: ./src/Customize/SinglePostBanner.php:47
+msgid "Text - (%s)"
+msgstr ""
+
+#: ./src/Customize/SinglePostBanner.php:37
+msgid "Single Post Banner"
+msgstr ""
+
+#: ./src/Customize/SinglePostBanner.php:60
+msgid "Label - (%s)"
+msgstr ""
+
+#: ./src/Customize/SinglePostBanner.php:70
+msgid "URL - (%s)"
+msgstr ""
+
+#: ./src/Customize/SinglePostBanner.php:83
+msgid "Background Image - (%s)"
 msgstr ""
