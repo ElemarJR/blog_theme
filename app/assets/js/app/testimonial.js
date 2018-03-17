@@ -28,7 +28,6 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
                 jQuery('.swiper-slide-next').find( '.slider-content .testimoial-foto').hide();
 
                 update();
-
             },
             resize: function () {
                 update();
@@ -43,7 +42,9 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
                 jQuery('.swiper-slide-active').find( '.slider-content .footer').show();
                 jQuery('.swiper-slide-active').find( '.slider-content .testimonial-foto').show();
 
-                update();
+                if ( isLargeScreen() ) {
+                    bulletsPosition();
+                }
             }
         },
         autoplay: {
@@ -58,19 +59,26 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         pagination: {
             el: '.swiper-pagination',
             clickable: 'true'
-        }
+        },
+        preloadImages : true,
+        updateOnImagesReady: true
     });
 
-    jQuery( window ).resize(function() {
-        setTimeout(function(){ fixSliderHeight(); }, 300);
-    });
+    /**
+     * Verify if the screen is large
+     *
+     * @return {Boolean} True if is large, false otherwise
+     */
+    function isLargeScreen() {
+        return jQuery( window ).width() > 1189;
+    }
 
     /**
      * Update element behavior based in some event
      */
     function update() {
         bulletsPosition();
-        fixSliderHeight();
+        fixSliderSizes();
     }
 
     /**
@@ -78,7 +86,12 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
      * screens and in large screen fix in the bottom of container
      */
     function bulletsPosition() {
-        if( jQuery( window ).width() <= 1189 ) {
+        if ( isLargeScreen() ) {
+            $pagination.css( {
+                'top' : 'auto',
+                'bottom' : '0'
+            } );
+        } else {
             var height = $testimonial
                             .find( '.swiper-slide-active' )
                                 .find( '.slider-content--wrapper' )
@@ -87,30 +100,27 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
                 'top' : height + 'px',
                 'bottom' : 'auto'
             } );
-        } else {
-            $pagination.css( {
-                'top' : 'auto',
-                'bottom' : '0'
-            } );
         }
     }
 
     /**
-     * Adjust the slider container size
+     * Adjust the slider container and prev/next size
      */
-    function fixSliderHeight() {
-        var maxHeight = 0;
+    function fixSliderSizes() {
+        var maxHeight = 0,
+            $swiperContainer = $testimonial.find( '.swiper-container' );
 
-        $testimonial.find( '.swiper-container' ).height( 'auto' );
+        $swiperContainer.height( 'auto' );
 
         $testimonial
             .find( '.swiper-slide' ).each(function() {
                 maxHeight = Math.max( jQuery( this ).outerHeight( true ), maxHeight );
-            })
-            .end()
-            .find( '.swiper-container' )
-                .height( maxHeight + $pagination.outerHeight(true) );
+            });
 
-        jQuery( '.testimonial-nav' ).css( 'width', 'calc( 50% - ' + jQuery( '.slider-content' ).width() / 2 + 'px )' );
+        $swiperContainer.height( maxHeight + $pagination.outerHeight(true) );
+
+        if ( isLargeScreen() ) {
+            jQuery( '.testimonial-nav' ).css( 'width', 'calc( 50% - ' + jQuery( '.slider-content' ).width() / 2 + 'px )' );
+        }
     }
 });
