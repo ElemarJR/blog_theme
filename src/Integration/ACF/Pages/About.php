@@ -37,9 +37,74 @@ class About {
 		if ( function_exists( 'acf_add_options_page' ) ) {
 			$this->add_hero_fields();
 			$this->add_body_fields();
+			$this->test_repeater();
 		}
 	}
-	
+
+	/**
+	 * Add Hero custom fields
+	 */
+	public function test_repeater() {
+		acf_add_local_field_group( array(
+			'key' => 'test_repeater',
+			'title' => __( 'Page Sections', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
+			'fields' => array(
+				array(
+					'type' => 'repeater',
+					'key' => 'about_repeater',
+					'name' => 'about_repeater',
+// 					'label' => __( 'About Sections', 'elemarjr' ),
+					'layout' => 'block',
+					'sub_fields' => array(
+						array(
+							'type' => 'text',
+							'key' => 'title',
+							'name' => 'title',
+							'label' => __( 'Title', 'elemarjr' ),
+						),
+						array(
+							'type' => 'wysiwyg',
+							'key' => 'text',
+							'name' => 'text',
+							'label' => __( 'Text', 'elemarjr' ),
+						),
+						array(
+							'type' => 'image',
+							'key' => 'image',
+							'name' => 'image',
+							'label' => __( 'Image', 'elemarjr' ),
+							'return_format' => 'id,'
+						),
+						array(
+							'type' => 'radio',
+							'key' => 'image_position',
+							'name' => 'image_position',
+							'label' => __( 'Image Position', 'elemarjr' ),
+							'choices' => array(
+								'left' => __( 'Left', 'elemarjr' ),
+								'right' => __( 'Right', 'elemarjr' ),
+							)
+						),
+						array(
+							'type' => 'radio',
+							'key' => 'color',
+							'name' => 'color',
+							'label' => __( 'Color Scheme', 'elemarjr' ),
+							'choices' => array(
+								'white-blue' => __( 'Background White and Title Blue', 'elemarjr' ),
+								'white-red' => __( 'Background White and Title Red', 'elemarjr' ),
+								'gray-blue' => __( 'Background Gray and Title Blue', 'elemarjr' ),
+								'tiffany-white' => __( 'Background Tiffany and Title White', 'elemarjr' ),
+							)
+						),
+					)
+				),
+			),
+			'location' => $this->location,
+		) );
+	}
+
 	/**
 	 * Add Hero custom fields
 	 */
@@ -58,7 +123,7 @@ class About {
 			),
 			'location' => $this->location,
 		) );
-	}	
+	}
 
 	/**
 	 * Add Purpose custom fields

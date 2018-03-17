@@ -1,4 +1,6 @@
 <?php
+use Aztec\Pages\About;
+
 /**
  * The template for displaying all pages
  *
@@ -6,7 +8,7 @@
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
- * 
+ *
  * Template name: About
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -17,7 +19,18 @@
  * @version 0.1.0
  */
 
-get_header(); ?>
+global $container;
+
+/**
+ *
+ * @var About $about
+ */
+$about = $container->get( About::class );
+
+get_header();
+
+
+?>
 
 <main>
 	<?php
@@ -25,96 +38,26 @@ get_header(); ?>
 			the_post();
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
-		<div class="about--row">
+		<?php while ( have_rows( 'about_repeater' ) ) : the_row(); ?>
+        <div class="<?php echo esc_attr( $about->row_classes_string() ) ?>">
 			<div class="about--row--container container">
 				<div class="about--row--content">
-					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_abilities_title', true ) ) ?></h2>
+					<h2 class="about--row--title"><?php echo esc_html( get_sub_field( 'title' ) ) ?></h2>
 					<div class="about--row--text">
 						<p>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_abilities_text', true ) ) ?>
+							<?php echo wp_kses_post( get_sub_field( 'text' ) ) ?>
 						</p>
 					</div>
 				</div>
 				<div class="about--row--image wow fadeInDown">
-					<?php 
-						$media_id = get_post_meta( get_the_ID(), 'about_abilities_image', true );
+					<?php
+						$media_id = get_sub_field( 'image' );
 						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
 					?>
 				</div>
 			</div>
 		</div>
-		<div class="about--row about--row__gray about--row__invert">
-			<div class="about--row--container container">
-				<div class="about--row--content">
-					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_clients_title', true ) ) ?></h2>
-					<div class="about--row--text">
-						<p>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_clients_text', true ) ) ?>
-						</p>
-					</div>
-				</div>
-				<div class="about--row--image wow fadeInDown">
-					<?php 
-						$media_id = get_post_meta( get_the_ID(), 'about_clients_image', true );
-						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="about--row about--row__tiffany">
-			<div class="about--row--container container">
-				<div class="about--row--content">
-					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_expirience_title', true ) ) ?></h2>
-					<div class="about--row--text">
-						<p>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_expirience_text', true ) ) ?>
-						</p>
-					</div>
-				</div>
-				<div class="about--row--image wow fadeInDown">
-					<?php 
-						$media_id = get_post_meta( get_the_ID(), 'about_expirience_image', true );
-						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="about--row about--row__red-title about--row__invert">
-			<div class="about--row--container container">
-				<div class="about--row--content">
-					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_raven_title', true ) ) ?></h2>
-					<div class="about--row--text">
-						<p>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_raven_text', true ) ) ?>
-						</p>
-					</div>
-				</div>
-				<div class="about--row--image wow fadeInDown">
-					<?php 
-						$media_id = get_post_meta( get_the_ID(), 'about_raven_image', true );
-						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="about--row about--row__gray">
-			<div class="about--row--container container">
-				<div class="about--row--content">
-					<h2 class="about--row--title"><?php echo esc_html( get_post_meta( get_the_ID(), 'about_mvp_title', true ) ) ?></h2>
-					<div class="about--row--text">
-						<p>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'about_mvp_text', true ) ) ?>
-						</p>
-					</div>
-				</div>
-				<div class="about--row--image wow fadeInDown">
-					<?php 
-						$media_id = get_post_meta( get_the_ID(), 'about_mvp_image', true );
-						echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
-					?>
-				</div>
-			</div>
-		</div>
+    		<?php endwhile; ?>
 	</article>
 	<?php endwhile; ?>
 </main>
