@@ -32,6 +32,9 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             resize: function () {
                 update();
             },
+            imagesReady: function() {
+                update();
+            },
             transitionStart: function() {
                 jQuery('.swiper-slide-next').find( '.slider-content .footer ').fadeOut(600);
                 jQuery('.swiper-slide-prev').find( '.slider-content .footer').fadeOut(600);
