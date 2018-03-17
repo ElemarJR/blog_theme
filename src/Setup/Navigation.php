@@ -40,8 +40,6 @@ class Navigation extends Base {
 		if ( 'social' === $args->theme_location ) {
 			$icon = sprintf( '<i class="%s"></i>', $this->social_menu_item_icon( $item->url ) );
 			$item_output = str_replace( $args->link_after, "</span>{$icon}", $item_output );
-
-			error_log( $item_output );
 		}
 
 		return $item_output;
