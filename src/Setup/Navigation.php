@@ -55,6 +55,7 @@ class Navigation extends Base {
 
 		$home_url = parse_url( home_url( '/' ), PHP_URL_HOST );
 		$url = parse_url( $url, PHP_URL_HOST );
+		$url = preg_replace( '/www\./', '', $url);
 
 		switch ( $url ) {
 			case $home_url :
