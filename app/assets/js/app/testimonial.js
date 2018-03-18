@@ -7,7 +7,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
     var $testimonial = jQuery('.front-page--testimonial'),
         $pagination = $testimonial.find( '.swiper-pagination' );
 
-	swiper = new Swiper({
+    swiper = new Swiper({
         el: '.swiper-container',
         initialSlide: 0,
         speed: 800,
@@ -15,7 +15,7 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         spaceBetween: 100,
         breakpoints: {
             1189: {
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 spaceBetween: 50
             }
         },
@@ -64,7 +64,8 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             clickable: 'true'
         },
         preloadImages : true,
-        updateOnImagesReady: true
+        updateOnImagesReady: true,
+        CSSWidthAndHeight: false
     });
 
     /**
