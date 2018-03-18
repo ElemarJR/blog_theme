@@ -32,13 +32,13 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		config: {
 			// web public directory
-			web: 'web', 
+			web: 'web',
 			// project assets directories
 			assets: {
 				// source of assets
 				src: 'app/assets',
 				// destination of assets to symlink
-				build: '.assets/<%= config.env.ENV %>'
+				build: '.assets'
 			},
 			// template directory
 			template: {
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 				dir: 'app/config',
 				// WP-CLI configuration file
 				cli: '<%= config.config.dir %>/wp-cli/<%= config.env.ENV %>.yml',
-				// WordPress configuration file 
+				// WordPress configuration file
 				wp: '<%= config.config.dir %>/wp-config/<%= config.env.ENV %>.php'
 			},
 			// add .env values to config

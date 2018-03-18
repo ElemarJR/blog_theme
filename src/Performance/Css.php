@@ -1,13 +1,13 @@
 <?php
 /**
  * Use Google CSS Delivery recomendation
- * 
+ *
  * This class load the CSS as Google reommend.
- * 
+ *
  * The content of the theme assets/css/prioritize.css will be loaded inline in
- * the head tag. All another styles files will be loaded inner the 
+ * the head tag. All another styles files will be loaded inner the
  * `<noscript id="deferred-styles">` tag just before the body close tag.
- * 
+ *
  * @link https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery#CSSattributes
  * @link https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent
  * @package Aztec
@@ -43,7 +43,7 @@ class Css extends Base {
 	public function deferred_styles() {
 		echo '
 			<noscript id="deferred-styles">
-		      <link rel="stylesheet" type="text/css" href="' . $this->get_style_file_uri() . '"/>
+		      <link rel="stylesheet" type="text/css" href="' . $this->get_style_file_uri() . '?ver=' . wp_get_theme()->get( 'Version' )  . '"/>
 		    </noscript>
 		    <script>
 		      var loadDeferredStyles = function() {
@@ -60,10 +60,10 @@ class Css extends Base {
 		    </script>
 		';
 	}
-	
+
 	/**
 	 * Get the theme main style file URI
-	 * 
+	 *
 	 * @return string The main style file URI.
 	 */
 	protected function get_style_file_uri() {

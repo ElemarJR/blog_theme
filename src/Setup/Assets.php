@@ -8,50 +8,49 @@
 namespace Aztec\Setup;
 
 use Aztec\Base;
+use DI\Container;
 
 /**
  * Manipulate the stylesheets and javascripts
  */
 class Assets extends Base {
 
+	protected $use_dist;
+
+	protected $dist_relative_path = '/assets/js/app.dist.js';
+
+	public function __construct( Container $container ) {
+		parent::__construct( $container );
+
+		$this->use_dist = is_readable( get_template_directory() . $this->dist_relative_path );
+	}
+
 	/**
 	 * Add assets hooks
 	 */
 	public function init() {
 		add_action( 'wp_enqueue_scripts', $this->callback( 'enqueue_script' ) );
-
-		add_filter( 'script_loader_tag', $this->callback( 'script_loader_tag' ), 10, 3 );
 	}
 
 	/**
 	 * Enqueue the JavaScript theme application
 	 *
+	 * If the dist file was generated, load it. Otherwise load the development application.
+	 *
 	 * Enqueue the RequireJS library file. Define the base url to the library
 	 * file url path.
 	 */
 	function enqueue_script() {
-		wp_enqueue_script( 'elemarjr-script', get_stylesheet_directory_uri() . '/assets/js/bower_components/requirejs/require.js', [ 'jquery' ], false, true );
-		wp_localize_script(
-			'elemarjr-script', 'elemarjr_script', [
-				'base_url' => get_stylesheet_directory_uri() . '/assets/js/bower_components',
-			]
-		);
-	}
-
-	/**
-	 * Add the main application script to the RequireJS script tag.
-	 *
-	 * @param string $tag The HTML tag.
-	 * @param string $handle The script handle.
-	 * @param string $src The script source.
-	 * @return string The HTML tag adding the main application script.
-	 */
-	function script_loader_tag( $tag, $handle, $src ) {
-		if ( 'elemarjr-script' === $handle ) {
-			$require_main = get_stylesheet_directory_uri() . '/assets/js/app';
-			return '<script data-main="' . $require_main . '" src="' . $src . '"></script>';
+		if( $this->use_dist ) {
+			wp_enqueue_script( 'elemarjr-script', get_template_directory_uri() . $this->dist_relative_path, [ 'jquery' ], wp_get_theme()->get( 'Version' ), true );
+		} else {
+			wp_enqueue_script( 'elemarjr-config', get_template_directory_uri() . '/assets/js/config.js', [], false, true );
+			wp_localize_script(
+				'elemarjr-config', 'elemarjr_script', [
+					'base_url' => get_template_directory_uri() . '/assets/js/bower_components',
+				]
+			);
+			wp_enqueue_script( 'elemarjr-script', get_template_directory_uri() . '/assets/js/bower_components/requirejs/require.js', [ 'jquery' ], false, true );
 		}
-
-		return $tag;
 	}
 }

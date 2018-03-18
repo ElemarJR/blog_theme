@@ -9,8 +9,7 @@ module.exports = function ( grunt ) {
 		'jshint',
 		'stylus:dev',
 		'bower:copy',
-		'sync:requirejs',
-		'sync:font-icon',
+		'sync',
 		'imagemin',
 		'symlink'
 	] );

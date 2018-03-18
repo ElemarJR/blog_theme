@@ -5,8 +5,19 @@ module.exports = {
 	requirejs: {
 		files : [{
 			cwd : '<%= config.assets.src %>/js',
-			src : '**',
+			src : ['app/**', 'app.js', 'config.js'],
 			dest : '<%= config.assets.build %>/js'
+		}],
+		pretend : false,
+		verbose: true,
+		updateAndDelete: true,
+		ignoreInDest: 'bower_components'
+	},
+	adminjs: {
+		files : [{
+			cwd : '<%= config.assets.src %>/js/admin',
+			src : '**',
+			dest : '<%= config.assets.build %>/js/admin'
 		}],
 		pretend : false,
 		verbose: true,
