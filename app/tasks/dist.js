@@ -10,6 +10,9 @@ module.exports = function ( grunt ) {
 		'sync:adminjs',
 		'sync:font-icon',
 		'imagemin',
-		'symlink'
+		'symlink:theme',
+		'symlink:assets',
+		'symlink:cli',
+		'symlink:wp'
 	] );
 };
