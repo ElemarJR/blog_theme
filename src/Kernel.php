@@ -35,6 +35,8 @@ class Kernel {
 	 */
 	public function init() {
 		$init_classes = [
+			\Aztec\Setup\Textdomain::class,
+
 			\Aztec\Customize\Newsletter::class,
 			\Aztec\Customize\SinglePostBanner::class,
 
@@ -77,7 +79,6 @@ class Kernel {
 			\Aztec\Setup\Rss::class,
 			\Aztec\Setup\Template::class,
 			\Aztec\Setup\Title::class,
-			\Aztec\Setup\Textdomain::class,
 			\Aztec\Setup\Thumbnail::class,
 
 			\Aztec\Shortcode\Twitter::class,

@@ -10,14 +10,13 @@
 
 namespace Aztec\Integration\ACF\Pages;
 
-use DI\Container;
-use Aztec\Pages\Blog as PageBlog;
+use Aztec\Base;
 
 /**
  * Add custom fields to blog
  */
-class Page {
-	
+class Page extends Base{
+
 	/**
 	 * Default template location
 	 *
@@ -38,10 +37,10 @@ class Page {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->add_hero_fields();
+			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
 		}
 	}
-	
+
 	/**
 	 * Add Hero custom fields
 	 */
@@ -71,5 +70,5 @@ class Page {
 			),
 			'location' => $this->location,
 		) );
-	}	
+	}
 }

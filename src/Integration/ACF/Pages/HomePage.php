@@ -10,10 +10,12 @@
 
 namespace Aztec\Integration\ACF\Pages;
 
+use Aztec\Base;
+
 /**
  * Add custom fields to homepage.
  */
-class HomePage {
+class HomePage extends Base {
 	/**
 	 * Home page location
 	 *
@@ -34,13 +36,13 @@ class HomePage {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->add_hero_fields();
-			$this->add_purpose_fields();
-			$this->add_quote_fields();
-			$this->add_blog_fields();
+			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
+			add_action( 'admin_init', $this->callback( 'add_purpose_fields' ) );
+			add_action( 'admin_init', $this->callback( 'add_quote_fields' ) );
+			add_action( 'admin_init', $this->callback( 'add_blog_fields' ) );
 		}
 	}
-	
+
 	/**
 	 * Add Hero custom fields
 	 */
@@ -143,7 +145,7 @@ class HomePage {
 			'location' => $this->location,
 		) );
 	}
-	
+
 	/**
 	 * Add Quote custom fields
 	 */

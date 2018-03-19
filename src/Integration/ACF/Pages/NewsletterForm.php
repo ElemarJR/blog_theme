@@ -10,10 +10,12 @@
 
 namespace Aztec\Integration\ACF\Pages;
 
+use Aztec\Base;
+
 /**
  * Disable features to newsletter form page
  */
-class NewsletterForm {
+class NewsletterForm extends Base {
 
 	/**
 	 * Newsletter form location
@@ -35,12 +37,12 @@ class NewsletterForm {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->deactivate_features();
+			add_action( 'admin_init', $this->callback( 'deactivate_features' ) );
 		}
 	}
-	
+
 	/**
-	 * Deactivate the content 
+	 * Deactivate the content
 	 */
 	public function deactivate_features() {
 		acf_add_local_field_group( array(

@@ -12,11 +12,12 @@ namespace Aztec\Integration\ACF\Pages;
 
 use DI\Container;
 use Aztec\Pages\Blog as PageBlog;
+use Aztec\Base;
 
 /**
  * Add custom fields to blog
  */
-class Blog {
+class Blog extends Base {
 	/**
 	 * Blog page location
 	 *
@@ -31,13 +32,13 @@ class Blog {
 		$this->container = $container;
 		$this->set_location();
 	}
-	
+
 	/**
 	 * Set the metabox locations to all language blog pages
 	 */
 	public function set_location(){
 		$this->location = array();
-		
+
 		foreach ( $this->container->get( PageBlog::class )->get_pages_id() as $page_id ) {
 			$this->location[] = array( array(
 				'param' => 'page',
@@ -52,10 +53,10 @@ class Blog {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->add_hero_fields();
+			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
 		}
 	}
-	
+
 	/**
 	 * Add Hero custom fields
 	 */
@@ -86,5 +87,5 @@ class Blog {
 			),
 			'location' => $this->location,
 		) );
-	}	
+	}
 }

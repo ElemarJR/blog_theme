@@ -10,10 +10,12 @@
 
 namespace Aztec\Integration\ACF\Pages;
 
+use Aztec\Base;
+
 /**
  * Add custom fields to about template.
  */
-class Contact {
+class Contact extends Base {
 
 	/**
 	 * About template location
@@ -35,8 +37,8 @@ class Contact {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->add_body_fields();
-			$this->add_form_fields();
+			add_action( 'admin_init', $this->callback( 'add_body_fields' ) );
+			add_action( 'admin_init', $this->callback( 'add_form_fields' ) );
 		}
 	}
 
@@ -65,7 +67,7 @@ class Contact {
 			'location' => $this->location,
 		) );
 	}
-	
+
 	/**
 	 * Add form page fields
 	 */

@@ -10,10 +10,12 @@
 
 namespace Aztec\Integration\ACF\Pages;
 
+use Aztec\Base;
+
 /**
  * Add custom fields to about template.
  */
-class About {
+class About extends Base {
 
 	/**
 	 * About template location
@@ -35,9 +37,9 @@ class About {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->add_hero_fields();
-			$this->add_body_fields();
-			$this->test_repeater();
+			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
+			add_action( 'admin_init', $this->callback( 'test_repeater' ) );
+			add_action( 'admin_init', $this->callback( 'add_body_fields' ) );
 		}
 	}
 
