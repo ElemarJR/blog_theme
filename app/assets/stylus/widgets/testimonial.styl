@@ -37,7 +37,7 @@
         opacity 0.4
 
         @media screen and ( min-width $screen-lg )
-            width 696px
+            width 45%
 
     .slider-content
         color gray
@@ -166,6 +166,7 @@
         border-radius 50%
         height 106px
         left calc( 50% - 53px )
+        opacity 0
         position absolute
         top -53px
         width 106px
@@ -182,10 +183,14 @@
             height 106px
             width 106px
 
+        /.swiper-slide-active ^[-1..-1]
+            opacity 1
+
     .footer
         border-top 1px solid #e0e0e0
         margin 0 20px
         padding 33px 29px 55px
+        opacity 0
 
         @media screen and ( min-width $screen-sm )
             margin 0 34px
@@ -199,6 +204,9 @@
             margin 0 60px
             padding 35px 0
             position relative
+
+        /.swiper-slide-active ^[-1..-1]
+            opacity 1
 
     .swiper-pagination
         margin-top 25px

@@ -5,47 +5,28 @@ var swiper;
  */
 define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
     var $testimonial = jQuery('.front-page--testimonial'),
-        $pagination = $testimonial.find( '.swiper-pagination' );
+        $pagination = $testimonial.find( '.swiper-pagination' ),
+        $slides = $testimonial.find( '.swiper-slide' );
 
     swiper = new Swiper({
         el: '.swiper-container',
         initialSlide: 0,
         speed: 800,
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 100,
         breakpoints: {
             1189: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 50
             }
         },
         on: {
-            init: function () {
-                jQuery('.swiper-slide-prev').find( '.slider-content .footer').hide();
-                jQuery('.swiper-slide-next').find( '.slider-content .footer').hide();
-
-                jQuery('.swiper-slide-prev').find( '.slider-content .testimoial-foto').hide();
-                jQuery('.swiper-slide-next').find( '.slider-content .testimoial-foto').hide();
-
-                update();
-            },
             resize: function () {
-                update();
-            },
-            imagesReady: function() {
+                $slides.css( 'width', '' );
                 update();
             },
             transitionStart: function() {
-                jQuery('.swiper-slide-next').find( '.slider-content .footer ').fadeOut(600);
-                jQuery('.swiper-slide-prev').find( '.slider-content .footer').fadeOut(600);
-
-                jQuery('.swiper-slide-prev').find( '.slider-content .testimonial-foto').fadeOut(600);
-                jQuery('.swiper-slide-next').find( '.slider-content .testimonial-foto').fadeOut(600);
-
-                jQuery('.swiper-slide-active').find( '.slider-content .footer').show();
-                jQuery('.swiper-slide-active').find( '.slider-content .testimonial-foto').show();
-
-                if ( isLargeScreen() ) {
+                if ( ! isLargeScreen() ) {
                     bulletsPosition();
                 }
             }
@@ -62,11 +43,14 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         pagination: {
             el: '.swiper-pagination',
             clickable: 'true'
-        },
-        preloadImages : true,
-        updateOnImagesReady: true,
-        CSSWidthAndHeight: false
+        }
     });
+
+    // Use interval to continuos fix slide container size
+    setInterval(function() {
+        swiper.update();
+        update();
+    }, 300);
 
     /**
      * Verify if the screen is large
@@ -112,16 +96,16 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
      */
     function fixSliderSizes() {
         var maxHeight = 0,
+            paginationHeight = $pagination.outerHeight( true ),
             $swiperContainer = $testimonial.find( '.swiper-container' );
 
         $swiperContainer.height( 'auto' );
 
-        $testimonial
-            .find( '.swiper-slide' ).each(function() {
-                maxHeight = Math.max( jQuery( this ).outerHeight( true ), maxHeight );
-            });
+        $slides.each(function() {
+            maxHeight = Math.max( jQuery( this ).outerHeight( true ), maxHeight );
+        });
 
-        $swiperContainer.height( maxHeight + $pagination.outerHeight(true) );
+        $swiperContainer.height( maxHeight + paginationHeight );
 
         if ( isLargeScreen() ) {
             jQuery( '.testimonial-nav' ).css( 'width', 'calc( 50% - ' + jQuery( '.slider-content' ).width() / 2 + 'px )' );
