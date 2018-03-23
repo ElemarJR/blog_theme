@@ -8,6 +8,10 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
         $pagination = $testimonial.find( '.swiper-pagination' ),
         $slides = $testimonial.find( '.swiper-slide' );
 
+    if ( 0 === $testimonial.length ) {
+        return;
+    }
+
     swiper = new Swiper({
         el: '.swiper-container',
         initialSlide: 0,

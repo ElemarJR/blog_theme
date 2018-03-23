@@ -20,5 +20,7 @@ require([
     'app/site-search',
     'app/testimonial'
 ], function() {
-    jQuery( window ).trigger('resize');
+    setTimeout(function() {
+        jQuery( window ).trigger('resize');
+    }, 300);
 });
