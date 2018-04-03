@@ -16,7 +16,7 @@
 # gd      - Thumbnail generator
 # mysqli  - MySQL server access
 # opcache - Improve performance
-FROM php:7-alpine
+FROM php:5.6-alpine
 
 # Install alpine packages
 RUN apk add --update autoconf bash build-base mysql-client openssh-client ssmtp
@@ -57,7 +57,7 @@ RUN { \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
 # Enable xdebug
-RUN pecl install xdebug \
+RUN pecl install xdebug-2.5.5 \
     && docker-php-ext-enable xdebug
 
 # Config SSMTP
