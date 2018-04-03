@@ -45,7 +45,6 @@ class Kernel {
 
 			\Aztec\Integration\ACF\ACF::class,
 			\Aztec\Integration\ACF\Pages\About::class,
-			\Aztec\Integration\ACF\Pages\Blog::class,
 			\Aztec\Integration\ACF\Pages\Contact::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
