@@ -34,7 +34,7 @@ class Testimonial extends Base {
 
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'acf/include_fields', 'testimonial_fields' );
+			add_action( 'acf/include_fields', $this->callback( 'testimonial_fields' ) );
 		}
 	}
 
