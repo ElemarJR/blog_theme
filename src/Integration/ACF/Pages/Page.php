@@ -15,7 +15,7 @@ use Aztec\Base;
 /**
  * Add custom fields to blog
  */
-class Page extends Base{
+class Page extends Base {
 
 	/**
 	 * Default template location
@@ -37,7 +37,7 @@ class Page extends Base{
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_hero_fields' ) );
 		}
 	}
 

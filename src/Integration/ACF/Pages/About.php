@@ -37,18 +37,18 @@ class About extends Base {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
-			add_action( 'admin_init', $this->callback( 'test_repeater' ) );
-			add_action( 'admin_init', $this->callback( 'add_body_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_hero_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'body_lines' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_body_fields' ) );
 		}
 	}
 
 	/**
-	 * Add Hero custom fields
+	 * The repeater to create the body lines
 	 */
-	public function test_repeater() {
+	public function body_lines() {
 		acf_add_local_field_group( array(
-			'key' => 'test_repeater',
+			'key' => 'body_lines',
 			'title' => __( 'Page Sections', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
@@ -56,7 +56,6 @@ class About extends Base {
 					'type' => 'repeater',
 					'key' => 'about_repeater',
 					'name' => 'about_repeater',
-// 					'label' => __( 'About Sections', 'elemarjr' ),
 					'layout' => 'block',
 					'sub_fields' => array(
 						array(

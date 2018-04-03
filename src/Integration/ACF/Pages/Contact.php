@@ -37,8 +37,8 @@ class Contact extends Base {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'admin_init', $this->callback( 'add_body_fields' ) );
-			add_action( 'admin_init', $this->callback( 'add_form_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_body_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_form_fields' ) );
 		}
 	}
 

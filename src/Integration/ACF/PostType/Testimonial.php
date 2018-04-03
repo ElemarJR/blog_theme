@@ -10,11 +10,13 @@
 
 namespace Aztec\Integration\ACF\PostType;
 
+use Aztec\Base;
+
 /**
  * Create ACF for testimonial post type
  */
-class Testimonial {
-	
+class Testimonial extends Base {
+
 	/**
 	 * Testimonial post type condition
 	 *
@@ -29,16 +31,13 @@ class Testimonial {
 			),
 		),
 	);
-	
-	/**
-	 * Init on container
-	 */
+
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			$this->testimonial_fields();
+			add_action( 'acf/include_fields', 'testimonial_fields' );
 		}
 	}
-	
+
 	/**
 	 * Add Hero custom fields
 	 */

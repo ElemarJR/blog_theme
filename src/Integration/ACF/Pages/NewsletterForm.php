@@ -37,7 +37,7 @@ class NewsletterForm extends Base {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'admin_init', $this->callback( 'deactivate_features' ) );
+			add_action( 'acf/include_fields', $this->callback( 'deactivate_features' ) );
 		}
 	}
 

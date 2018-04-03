@@ -53,7 +53,7 @@ class Blog extends Base {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'admin_init', $this->callback( 'add_hero_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_hero_fields' ) );
 		}
 	}
 
