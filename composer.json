@@ -24,7 +24,8 @@
 		"wpackagist-plugin/wordpress-seo" : "^6.1",
 		"wpackagist-plugin/wp-github-sync" : "~2.0",
 		"wpackagist-plugin/wp-mail-smtp" : "^1.2",
-		"wpackagist-plugin/wp-session-manager" : "^3.0"
+		"wpackagist-plugin/wp-session-manager" : "^3.0",
+		"embed/embed": "^3.3"
 	},
 	"require-dev" : {
 		"deployer/deployer" : "^6.0",
