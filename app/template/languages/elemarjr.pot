@@ -1,0 +1,188 @@
+# Copyright (C) 2018 Aztec Online Solutions
+# This file is distributed under the GNU General Public License v2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Elemar Jr Blog Theme 0.1.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/template\n"
+"POT-Creation-Date: 2018-05-15 20:47:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:17
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:19
+msgid "Sorry! That page doesn't seem to exist."
+msgstr ""
+
+#: 404.php:22
+msgid "Back to home"
+msgstr ""
+
+#: comments.php:19
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:21
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:23 template-parts/hero/hero-single.php:20
+msgid "Comments"
+msgstr ""
+
+#: comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:30
+msgid "Follow us"
+msgstr ""
+
+#: header.php:37
+msgid "Skip to content"
+msgstr ""
+
+#: index.php:33
+msgid "Previous Page"
+msgstr ""
+
+#: index.php:33
+msgid "Next Page"
+msgstr ""
+
+#: page-templates/contact.php:62
+msgid "Send"
+msgstr ""
+
+#: page-templates/home.php:67
+msgid "Testimonials"
+msgstr ""
+
+#: page-templates/home.php:125
+msgid "See more"
+msgstr ""
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:15
+msgid "Search Results for &#8220;%s&#8221;"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:36
+msgid "Category: %s"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:56
+msgid "Page %s"
+msgstr ""
+
+#: template-parts/blog/category-nav.php:20
+msgid "Show All"
+msgstr ""
+
+#: template-parts/blog/post-list-empty.php:2
+msgid "Nothing found here."
+msgstr ""
+
+#: template-parts/blog/post-list.php:9
+msgid "Loading posts..."
+msgstr ""
+
+#: template-parts/blog/single/footer-meta.php:3
+msgid "Tags"
+msgstr ""
+
+#: template-parts/blog/single/footer-meta.php:7
+msgid "Share"
+msgstr ""
+
+#: template-parts/blog/single/post-nav.php:19
+#: template-parts/blog/single/post-nav.php:26
+msgid "Previous"
+msgstr ""
+
+#: template-parts/blog/single/post-nav.php:40
+#: template-parts/blog/single/post-nav.php:48
+msgid "Next"
+msgstr ""
+
+#: template-parts/hero/hero-single.php:15
+msgid "Reading time:"
+msgstr ""
+
+#: template-parts/newsletter/form.php:25 template-parts/newsletter/form.php:26
+msgid "Type your email"
+msgstr ""
+
+#: template-parts/newsletter/form.php:29 template-parts/newsletter/form.php:30
+msgid "First Name"
+msgstr ""
+
+#: template-parts/newsletter/form.php:31 template-parts/newsletter/form.php:32
+msgid "Last Name"
+msgstr ""
+
+#: template-parts/newsletter/form.php:35
+msgid "Content of Interest"
+msgstr ""
+
+#: template-parts/newsletter/form.php:44
+msgid "Events in which I will speak"
+msgstr ""
+
+#: template-parts/newsletter/form.php:52
+msgid "English content"
+msgstr ""
+
+#: template-parts/newsletter/form.php:62
+msgid "Portuguese content"
+msgstr ""
+
+#: template-parts/newsletter/form.php:70
+msgid "Offers and Promotions"
+msgstr ""
+
+#: template-parts/newsletter/form.php:78
+msgid "Select at least one interest"
+msgstr ""
+
+#: template-parts/newsletter/form.php:82
+msgid "Subscribe"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Elemar Jr Blog Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Aztec Online Solutions"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://aztecweb.net/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "About"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Contact"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Newsletter Form"
+msgstr ""

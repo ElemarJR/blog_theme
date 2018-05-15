@@ -7,6 +7,7 @@
 # autoconf          - Pecl dependency
 # bash              - To execute the bin scripts
 # build-base        - Pecl dependency
+# gettext			- Tools to create POT file
 # libjpeg-turbo-dev - Thumbnail generator
 # libpng-dev        - Thumbnail generator
 # mysql-client      - To WP-CLI access the database
@@ -26,12 +27,16 @@ RUN set -ex; \
 	\
 	apk add --no-cache --virtual .build-deps \
 		bash \
+        gettext \
 		libjpeg-turbo-dev \
 		libpng-dev \
 		mysql-client \
 		openssh-client \
 		ssmtp \
 	; \
+    apk add --no-cache \
+        gettext \
+    ; \
 	\
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
 	docker-php-ext-install gd mysqli opcache; \

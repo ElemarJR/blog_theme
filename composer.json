@@ -4,6 +4,18 @@
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "https://wpackagist.org"
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "wp/i18n-tools",
+				"version": "dev-master",
+				"source": {
+					"url": "https://develop.svn.wordpress.org",
+					"type": "svn",
+					"reference": "trunk/tools/i18n/"
+				}
+			}
 		}
 	],
 	"require" : {
@@ -30,7 +42,7 @@
 		"deployer/deployer" : "^6.0",
 		"deployer/recipes" : "^6.0",
 		"wpackagist-plugin/query-monitor" : "^2.17",
-		"roborourke/wp-l10n-gen" : "dev-master"
+		"wp/i18n-tools" : "dev-master"
 	},
 	"autoload" : {
 		"psr-4" : {
