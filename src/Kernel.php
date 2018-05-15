@@ -81,6 +81,8 @@ class Kernel {
 			\Aztec\Setup\Thumbnail::class,
 
 			\Aztec\Shortcode\Twitter::class,
+
+			\Aztec\Taxonomy\Serie::class,
 		];
 
 		foreach ( $init_classes as $class ) {
