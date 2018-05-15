@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# @todo Enviar composer.lock e instalar pacote no-dev
+# @todo Empacotar todos arquivos num zip e mandar apenas o pacote
+
 set -ex
 
 grunt="docker-compose run --rm node grunt"
@@ -9,7 +12,7 @@ elemarSSH="${elemarResetKey}; ssh elem3989155387@www.elemarjr.com"
 
 function elemar-ssh() {
 	${elemarResetKey}
-	ssh elem3989155387@www.elemarjr.com $@
+	ssh -tt elem3989155387@www.elemarjr.com $@
 }
 
 function elemar-scp() {
@@ -18,16 +21,16 @@ function elemar-scp() {
 }
 
 # Generate dist assets
-# rm -rf .assets/
-# ${grunt} dist
+rm -rf .assets/
+${grunt} dist
 
-# # Make deploy
-# elemar-ssh mkdir -p ${deployDir}
-# elemar-scp src/ app/template/
+# Make deploy
+elemar-ssh mkdir -p ${deployDir}
+elemar-scp src/ app/template/
+
 elemar-ssh << EOF
 	cp -R ${deployDir}/src/* src
 	cp -R ${deployDir}/template/* html/wp-content/themes/elemarjr
-	rm -rf ${deployDir}
 EOF
 
 # Regenerate dev assets
