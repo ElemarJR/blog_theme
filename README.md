@@ -56,11 +56,17 @@ Install the WordPress
 
 ## Run the server
 
+#### Linux
+
+The website will be served in [http://localhost:8080](http://localhost:8080).
+
 Up the server and the watch task.
 
     $ docker-compose up server watch
 
-The website will be served in [http://localhost:8080](http://localhost:8080).
+#### Mac
+
+    $ docker-compose -f docker-compose.yml -f docker-compose.mac.yml up server watch
 
 ## PHP Code Standards
 
@@ -73,3 +79,21 @@ The validation isn't done by the _watch_ service. Because is a PHP execution and
 And to fix some warnings using the _PHP Code Beautifier and Fixer_, execute:
 
     $ docker-compose run --rm php phpcbf
+
+## PHP 5.6
+
+The production server use the PHP 5.6. To up locally a server with this version is necessary uninstall dev PHP packages because Deployer doesn't work in PHP version minor than 7.
+
+### Uninstall packages
+
+    $ composer install --no-dev
+
+### Up the server
+
+#### Linux
+
+    $ docker-compose -f docker-compose.yml -f docker-compose.php56.yml up server watch
+
+#### Mac
+
+    $ docker-compose -f docker-compose.yml -f docker-compose.php56.yml -f docker-compose.mac.yml up server watch

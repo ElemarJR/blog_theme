@@ -9,7 +9,7 @@ services:
     build:
       context: ./app/docker/php
     volumes:
-      - .:/app:cached
+      - .:/app
       - ./.ssh:/root/.ssh
     depends_on:
       - db
@@ -20,7 +20,7 @@ services:
     volumes:
       - .:/app
       # Map local user Composer directory with container for cache packages
-      - ~/.docker_cache/composer:/root/composer
+      - ~/.docker_cache/composer:/tmp/composer
 
   # Database image to run the mysql
   db:
@@ -28,7 +28,7 @@ services:
     ports:
         - "3306:3306"
     volumes:
-       - ./database:/var/lib/mysql:cached
+       - ./database:/var/lib/mysql
        - ./app/initdb:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -47,25 +47,31 @@ services:
       MAILCATCHER_PORT: 1025
 
   # Run the applicatiion over HTTP on localhost:8080
+  # Nginx
   server:
-    command: wp server --host=0.0.0.0
     build:
-      # Uncomment one context to build PHP 5.6 or 7
-      #context: ./app/docker/php-56
-      context: ./app/docker/php
+      context: ./app/docker/nginx
+    links:
+      - wordpress
     ports:
       - "8080:8080"
     volumes:
-      - .:/app:cached
+      - .:/var/www/html
+
+  # PHP-FPM with WP dependencies
+  wordpress:
+    build:
+      context: ./app/docker/wp-fpm
+      dockerfile: wp-fpm-72.Dockerfile
+    volumes:
+      - .:/var/www/html
+    environment:
+      PHP_XDEBUG_REMOTE_ENABLE: "On"
+      PHP_XDEBUG_REMOTE_HOST: "10.254.254.254"
+      PHP_XDEBUG_IDEKEY: "xdebug_idekey"
     depends_on:
       - db
       - smtp
-    environment:
-      # Run $ sudo ifconfig en0 alias 10.254.254.254 255.255.255.0
-      # to create a alias IP for the host machine and connect with Xdebug.
-      # This command must be executed every time you restartr your machine.
-      # Switch the value to 'On' to enable the remote connection.
-      PHP_XDEBUG_REMOTE_ENABLE: "On"
 
   # Node 8.2 with Grunt and Bower
   node:

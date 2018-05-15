@@ -1,0 +1,20 @@
+# Development project infrastructure generated over the Docker. For see how up
+# the infrastructure read the README file.
+
+version: "2"
+
+services:
+  # PHP-FPM with WP dependencies
+  wordpress:
+    build:
+      context: ./app/docker/wp-fpm
+      dockerfile: wp-fpm-56.Dockerfile
+    volumes:
+      - .:/var/www/html
+    environment:
+      PHP_XDEBUG_REMOTE_ENABLE: "On"
+      PHP_XDEBUG_REMOTE_HOST: "10.254.254.254"
+      PHP_XDEBUG_IDEKEY: "xdebug_idekey"
+    depends_on:
+      - db
+      - smtp

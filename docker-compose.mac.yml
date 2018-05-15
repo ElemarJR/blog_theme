@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  php:
+    volumes:
+      - .:/app:cached
+
+  composer:
+    volumes:
+      - .:/app:cached
+
+  db:
+    volumes:
+       - ./database:/var/lib/mysql:cached
+
+  server:
+    volumes:
+      - .:/var/www/html:cached
+
+  wordpress:
+    volumes:
+      - .:/var/www/html:cached
+
+  node:
+    volumes:
+      - .:/app:cached
+
+  watch:
+    volumes:
+      - .:/app:cached
