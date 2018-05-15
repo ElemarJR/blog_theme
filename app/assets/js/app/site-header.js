@@ -15,8 +15,8 @@ define([],function () {
 
 	if( ! jQuery( 'body' ).hasClass( 'no-hero' ) ) {
 		/*
-		 * Define the header here and not use height 100vh to sole the problem with
-		 * sartphones that change the website area after scroll
+		 * Define the header here and not use height 100vh to solve the problem with
+		 * smartphones that change the website area after scroll
 		 */
 		jQuery( '.site-header, .site-header--wrapper' ).height( jQuery( window ).height() );
 	}
