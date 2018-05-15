@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 			// template directory
 			template: {
 				// source of the template
-				src: 'app/template',
+				src: 'src',
 				// destination of the directory in web
 				build: '<%= config.web %>/wp-content/themes/<%= config.env.THEME %>'
 			},

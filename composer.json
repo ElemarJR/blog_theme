@@ -34,10 +34,10 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Aztec\\" : "src/"
+			"Aztec\\" : "src/includes"
 		},
 		"files" : [
-			"src/WP_CLI/bootstrap.php"
+			"src/includes/WP_CLI/bootstrap.php"
 		]
 	},
 	"extra" : {
