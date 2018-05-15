@@ -9,7 +9,7 @@ var require = {
     config: function (c) {
         require = c;
     }
-}
+};
 
 require.config({
     baseUrl: elemarjr_script.base_url,
