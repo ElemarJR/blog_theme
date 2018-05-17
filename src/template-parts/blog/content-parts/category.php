@@ -8,7 +8,7 @@ if ( empty( $categories ) ) {
 
 ?>
 <ul class="listing-post__categories">
-	<?php foreach ( get_the_category() as $term ) : ?>
+	<?php foreach ( $categories as $term ) : ?>
 	<li>
 		<a href="<?php echo esc_url( get_term_link( $term, 'category' ) ) ?>">
 			<?php echo esc_html( $term->name ) ?>
