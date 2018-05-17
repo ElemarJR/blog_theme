@@ -1,0 +1,509 @@
+# Copyright (C) 2018 Aztec Online Solutions
+# This file is distributed under the GNU General Public License v2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Elemar Jr Blog Theme 0.1.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
+"POT-Creation-Date: 2018-05-15 21:47:32+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:17
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:19
+msgid "Sorry! That page doesn't seem to exist."
+msgstr ""
+
+#: 404.php:22
+msgid "Back to home"
+msgstr ""
+
+#: comments.php:19
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:21
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:23 template-parts/hero/hero-single.php:20
+msgid "Comments"
+msgstr ""
+
+#: comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:30
+msgid "Follow us"
+msgstr ""
+
+#: header.php:37
+msgid "Skip to content"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:37
+msgid "Newletter Form"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:47
+msgid "Title - (%s)"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:57
+#: includes/Customize/SinglePostBanner.php:47
+msgid "Text - (%s)"
+msgstr ""
+
+#: includes/Customize/SinglePostBanner.php:37
+msgid "Single Post Banner"
+msgstr ""
+
+#: includes/Customize/SinglePostBanner.php:60
+msgid "Label - (%s)"
+msgstr ""
+
+#: includes/Customize/SinglePostBanner.php:70
+msgid "URL - (%s)"
+msgstr ""
+
+#: includes/Customize/SinglePostBanner.php:83
+msgid "Background Image - (%s)"
+msgstr ""
+
+#: includes/Form/Contact.php:36
+msgid "Name"
+msgstr ""
+
+#: includes/Form/Contact.php:37
+msgid "Email"
+msgstr ""
+
+#: includes/Form/Contact.php:39
+msgid "Your Message"
+msgstr ""
+
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.1.3)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: includes/Form/Contact.php:56
+msgid "Contact"
+msgstr ""
+
+#: includes/Form/Contact.php:66
+msgid "Email that receive the contact - (%s)"
+msgstr ""
+
+#: includes/Form/Contact.php:76
+msgid "Email subject - (%s)"
+msgstr ""
+
+#: includes/Form/Form.php:235
+msgid "Message sent by %s website"
+msgstr ""
+
+#: includes/Form/Form.php:236
+msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:51
+msgid "Page Sections"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:64
+#: includes/Integration/ACF/Pages/Contact.php:58
+#: includes/Integration/ACF/Pages/HomePage.php:59
+#: includes/Integration/ACF/Pages/Page.php:56
+msgid "Title"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:70
+#: includes/Integration/ACF/Pages/About.php:121
+#: includes/Integration/ACF/Pages/HomePage.php:65
+#: includes/Integration/ACF/Pages/HomePage.php:162
+#: includes/Integration/ACF/Pages/Page.php:68
+msgid "Text"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:76
+msgid "Image"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:83
+msgid "Image Position"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:85
+msgid "Left"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:86
+msgid "Right"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:93
+msgid "Color Scheme"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:95
+msgid "Background White and Title Blue"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:96
+msgid "Background White and Title Red"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:97
+msgid "Background Gray and Title Blue"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:98
+msgid "Background Tiffany and Title White"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:114
+#: includes/Integration/ACF/Pages/HomePage.php:52
+#: includes/Integration/ACF/Pages/Page.php:50
+msgid "Hero"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:51
+msgid "Body"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:64
+msgid "Description"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:77
+msgid "Form"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:84
+msgid "Success"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:90
+msgid "Error Message: Empty fields"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:96
+msgid "Error Message: Spam"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:102
+msgid "Error Message: Not sent"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:71
+msgid "Button Label"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:77
+msgid "Button URL"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:90
+msgid "Purpose"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:98
+msgid "Destination URL"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:104
+msgid "Icon Class 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:110
+msgid "Text 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:116
+msgid "Icon Class 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:122
+msgid "Text 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:135
+#: includes/Integration/ACF/Pages/HomePage.php:142
+msgid "Quote"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:155
+msgid "Blog"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:163
+msgid "Text after the section title"
+msgstr ""
+
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.1.3)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: includes/Integration/ACF/Pages/NewsletterForm.php:50
+msgid "Newsletter Form"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Page.php:62
+msgid "Subtitle"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Testimonial.php:47
+#: includes/PostType/Testimonial.php:33
+msgid "Testimonial"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Testimonial.php:53
+msgid "Position"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Testimonial.php:59
+msgid "Photo"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Testimonial.php:65
+msgid "Company Logo"
+msgstr ""
+
+#: includes/Integration/Polylang/Polylang.php:42
+msgid "Contact Phone"
+msgstr ""
+
+#: includes/Integration/Polylang/Polylang.php:43
+msgid "Contact Email"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:32 page-templates/home.php:67
+msgid "Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:34
+msgctxt "testimonial"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:35
+msgid "Add New Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:36
+msgid "New Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:37
+msgid "Edit Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:38
+msgid "View Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:39
+msgid "All Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:40
+msgid "Search Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:41
+msgid "No testimonials found."
+msgstr ""
+
+#: includes/PostType/Testimonial.php:42
+msgid "No testimonials found in Trash."
+msgstr ""
+
+#: includes/Setup/Navigation.php:31
+msgid "Primary"
+msgstr ""
+
+#: includes/Setup/Navigation.php:32
+msgid "Social Menu"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:30 includes/Taxonomy/Serie.php:32
+msgid "Series"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:33
+msgid "Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:34
+msgid "All Series"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:35
+msgid "Edit Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:36
+msgid "View Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:37
+msgid "Update Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:38
+msgid "Add New Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:39
+msgid "New Serie Name"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:40
+msgid "Parent Serie"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:41
+msgid "Parent Serie:"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:42
+msgid "Search Series"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:43
+msgid "Popular Series"
+msgstr ""
+
+#: includes/Taxonomy/Serie.php:44
+msgid "No series found."
+msgstr ""
+
+#: index.php:33
+msgid "Previous Page"
+msgstr ""
+
+#: index.php:33
+msgid "Next Page"
+msgstr ""
+
+#: page-templates/contact.php:62
+msgid "Send"
+msgstr ""
+
+#: page-templates/home.php:125
+msgid "See more"
+msgstr ""
+
+#: searchform.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:15
+msgid "Search Results for &#8220;%s&#8221;"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:36
+msgid "Category: %s"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:56
+msgid "Page %s"
+msgstr ""
+
+#: template-parts/blog/category-nav.php:20
+msgid "Show All"
+msgstr ""
+
+#: template-parts/blog/post-list-empty.php:2
+msgid "Nothing found here."
+msgstr ""
+
+#: template-parts/blog/post-list.php:9
+msgid "Loading posts..."
+msgstr ""
+
+#: template-parts/blog/single/footer-meta.php:3
+msgid "Tags"
+msgstr ""
+
+#: template-parts/blog/single/footer-meta.php:7
+msgid "Share"
+msgstr ""
+
+#: template-parts/blog/single/post-nav.php:19
+#: template-parts/blog/single/post-nav.php:26
+msgid "Previous"
+msgstr ""
+
+#: template-parts/blog/single/post-nav.php:40
+#: template-parts/blog/single/post-nav.php:48
+msgid "Next"
+msgstr ""
+
+#: template-parts/hero/hero-single.php:15
+msgid "Reading time:"
+msgstr ""
+
+#: template-parts/newsletter/form.php:25 template-parts/newsletter/form.php:26
+msgid "Type your email"
+msgstr ""
+
+#: template-parts/newsletter/form.php:29 template-parts/newsletter/form.php:30
+msgid "First Name"
+msgstr ""
+
+#: template-parts/newsletter/form.php:31 template-parts/newsletter/form.php:32
+msgid "Last Name"
+msgstr ""
+
+#: template-parts/newsletter/form.php:35
+msgid "Content of Interest"
+msgstr ""
+
+#: template-parts/newsletter/form.php:44
+msgid "Events in which I will speak"
+msgstr ""
+
+#: template-parts/newsletter/form.php:52
+msgid "English content"
+msgstr ""
+
+#: template-parts/newsletter/form.php:62
+msgid "Portuguese content"
+msgstr ""
+
+#: template-parts/newsletter/form.php:70
+msgid "Offers and Promotions"
+msgstr ""
+
+#: template-parts/newsletter/form.php:78
+msgid "Select at least one interest"
+msgstr ""
+
+#: template-parts/newsletter/form.php:82
+msgid "Subscribe"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Elemar Jr Blog Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Aztec Online Solutions"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://aztecweb.net/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "About"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home"
+msgstr ""
