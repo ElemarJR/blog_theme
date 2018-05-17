@@ -84,6 +84,7 @@ rm -rf web/wp-content/languages/themes
 
 # Generate env salts file
 if [ ! -f .salts ]; then
+    touch .salts
     $wp dotenv salts generate --file='.salts'
 fi
 
