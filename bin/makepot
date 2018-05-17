@@ -1,7 +1,13 @@
 #!/bin/sh
 
 # Go to project root
-cd $(dirname "$0")/..
+cd $(dirname $(dirname "$0"))
+
+# Define script variables
+theme=$(wp theme list --status=active --field=name --allow-root)
+templateDir=$(pwd)/src
+languageDir=${templateDir}/languages
+potFile=${languageDir}/${theme}.pot
 
 set -x
 
@@ -10,9 +16,9 @@ mkdir -p vendor/src
 cp -R web/wp-includes/ vendor/src/wp-includes/
 
 mkdir -p $(pwd)/src/languages/
-touch $(pwd)/src/languages/elemarjr.pot
+touch ${potFile}
 
 # Run the makepot script
-php vendor/wp/i18n-tools/makepot.php wp-theme $(pwd)/app/template/ $(pwd)/app/template/languages/elemarjr.pot
+php vendor/wp/i18n-tools/makepot.php wp-theme ${templateDir} ${potFile}
 
 rm -rf vendor/src
