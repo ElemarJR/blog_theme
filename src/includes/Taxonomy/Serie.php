@@ -27,6 +27,7 @@ class Serie extends Base {
 	public function register_taxonomy() {
 		register_taxonomy( 'serie', 'post',
 			array(
+				'hierarchical' => true,
 				'label' => __( 'Series', 'elemarjr' ),
 				'labels' => array(
 					'name' => __( 'Series', 'elemarjr' ),
