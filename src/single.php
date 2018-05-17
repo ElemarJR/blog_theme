@@ -36,6 +36,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/blog/single/post-nav' ); ?>
 
+			<?php get_template_part( 'template-parts/blog/single/serie' ); ?>
+
 			<?php get_template_part( 'template-parts/blog/single/banner-contact' ); ?>
 
 			<?php comments_template(); ?>

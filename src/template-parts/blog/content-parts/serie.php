@@ -1,10 +1,13 @@
 <?php
 
-$series = get_the_terms( get_the_ID(), 'serie' );
+use Aztec\Taxonomy\Serie;
 
-if ( empty( $series ) ) {
-	return;
-}
+global $container;
+
+/** @var Serie $serie_helper */
+$serie_helper = $container->get( Serie::class );
+
+$series = $serie_helper->get_post_terms( get_the_ID() );
 
 foreach ( $series as $term ) :
 ?>

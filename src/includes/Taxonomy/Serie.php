@@ -14,6 +14,8 @@ use Aztec\Base;
  */
 class Serie extends Base {
 
+	private $slug = 'serie';
+
 	/**
 	 * Add hooks
 	 */
@@ -25,7 +27,7 @@ class Serie extends Base {
 	 * Register post type
 	 */
 	public function register_taxonomy() {
-		register_taxonomy( 'serie', 'post',
+		register_taxonomy( $this->slug, 'post',
 			array(
 				'hierarchical' => true,
 				'label' => __( 'Series', 'elemarjr' ),
@@ -47,5 +49,39 @@ class Serie extends Base {
 				'public' => true,
 			)
 		);
+	}
+
+	/**
+	 * Get series from a post
+	 *
+	 * @see get_the_terms()
+	 *
+     * @param int|object $post Post ID or object.
+     * @return array|false|\WP_Error Array of WP_Term objects on success, false if there are no terms
+     *                               or the post does not exist, WP_Error on failure.
+	 */
+	public function get_post_terms( $post ) {
+		return get_the_terms( $post, $this->slug );
+	}
+
+	/**
+	 * Get all posts from a taxonomy term
+	 *
+	 * @param \WP_Term $serie The posts from the term.
+	 * @return \WP_Post[] The serie posts.
+	 */
+	public function get_serie_posts( \WP_Term $serie ) {
+		$query = new \WP_Query( array(
+			'nopaging'  => true,
+			'post_type' => 'post',
+			'tax_query' => array(
+				array(
+					'taxonomy' => $this->slug,
+					'terms' => array( $serie->term_id ),
+				)
+			),
+		) );
+
+		return $query->posts;
 	}
 }
