@@ -1,4 +1,6 @@
 .listing-post
+    $listing-post-title-margin = 14px
+
     &__thumbnail
         margin-bottom 27px
 
@@ -29,10 +31,18 @@
                 background $red
                 text-decoration none
 
+    &__serie
+        color $red
+        display block
+        font-weight bold
+        margin-bottom - $listing-post-title-margin
+        text-decoration none
+
     h2&__title
         font-size 17px
         letter-spacing 1.7px
         line-height 1.41
+        margin $listing-post-title-margin 0
         text-transform uppercase
 
         a

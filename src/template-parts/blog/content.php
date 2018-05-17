@@ -3,6 +3,7 @@
 		<?php
 			get_template_part( 'template-parts/blog/content-parts/thumbnail' );
 			get_template_part( 'template-parts/blog/content-parts/category' );
+			get_template_part( 'template-parts/blog/content-parts/serie' );
 			the_title( '<h2 class="listing-post__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		?>
 	</header><!-- .entry-header -->
