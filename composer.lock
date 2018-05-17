@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c9aabe4543cd97e9b5191a900df68e3",
+    "content-hash": "7cc3d1fb3f018e7d54ec9847f5df9d38",
     "packages": [
         {
             "name": "aaemnnosttv/wp-cli-dotenv-command",
@@ -2664,6 +2664,63 @@
             "time": "2018-01-29T02:30:16+00:00"
         },
         {
+            "name": "wp-cli/embed-command",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-cli/embed-command.git",
+                "reference": "81319d4243a8dfe096389bf54cdc4fc3dec53497"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-cli/embed-command/zipball/81319d4243a8dfe096389bf54cdc4fc3dec53497",
+                "reference": "81319d4243a8dfe096389bf54cdc4fc3dec53497",
+                "shasum": ""
+            },
+            "require-dev": {
+                "behat/behat": "~2.5",
+                "wp-cli/wp-cli": "^1.5"
+            },
+            "type": "wp-cli-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "bundled": true,
+                "commands": [
+                    "embed",
+                    "embed fetch",
+                    "embed provider list",
+                    "embed provider match",
+                    "embed handler list",
+                    "embed cache clear",
+                    "embed cache find",
+                    "embed cache trigger"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "WP_CLI\\Embeds\\": "src/"
+                },
+                "files": [
+                    "embed-command.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Birchler",
+                    "homepage": "https://pascalbirchler.com/"
+                }
+            ],
+            "description": "Inspects oEmbed providers, clears embed cache, and more.",
+            "homepage": "https://github.com/wp-cli/embed-command",
+            "time": "2018-01-22T21:26:48+00:00"
+        },
+        {
             "name": "wp-cli/entity-command",
             "version": "v1.2.0",
             "source": {
@@ -3820,16 +3877,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "v1.4.1",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "1d9dec0212fa1e85b1c5ca7b0d8395091c52de40"
+                "reference": "01d0ac3fe71f89f8ccba866151b982cc01a541bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/1d9dec0212fa1e85b1c5ca7b0d8395091c52de40",
-                "reference": "1d9dec0212fa1e85b1c5ca7b0d8395091c52de40",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/01d0ac3fe71f89f8ccba866151b982cc01a541bd",
+                "reference": "01d0ac3fe71f89f8ccba866151b982cc01a541bd",
                 "shasum": ""
             },
             "require": {
@@ -3857,6 +3914,7 @@
                 "wp-cli/core-command": "^1.0",
                 "wp-cli/cron-command": "^1.0",
                 "wp-cli/db-command": "^1.0",
+                "wp-cli/embed-command": "^1.0",
                 "wp-cli/entity-command": "^1.0",
                 "wp-cli/eval-command": "^1.0",
                 "wp-cli/export-command": "^1.0",
@@ -3893,6 +3951,9 @@
             ],
             "type": "library",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                },
                 "autoload-splitter": {
                     "splitter-logic": "WP_CLI\\AutoloadSplitter",
                     "splitter-location": "php/WP_CLI/AutoloadSplitter.php",
@@ -3912,13 +3973,13 @@
             "license": [
                 "MIT"
             ],
-            "description": "A command line interface for WordPress",
-            "homepage": "http://wp-cli.org",
+            "description": "The command line interface for WordPress",
+            "homepage": "https://wp-cli.org",
             "keywords": [
                 "cli",
                 "wordpress"
             ],
-            "time": "2017-11-13T15:28:04+00:00"
+            "time": "2018-01-31T09:42:08+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",
