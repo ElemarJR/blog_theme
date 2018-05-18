@@ -20,4 +20,4 @@ In the process of deploy, the serve will get the code in the Git repository. It'
 
 The deploy is managed by Deployer. You need permission to do the deploy. You public key must be registered in the host. To run the deploy you just need
 
-    docker-compose run --rm php dep deploy production --log deploy.log
+    docker-compose run --rm php dep deploy staging --log deploy.log

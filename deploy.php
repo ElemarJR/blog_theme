@@ -15,7 +15,7 @@ host('107.22.150.147')
 	->set('deploy_path', '/home/elemarjr')
 	->set('http_user', 'www-data');
 
-set('repository', 'git@github.com:ElemarJR/blog_theme.git');
+set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/elemarjr.git');
 set('branch', 'master');
 
 set('ssh_multiplexing', false);
