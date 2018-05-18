@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 0.1.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-05-15 21:47:32+00:00\n"
+"POT-Creation-Date: 2018-05-18 00:58:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -272,11 +272,11 @@ msgstr ""
 msgid "Company Logo"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:42
+#: includes/Integration/Polylang/Polylang.php:46
 msgid "Contact Phone"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:43
+#: includes/Integration/Polylang/Polylang.php:47
 msgid "Contact Email"
 msgstr ""
 
@@ -329,55 +329,55 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:30 includes/Taxonomy/Serie.php:32
+#: includes/Taxonomy/Serie.php:33 includes/Taxonomy/Serie.php:35
 msgid "Series"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:33
+#: includes/Taxonomy/Serie.php:36
 msgid "Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:34
+#: includes/Taxonomy/Serie.php:37
 msgid "All Series"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:35
+#: includes/Taxonomy/Serie.php:38
 msgid "Edit Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:36
+#: includes/Taxonomy/Serie.php:39
 msgid "View Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:37
+#: includes/Taxonomy/Serie.php:40
 msgid "Update Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:38
+#: includes/Taxonomy/Serie.php:41
 msgid "Add New Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:39
+#: includes/Taxonomy/Serie.php:42
 msgid "New Serie Name"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:40
+#: includes/Taxonomy/Serie.php:43
 msgid "Parent Serie"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:41
+#: includes/Taxonomy/Serie.php:44
 msgid "Parent Serie:"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:42
+#: includes/Taxonomy/Serie.php:45
 msgid "Search Series"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:43
+#: includes/Taxonomy/Serie.php:46
 msgid "Popular Series"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:44
+#: includes/Taxonomy/Serie.php:47
 msgid "No series found."
 msgstr ""
 
@@ -442,6 +442,10 @@ msgstr ""
 #: template-parts/blog/single/post-nav.php:40
 #: template-parts/blog/single/post-nav.php:48
 msgid "Next"
+msgstr ""
+
+#: template-parts/blog/single/serie.php:16
+msgid "More posts in \"%s\" series: "
 msgstr ""
 
 #: template-parts/hero/hero-single.php:15
