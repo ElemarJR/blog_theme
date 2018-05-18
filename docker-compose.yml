@@ -20,7 +20,7 @@ services:
     volumes:
       - .:/app
       # Map local user Composer directory with container for cache packages
-      - ~/.docker_cache/composer:/tmp/composer
+      - ~/.docker_cache/composer:/tmp/cache
 
   # Database image to run the mysql
   db:
