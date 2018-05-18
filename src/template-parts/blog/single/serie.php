@@ -9,6 +9,10 @@ $serie_helper = $container->get( Serie::class );
 
 $series = $serie_helper->get_post_terms( get_the_ID() );
 
+if( false === $series ) {
+	return;
+}
+
 foreach ( $series as $serie ) :
 	$posts = $serie_helper->get_serie_posts( $serie );
 ?>
