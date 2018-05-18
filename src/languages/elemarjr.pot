@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 0.1.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-05-18 00:58:43+00:00\n"
+"POT-Creation-Date: 2018-05-18 01:33:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -444,8 +444,8 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: template-parts/blog/single/serie.php:16
-msgid "More posts in \"%s\" series: "
+#: template-parts/blog/single/serie.php:20
+msgid "More posts in \"%s\" series:"
 msgstr ""
 
 #: template-parts/hero/hero-single.php:15

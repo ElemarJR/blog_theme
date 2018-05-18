@@ -17,7 +17,7 @@ foreach ( $series as $serie ) :
 	$posts = $serie_helper->get_serie_posts( $serie );
 ?>
 <div class="post-serie">
-	<h3 class="post-serie--title"><?php echo sprintf( __( 'More posts in "%s" series: ', 'elemarjr' ), $serie->name ); ?></h3>
+	<h3 class="post-serie--title"><?php echo sprintf( __( 'More posts in "%s" series:', 'elemarjr' ), $serie->name ); ?></h3>
 
 	<ul class="post-serie--list">
 		<?php
