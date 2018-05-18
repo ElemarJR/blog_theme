@@ -52,6 +52,16 @@ class Serie extends Base {
 	}
 
 	/**
+	 * Get the serie term link
+	 *
+	 * @param \WP_Term $serie The term.
+ 	 * @return string|\WP_Error HTML link to taxonomy term archive on success, WP_Error if term does not exist.
+	 */
+	public function get_serie_link( \WP_Term $serie ) {
+		return get_term_link( $serie, $this->slug );
+	}
+
+	/**
 	 * Get series from a post
 	 *
 	 * @see get_the_terms()
