@@ -38,15 +38,19 @@ class Polylang extends Base {
 	 * Register theme options to be translated
 	 */
 	public function register_strings() {
+		if( ! $this->is_active() ) {
+			return;
+		}
+
 		$group = 'Elemar Jr.';
 		pll_register_string( __( 'Contact Phone', 'elemarjr' ), 'phone', $group, false );
 		pll_register_string( __( 'Contact Email', 'elemarjr' ), 'email', $group, false );
 	}
-	
+
 	public function is_active() {
 		return function_exists( 'PLL' );
 	}
-	
+
 	public function custom_post_type_support( $post_types ) {
 		$post_types['testimonial'] = 'testimonial';
 		return $post_types;
