@@ -1,0 +1,37 @@
+# Docker
+## Kill and remove all existing Docker containers
+function kill() {
+	docker kill $(docker ps -qa) 2> /dev/null || docker rm $(docker ps -qa) 2> /dev/null
+}
+
+# Docker Compose services
+
+compose="docker-compose -f docker-compose.yml"
+os=$(uname -s)
+if [ 'Darwin' == $os ]; then
+	compose="${compose} -f docker-compose.mac.yml"
+fi
+
+## PHP
+alias wp="${compose} run --rm php"
+
+## WP-CLI
+alias wp="${compose} run --rm php wp"
+
+## Database - A database container must be up
+alias dbroot="${compose} exec db mysql -proot"
+alias mysql-cli="${compose} exec db bash"
+
+### project db user access
+alias db="${compose} exec db mysql -u project -pproject project"
+
+## Up server
+alias server="${compose} up server grunt"
+
+## Node
+alias node="${compose} run --rm node"
+alias bower="node bower"
+alias grunt="node grunt"
+
+## Composer
+alias composer="${compose} run --rm composer"
