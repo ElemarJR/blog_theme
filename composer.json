@@ -20,7 +20,7 @@
 	],
 	"require" : {
 		"vlucas/phpdotenv" : "^2.4",
-		"php-di/php-di" : "^6.0",
+		"php-di/php-di" : "^5.4",
 		"aaemnnosttv/wp-cli-dotenv-command" : "^1.0",
 		"johnpbloch/wordpress" : "^4.8",
 		"wp-cli/wp-cli" : "^1.5.1",
