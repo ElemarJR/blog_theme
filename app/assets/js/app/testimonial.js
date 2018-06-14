@@ -109,10 +109,30 @@ define( [ 'swiper/dist/js/swiper' ], function ( Swiper ) {
             maxHeight = Math.max( jQuery( this ).outerHeight( true ), maxHeight );
         });
 
-        $swiperContainer.height( maxHeight + paginationHeight );
+        /*
+         * Firefox BUG
+         * When the scroll arrive in the page end, the scroll up a little. The `containerIsVisible` function fix it
+         * applying the container height ajust just if it's visible.
+         */
+        if( containerIsVisible() ) {
+            $swiperContainer.height( maxHeight + paginationHeight );
+        }
 
         if ( isLargeScreen() ) {
             jQuery( '.testimonial-nav' ).css( 'width', 'calc( 50% - ' + jQuery( '.slider-content' ).width() / 2 + 'px )' );
         }
+    }
+
+    /**
+     * Verify if a part of the swiper container is being shown in the screen
+     */
+    function containerIsVisible() {
+        var $swiperContainer = $testimonial.find( '.swiper-container' ),
+            docViewTop = jQuery( window ).scrollTop(),
+            docViewBottom = docViewTop + jQuery( window ).height(),
+            elemTop = $swiperContainer.offset().top,
+            elemBottom = elemTop + $swiperContainer.height();
+
+        return ( elemTop > docViewTop && elemTop < docViewBottom ) || ( elemBottom > docViewTop && elemBottom < docViewBottom );
     }
 });
