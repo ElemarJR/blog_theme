@@ -26,11 +26,12 @@ ${grunt} dist
 
 # Make deploy
 elemar-ssh mkdir -p ${deployDir}
-elemar-scp src/ app/template/
+elemar-scp composer.lock src/
 
 elemar-ssh << EOF
-	cp -R ${deployDir}/src/* src
-	cp -R ${deployDir}/template/* html/wp-content/themes/elemarjr
+	cd ${deployDir}
+	../vendor/bin/composer install --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader
+	cp -R ${deployDir}/src/* html/wp-content/themes/elemarjr
 EOF
 
 # Regenerate dev assets
