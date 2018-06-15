@@ -2,11 +2,12 @@
  * Manipulate header to show after load the font
  */
 define( [ 'typed.js/lib/typed' ], function ( Typed ) {
-	function fade( $element ) {
+	function fade( $element, callback ) {
 		$element
 			.addClass( 'animated fadeInUp' )
 			.one( 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
 				jQuery( this ).removeClass( 'animated fadeInUp' );
+				callback.call();
 			});
 	}
 
@@ -15,6 +16,7 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 			stringsElement: '#typed-strings',
 			typeSpeed: 50
 		} );
+		callback.call();
 	}
 
 	function heroContainerHeight() {
@@ -58,15 +60,17 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 				var $item = jQuery( item ).find( '.hero--container' ).show();
 
 				if( jQuery( 'body' ).hasClass( 'about' ) ) {
-					typed( $item.find( '.hero--title' ) );
+					typed( $item.find( '.hero--title' ), updateHeroContainer );
 				} else {
-					fade( $item );
+					fade( $item, updateHeroContainer );
 				}
 
-				updateHeroContainer();
+				// updateHeroContainer();
 			} );
 		} )
 		.on( 'resize', function() {
 			updateHeroContainer();
 		} );
+
+	// setTimeout( updateHeroContainer, 500 );
 });
