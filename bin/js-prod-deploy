@@ -1,4 +1,11 @@
 #!/bin/bash
+#
+# Deploy the development JS application to production
+#
+# The objective is test some behavior that cannot be reproduced in development or staging environment.
+#
+# After the tests, execute this command generating the minified version of the application. Comment the grunt command
+# `requirejs:nooptimize` and uncomment `requirejs:compile`. After the execution back to the original code.
 
 set -ex
 
