@@ -64,13 +64,9 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 				} else {
 					fade( $item, updateHeroContainer );
 				}
-
-				// updateHeroContainer();
 			} );
 		} )
 		.on( 'resize', function() {
 			updateHeroContainer();
 		} );
-
-	// setTimeout( updateHeroContainer, 500 );
 });
