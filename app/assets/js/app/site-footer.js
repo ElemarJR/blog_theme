@@ -3,6 +3,10 @@
  */
 define([],function () {
 	jQuery( window ).on( 'resize', function() {
+		footerPosition();
+	} );
+
+	function footerPosition() {
 		var $window = jQuery( window ),
 			$body = jQuery( 'body' ),
 			$siteContent = jQuery( '.site-content' ),
@@ -16,5 +20,12 @@ define([],function () {
 			$body.removeClass( 'footer-fixed' );
 			$siteContent.css( 'height', 'auto' );
 		}
-	} );
+	}
+
+	/**
+	 * Firefox BUGFIX
+	 *
+	 * The body didn't get the right height sometimes
+	 */
+	setTimeout(footerPosition, 1000);
 });
