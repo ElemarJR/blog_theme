@@ -6,7 +6,7 @@
 module.exports = function ( grunt ) {
 	grunt.task.registerTask( 'dist', [
 		'stylus:dist',
-		'requirejs',
+		'requirejs:compile',
 		'sync:adminjs',
 		'sync:font-icon',
 		'imagemin',

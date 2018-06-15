@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -ex
+
+grunt="docker-compose run --rm node grunt"
+deployDir="/home/elem3989155387/html/wp-content/themes/elemarjr/assets/js"
+elemarResetKey="ssh-keygen -R www.elemarjr.com"
+elemarSSH="${elemarResetKey}; ssh elem3989155387@www.elemarjr.com"
+
+function elemar-ssh() {
+	${elemarResetKey}
+	ssh -tt elem3989155387@www.elemarjr.com $@
+}
+
+function elemar-scp() {
+	${elemarResetKey}
+	scp -r $@ elem3989155387@www.elemarjr.com:${deployDir}
+}
+
+# Generate dist assets
+rm -rf .assets/
+${grunt} requirejs:nooptimize # non-minified version
+# ${grunt} requirejs:compile # minified version
+
+# Make deploy
+elemar-ssh mkdir -p ${deployDir}
+elemar-scp .assets/js/app.dist.js
+
+# Regenerate dev assets
+rm -rf .assets/
+${grunt} --force
