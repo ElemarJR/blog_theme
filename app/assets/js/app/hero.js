@@ -11,7 +11,7 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 			});
 	}
 
-	function typed( $element ) {
+	function typed( $element, callback ) {
 		new Typed( $element.get( 0 ), {
 			stringsElement: '#typed-strings',
 			typeSpeed: 50
