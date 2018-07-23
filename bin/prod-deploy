@@ -26,7 +26,7 @@ ${grunt} dist
 
 # Make deploy
 elemar-ssh mkdir -p ${deployDir}
-elemar-scp composer.lock src/
+elemar-scp composer.json composer.lock src/
 
 elemar-ssh << EOF
 	cd ${deployDir}
