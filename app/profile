@@ -13,7 +13,7 @@ if [ 'Darwin' == $os ]; then
 fi
 
 ## PHP
-alias wp="${compose} run --rm php"
+alias php="${compose} run --rm php"
 
 ## WP-CLI
 alias wp="${compose} run --rm php wp"
@@ -26,7 +26,7 @@ alias mysql-cli="${compose} exec db bash"
 alias db="${compose} exec db mysql -u project -pproject project"
 
 ## Up server
-alias server="${compose} up server watch"
+alias server="${compose} up -d server watch"
 
 ## Node
 alias node="${compose} run --rm node"
