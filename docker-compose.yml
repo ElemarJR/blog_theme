@@ -46,7 +46,6 @@ services:
     environment:
       MAILCATCHER_PORT: 1025
 
-  # Run the applicatiion over HTTP on localhost:8080
   # Nginx
   server:
     build:
@@ -54,9 +53,10 @@ services:
     links:
       - wordpress
     ports:
-      - "8080:8080"
+      - "80:80"
     volumes:
       - .:/var/www/html
+      - ./app/docker/nginx/etc/nginx.conf:/etc/nginx/nginx.conf
 
   # PHP-FPM with WP dependencies
   wordpress:

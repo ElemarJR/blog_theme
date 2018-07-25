@@ -60,7 +60,7 @@ Install the WordPress
 
 #### Linux
 
-The website will be served in [http://localhost:8080](http://localhost:8080).
+The website will be served in [http://localhost](http://localhost).
 
 Up the server and the watch task.
 
