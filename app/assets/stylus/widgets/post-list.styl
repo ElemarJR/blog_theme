@@ -14,10 +14,11 @@
 
     &--wrapper
         position relative
-
-        @media screen and ( min-width $screen-md )
-            margin-left '-%s' %  ( $column-gutter / 2 )
-            width 'calc( 100% + %s )' % ( $column-gutter )
+        margin-left -9px
+        margin-right -9px
+        @media screen and ( min-width $screen-sm )
+            margin-left -4px
+            margin-right -4px
 
     &--loading
         margin-bottom $column-gutter
@@ -32,27 +33,10 @@
         flex-wrap wrap
 
     article
-        margin 0 auto 35px
-        max-width 414px
+        padding 9px
+        width 100%
 
-        &:hover
-            transform scale( 1.1 )
-
+        @media screen and ( min-width $screen-sm )
+            padding 4px
         @media screen and ( min-width $screen-md )
-            margin-bottom 70px
-            padding 0 ( $column-gutter / 2 )
-            width 49.9%
-
-        @media screen and ( min-width $screen-lg )
-            width 33.3%
-
-        // In medium screen show 4 post, in another just 3
-        /.home &
-            &:last-child
-                display none
-
-                @media screen and ( min-width $screen-md )
-                    display block
-
-                @media screen and ( min-width $screen-lg )
-                    display none
+            width 33.33333%

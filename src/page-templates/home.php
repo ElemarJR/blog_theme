@@ -113,7 +113,7 @@ get_header(); ?>
 
 			<?php
 				$query = new WP_Query( array(
-					'posts_per_page' => 4,
+					'posts_per_page' => 3,
 				) );
 				$container->set( 'post_list.query', $query );
 				$container->set( 'post_list.extra_class', 'front-page--blog--list' );
