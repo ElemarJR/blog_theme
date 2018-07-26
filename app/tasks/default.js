@@ -8,9 +8,6 @@ module.exports = function ( grunt ) {
 		'stylint',
 		'jshint',
 		'stylus:dev',
-		'bower:copy',
-		'sync',
-		'imagemin',
 		'symlink'
 	] );
 };
