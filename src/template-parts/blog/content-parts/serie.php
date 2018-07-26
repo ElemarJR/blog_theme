@@ -13,14 +13,17 @@ $serie_helper = $container->get( Serie::class );
 
 $series = $serie_helper->get_post_terms( get_the_ID() );
 
-if( false === $series ) {
-	return;
-}
+if ( $series ) :
 
-foreach ( $series as $term ) :
-	$link = is_single() ? $serie_helper->get_serie_link( $term ) : get_the_permalink();
+	foreach ( $series as $term ) :
+		$link = is_single() ? $serie_helper->get_serie_link( $term ) : get_the_permalink();
 ?>
 <a class="listing-post__serie" href="<?php echo esc_url( $link ) ?>">
 	<?php echo esc_html( $term->name ) ?>
 </a>
-<?php endforeach; ?>
+<?php
+	endforeach;
+else :
+?>
+<div class="listing-post__serie"></div>
+<?php endif; ?>
