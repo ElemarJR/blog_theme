@@ -1,20 +1,20 @@
 a.button,
 input[type='submit'].button
-    $height = 54px
-    background $red
-    border 2px solid $red
-    border-radius $height
-    color $white
+    $height = 45px
+    border 1px solid $black
+    color $black
+    background $white
     display inline-block
     font-weight bold
     line-height $height
-    padding 0 72px
+    padding 0 50px
     text-decoration none
     text-transform uppercase
+    transition $transition-default
 
     &:hover
-        background $white
-        color $red
+        background $black
+        color $white
         text-decoration none
 
     &__bordered
@@ -35,10 +35,10 @@ input[type='submit'].button
             color $tiffany
 
     &__white
-        background $white
-        border none
-        color $red
+        background transparent
+        border-color $white
+        color $white
 
         &:hover
-            background $red
-            color $white
+            background $white
+            color $black

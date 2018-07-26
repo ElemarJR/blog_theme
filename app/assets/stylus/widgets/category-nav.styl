@@ -14,11 +14,13 @@
         margin 20px 45px
 
         a
-            color $gray-dark
+            color $black
             font-weight bold
+            padding-bottom 3px
             text-decoration none
             text-transform uppercase
 
             ^[0..-2].current-cat ^[-1..-1] // @stylint ignore
             &:hover
                 color $red
+                border-bottom 1px solid $red
