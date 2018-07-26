@@ -17,11 +17,8 @@ body
     color $gray-dark
     font-family $sans-serif
     font-weight 300
+    font-size $font-size-base
     overflow-x hidden
-    // padding-top $sm-nav-height
-
-    // @media screen and ( min-width $nav-breakpoint )
-    //     padding-top $sm-nav-height-breakpoint
 
 img
     height auto
@@ -205,7 +202,6 @@ button
 
 .site-header
     height 100%
-    image-bg()
     position fixed
     width 100%
     z-index 2
@@ -232,21 +228,6 @@ button
 
             /.sticky&
                 height $sm-nav-height-sticky
-
-    /.single-post &,
-    /.page-template-default &
-        position relative
-
-        &:before
-            background $header-overlay
-            bottom 0
-            content ''
-            height 100%
-            left 0
-            position absolute
-            right 0
-            top 0
-            width 100%
 
     &__no-hero
         height auto

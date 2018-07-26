@@ -1,5 +1,91 @@
 .post
     &--content
-        clearfix()
+        font-size 20px
         margin 0 auto 40px
-        max-width 950px
+        
+    &--title
+        font-size 42px
+        line-height 50px
+        text-transform uppercase
+        width 75%
+        margin 0
+        a
+            color $black
+            text-decoration none
+            
+    &--image
+        height 247px
+        margin 35px 0 30px
+        position static
+        
+    &--main
+        display flex
+        
+    &--share
+        align-items center
+        display flex
+        flex-direction column
+        padding-right 25px
+        width 60px
+        
+        &-item
+            color $gray
+            font-size 16px
+            text-decoration none
+            margin-bottom 32px
+        
+    &--comments
+        color $gray
+        text-align center
+        margin 10px 0 32px
+        
+        &-count
+            font-size 12px
+            
+        &-icon
+            border 1px solid $tiffany
+            border-radius 50%
+            color $tiffany
+            cursor pointer
+            line-height 40px
+            font-size 28px
+            height 40px
+            width 40px
+            
+            &:hover
+                background $tiffany
+                color $white
+
+    &--meta
+        align-items center
+        display flex
+        font-size 20px
+        font-weight 100
+        margin-top 22px
+
+    &--meta-author
+        color $tiffany
+        font-weight bold
+        text-decoration none
+        
+    &--meta-date
+        margin 0 60px
+    
+    &--meta-reading
+        display flex
+        line-height 1
+    
+    &--icon__time
+        margin-right 22px
+        color $tiffany
+        icon( i-time )
+        
+    .listing-post__serie
+        font-size 14px
+        margin-top 20px
+        margin-bottom 15px
+        height auto
+        
+    .listing-post__categories a
+        padding 8px 20px
+        

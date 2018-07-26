@@ -1,47 +1,32 @@
 .post-serie
-    background $downy
-    margin 30px 0 0 -20px
-    padding 30px
-    width calc( 100% + 40px );
+    background $gray-light 
+    margin 32px 0 0
+    padding 40px 30px
 
-    @media screen and ( min-width $screen-sm )
-        padding 65px 50px
-
-    @media screen and ( min-width $screen-lg )
-        margin-left 0
-        padding 60px
-        width 100%
-
-    .single-post h3&--title
-        color $purple
-        font-size 20px
-        margin 0 0 20px 0
+    &--title
+        color $black
+        text-align center
+        text-transform uppercase
+        margin 0 0 30px 0
 
     &--list
-        font-size 14px
         margin 0
         padding 0
-
-        @media screen and ( min-width $screen-sm )
-            font-size 16px
+        list-style none
 
     &--item
-        clearfix()
-        list-style none
-        margin-bottom 10px
-
+        display flex
+        justify-content space-between
+        
         &__current
             font-weight bold
 
-        .single-post a&--link
-            &:hover
-                color $purple
+        &-date
+            color $tiffany
+            margin-right 60px
+            width 80px
 
-        &--date
-            float left
-            margin-right 10px
-            width 100px
-
-        &--title
-            float left
-            width calc( 100% - 110px )
+        &-title
+            color $gray-dark 
+            text-decoration none
+            width calc( 100% - 140px )

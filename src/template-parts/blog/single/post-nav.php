@@ -20,10 +20,10 @@ if( $previous_post = get_adjacent_post( false, '', true ) ) {
 	</a>
 
 	<a class="posts-nav-link--previous" href="<?php echo esc_url( $post_link ); ?>" title="">
-		<img class="posts-nav-img" src="<?php echo esc_url( $image_url ); ?>" alt="">
+		<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
 		<div class="posts-nav-title-wrapper">
-			<p class="posts-nav-title"><?php echo esc_html( $title ) ?></p>
 			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Previous', 'elemarjr' ); ?></p>
+			<p class="posts-nav-link--title"><?php echo esc_html( $title ) ?></p>
 		</div>
 	</a>
 
@@ -42,12 +42,11 @@ if( $next_post = get_adjacent_post( false, '', false ) ) {
 	</a>
 
 	<a class="posts-nav-link--next" href="<?php echo esc_url( $post_link ); ?>" title="">
-		<img class="posts-nav-img" src="<?php echo esc_url( $image_url ); ?>" alt="">
 		<div class="posts-nav-title-wrapper linhk-wrapper-next">
-			<p class="posts-nav-title"><?php echo esc_html( $title ) ?></p>
 			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Next', 'elemarjr' ) ?></p>
+			<p class="posts-nav-link--title"><?php echo esc_html( $title ) ?></p>
 		</div>
-
+		<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
 	</a>
 
 <?php
