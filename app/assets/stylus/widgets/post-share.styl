@@ -1,0 +1,73 @@
+.post
+	&--share
+		align-items center
+		display flex
+		flex-direction row
+		justify-content space-between
+		
+		@media screen and ( min-width $screen-md )
+			flex-direction column
+			justify-content inherit
+			padding-right 40px
+			width 108px
+			
+		&-sticky
+			position sticky
+			top 65px
+		
+		&-item
+			color $gray
+			font-size 24px
+			margin-left 20px
+			text-decoration none
+			
+			@media screen and ( min-width 350px )
+				margin-left 50px
+			
+			@media screen and ( min-width $screen-md )
+				margin 20px auto 0
+
+	&--social        
+		display flex
+		
+		@media screen and ( min-width $screen-md )
+			flex-direction column
+		
+	&--comments
+		align-items center
+		color $gray
+		display flex
+		text-align center
+		
+		@media screen and ( min-width $screen-md )
+			margin-bottom 30px
+			flex-direction column
+		
+		&-count
+			font-size 30px
+			margin-bottom 8px
+			
+			@media screen and ( min-width $screen-md )
+				font-size 22px
+			
+		&-icon
+			border 1px solid $tiffany
+			border-radius 50%
+			color $tiffany
+			cursor pointer
+			line-height 84px
+			font-size 45px
+			margin-left 22px
+			height 80px
+			width 80px
+			
+			@media screen and ( min-width $screen-md )
+				font-size 24px
+				line-height 70px
+				height 68px
+				margin-left 0
+				width 68px
+			
+			&:hover
+				background $tiffany
+				color $white

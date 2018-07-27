@@ -100,67 +100,6 @@
                 font-size 70px
                 margin 0 0 33px
 
-    ~/__single
-        & .listing-post__categories
-            a
-                font-size 18px
-
-        & .listing-post__serie
-            color $tiffany
-            font-size 20px
-            margin-bottom 0
-
-            &:hover
-                color $red
-
-        & ^[0]--title
-            color $white
-            font-size 25px
-            letter-spacing 4px
-            margin-bottom 49px
-            position relative
-
-            @media screen and ( min-width $screen-sm )
-                font-size 30px
-
-            @media screen and ( min-width $screen-md )
-                font-size 40px
-
-        & ^[0]--meta
-            font-size 22px
-
-            &--data
-                align-items center
-                display flex
-                margin-top 10px
-
-                @media screen and ( min-width $screen-lg )
-                    float left
-                    margin-right 60px
-
-                &__date
-                    height 40px
-
-                &__reading
-                    icon( i-time )
-
-                &__comments
-                    color $white
-                    icon( i-comments )
-                    text-decoration none
-
-                    &:hover
-                        color $red
-
-                        &:before
-                            color $red
-
-                &:before
-                    color $tiffany
-                    display inline-block
-                    font-size 40px
-                    margin-right 16px
-
     ~/__about
         width 100%
 

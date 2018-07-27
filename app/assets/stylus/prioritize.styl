@@ -16,12 +16,9 @@ normalize-css()
 body
     color $gray-dark
     font-family $sans-serif
+    font-size $font-size-base
     font-weight 300
     overflow-x hidden
-    // padding-top $sm-nav-height
-
-    // @media screen and ( min-width $nav-breakpoint )
-    //     padding-top $sm-nav-height-breakpoint
 
 img
     height auto
@@ -205,7 +202,6 @@ button
 
 .site-header
     height 100%
-    image-bg()
     position fixed
     width 100%
     z-index 2
@@ -233,21 +229,6 @@ button
             /.sticky&
                 height $sm-nav-height-sticky
 
-    /.single-post &,
-    /.page-template-default &
-        position relative
-
-        &:before
-            background $header-overlay
-            bottom 0
-            content ''
-            height 100%
-            left 0
-            position absolute
-            right 0
-            top 0
-            width 100%
-
     &__no-hero
         height auto
 
@@ -258,23 +239,14 @@ button
 
 // Breadcrumb
 .breadcrumb
-    color $red
-    font-size 13px
-    letter-spacing 1.3px
+    color #b3b3b3
     list-style none
-    margin 0
-    padding 20px 0
+    margin 0 0 30px
+    padding 25px 0
 
     &--wrapper
-        margin-top $sm-nav-height
         position relative
         z-index 10
-
-        @media screen and ( min-width $nav-breakpoint )
-            margin-top $sm-nav-height-breakpoint
-
-        /.sticky &
-            margin-top $sm-nav-height-sticky
 
     &--item
         display inline
@@ -286,9 +258,12 @@ button
 
         &:last-child:after
             display none
+        
+        &:last-child a
+            font-weight bold
 
     &--link
-        color $red
+        color #b3b3b3
         text-decoration none
 
 .site-content,

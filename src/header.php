@@ -89,7 +89,7 @@ $display_hero = $container->get( 'display_hero' );
 		</header><!-- #masthead -->
 	</div>
 	
-	<?php 
+	<?php
 		if( $container->get( 'display_breadcrumb' ) ) :
 			get_template_part( 'template-parts/blog/breadcrumb' );
 		endif;
@@ -106,5 +106,5 @@ $display_hero = $container->get( 'display_hero' );
 			endforeach;
 		?>>
 		<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
-		<div class="container">
+		<div class="<?php echo esc_html( ! is_singular() ? 'container' : '' ) ?>">
 		<?php endif; ?>
