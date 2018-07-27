@@ -89,7 +89,7 @@ $display_hero = $container->get( 'display_hero' );
 		</header><!-- #masthead -->
 	</div>
 	
-	<?php 
+	<?php
 		if( $container->get( 'display_breadcrumb' ) ) :
 			get_template_part( 'template-parts/blog/breadcrumb' );
 		endif;

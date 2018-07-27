@@ -1,11 +1,14 @@
 .banner-contact
     background-color #2c598a
-    background-position center center
+    background-position center right
     background-repeat no-repeat
     background-size cover
     padding 40px 30px
+    margin 62px ( - $container-padding ) 0 (- $container-padding)
     text-transform uppercase
-    margin-top 60px
+    
+    @media screen and ( min-width $screen-md )
+        margin 62px 0 0
 
     &--text
         color $white
@@ -14,8 +17,8 @@
         margin-bottom 25px
         text-align left
         
-        p,
-        h2
+        h2,
+        p
             margin 0
 
     .button

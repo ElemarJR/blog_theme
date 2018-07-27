@@ -1,0 +1,29 @@
+.post
+    &--footer
+        border-bottom 1px solid $gray
+        border-top 1px solid $gray
+        line-height 36px
+        padding 20px 0
+    
+    &--tags
+        align-items center
+        display flex
+        flex-wrap wrap
+
+        strong
+            color $black
+            display block
+            font-size 18px
+            margin-right 40px
+            text-transform uppercase
+
+        a
+            color $gray
+            margin-right 8px
+            text-decoration none
+            
+            @media screen and ( min-width $screen-md )
+                margin-right 12px
+
+            &:hover
+                color $red

@@ -6,10 +6,16 @@
     
     &--next,
     &--previous
-        display flex
+        display none
+        flex-direction column
         font-weight bold
         text-decoration none
-        max-width 40%
+        width 100%
+        
+        @media screen and ( min-width $screen-md )
+            display flex        
+            flex-direction row
+            max-width 40%
     
     &--img
         margin-right 20px
@@ -30,6 +36,12 @@
 
     .link-next,
     .link-previous
-        position absolute
-        top 50%
-        display none
+        align-items center
+        color $gray
+        display flex
+        font-size 28px
+        font-weight 400
+        text-decoration none
+
+        @media screen and ( min-width $screen-md )
+            display none

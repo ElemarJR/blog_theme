@@ -24,6 +24,9 @@ get_header(); ?>
 		?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			
+			<?php get_template_part( 'template-parts/blog/breadcrumb' ); ?>
+
 			<header class="container">
 				<?php get_template_part( 'template-parts/blog/content-parts/category' )?>
 
@@ -44,33 +47,15 @@ get_header(); ?>
 			?>>
 			</div>
 
-			<article class="container post--main">
-				<div class="post--share">
-					<div class="post--comments">
-						<div class="post--comments-count"><?php echo esc_html( get_comments_number() ); ?></div>
-						<div class="post--comments-icon">
-							<i class="i-comments"></i>							
-						</div>
-					</div>
-					<a class="post--share-item addthis_button_twitter"><i class="i-twitter"></i></a>
-					<a class="post--share-item addthis_button_linkedin"><i class="i-linkedin"></i></a>
-					<a class="post--share-item addthis_button_facebook"><i class="i-facebook"></i></a>
+			<section class="container">
+				<div class="post--main">
+					<?php get_template_part( 'template-parts/blog/single/social-medias' ); ?>
+
+					<?php get_template_part( 'template-parts/blog/single/content' ); ?>
 				</div>
+			</section>
 
-				<div class="post--content">
-					<?php
-						the_content();
-
-						wp_link_pages( array(
-							'next_or_number' => 'next',
-							'before' => '<div class="posts-nav">',
-							'after' => '</div>'
-						) );
-					?>
-				</div>
-			</article>
-
-			<div class="container">
+			<section class="container">
 				<?php get_template_part( 'template-parts/blog/single/tags' ); ?>
 
 				<?php get_template_part( 'template-parts/blog/single/post-nav' ); ?>
@@ -80,7 +65,7 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/blog/single/banner-contact' ); ?>
 
 				<?php comments_template(); ?>
-			</div>
+			</section>
 		</article>
 		<?php endwhile; ?>
 	</main>

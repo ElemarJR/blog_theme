@@ -16,8 +16,8 @@ normalize-css()
 body
     color $gray-dark
     font-family $sans-serif
-    font-weight 300
     font-size $font-size-base
+    font-weight 300
     overflow-x hidden
 
 img
@@ -239,23 +239,14 @@ button
 
 // Breadcrumb
 .breadcrumb
-    color $red
-    font-size 13px
-    letter-spacing 1.3px
+    color #b3b3b3
     list-style none
-    margin 0
-    padding 20px 0
+    margin 0 0 30px
+    padding 25px 0
 
     &--wrapper
-        margin-top $sm-nav-height
         position relative
         z-index 10
-
-        @media screen and ( min-width $nav-breakpoint )
-            margin-top $sm-nav-height-breakpoint
-
-        /.sticky &
-            margin-top $sm-nav-height-sticky
 
     &--item
         display inline
@@ -267,9 +258,12 @@ button
 
         &:last-child:after
             display none
+        
+        &:last-child a
+            font-weight bold
 
     &--link
-        color $red
+        color #b3b3b3
         text-decoration none
 
 .site-content,
