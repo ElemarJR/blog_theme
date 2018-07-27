@@ -1,37 +1,37 @@
 .post
-	&--meta
-		align-items center
-		display flex
-		font-size 20px
-		font-weight 100
-		margin-top 12px
-		flex-wrap wrap
-		flex-direction column
-		
-		@media screen and ( min-width $screen-md )
-			margin-top 22px
-			flex-direction row
+    &--meta
+        align-items center
+        display flex
+        flex-direction column
+        flex-wrap wrap
+        font-size 20px
+        font-weight 100
+        margin-top 12px
+        
+        @media screen and ( min-width $screen-md )
+            flex-direction row
+            margin-top 22px
 
-		&-author
-			color $tiffany
-			font-weight bold
-			text-decoration none
-			margin-bottom 16px
-			
-			@media screen and ( min-width $screen-md )
-				margin-bottom 0
-			
-		&-date
-			margin-bottom 12px
-			
-			@media screen and ( min-width $screen-md )
-				margin 0 60px
-		
-		&-reading
-			display flex
-			line-height 1
-	
-	&--icon__time
-		margin-right 22px
-		color $tiffany
-		icon( i-time )
+        &-author
+            color $tiffany
+            font-weight bold
+            margin-bottom 16px
+            text-decoration none
+            
+            @media screen and ( min-width $screen-md )
+                margin-bottom 0
+            
+        &-date
+            margin-bottom 12px
+            
+            @media screen and ( min-width $screen-md )
+                margin 0 60px
+        
+        &-reading
+            display flex
+            line-height 1
+    
+    &--icon__time
+        color $tiffany
+        icon( i-time )
+        margin-right 22px

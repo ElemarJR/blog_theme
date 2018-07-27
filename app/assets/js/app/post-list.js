@@ -4,7 +4,7 @@
  * @fixme When resize for a bigger screen the container stay smaller tha the expected
  * @todo Add animation to post list
  */
-define( [ 'imagesloaded/imagesloaded' ], function() {
+define( [ 'app/is-touch', 'imagesloaded/imagesloaded' ], function(isTouch) {
 	jQuery( '.post-list' ).each( function( i,item ) {
 		jQuery( item ).imagesLoaded({ background: true })
 			.always( function() {
@@ -18,4 +18,8 @@ define( [ 'imagesloaded/imagesloaded' ], function() {
 						});
 			});
 	});
+
+	if ( isTouch ) {
+		jQuery( 'body' ).addClass( 'has-touch' );		
+	}
 });
