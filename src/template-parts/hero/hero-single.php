@@ -8,18 +8,22 @@ use Bookworm\Bookworm;
 
 <?php the_title( '<h1 class="entry-title hero--title">', '</h1>' ); ?>
 
-<div class="entry-meta hero--meta">
-	<div class="hero--meta--data hero--meta--data__date">
+<div class="post--meta">
+	<div class="post--meta-author">
+		<?php echo esc_html( get_the_author() ); ?>
+	</div>
+
+	<div class="post--meta-date">
 		<?php echo esc_html( get_the_date() ); ?>
 	</div>
 
-	<div class="hero--meta--data hero--meta--data__reading">
+	<div class="post--meta-reading">
 		<?php echo esc_html_e( 'Reading time:', 'elemarjr' ); ?>
 		<?php echo esc_html( Bookworm::estimate( get_the_content(), ' min' ) ); ?>
 	</div>
 
-	<a class="hero--meta--data hero--meta--data__comments" href="<?php comments_link(); ?>">
+	<a class="post--meta-comments" href="<?php comments_link(); ?>">
 		<?php echo esc_html_e( 'Comments' ); ?>:
-	    	<?php echo esc_html( get_comments_number() ); ?>
+	    <?php echo esc_html( get_comments_number() ); ?>
 	</a>
 </div><!-- .entry-meta -->
