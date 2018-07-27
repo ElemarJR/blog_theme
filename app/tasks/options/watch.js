@@ -13,23 +13,7 @@ module.exports = {
 		tasks: ['stylint', 'stylus:dev']
 	},
 	js: {
-		files: ['<%= config.assets.src %>/js/**/*.js'],
-		tasks: ['sync:requirejs']
-	},
-	images: {
-		files: ['<%= config.assets.src %>/images/**/*.{png,jpg,gif,svg}'],
-		tasks: ['imagemin']
-	},
-	bower: {
-		files: ['bower_components/**/*'],
-		tasks: ['bower:copy']
-	},
-	config: {
-		files: ['<%= config.config.dir %>/**/*'],
-		tasks: ['symlink']
-	},
-	'font-icon': {
-		files: ['theme/font-icon/fonts/**/*'],
-		tasks: ['sync:font-icon']
+		files: ['<%= config.assets.src %>/js/**/*'],
+		tasks: ['jshint']
 	}
 };
