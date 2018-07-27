@@ -92,7 +92,7 @@ class Blog extends Base {
 	}
 	
 	public function is_post_list() {
-		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
+		return ( ! is_front_page() && ! is_page() ) || is_search() || is_archive();
 	}
 
 	/**
