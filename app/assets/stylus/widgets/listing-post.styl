@@ -1,29 +1,53 @@
 .listing-post
-    $listing-post-title-margin = 14px
+    min-height 308px
+    position relative
+    
+    &:hover
+        .listing-post__footer
+            height 35px
+            visibility visible
+        .listing-post__overlay
+            height 100%
 
-    &__thumbnail
-        margin-bottom 27px
-
-        img
-            width 100%
-
+    &__container
+        min-height 308px
+        position relative
+        
+    &__bg
+        background-size cover
+        background-repeat no-repeat
+        background-position center
+        height 100%
+        position absolute
+        width 100%
+        
+    &__overlay
+        background rgba(#000, .6)
+        bottom 0
+        display flex
+        flex-direction column
+        height auto
+        justify-content center
+        padding 30px
+        position absolute
+        width 100%
+        transition .2s ease-out
+        
     &__categories
         list-style none
-        margin 0 0 24px
+        margin 0 0 10px
         padding 0
-        position relative
 
         li
             display inline-block
-            margin-bottom 5px
 
         a
             background $tiffany
             color $white
             display block
-            font-size 10px
+            font-size 11px
             font-weight bold
-            padding 3px 16px
+            padding 6px 18px
             text-decoration none
             text-transform uppercase
 
@@ -32,33 +56,32 @@
                 text-decoration none
 
     &__serie
-        color $red
+        color $tiffany
         display block
+        font-size 11px
         font-weight bold
-        margin-bottom - $listing-post-title-margin
         text-decoration none
+        text-transform uppercase
 
     h2&__title
-        font-size 17px
-        letter-spacing 1.7px
-        line-height 1.41
-        margin $listing-post-title-margin 0
+        font-size 16px
+        margin 0
         text-transform uppercase
 
         a
-            color $gray-dark
+            color $white
             text-decoration none
 
             &:hover
-                color $tiffany
+                color rgba($white, .7)
                 text-decoration none
-
-    &__content
-        p
-            margin 0 0 37px
 
     &__footer
         color $tiffany
+        height 0
+        margin-top 2rem
+        visibility hidden
+        transition .2s ease-out
 
         &__right
             float right

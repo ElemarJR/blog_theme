@@ -6,7 +6,7 @@
  */
 define( [ 'imagesloaded/imagesloaded' ], function() {
 	jQuery( '.post-list' ).each( function( i,item ) {
-		jQuery( item ).imagesLoaded()
+		jQuery( item ).imagesLoaded({ background: true })
 			.always( function() {
 				jQuery( item )
 					.addClass( 'post-list--loaded animated fadeInUpBig' )
