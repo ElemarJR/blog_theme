@@ -89,3 +89,10 @@ services:
       - "35729:35729"
     volumes:
       - .:/app
+
+  # Ngrok
+  ngrok:
+    image: wernight/ngrok
+    links:
+      - server
+    command: ngrok http server:80

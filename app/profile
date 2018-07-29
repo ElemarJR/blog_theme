@@ -35,3 +35,6 @@ alias grunt="node grunt"
 
 ## Composer
 alias composer="${compose} run --rm composer"
+
+## Ngrok
+alias ngrok="${compose} run --rm ngrok"
