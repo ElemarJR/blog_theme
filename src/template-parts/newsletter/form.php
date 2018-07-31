@@ -18,7 +18,7 @@ $lang = PLL()->curlang;
 
 ?>
 <div class="newsletter--wrapper">
-	<div class="container newsletter">
+	<div class="newsletter">
 		<h2 class="newsletter--title"><?php echo esc_html( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?></h2>
 		<div class="newsletter--subtitle"><?php echo wp_kses_post( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'text' ) ) ); ?></div>
 		<form class="form newsletter--form" method="post" action="https://elemarjr.us17.list-manage.com/subscribe/post?u=0ea74f86198646647c46d29cf&amp;id=cd82e1ff48" target="_blank">

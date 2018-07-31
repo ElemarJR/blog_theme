@@ -31,7 +31,7 @@ $bg_images = $spb->get_background_images( $lang );
 	</div>
 
 	<?php $button_label = get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'label' ) ); ?>
-	<a class="button button__tiffany" href="<?php echo esc_url( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'url' ) ) ) ?>" title="<?php echo esc_attr( $button_label ); ?>">
+	<a class="button button__white" href="<?php echo esc_url( get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'url' ) ) ) ?>" title="<?php echo esc_attr( $button_label ); ?>">
 		<?php echo esc_html( $button_label ); ?>
 	</a>
 </div>

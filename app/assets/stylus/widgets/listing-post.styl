@@ -1,7 +1,6 @@
 .listing-post
-    min-height 308px
     position relative
-    
+
     &:hover
         .listing-post__footer
             height 35px
@@ -10,19 +9,22 @@
             height 100%
 
     &__container
-        min-height 308px
+        min-height 450px
         position relative
         
+        @media screen and ( min-width $screen-md )
+            min-height 308px
+        
     &__bg
-        background-size cover
-        background-repeat no-repeat
         background-position center
+        background-repeat no-repeat
+        background-size cover
         height 100%
         position absolute
         width 100%
         
     &__overlay
-        background rgba(#000, .6)
+        background rgba( $black, .6 )
         bottom 0
         display flex
         flex-direction column
@@ -30,8 +32,8 @@
         justify-content center
         padding 30px
         position absolute
+        transition $transition-default
         width 100%
-        transition .2s ease-out
         
     &__categories
         list-style none
@@ -45,11 +47,16 @@
             background $tiffany
             color $white
             display block
-            font-size 11px
+            font-size 22px
             font-weight bold
-            padding 6px 18px
+            padding 9px 28px
             text-decoration none
             text-transform uppercase
+            
+            @media screen and ( min-width $screen-md )
+                font-size 14px
+                padding 7px 18px
+                
 
             &:hover
                 background $red
@@ -60,28 +67,41 @@
         display block
         font-size 11px
         font-weight bold
+        height 16px
         text-decoration none
         text-transform uppercase
 
     h2&__title
-        font-size 16px
+        font-size 22px
         margin 0
         text-transform uppercase
+        
+        @media screen and ( min-width $screen-md )
+            font-size 16px
 
         a
+            -webkit-box-orient vertical
+            -webkit-display -webkit-box
+            -webkit-line-clamp 2
             color $white
+            display block
+            height 58px
+            overflow hidden
             text-decoration none
+            
+            @media screen and ( min-width $screen-md )
+                height 42px
 
             &:hover
-                color rgba($white, .7)
+                color rgba( $white, .7 )
                 text-decoration none
 
     &__footer
         color $tiffany
         height 0
         margin-top 2rem
+        transition $transition-default
         visibility hidden
-        transition .2s ease-out
 
         &__right
             float right
@@ -111,3 +131,8 @@
         &:hover
             color $red
             text-decoration none
+            
+.has-touch
+    .listing-post__footer
+        height auto
+        visibility visible

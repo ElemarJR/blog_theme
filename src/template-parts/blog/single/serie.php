@@ -28,13 +28,11 @@ foreach ( $series as $serie ) :
 				}
 			?>
 			<li class="<?php echo esc_attr( $item_class ); ?>">
-				<a class="post-serie--item--link" href="<?php echo esc_url( get_the_permalink( $serie_post ) ); ?>" title="<?php echo esc_attr( get_the_title( $serie_post ) ); ?>">
-					<span class="post-serie--item--date">
-						<?php echo esc_html( get_the_date( '', $serie_post ) ); ?>
-					</span>
-					<span class="post-serie--item--title">
+				<span class="post-serie--item-date">
+					<?php echo esc_html( get_the_date( '', $serie_post ) ); ?>
+				</span>
+				<a class="post-serie--item-title" href="<?php echo esc_url( get_the_permalink( $serie_post ) ); ?>" title="<?php echo esc_attr( get_the_title( $serie_post ) ); ?>">
 						<?php echo esc_html( get_the_title( $serie_post ) ); ?>
-					</span>
 				</a>
 			</li>
 		<?php endforeach; ?>

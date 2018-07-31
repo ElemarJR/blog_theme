@@ -83,12 +83,8 @@ class Blog extends Base {
 	 * 
 	 * @return boolean True, if is the home of the blog. False, otherwise.
 	 */
-	public function display_hero( $display ) {
-		if( $this->is_post_list() ) {
-			return false;
-		}
-		
-		return $display;
+	public function display_hero( $display ) {		
+		return false;
 	}
 	
 	public function display_breadcrumb() {
@@ -96,7 +92,7 @@ class Blog extends Base {
 	}
 	
 	public function is_post_list() {
-		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
+		return ( ! is_front_page() && ! is_page() ) || is_search() || is_archive();
 	}
 
 	/**
