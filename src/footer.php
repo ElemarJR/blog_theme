@@ -19,29 +19,26 @@ global $container;
 </div><!-- #site-content -->
 
 <footer id="colophon" class="site-footer">
-	<div class="site-info container">
-		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
-			</a>	
-		</div><!-- .site-branding -->
-
-		<div class="follow-us">
-			<h3 class="follow-us--title"><?php esc_html_e( 'Follow us', 'elemarjr' ) ?></h3>
-			<?php get_template_part( 'template-parts/social-menu') ?>
+	<div class="scroll-up">
+		<div class="scroll-up--icon">
+			<i class="i-arrow-right"></i>			
 		</div>
+	</div>
 
-		<div class="contact-info">
-			<?php if( $container->get( Polylang::class )->is_active() )  : ?>
-			<p><?php echo esc_html( pll__( 'phone' ) ) ?></p>
-			<p>
-				<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
-					<?php echo esc_html( pll__( 'email' ) ) ?>
-				</a>
-			</p>
-			<?php endif; ?>
-		</div>
-	</div><!-- .site-info -->
+	<div class="follow-us">
+		<?php get_template_part( 'template-parts/social-menu') ?>
+	</div>
+
+	<div class="contact-info">
+		<?php if( $container->get( Polylang::class )->is_active() )  : ?>
+		<p class="phone"><?php echo esc_html( pll__( 'phone' ) ) ?></p>
+		<p>
+			<a href="<?php echo esc_url( 'mailto:' . pll__( 'email' ) ) ?>">
+				<?php echo esc_html( pll__( 'email' ) ) ?>
+			</a>
+		</p>
+		<?php endif; ?>
+	</div>
 </footer><!-- #colophon -->
 
 <?php

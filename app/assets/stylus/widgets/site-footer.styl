@@ -1,35 +1,22 @@
 .site-footer
-    background-color $purple
+    background-color $dark-grey
     color $white
-    letter-spacing .8px
+    height $footer-height
     padding 65px 0 30px
-    position relative
-    text-align center
     visibility visible
-    z-index 10
-
-    @media screen and ( min-width $footer-breakpoint )
-        height $footer-height
-        padding-top 60px
-
-    .site-info
-        @media screen and ( min-width $footer-breakpoint )
-            position relative
-
-    .site-branding
-        display none
-
-        @media screen and ( min-width $footer-breakpoint )
-            display block
-            height 64px
-            left $container-padding
-            position absolute
-            top 0
-            width 164px
-
+    text-align center
+    
     a
-        color $white
         text-decoration none
+        
+.scroll-up
+    align-items center
+    border 1px solid $white
+    display flex
+    height 45px
+    justify-content center
+    margin 0 auto 70px
+    width 45px
 
-        &:hover
-            color $red
+    &--icon
+        transform rotate( -90deg )
