@@ -97,6 +97,17 @@ button
             
             &.toggled
                 display flex
+    
+    &__searchable
+        .main-navigation,
+        .langs-navigation
+            display none
+            
+        .site-search
+            width calc( 70% - 125px )
+            top 50%
+            right 20px
+            transform translateY( -50% )
 
 // Logo
 .site-branding
@@ -133,9 +144,12 @@ button
             a
                 border none
                 margin 0 15px
-                padding-bottom 3px
+                padding 3px 0 0
         
 .menu-toggle
+    &:focus
+        outline none
+
     .icon-bar
         border-radius 1px
         display block
@@ -199,9 +213,72 @@ button
             display inline-block
            
 // Search
-.site-search
+.search-form
+    align-items center
+    display flex
+    border-bottom 1px solid $white
+    color $white
+    margin-bottom 10px
+    
+    .search-submit
+        text-align center
+        width 30px
+    
+    input[type="search"]
+        background transparent
+        border none
+        height 48px
+        line-height 48px
+        padding 0
+        width 100%
+        
+        &:focus
+            outline none
+    
     @media screen and ( min-width $nav-breakpoint )
-        display none
+        border-bottom none
+        margin-bottom 0
+
+        input[type="search"]
+            border-bottom 1px solid $white
+            line-height 28px
+            margin 0 8px
+            height 28px
+
+.search-close
+    display none
+    height 25px
+    position relative
+    width 25px
+
+    &:after,
+    &:before
+        background $white
+        content ""
+        display block
+        height 1px
+        right 4px
+        position absolute
+        top 12px
+        width 14px
+
+    &:after
+        transform rotate( -45deg )
+
+    &:before
+        transform rotate( 45deg )
+        
+    @media screen and ( min-width $nav-breakpoint )
+        display block
+
+.site-search
+    transition right .2s linear
+
+    @media screen and ( min-width $nav-breakpoint )
+        position absolute
+        top -100%
+        right 0
+        
 
 // Header
 .site-header

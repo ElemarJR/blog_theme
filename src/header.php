@@ -60,12 +60,13 @@ $display_hero = $container->get( 'display_hero' );
 				</nav><!-- #site-navigation -->
 
 				<div id="site-search" class="site-search">
-					<div class="search-form">
+					<form method="GET" class="search-form">
 						<button type="submit" class="search-submit">
 							<i class="i-search"></i>
 						</button>
 						<input type="search" name="s" placeholder="Buscar">
-					</div>
+						<span class="search-close"></span>
+					</form>
 				</div><!-- #site-search -->
 
 				<ul class="langs-navigation">

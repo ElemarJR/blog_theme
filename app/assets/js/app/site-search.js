@@ -2,9 +2,9 @@
  * Handles the search form open/close for small screens.
  */
 define(function () {
-	var container, button, banner;
+	var container, button, closeButton, close, open;
 
-	container = document.getElementsByClassName( 'site-search' )[0];
+	container = document.getElementsByClassName( 'top-header--collapse' )[0];
 	if ( ! container ) {
 		return;
 	}
@@ -14,19 +14,28 @@ define(function () {
 		return;
 	}
 
-	banner = container.getElementsByClassName( 'search-form' )[0];
+	closeButton = container.getElementsByClassName( 'search-close' )[0];
 
-	banner.setAttribute( 'aria-expanded', 'false' );
+	close = function() {
+		container.classList.remove( 'top-header__searchable' );
+		button.setAttribute( 'aria-expanded', 'false' );
+	};
+
+	open = function() {
+		container.classList.add( 'top-header__searchable' );
+		button.setAttribute( 'aria-expanded', 'true' );
+		container.querySelector( 'input[type="search"]' ).focus();
+	};
+
+	closeButton.onclick = function() {
+		close();
+	};
 
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			banner.setAttribute( 'aria-expanded', 'false' );
+		if ( -1 !== container.classList.contains( 'top-header__searchable' ) ) {
+			open();
 		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			banner.setAttribute( 'aria-expanded', 'true' );
+			close();
 		}
 	};
 });
