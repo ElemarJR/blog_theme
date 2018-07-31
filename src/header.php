@@ -38,20 +38,18 @@ $display_hero = $container->get( 'display_hero' );
 
 	<div class="top-header-wrapper">
 		<div class="top-header container">
-			<div class="site-branding">
-				<a href="<?php echo esc_url( home_url( '/' ) ) ?>">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
-				</a>
-			</div><!-- .site-branding -->
+			<a href="<?php echo esc_url( home_url( '/' ) ) ?>" class="site-branding">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+			</a><!-- .site-branding -->
 
-			<div class="header-right">
-				<div id="site-search" class="site-search">
-					<button class="header-toogle-button search-toggle" aria-controls="search" aria-expanded="false"></button>
-					<?php get_search_form() ?>
-				</div><!-- #site-search -->
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
 
+			<div class="top-header--collapse">
 				<nav id="site-navigation" class="main-navigation">
-					<button class="header-toogle-button menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'primary',
@@ -60,7 +58,37 @@ $display_hero = $container->get( 'display_hero' );
 						) )
 					?>
 				</nav><!-- #site-navigation -->
-			</div>
+
+				<div id="site-search" class="site-search">
+					<div class="search-form">
+						<button type="submit" class="search-submit">
+							<i class="i-search"></i>
+						</button>
+						<input type="search" name="s" placeholder="Buscar">
+					</div>
+				</div><!-- #site-search -->
+
+				<ul class="langs-navigation">
+					<?php
+						$languages = pll_the_languages( array( 'raw' => 1 ) );
+
+						foreach ( $languages as $lang ) :
+						?>
+							<li class="menu-item<?php echo $lang['current_lang'] ? esc_attr( ' current-menu-item' ) : ''; ?>">
+								<a href="<?php echo esc_url( $lang['url'] ); ?>" class="menu-link">
+									<?php echo esc_html( $lang['name'] ); ?>
+								</a>
+							</li>
+					<?php endforeach; ?>
+					<li class="menu-item">
+						<a href="#" class="menu-link">
+							<button class="search-toggle" aria-controls="search" aria-expanded="false">
+								<i class="i-search"></i>
+							</button>
+						</a>
+					</li>
+				</ul><!-- .langs-navigation -->
+			</div><!-- .header-right -->			
 		</div>
 	</div>
 

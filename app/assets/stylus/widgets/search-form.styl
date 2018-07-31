@@ -1,51 +1,17 @@
 .search-form
-    background $white
-    justify-content space-between
-    left 0
-    padding 20px
-    position absolute
-    top $sm-nav-height
-    width 100%
-    z-index 999
-
-    @media screen and ( min-width $nav-breakpoint )
+    display flex
+    border-bottom 1px solid $white
+    color $white
+    margin-bottom 10px
+    
+    .search-submit
+        text-align center
+        width 30px
+    
+    input[type="search"]
         background transparent
-        display flex
+        border none
+        height 48px
+        line-height 48px
         padding 0
-        position static
-
-    label
-        margin-bottom 0
-        order 2
         width 100%
-
-    input[type='search']
-        border-bottom-color $gray-dark
-        border-left 0
-        border-right 0
-        border-top 0
-        color $red
-        height 30px
-        width 100%
-
-        @media screen and ( min-width $nav-breakpoint )
-            border-bottom-color $white
-            color $white
-            margin-left 5px
-            margin-top -3px
-            width 0
-
-            /.toggled &
-                width 300px
-
-    button[type='submit']
-        color $gray-dark
-        font-size 30px
-        height 30px
-        icon( i-search )
-        margin-right 20px
-        order 1
-        width 40px
-
-        @media screen and ( min-width $nav-breakpoint )
-            display none

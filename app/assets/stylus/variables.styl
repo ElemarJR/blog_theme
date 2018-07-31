@@ -3,7 +3,7 @@ $screen-sm = 480px
 $screen-md = 768px
 $screen-lg = 1190px
 
-$nav-breakpoint = 1000px
+$nav-breakpoint = $screen-md
 $footer-breakpoint = $screen-md
 $footer-height = 172px
 
@@ -28,7 +28,9 @@ $gray-light-100 = #ececec
 $gray-light-200 = #a3a0a0
 $gray-light-300 = #b3b3b3
 
-$header-overlay = rgba( #0E1D41, .7 )
+$header-bg = #1e1f22
+$header-overlay = $header-bg
+
 $quote-bg = #62d2c2
 $quote-quotes = #92ddce
 
@@ -82,7 +84,7 @@ $font-size-h6 = ceil( $font-size-base * .85 )
 
 
 // *** PROJECT VARIABLES ***
-$sm-nav-height = 90px
+$sm-nav-height = 100px
 $sm-nav-height-breakpoint = 107px
 $sm-nav-height-sticky = 62px
 $container-padding = 20px

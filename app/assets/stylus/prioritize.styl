@@ -56,150 +56,154 @@ button
 .wow
     visibility hidden
 
-// Header
+// Header wrapper
 .top-header-wrapper
-    border-bottom 1px solid rgba( $white, .7 )
     fixed top left
     height $sm-nav-height
     width 100%
     z-index 99
+    transition $transition-default
 
     @media screen and ( min-width $nav-breakpoint )
         height $sm-nav-height-breakpoint
 
 .top-header
+    align-items center
+    display flex
+    justify-content space-between
+    height 100%
     position relative
     z-index 9999
-
-    .site-branding
-        position absolute
-        top 18px
-        width 140px
-
-        @media screen and ( min-width $nav-breakpoint )
-            float left
-            height 70px
-            left 0
-            margin-top 18px
-            position static
-            width 180px
-
-.header-right
-    @media screen and ( min-width $nav-breakpoint )
-        display flex
-        float right
-        max-width calc( 100% - 200px )
-        padding-top 38px
-
-.header-toogle-button
-    color $white
-    cursor pointer
-    position absolute
-
-    /.toggled &
-        color $red
-
-.site-search
-    @media screen and ( min-width $nav-breakpoint )
-        display flex
-        margin-right 40px
-
-    /.search-toggle
-        background transparent
-        border none
-        font-size 26px
-        icon( i-search )
-        right 83px
-        top 33px
-
-        @media screen and ( min-width $nav-breakpoint )
-            padding-top 3px
-            position static
-
-    .search-form
-        display none
-
-        ~/.toggled ^[1..-1]
-            display flex
-
-.main-navigation
-    /.menu-toggle
-        background-color transparent
-        border none
-        font-size 46px
-        icon( i-menu )
-        padding 0
-        right 20px
-        top 22px
-
-        @media screen and ( min-width $nav-breakpoint )
-            display none
-
-    div
-        background $white
+    
+    &--collapse
+        background-color $header-bg
         display none
         left 0
+        padding 30px 20px 60px
         position absolute
         top $sm-nav-height
         width 100%
-        z-index 999
-
-        @media screen and ( min-width $nav-breakpoint )
-            background transparent
-            border-left 1px solid $white
-            display flex
-            height 30px
-            padding-left 20px
-            position static
-
-        ~/.toggled ^[1..-1]
+        
+        &.toggled
             display block
+            
+        @media screen and ( min-width $nav-breakpoint )
+            align-items center
+            display flex
+            top 0
+            padding 0
+            position static
+            width calc( 100% - 125px )
+            
+            &.toggled
+                display flex
 
-    ul
+// Logo
+.site-branding
+    display block
+    width 125px
+
+// Nav
+.main-navigation
+    .menu
         list-style none
         margin 0
         padding 0
-        width 100%
-
-        @media screen and ( min-width $nav-breakpoint )
-            width auto
-
-        > .menu-item
+        font-weight bold
+        
+    .menu-item
+        &.current-menu-item a
+            border-bottom 1px solid $tiffany
+            
+        a
+            border-bottom 1px solid $white
             display block
-            line-height 47px
+            color $white
+            font-size 12px
+            padding 15px 0
+            text-decoration none
             text-transform uppercase
+    
+    @media screen and ( min-width $nav-breakpoint )
+        margin-left auto
 
-            @media screen and ( min-width $nav-breakpoint )
-                display inline-block
-                font-size 16px
-                line-height 30px
-                padding 0 20px
-                position relative
-
-            &:last-child
-                @media screen and ( min-width $nav-breakpoint )
-                    padding-right 0
+        .menu-item
+            display inline-block
 
             a
-                color $gray-dark
-                display block
-                font-size 16px
-                font-weight bold
-                padding 0 30px
-                text-decoration none
-                width 100%
+                border none
+                margin 0 15px
+                padding-bottom 3px
+        
+.menu-toggle
+    .icon-bar
+        border-radius 1px
+        display block
+        height 2px
+        width 22px
+        background $white
+        transition transform $transition-default
+        
+        & + .icon-bar
+            margin-top 4px
+            
+    &[aria-expanded="true"]
+        .icon-bar:nth-child(1)
+            transform rotate( 45deg )
+        .icon-bar:nth-child(2)
+            transform rotate( -45deg )
+            margin-top -2px
+        .icon-bar:nth-child(3)
+            display none
+    
+    @media screen and ( min-width $nav-breakpoint )
+        display none
 
-                @media screen and ( min-width $nav-breakpoint )
-                    color $white
-                    display inline-block
-                    padding 0
-                    text-decoration none
-                    width auto
+// Langs
+.langs-navigation
+    font-weight bold
+    list-style none
+    margin 0
+    padding 0
+    
+    .menu-item
+        display inline-block
+        font-size 12px
+        margin-right 50px
+        border-bottom 1px solid transparent
+        
+        &:last-child
+            display none
+            
+        &.current-menu-item a
+            padding-bottom 3px
+            border-bottom 1px solid $tiffany
+        
+    .menu-link
+        display block
+        color $white
+        padding 8px
+        text-decoration none
+        text-transform uppercase
+    
+    @media screen and ( min-width $nav-breakpoint )
+        margin-left auto
 
-                ^[0..-2].current-menu-item ^[-1..-1] // @stylint ignore
-                &:hover
-                    color $red
+        .menu-link
+            padding 8px 0
+            
+        .menu-item
+           margin 0 0 0 30px
+           
+           &:last-child
+            display inline-block
+           
+// Search
+.site-search
+    @media screen and ( min-width $nav-breakpoint )
+        display none
 
+// Header
 .site-header
     height 100%
     position fixed
@@ -207,7 +211,7 @@ button
     z-index 2
 
     &--wrapper
-        background-color $purple
+        background-color $header-bg
         height 100vh
         left 0
         min-height 500px
@@ -247,7 +251,7 @@ button
     &--wrapper
         position relative
         z-index 10
-        margin-top 90px
+        margin-top 106px
 
     &--item
         display inline
