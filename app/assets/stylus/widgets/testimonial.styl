@@ -1,238 +1,42 @@
-.front-page--testimonial
-    background #f1f1f1
-    padding 45px 20px 37px
-    position relative
+.testimonial
+    margin 0 auto
+    text-align center
+    width 50%
+    
+    &--image
 
-    @media screen and ( min-width $screen-sm )
-        padding-bottom 65px
-        padding-top 80px
+        img
+            background $white
+            border 1px solid $dusky-blue
+            border-radius 50%
+            display inline-block
+            height 130px
+            padding 5px
+            width 130px
 
-    @media screen and ( min-width $screen-sm )
-        padding-bottom 77px
+    &--content
+        color $brownish-grey
+        font-size 20px
+        margin 0 auto
 
-    .testimonial-title
-        color #1a1a1a
-        font-size 30px
-        font-weight bold
-        margin 0 0 38px
-        text-align center
-        text-transform uppercase
+    &--footer
+        align-items center
+        display flex
+        margin-top 20px
+        justify-content center
+    
+    &--company
+        margin-right 60px
 
-        @media screen and ( min-width $screen-sm )
-            font-size 42px
-            line-height 1.58
-            margin-bottom 75px
-            text-align center
-
-        @media screen and ( min-width $screen-lg )
-            font-size 50px
-            font-weight bold
-            line-height 1.22
-
-    .swiper-container
-        width 100%
-
-    .swiper-slide
-        height auto
-        opacity 0.4
-
-        @media screen and ( min-width $screen-lg )
-            width 45%
-
-    .slider-content
-        color gray
-        position relative
-
-        &--wrapper
-            padding-top 53px
-
-            @media screen and ( min-width $screen-sm )
-                padding-top 90px
-
-            @media screen and ( min-width $screen-lg )
-                padding-top 53px
-
+    &--author
+        text-align left
         p
-            color #666666
-            font-size 17px
-            font-weight 300
-            letter-spacing 1px
-            line-height 1.71
-            margin unset
-            padding-left 70px
-            padding-right 25px
-            padding-top 94px
-            padding-bottom 30px
-            text-align left
+            margin 0
 
-            @media screen and ( min-width $screen-sm )
-                color #666666
-                font-size 22px
-                letter-spacing 1.7px
-                line-height 1.68
-                padding-left 125px
-                text-align left
-                padding-top 156px
-
-            @media screen and ( min-width $screen-lg )
-                font-size 16px
-                line-height 2.06
-                letter-spacing 1.3px
-                padding-top 96px
-                padding-left 104px
-                text-align left
-
-        .testimonial-author
-            color #333333
-            font-size 18px
-            font-weight bold
-            letter-spacing 1.8px
-            line-height 1.39
-            padding-bottom 2px
-            text-align left
-            text-transform uppercase
-
-            @media screen and ( min-width $screen-sm )
-                font-size 30px
-                line-height 1.37
-                letter-spacing 3px
-
-            @media screen and ( min-width $screen-lg )
-                font-size 14px
-                line-height 1.57
-                letter-spacing 1.4px
-                text-align left
-
-        .testimonial-author-position
-            color #666666
-            font-size 16px
-            font-weight 300
-            letter-spacing 1.6px
-            line-height 1.56
-            margin-bottom 20px
-
-            @media screen and ( min-width $screen-sm )
-                font-size 26px
-                line-height 1.58
-                letter-spacing 2.6px
-
-            @media screen and ( min-width $screen-lg )
-                font-size 13px
-                line-height 1.69
-                letter-spacing 1.3px
-                margin-bottom 0
-
-        .company-logo
-            @media screen and ( min-width $screen-lg )
-                bottom 0
-                box-sizing content-box
-                max-height 44px
-                padding-bottom inherit
-                position absolute
-                right 0
-
-    .quote
-        color #62d3c2
-        font-size 30px
-        left 24px
-        line-height .68
-        position absolute
-        text-align center
-        top 100px
-
-        @media screen and ( min-width $screen-sm )
-            font-size 52px
-            line-height .67
-            text-align center
-            left 47px
-            top 168px
-
-        @media screen and ( min-width $screen-lg )
-            font-size 30px
-            left 56px
-            line-height .68
-            top 102px
-
-
-    .swiper-slide-active .slider-content
-        background white
-        color black
-
-    .swiper-slide-active
-        opacity 1
-
-    .testimonial-foto
-        background red
-        border-radius 50%
-        height 106px
-        left calc( 50% - 53px )
-        opacity 0
-        position absolute
-        top -53px
-        width 106px
-
-        @media screen and ( min-width $screen-sm )
-            height 172px
-            left calc( 50% - 70px )
-            top -90px
-            width 172px
-
-        @media screen and ( min-width $screen-lg )
-            top -53px
-            left calc( 50% - 53px )
-            height 106px
-            width 106px
-
-        /.swiper-slide-active ^[-1..-1]
-            opacity 1
-
-    .footer
-        border-top 1px solid #e0e0e0
-        margin 0 20px
-        padding 33px 29px 55px
-        opacity 0
-
-        @media screen and ( min-width $screen-sm )
-            margin 0 34px
-            padding 33px 46px 70px
-
-        @media screen and ( min-width $screen-md )
-            margin 0 45px
-            padding 56px 62px 80px
-
-        @media screen and ( min-width $screen-lg )
-            margin 0 60px
-            padding 35px 0
-            position relative
-
-        /.swiper-slide-active ^[-1..-1]
-            opacity 1
-
-    .swiper-pagination
-        margin-top 25px
-
-        @media screen and ( min-width $screen-sm )
-            margin-top 65px
-
-    .swiper-container-horizontal
-        > .swiper-pagination-bullets
-            bottom auto
-
-    .swiper-pagination-bullet
-        border solid 1px #f0514b !important
-        background transparent
-        height 13px
-        width 13px
-        opacity inherit
-
-    .swiper-pagination-bullet-active
-        background #f0514b
-
-    .testimonial-nav
-        height 100%
-        margin unset
-        top 0
-        background transparent
-
-    .swiper-button-next
-        float right
+            &:first-child
+                color $brownish-grey
+                font-size 12px
+                font-weight 100
+            &:last-child
+                font-weight bold
+                text-transform uppercase
