@@ -13,13 +13,18 @@
             position relative
 
             a
-                border 1px solid $white
+                border 2px solid $white
                 border-radius 50%
                 color $white
                 display block
                 line-height 30px
                 height 30px
+                transition all .2s linear
                 width 30px
+                
+                &:hover
+                    border-color $pinkish-grey
+                    color $pinkish-grey
 
             @media screen and ( min-width $screen-sm )
                 font-size 24px
