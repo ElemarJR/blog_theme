@@ -76,7 +76,7 @@ button
     z-index 9999
     
     &--collapse
-        background-color $header-bg
+        background $header-bg
         display none
         left 0
         padding 30px 20px 60px
@@ -89,6 +89,7 @@ button
             
         @media screen and ( min-width $nav-breakpoint )
             align-items center
+            background transparent
             display flex
             top 0
             padding 0
@@ -282,10 +283,13 @@ button
 
 // Header
 .site-header
+    background-position center
+    background-repeat no-repeat
+    background-size cover
     height 100%
     position fixed
     width 100%
-    z-index 2
+    z-index 10
 
     &--wrapper
         background-color $header-bg
@@ -296,7 +300,6 @@ button
         right 0
         top 0
         width 100vw
-        z-index 2
 
         /.no-hero &
             height $sm-nav-height

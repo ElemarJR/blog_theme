@@ -2,7 +2,7 @@
  * Load background image to site header, site content and contact banner, if exists
  */
 define([],function () {
-	var $maybeBg = jQuery( '.site-header, .site-content, .banner-contact' );
+	var $maybeBg = jQuery( '.site-header--image, .site-content, .banner-contact' );
 
 	jQuery( window )
 		.on( 'resize', function() {

@@ -84,7 +84,7 @@ class Blog extends Base {
 	 * @return boolean True, if is the home of the blog. False, otherwise.
 	 */
 	public function display_hero( $display ) {		
-		return false;
+		return true;
 	}
 	
 	public function display_breadcrumb() {
