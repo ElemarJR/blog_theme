@@ -115,9 +115,14 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div class="front-page--quote">
-			<div class="front-page--quote--container container wow fadeInUpBig">
-				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ) ?>
+		<div class="front-page--quote" style="background-image: url(<?php echo esc_url( get_field( 'quote_image' )['url'] ); ?>);">
+			<div class="container">
+				<div class="wow fadeInUpBig">
+					<div class="front-page--quote-content">
+						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ); ?>
+						<p class="front-page--quote-author">Elemar JR</p>				
+					</div>
+				</div>				
 			</div>
 		</div>
 

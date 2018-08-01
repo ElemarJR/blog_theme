@@ -58,41 +58,27 @@
                     max-width 70%
 
     &--quote
-        background $quote-bg
+        background-color $quote-bg
+        background-position center
+        background-size cover
+        background-repeat repeat
         color $white
-        font-size 23px
-        font-weight 700
-        letter-spacing 2.3px
-        line-height 1.52
-        text-align center
-        width 100vw
+        padding 60px 0 30px
+        
+        @media screen and ( min-width $screen-md )
+            padding 120px 0 75px
 
-        &--container
-            $icon-size = 26px
-            $x-space = 20px
-            $y-space = 100px
-            display inline-block
-            max-width 695px
-            padding 110px 55px
-            position relative
+        &-author
+            font-size 14px
+            font-weight bold
+            margin-top 45px
+            
+        &-content
+            font-size 20px
+            margin 0 auto
 
-            &:before
-                icon-font()
-                color $quote-quotes
-                content i-left-quote
-                font-size $icon-size
-                left $x-space
-                position absolute
-                top $y-space
-
-            &:after
-                icon-font()
-                bottom $y-space
-                color $quote-quotes
-                content i-right-quote
-                font-size $icon-size
-                position absolute
-                right $x-space
+            @media screen and ( min-width $screen-md )
+                max-width 500px
 
     &--blog
         padding 60px 0

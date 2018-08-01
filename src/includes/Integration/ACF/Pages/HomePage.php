@@ -142,6 +142,12 @@ class HomePage extends Base {
 			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
 				array(
+					'type' => 'image',
+					'key' => 'quote_image',
+					'name' => 'quote_image',
+					'label' => __( 'Background', 'elemarjr' ),
+				),
+				array(
 					'type' => 'wysiwyg',
 					'key' => 'quote',
 					'name' => 'quote',
