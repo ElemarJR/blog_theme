@@ -29,6 +29,57 @@ get_header(); ?>
 			the_post();
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
+		<div class="front-page--blog">
+			<div class="container">
+				<div class="front-page--blog-title">
+					<h2>Blog</h2>
+				</div>
+
+				<p class="front-page--blog-description">
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'blog_text', true ) ) ?>
+				</p>
+
+				<br>
+				<br>
+				<br>
+
+				<div class="front-page--blog-list">
+					<?php
+						$query = new WP_Query( array(
+							'posts_per_page' => 3,
+						) );
+						$container->set( 'post_list.query', $query );
+						$container->set( 'post_list.extra_class', 'front-page--blog--list' );
+						get_template_part( 'template-parts/blog/post-list' );
+					?>
+					<div class="front-page--blog-actions">
+						<a class="button button__transparent" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
+							<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
+						</a>						
+					</div>
+				</div>
+
+				<p class="front-page--blog-description">Últimos posts em inglês</p>
+
+				<div class="front-page--blog-list">
+					<?php
+						$query = new WP_Query( array(
+							'lang' => 'en',
+							'posts_per_page' => 3,
+						) );
+						$container->set( 'post_list.query', $query );
+						$container->set( 'post_list.extra_class', 'front-page--blog--list' );
+						get_template_part( 'template-parts/blog/post-list' );
+					?>
+					<div class="front-page--blog-actions">
+						<a class="button button__transparent" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
+							<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
+						</a>						
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="front-page--purpose container">
 			<div class="front-page--purpose-image">
 				<img src="<?php echo esc_html( get_field( 'purpose_image' )['url'] ); ?>">
@@ -112,31 +163,6 @@ get_header(); ?>
 	    		<div class="swiper-button-prev testimonial-nav"></div>
 		</div>
 		<?php endif; ?>
-
-		<div class="front-page--blog container">
-			<div class="front-page--blog--header">
-				<h2 class="front-page--blog--title">Blog</h2>
-
-				<p class="front-page--blog--description">
-					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'blog_text', true ) ) ?>
-				</p>
-			</div>
-
-			<?php
-				$query = new WP_Query( array(
-					'posts_per_page' => 3,
-				) );
-				$container->set( 'post_list.query', $query );
-				$container->set( 'post_list.extra_class', 'front-page--blog--list' );
-				get_template_part( 'template-parts/blog/post-list' );
-			?>
-
-			<div class="front-page--blog--footer">
-				<a class="button" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
-					<?php echo esc_html_e( 'See more', 'elemarjr' ) ?>
-				</a>
-			</div>
-		</div>
 	</article>
 	<?php endwhile; ?>
 </main>

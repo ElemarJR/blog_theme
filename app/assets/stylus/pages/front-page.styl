@@ -1,20 +1,23 @@
 .front-page
-
+    // Purpose
     &--purpose
         display flex
-        padding 60px 0
+        flex-direction column
+        padding-top 60px
+        padding-bottom 60px
+        position relative
 
         &-image
-            padding-left 40px
-            text-align center
-            width 50%
+            position absolute
+            top 60px
+            right 20px
+            width 180px
 
             img
                 displat inline-block
-                width 70%
             
         &-content
-            width 50%
+            width 100%
         
         &-title
             color $dark-grey
@@ -22,6 +25,37 @@
             font-weight 100
             text-transform uppercase
             margin-bottom 75px
+            position relative
+            z-index 5
+            
+            b
+                display block
+
+        @media screen and ( min-width $screen-md )
+            flex-direction row
+            
+            &-content
+                width 50%
+
+            &-image
+                top 50%
+                transform translateY( -50% )
+                width 50%
+
+                img
+                    max-width 90%
+
+            &-title b
+                display inline
+
+        @media screen and ( min-width $screen-lg )
+            &-image
+                transform none
+                position static
+                padding-right 40px
+
+                img
+                    max-width 70%
 
     &--quote
         background $quote-bg
@@ -61,22 +95,42 @@
                 right $x-space
 
     &--blog
-        margin-top 117px
-        padding-bottom 88px
+        padding 60px 0
+        background $white-two
 
-        &--header
-        &--footer
+        &-description
+            color $black
+            font-weight bold
             text-align center
-
-        &--title
-            font-size 50px
-            letter-spacing .6px
+            text-transform uppercase
+            
+        &-title
+            color $black
+            font-weight 100
+            text-align center
             text-transform uppercase
 
-        p&--description
-            font-size 15px
-            margin-bottom 62px
+            h2
+                border-bottom 1px solid $dusky-blue
+                display inline-block
+                font-size 32px
+                margin 0 0 20px
+                padding-bottom 20px
 
+        &-list
+            margin-bottom 60px
+
+            .listing-post:last-child
+                display none
+                
+                @media screen and ( min-width $screen-lg )
+                    display block
+            
+        &-actions
+            margin-top 40px
+            text-align center
+
+// Purpose
 .purpose
     display flex
     margin-bottom 25px
