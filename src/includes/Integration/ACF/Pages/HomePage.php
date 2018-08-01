@@ -92,16 +92,16 @@ class HomePage extends Base {
 			// @todo Use repeater instead two fixed fields
 			'fields' => array(
 				array(
-					'type' => 'url',
-					'key' => 'purpose_link',
-					'name' => 'purpose_link',
-					'label' => __( 'Destination URL', 'elemarjr' ),
-				),
-				array(
 					'type' => 'text',
 					'key' => 'purpose_icon_1',
 					'name' => 'purpose_icon_1',
 					'label' => __( 'Icon Class 1', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'purpose_title_1',
+					'name' => 'purpose_title_1',
+					'label' => __( 'Title 1', 'elemarjr' ),
 				),
 				array(
 					'type' => 'wysiwyg',
@@ -116,10 +116,16 @@ class HomePage extends Base {
 					'label' => __( 'Icon Class 2', 'elemarjr' ),
 				),
 				array(
-					'type' => 'wysiwyg',
-					'key' => 'purpose_text_2',
-					'name' => 'purpose_text_2',
-					'label' => __( 'Text 2', 'elemarjr' ),
+					'type' => 'text',
+					'key' => 'purpose_title_2',
+					'name' => 'purpose_title_2',
+					'label' => __( 'Title 2', 'elemarjr' ),
+				),
+				array(
+					'type' => 'image',
+					'key' => 'purpose_image',
+					'name' => 'purpose_image',
+					'label' => __( 'Image', 'elemarjr' ),
 				),
 			),
 			'location' => $this->location,

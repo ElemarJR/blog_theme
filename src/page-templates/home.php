@@ -30,25 +30,36 @@ get_header(); ?>
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--purpose container">
-			<div class="front-page--purpose--wrapper">
-				<?php $purpose_link = get_post_meta( get_the_ID(), 'purpose_link', true ) ?>
-				<div class="front-page--purpose--item--wrapper wow fadeInUpBig">
-					<a href="<?php echo esc_url( $purpose_link ) ?>" class="front-page--purpose--item">
-						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ) ?>
-						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
-						<span>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ) ?>
-						</span>
-					</a>
+			<div class="front-page--purpose-image">
+				<img src="<?php echo esc_html( get_field( 'purpose_image' )['url'] ); ?>">
+			</div>
+			<div class="front-page--purpose-content">
+				<div class="front-page--purpose-title">
+					Meu <b>trabalho</b>
 				</div>
-				<div class="front-page--purpose--item--wrapper wow fadeInUpBig">
-					<a href="<?php echo esc_url( $purpose_link ) ?>" class="front-page--purpose--item">
-						<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ) ?>
-						<i class="front-page--purpose--icon bordered-icon <?php echo esc_attr( $icon_class ) ?>"></i>
-						<span>
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ) ?>
-						</span>
-					</a>
+				<div class="purpose wow fadeInUpBig">				
+					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
+					<div class="purpose--icon">
+						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
+					</div>
+					<div class="purpose--content">
+						<div class="purpose--title">
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_1', true ) ); ?>
+						</div>
+						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ); ?>
+					</div>
+				</div>
+				<div class="purpose wow fadeInUpBig">				
+					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ); ?>
+					<div class="purpose--icon">
+						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
+					</div>
+					<div class="purpose--content">
+						<div class="purpose--title">
+							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_2', true ) ); ?>
+						</div>
+						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ); ?>
+					</div>
 				</div>
 			</div>
 		</div>

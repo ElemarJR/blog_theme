@@ -1,53 +1,27 @@
 .front-page
+
     &--purpose
-        $column-gutter = 25px
-        padding-bottom 40px
-        padding-top 40px
+        display flex
+        padding 60px 0
 
-        &--wrapper
-            @media screen and ( min-width $screen-md )
-                align-items strech
-                display flex
-                margin-left '-%s' %  ( $column-gutter / 2 )
-                width 'calc( 100% + %s )' % ( $column-gutter )
-
-        &--item
-            border 1px solid $gray-light
-            display block
-            height 100%
-            padding 43px
+        &-image
+            padding-left 40px
             text-align center
-            text-decoration none
+            width 50%
 
-            span
-                color $gray
-                display block
-                font-size 17px
-                line-height 1.76em
-                margin 1em 0
-
-            strong
-                color $red
-
-            &:first-child
-                margin-bottom 20px
-
-                @media screen and ( min-width $screen-md )
-                    margin-bottom 0
-
-            &--wrapper
-                @media screen and ( min-width $screen-md )
-                    padding 0 ( $column-gutter / 2 )
-                    width 50%
-
-            &:hover
-                box-shadow 0 0 10px 2px $gray-light
-
-                & ^[0..1]--icon
-                    background $red
-
-                    &:before
-                        color $white
+            img
+                displat inline-block
+                width 70%
+            
+        &-content
+            width 50%
+        
+        &-title
+            color $dark-grey
+            font-size 32px
+            font-weight 100
+            text-transform uppercase
+            margin-bottom 75px
 
     &--quote
         background $quote-bg
@@ -102,3 +76,24 @@
         p&--description
             font-size 15px
             margin-bottom 62px
+
+.purpose
+    display flex
+    margin-bottom 25px
+    width 80%
+
+    &--title
+        color $black
+        font-size 16px
+        font-weight bold
+        margin-bottom 10px
+
+    &--content
+        color $gray
+        
+    &--icon
+        font-size 40px
+        margin-right 35px
+
+        i::before
+            color $black

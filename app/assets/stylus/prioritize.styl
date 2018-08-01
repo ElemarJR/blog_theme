@@ -114,6 +114,10 @@ button
 .site-branding
     display block
     width 125px
+    transition width $transition-default
+    
+    @media screen and ( min-width $nav-breakpoint )
+        width 150px
 
 // Nav
 .main-navigation

@@ -3,8 +3,15 @@
         background rgba( $header-overlay, .9 )
         height $sm-nav-height-sticky
 
+        .site-branding
+            width 100px
+
+            @media screen and ( min-width $nav-breakpoint )
+                width 120px
+        
         .top-header--collapse
             top $sm-nav-height-sticky
             
             @media screen and ( min-width $nav-breakpoint )
                 top 0
+
