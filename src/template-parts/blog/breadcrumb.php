@@ -9,23 +9,26 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 					<span itemprop="title">Blog</span>
 				</a>
 			</li>
-			<?php if( is_search() ) : ?>
+			<?php if ( is_search() ) : ?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( get_search_link( get_search_query() ) ) ?>" itemprop="url">
 					<span itemprop="title"><?php echo esc_html( sprintf( __( 'Search Results for &#8220;%s&#8221;' ), get_search_query() ) ) ?></span>
 				</a>
 			</li>
 			<?php 
-				elseif( is_archive() ) :
-					if( is_category() ) :
+				elseif ( is_archive() ) :
+					$title = get_the_archive_title();
+					
+					if ( is_category() ) :
 						$url = get_category_link( get_query_var( 'category_name' ) );
-					elseif( is_tag() ) :
+						$title = single_cat_title( '', false );
+					elseif ( is_tag() ) :
 						$url = get_tag_link( get_query_var( 'tag' ) );
 					endif;
 			?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( $url ) ?>" itemprop="url">
-					<span itemprop="title"><?php echo esc_html( get_the_archive_title() ) ?></span>
+					<span itemprop="title"><?php echo esc_html( $title ) ?></span>
 				</a>
 			</li>
 			<?php 
@@ -46,9 +49,9 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 					<span itemprop="title"><?php echo esc_html( get_the_title() ) ?></span>
 				</a>
 			</li>
-		    <?php endif; ?>
+			<?php endif; ?>
 			<?php 
-				if( $paged = get_query_var( 'paged' ) ) :
+				if ( $paged = get_query_var( 'paged' ) ) :
 					$paged_url = add_query_arg( 'paged', $paged, $url );
 			?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">

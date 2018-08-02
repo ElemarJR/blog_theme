@@ -330,15 +330,26 @@ button
 
 // Breadcrumb
 .breadcrumb
-    color #b3b3b3
+    color $gray-light-300
+    font-size 12px
     list-style none
     margin 0
-    padding 25px 0
+    padding 15px 0
+    
+    @media screen and ( min-width $screen-md )
+        font-size 14px
+        padding 15px 0
+
+    @media screen and ( min-width $screen-lg )
+        padding 25px 0
 
     &--wrapper
         position relative
+        margin-top 100px
         z-index 10
-        margin-top 106px
+
+        @media screen and ( min-width $screen-md )
+            margin-top 107px
 
     &--item
         display inline
@@ -357,9 +368,6 @@ button
     &--link
         color #b3b3b3
         text-decoration none
-
-.home .breadcrumb--wrapper
-    margin-top 106px
 
 .site-content,
 .site-footer

@@ -1,5 +1,6 @@
 .category-nav
     ul
+        font-size 12px
         list-style none
         margin 0
         padding 0 0 35px
@@ -8,10 +9,14 @@
         @media screen and ( min-width $screen-md )
             display flex
             flex-wrap wrap
-            justify-content center
+            justify-content space-between
+
+        @media screen and ( min-width $screen-lg )
+            font-size 14px
+            justify-content space-around
 
     .cat-item
-        margin 20px 45px
+        margin 20px 0
 
         a
             color $black
