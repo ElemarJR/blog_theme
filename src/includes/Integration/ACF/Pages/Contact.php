@@ -58,6 +58,12 @@ class Contact extends Base {
 					'label' => __( 'Title', 'elemarjr' ),
 				),
 				array(
+					'type' => 'text',
+					'key' => 'subtitle',
+					'name' => 'subtitle',
+					'label' => __( 'Subtitle', 'elemarjr' ),
+				),
+				array(
 					'type' => 'wysiwyg',
 					'key' => 'description',
 					'name' => 'description',
