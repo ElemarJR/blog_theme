@@ -6,19 +6,18 @@ define([],function () {
 	 * Load the background header
 	 */
 	var $siteHeader = jQuery( '.site-header' ),
-		$topHeader = jQuery( '.top-header-wrapper' ),
+		$heroContainer = jQuery( '.hero--wrapper' ),
+	    $topHeader = jQuery( '.top-header-wrapper' ),
 		headerStickyClass = 'top-header-wrapper__sticky',
 		$body = jQuery( 'body' ),
-		bodyStickyClass = 'sticky',
-		$heroContainer = $siteHeader.find( '.hero--container' ),
-		heroContainerBottom = parseInt( $heroContainer.css( 'bottom' ), 10 );
+		bodyStickyClass = 'sticky';
 
 	if( ! jQuery( 'body' ).hasClass( 'no-hero' ) ) {
 		/*
 		 * Define the header here and not use height 100vh to solve the problem with
 		 * smartphones that change the website area after scroll
 		 */
-		jQuery( '.site-header, .site-header--wrapper' ).height( jQuery( window ).height() );
+		// jQuery( '.site-header__parallax' ).height( jQuery( window ).height() );
 	}
 
 	/*
@@ -35,33 +34,30 @@ define([],function () {
 		jQuery( '.site-search' ).removeClass( 'toggled' );
 	} );
 
-	jQuery( window )
-		.on( 'scroll', function() {
-			if( jQuery( this ).scrollTop() > 0 ) {
-				$body.addClass( bodyStickyClass );
-				$topHeader.addClass( headerStickyClass );
-			} else {
-				$body.removeClass( bodyStickyClass );
-				$topHeader.removeClass( headerStickyClass );
-			}
+	jQuery( window ).on( 'scroll', function() {
+		if( jQuery( this ).scrollTop() > 0 ) {
+			$body.addClass( bodyStickyClass );
+			$topHeader.addClass( headerStickyClass );
+		} else {
+			$body.removeClass( bodyStickyClass );
+			$topHeader.removeClass( headerStickyClass );
+		}
 
-			if ( jQuery( '.site-header' ).hasClass( 'site-header__parallax' ) ) {
-				var ymin = 0,
-					ymax = $siteHeader.height(),
-					scrollPos = jQuery(this).scrollTop();
+		var ymin = 0, 
+            ymax = $siteHeader.height(), 
+            scrollPos = jQuery(this).scrollTop();
 
-				if( scrollPos <= ymax ) {
-					var normalized = normalize( scrollPos, ymax, ymin );
-					$heroContainer.css({
-						'bottom': ( heroContainerBottom + ( ( normalized * ymax ) / 4 ) ) + 'px',
-						'opacity': 1 - normalized
-					} );
-				}
-			}
-		})
-		.trigger( 'scroll' );
+ 
+        // if( scrollPos <= ymax ) { 
+          var normalized = normalize( scrollPos, ymax, ymin ); 
+        	console.log(1 - normalized);
+          $heroContainer.css({ 
+            'opacity': 1 - normalized 
+          } );
+      	// }
+	}).trigger( 'scroll' );
 
-	function normalize( val, max, min ) {
-		return ( val - min ) / ( max - min );
+	function normalize( val, max, min ) { 
+	    return ( val - min ) / ( max - min ); 
 	}
 });

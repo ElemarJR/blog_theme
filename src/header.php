@@ -98,24 +98,25 @@ $display_hero = $container->get( 'display_hero' );
 			$bg_images = $display_hero ? $container->get( BackgroundImage::class )->get_bg_images() : array();
 			$classes = $container->get( Template::class )->header_classes( $display_hero );
 		?>
-		<header id="masthead" class="<?php echo esc_attr( $classes ) ?>"<?php
+		<div class="site-header site-header--image" <?php
 			foreach ( $bg_images as $size => $url ) :
 				echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
 			endforeach;
-		?>>	
-			<?php if( $display_hero ) : ?>
-			<div class="hero--wrapper">
-				<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
-				<div class="<?php echo esc_attr( 'container hero hero__' . $hero_template ) ?>">
+		?>>
+		</div>
+		<?php if( $display_hero ) : ?>
+		<div class="hero--wrapper">
+			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
+			<div class="container">
+				<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ) ?>">
 					<div class="hero--container">
 						<?php get_template_part( 'template-parts/hero/hero', $hero_template )  ?>
 					</div>
 					<button class="hero--scroll-button mouse"></button>
 				</div>
 			</div>
-			<?php endif; ?>
-			
-		</header><!-- #masthead -->
+		</div>
+		<?php endif; ?>
 	</div>
 	
 	<?php

@@ -92,10 +92,10 @@ class About extends Base {
 							'name' => 'color',
 							'label' => __( 'Color Scheme', 'elemarjr' ),
 							'choices' => array(
-								'white-blue' => __( 'Background White and Title Blue', 'elemarjr' ),
-								'white-red' => __( 'Background White and Title Red', 'elemarjr' ),
-								'gray-blue' => __( 'Background Gray and Title Blue', 'elemarjr' ),
-								'tiffany-white' => __( 'Background Tiffany and Title White', 'elemarjr' ),
+								'white' => __( 'Background White and Title Black', 'elemarjr' ),
+								'light' => __( 'Background Gray and Title Black', 'elemarjr' ),
+								'dark' => __( 'Background Black and Title White', 'elemarjr' ),
+								'dusky' => __( 'Background Dusky and Title White', 'elemarjr' ),
 							)
 						),
 					)

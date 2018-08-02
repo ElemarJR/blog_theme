@@ -19,39 +19,8 @@ define( [ 'typed.js/lib/typed' ], function ( Typed ) {
 		callback.call();
 	}
 
-	function heroContainerHeight() {
-		return jQuery( '.hero--container' ).outerHeight();
-	}
-
 	function updateHeroContainer() {
-		var $heroContainer = jQuery( '.hero--container' ),
-			topHeaderHeight = jQuery( '.top-header-wrapper' ).outerHeight(),
-			vOffset = 50,
-			heroBottomSpace = parseInt( $heroContainer.css( 'bottom' ), 10 ),
-			minSiteHeaderHeight = topHeaderHeight + heroContainerHeight() + heroBottomSpace;
-
-		if( jQuery( this ).height() < minSiteHeaderHeight ) {
-			jQuery( '.site-header')
-				.find( '.mouse' )
-					.hide();
-
-			// disable paralax and reset its effect
-			jQuery( '.site-header' ).removeClass( 'site-header__parallax' );
-
-			$heroContainer.css( {
-				'bottom' : 0,
-				'opacity' : 1,
-				'padding-bottom' : vOffset,
-				'padding-top' : topHeaderHeight + vOffset,
-				'position' : 'static'
-			} );
-
-			jQuery( '.site-header--wrapper, .site-header, .hero--wrapper, .hero' )
-				.css( {
-					'height' : heroContainerHeight() + 'px',
-					'position' : 'relative'
-				} );
-		}
+		//
 	}
 
 	jQuery( window )

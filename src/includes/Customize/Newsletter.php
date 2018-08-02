@@ -48,19 +48,6 @@ class Newsletter extends Base {
 				'section' => $section_id,
 				'type' => 'text',
 			) );
-
-			$text_id = $this->get_theme_mod_control_id( $lang, 'text' );
-			$wp_customize->add_setting( $text_id, array(
-				'default' => '',
-			) );
-			$wp_customize->add_control( new Editor( $wp_customize, $text_id, array(
-				'label' => sprintf( __( 'Text - (%s)', 'elemarjr' ), $lang->locale ),
-				'section' => $section_id,
-				'editor_settings' => array(
-					'quicktags' => true,
-					'tinymce'   => true,
-				)
-			) ) );
 		}
 	}
 

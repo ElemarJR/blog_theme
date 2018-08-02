@@ -1,84 +1,45 @@
 // Hero Content
 .hero
-    bottom 0
-    left 0
-    position absolute
-    right 0
-    top 0
-
     &--wrapper
+        display flex
+        align-items center
         height 100%
+        text-align center
+        position fixed
+        width 100%
+        z-index 90
+
+    &--container
+        color $white
+
+    &--image
+        height 100%
+        left 0
         position absolute
         top 0
         width 100%
 
-    &--container
-        bottom 116px // .scroll-button height + padding
-        color $white
-        max-width 'calc( 100% - %s )' % ( $container-padding * 2 )
-        position absolute
-
     &--title
-        color $red
+        font-size 35px
+        color $white
+        font-weight 100
         margin 0
-        text-transform uppercase
+        
+        strong
+            display block
 
     &--description
-        font-size 18px
-        letter-spacing 1.8px
-        line-height 32px
-        margin 0
+        font-size 12px
         text-transform none
 
     &--button
         margin 0
 
     ~/__home
-        & ^[0]--title
-            font-size 30px
-            font-weight 300
-            margin-bottom 25px
-            max-width 690px
-
-            @media screen and ( min-width $screen-sm )
-                font-size 49px
-                margin-bottom 40px
-
-            @media screen and ( min-width $screen-md )
-                max-width 600px
-
-            @media screen and ( min-width $screen-lg )
-                margin-bottom 20px
-                max-width 560px
-
         & ^[0]--description
-            letter-spacing 1.6px
-            line-height 1.62em
-            margin-bottom 29px
-            max-width 450px
-
-            @media screen and ( min-width $screen-sm )
-                font-size 25px
-                letter-spacing 2.5px
-                line-height 1.68
-                margin-bottom 48px
-
-            @media screen and ( min-width $screen-md )
-                max-width 600px
-
-            @media screen and ( min-width $screen-lg )
-                margin-bottom 30px
-                max-width 650px
-
-        & ^[0]--button
-            padding 0 34px
-
-            @media screen and ( min-width $screen-sm )
-                $button-height = 65px
-                font-size 25px
-                height $button-height
-                line-height $button-height
-                padding 0 56px
+            margin 25px auto
+            text-transform uppercase
+            width 50%
 
     ~/__page
         text-transform uppercase
@@ -131,3 +92,7 @@
                 color $tiffany
                 font-weight 700
                 white-space nowrap
+
+.home
+    .site-header
+        opacity .4

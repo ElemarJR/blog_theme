@@ -9,11 +9,11 @@
             height 100%
 
     &__container
-        min-height 450px
+        min-height 280px
         position relative
         
-        @media screen and ( min-width $screen-md )
-            min-height 308px
+        @media screen and ( min-width $screen-lg )
+            min-height 310px
         
     &__bg
         background-position center
@@ -30,7 +30,7 @@
         flex-direction column
         height auto
         justify-content center
-        padding 30px
+        padding 20px 15px
         position absolute
         transition $transition-default
         width 100%
@@ -47,15 +47,11 @@
             background $tiffany
             color $white
             display block
-            font-size 22px
+            font-size 12px
             font-weight bold
-            padding 9px 28px
+            padding 5px 20px
             text-decoration none
             text-transform uppercase
-            
-            @media screen and ( min-width $screen-md )
-                font-size 14px
-                padding 7px 18px
                 
 
             &:hover
@@ -65,36 +61,32 @@
     &__serie
         color $tiffany
         display block
-        font-size 11px
+        font-size 12px
         font-weight bold
-        height 16px
+        height 17px
+        margin-bottom 8px
         text-decoration none
         text-transform uppercase
 
     h2&__title
-        font-size 22px
+        font-size 14px
+        height 40px
         margin 0
+        overflow hidden
         text-transform uppercase
-        
-        @media screen and ( min-width $screen-md )
-            font-size 16px
 
         a
-            -webkit-box-orient vertical
-            -webkit-display -webkit-box
-            -webkit-line-clamp 2
             color $white
             display block
-            height 58px
-            overflow hidden
-            text-decoration none
-            
-            @media screen and ( min-width $screen-md )
-                height 42px
+            text-decoration none              
 
             &:hover
                 color rgba( $white, .7 )
                 text-decoration none
+        
+        @media screen and ( min-width $screen-md )
+            font-size 16px
+            height 45px
 
     &__footer
         color $tiffany
