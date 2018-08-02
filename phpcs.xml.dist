@@ -12,16 +12,19 @@
          Exclude lowercase generic rule in favour of PSR-4
      -->
     <rule ref="WordPress">
-        <exclude name="WordPress.Files.FileName" />
         <exclude name="WordPress.VIP.RestrictedFunctions" />
         <exclude name="WordPress.VIP.RestrictedVariables" />
         <exclude name="WordPress.VIP.SuperGlobalInputUsage" />
         <exclude name="WordPress.VIP.FileSystemWritesDisallow" />
     </rule>
 
+    <rule ref="WordPress">
+        <exclude name="WordPress.Files.FileName" />
+        <exclude-pattern>*/src/includes/*</exclude-pattern>
+    </rule>
+
     <!-- Sniff the template and files -->
     <file>./src/</file>
-    <file>./app/template/</file>
 
     <!-- Non sniff assets files -->
     <exclude-pattern>assets</exclude-pattern>

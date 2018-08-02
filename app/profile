@@ -38,3 +38,7 @@ alias composer="${compose} run --rm composer"
 
 ## Ngrok
 alias ngrok="${compose} run --rm ngrok"
+
+## phpcs
+alias phpcs="php phpcs -s"
+alias phpcbf="php phpcbf"
