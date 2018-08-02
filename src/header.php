@@ -36,7 +36,7 @@ $display_hero = $container->get( 'display_hero' );
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
-	<div class="top-header-wrapper">
+	<div class="top-header-wrapper <?php echo esc_attr( $display_hero ? '' : 'top-header-wrapper__no-hero' ); ?>">
 		<div class="top-header container">
 			<a href="<?php echo esc_url( home_url( '/' ) ) ?>" class="site-branding">
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
@@ -93,6 +93,7 @@ $display_hero = $container->get( 'display_hero' );
 		</div>
 	</div>
 
+	<?php if ( $display_hero ) : ?>
 	<div class="site-header--wrapper">
 		<?php
 			$bg_images = $display_hero ? $container->get( BackgroundImage::class )->get_bg_images() : array();
@@ -104,7 +105,6 @@ $display_hero = $container->get( 'display_hero' );
 			endforeach;
 		?>>
 		</div>
-		<?php if( $display_hero ) : ?>
 		<div class="hero--wrapper">
 			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
 			<div class="container">
@@ -116,11 +116,11 @@ $display_hero = $container->get( 'display_hero' );
 				</div>
 			</div>
 		</div>
-		<?php endif; ?>
 	</div>
+	<?php endif; ?>
 	
 	<?php
-		if( $container->get( 'display_breadcrumb' ) ) :
+		if ( $container->get( 'display_breadcrumb' ) ) :
 			get_template_part( 'template-parts/blog/breadcrumb' );
 		endif;
 	?>
@@ -135,6 +135,6 @@ $display_hero = $container->get( 'display_hero' );
 				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
 			endforeach;
 		?>>
-		<?php if( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
+		<?php if ( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
 		<div class="<?php echo esc_html( ! is_singular() ? 'container' : '' ) ?>">
 		<?php endif; ?>

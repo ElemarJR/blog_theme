@@ -1,32 +1,37 @@
 .contact
-    color $white
-    position relative
-
-    a
-        color $white
-
-    .site
-        position relative
-        z-index 1
-
-    .site-content
-        background-attachment fixed
-        background-color $purple
-        background-position center bottom
-
-    &--container
-        max-width 700px
-        padding-bottom 50px
-
-    h2&--title
-        color $red
-        font-size 40px
-        letter-spacing .5px
-        margin 66px 0 31px
+    color $black
+    text-align center
+    
+    &--subtitle
+        color $black
+        font-weight bold
+        margin-bottom 10px
         text-transform uppercase
-
+        
     &--description
-        font-size 15px
-        line-height 1.8em
-        margin-bottom 39px
-        max-width 403px
+        margin-bottom 60px
+
+    .form
+        input,
+        textarea
+            border-color $black
+    
+    &--form
+        @media screen and ( min-width $screen-md )
+            display flex
+            flex-wrap wrap
+            
+            label
+                margin-bottom 8px
+                width 100%
+            
+            label:nth-child(1)
+                width calc( 50% - 10px )
+                margin-right 10px
+                
+            label:nth-child(2)
+                width 50%
+
+            .form--submit-wrapper
+                width 100%
+                text-align center
