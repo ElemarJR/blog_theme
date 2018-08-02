@@ -32,16 +32,16 @@ class About extends Base {
 			$color_scheme = get_sub_field( 'color' );
 		}
 
-		if( 'white-blue' !== $color_scheme ) {
+		if ( 'white' !== $color_scheme ) {
 			switch ( $color_scheme ) {
-				case 'white-red' :
-					$classes[] = 'about--row__red-title';
+				case 'light' :
+					$classes[] = 'about--row__light';
 					break;
-				case 'gray-blue' :
-					$classes[] = 'about--row__gray';
+				case 'dark' :
+					$classes[] = 'about--row__dark';
 					break;
-				case 'tiffany-white' :
-					$classes[] = 'about--row__tiffany';
+				case 'dusky' :
+					$classes[] = 'about--row__dusky';
 					break;
 			}
 		}
