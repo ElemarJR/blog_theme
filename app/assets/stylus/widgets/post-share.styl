@@ -1,37 +1,35 @@
 .post
     &--share
-        align-items center
-        display flex
-        flex-direction row
-        justify-content space-between
-
-        @media screen and ( min-width $screen-md )
-            flex-direction column
-            justify-content inherit
+        @media screen and ( min-width $screen-lg )
             padding-right 40px
             padding-bottom 30px
             width 108px
 
         &-sticky
+            align-items center
+            display flex
+            flex-direction row
+            justify-content space-between
             position sticky
             top 65px
+
+            @media screen and ( min-width $screen-lg )
+                flex-direction column
+                justify-content inherit
 
         &-item
             color $gray
             font-size 24px
-            margin-left 20px
+            margin-left 25px
             text-decoration none
 
-            @media screen and ( min-width 350px )
-                margin-left 50px
-
-            @media screen and ( min-width $screen-md )
-                margin 20px auto 0
+            @media screen and ( min-width $screen-lg )
+                margin 0 auto 50px
 
     &--social
         display flex
 
-        @media screen and ( min-width $screen-md )
+        @media screen and ( min-width $screen-lg )
             flex-direction column
 
     &--comments
@@ -40,34 +38,38 @@
         display flex
         text-align center
 
-        @media screen and ( min-width $screen-md )
+        @media screen and ( min-width $screen-lg )
             flex-direction column
             margin-bottom 30px
 
         &-count
-            font-size 30px
-            margin-bottom 8px
-
             @media screen and ( min-width $screen-md )
+                font-size 20px
+
+            @media screen and ( min-width $screen-lg )
                 font-size 22px
+                margin-bottom 8px
 
         &-icon
             border 1px solid $tiffany
             border-radius 50%
             color $tiffany
             cursor pointer
-            font-size 45px
-            height 80px
-            line-height 84px
-            margin-left 22px
-            width 80px
+            font-size 24px
+            height 42px
+            line-height 42px
+            margin-left 10px
+            width 42px
 
             @media screen and ( min-width $screen-md )
                 font-size 24px
                 height 68px
                 line-height 70px
-                margin-left 0
+                margin-left 20px
                 width 68px
+
+            @media screen and ( min-width $screen-lg )
+                margin-left 0
 
             &:hover
                 background $tiffany

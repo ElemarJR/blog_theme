@@ -63,7 +63,7 @@ button
     width 100%
     z-index 99
     transition $transition-default
-    
+
     &__no-hero
         background $header-bg
 
@@ -77,7 +77,7 @@ button
     height 100%
     position relative
     z-index 9999
-    
+
     &--collapse
         background $header-bg
         display none
@@ -86,10 +86,10 @@ button
         position absolute
         top $sm-nav-height
         width 100%
-        
+
         &.toggled
             display block
-            
+
         @media screen and ( min-width $nav-breakpoint )
             align-items center
             background transparent
@@ -98,15 +98,15 @@ button
             padding 0
             position static
             width calc( 100% - 125px )
-            
+
             &.toggled
                 display flex
-    
+
     &__searchable
         .main-navigation,
         .langs-navigation
             display none
-            
+
         .site-search
             width calc( 70% - 125px )
             top 50%
@@ -118,7 +118,7 @@ button
     display block
     width 125px
     transition width $transition-default
-    
+
     @media screen and ( min-width $nav-breakpoint )
         width 150px
 
@@ -129,11 +129,11 @@ button
         margin 0
         padding 0
         font-weight bold
-        
+
     .menu-item
         &.current-menu-item a
             border-bottom 1px solid $tiffany
-            
+
         a
             border-bottom 1px solid $white
             display block
@@ -142,7 +142,7 @@ button
             padding 15px 0
             text-decoration none
             text-transform uppercase
-    
+
     @media screen and ( min-width $nav-breakpoint )
         margin-left auto
 
@@ -153,7 +153,7 @@ button
                 border none
                 margin 0 15px
                 padding 3px 0 0
-        
+
 .menu-toggle
     &:focus
         outline none
@@ -165,10 +165,10 @@ button
         width 22px
         background $white
         transition transform $transition-default
-        
+
         & + .icon-bar
             margin-top 4px
-            
+
     &[aria-expanded="true"]
         .icon-bar:nth-child(1)
             transform rotate( 45deg )
@@ -177,7 +177,7 @@ button
             margin-top -2px
         .icon-bar:nth-child(3)
             display none
-    
+
     @media screen and ( min-width $nav-breakpoint )
         display none
 
@@ -187,39 +187,39 @@ button
     list-style none
     margin 0
     padding 0
-    
+
     .menu-item
         display inline-block
         font-size 12px
         margin-right 50px
         border-bottom 1px solid transparent
-        
+
         &:last-child
             display none
-            
+
         &.current-menu-item a
             padding-bottom 3px
             border-bottom 1px solid $tiffany
-        
+
     .menu-link
         display block
         color $white
         padding 8px
         text-decoration none
         text-transform uppercase
-    
+
     @media screen and ( min-width $nav-breakpoint )
         margin-left auto
 
         .menu-link
             padding 8px 0
-            
+
         .menu-item
            margin 0 0 0 30px
-           
+
            &:last-child
             display inline-block
-           
+
 // Search
 .search-form
     align-items center
@@ -227,11 +227,11 @@ button
     border-bottom 1px solid $white
     color $white
     margin-bottom 10px
-    
+
     .search-submit
         text-align center
         width 30px
-    
+
     input[type="search"]
         background transparent
         border none
@@ -239,10 +239,10 @@ button
         line-height 48px
         padding 0
         width 100%
-        
+
         &:focus
             outline none
-    
+
     @media screen and ( min-width $nav-breakpoint )
         border-bottom none
         margin-bottom 0
@@ -275,7 +275,7 @@ button
 
     &:before
         transform rotate( 45deg )
-        
+
     @media screen and ( min-width $nav-breakpoint )
         display block
 
@@ -286,7 +286,7 @@ button
         position absolute
         top -100%
         right 0
-        
+
 
 // Header
 .site-header
@@ -335,7 +335,7 @@ button
     list-style none
     margin 0
     padding 15px 0
-    
+
     @media screen and ( min-width $screen-md )
         font-size 14px
         padding 15px 0
@@ -348,7 +348,7 @@ button
         margin-top 100px
         transition margin-top $transition-default
         z-index 10
-        
+
         /.sticky &
             margin-top 115px
 
@@ -365,7 +365,7 @@ button
 
         &:last-child:after
             display none
-        
+
         &:last-child a
             font-weight bold
 

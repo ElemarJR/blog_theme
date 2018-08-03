@@ -3,7 +3,7 @@
     justify-content space-between
     margin-top 32px
     position relative
-    
+
     &--next,
     &--previous
         display none
@@ -11,24 +11,25 @@
         font-weight bold
         text-decoration none
         width 100%
-        
+
         @media screen and ( min-width $screen-md )
             align-items flex-start
             display flex
             flex-direction row
             max-width 45%
-    
+
     &--img
         margin-right 20px
         width 92px
-        
+
     &--title
         color $black
         margin 0 0 8px
         text-transform uppercase
-        
+
     &--next
-        text-align right
+        justify-content flex-end
+
         & ^[0]--img
             margin 0 0 0 22px
 
@@ -41,16 +42,19 @@
         align-items center
         color $gray
         display flex
-        font-size 28px
+        font-size 14px
         font-weight 400
         position relative
         text-decoration none
+
+        i
+            font-size 28px
 
         @media screen and ( min-width $screen-md )
             font-size 0
             position absolute
             top 50%
-            transform translateX( -50% )
+            transform translateY( -50% )
             z-index 10
 
             i
@@ -58,14 +62,14 @@
 
     .link-next
         @media screen and ( min-width $screen-md )
-            right -32px
+            right -22px
 
         @media screen and ( min-width $screen-lg )
-            right -54px
+            right -44px
 
     .link-previous
         @media screen and ( min-width $screen-md )
-            left -10px
+            left -22px
 
         @media screen and ( min-width $screen-lg )
-            left -32px
+            left -44px
