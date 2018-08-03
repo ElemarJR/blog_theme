@@ -1,115 +1,88 @@
-.comment-reply-link
-    border 1px solid $red
-    color $red
-    display inline-block
-    font-size 18px
-    font-weight 700
-    padding 10px 20px
-    text-transform uppercase
-    text-decoration none
-    
-    @media screen and ( min-width $screen-md )
-        font-size 11px
-        padding 6px 12px
-
-    &:hover
-        background $red
-        color $white
-        text-decoration none
-
-.comment.parent
-    border-bottom 1px solid $gray-light-300
-    margin-bottom 42px
-    
-    .children
-        padding-left 64px
-        
-        @media screen and ( min-width $screen-md )
-            padding-left 105px
-
-.comment-list
-    padding 0
-
-.comments-area
-    margin-top 50px
-
-    ol
-        list-style none
-
-    &--number
-        font-size 22px
-        font-weight 700
-        margin-bottom 40px
-        text-transform uppercase
-        
-        @media screen and ( min-width $screen-md )
-            font-size 14px
-
-
-.comment-metadata
-    font-size 20px
-    left 85px
-    line-height 24px
-    position absolute
-    text-decoration none
-    top 32px
-    
-    @media screen and ( min-width $screen-md )
-        font-size 12px
-        left 215px
-        top 0
-        
-
-.comment-body
-    border-bottom 1px solid $gray-light
-    display flex
-    flex-direction column
-    padding 0 0 30px
-    position relative
-    
-    @media screen and ( min-width $screen-md )
-        flex-direction row
-
-.comment-meta
-    flex 0 0 65px
-
-    .says
-        display none
-        
-    .fn
-        font-size 25px
-        left 85px
-        position absolute
-        top 0
-        
-        @media screen and ( min-width $screen-md )
-            font-size 18px
-        
-        .url
-            color $gray-dark
-
-    a
-        text-decoration none
-
-.comment-author
-    .avatar
-        border-radius 50%
-
-.comment-reply-title
-    font-size 14px
-    text-transform uppercase
-    margin 0 0 30px
-
-.comment-notes
-    display none
-
-.comment-content
-    flex-grow 2
-    font-size 18px
-
-    @media screen and ( min-width: $screen-md )
-        margin 15px 30px 0
-
-.reply
+.comment
     align-items center
     display flex
+    flex-wrap wrap
+
+    &.depth-1
+        padding 30px 0
+        border-bottom 1px solid $gray-light-300
+
+    &--meta
+        display flex
+        font-size 12px
+        flex-direction column
+
+        &-author
+            color $black-two
+            margin 0
+            a
+                color $black-two
+                text-decoration none
+
+        &-date
+            color $dusky-blue
+
+        @media screen and ( min-width $screen-md )
+            align-items center
+            flex-direction row
+            &-author
+                font-size 18px
+                margin-right 35px
+
+    &--avatar
+        height 55px
+        margin-right 15px
+        width 55px
+
+        img
+            border-radius 50%
+            max-width 100%
+            width 100%
+
+    &--text
+        color $brownish-grey
+        line-height 20px
+
+        @media screen and ( min-width $screen-md )
+            font-size 15px
+            margin-right 30px
+            padding-left 70px
+            width calc( 100% - 30px )
+
+    &--content
+        @media screen and ( min-width $screen-md )
+            align-items center
+            display flex
+            width 100%
+
+    &--action
+        .comment-reply-link
+            border 1px solid $dusky-blue
+            color $dusky-blue
+            display inline-block
+            font-size 12px
+            font-weight bold
+            text-transform uppercase
+            text-decoration none
+            padding 4px 6px
+
+            &:hover
+                background $dusky-blue
+                color $white
+
+        @media screen and ( min-width $screen-md )
+            text-align center
+            width 100px
+
+    .children
+        padding-left 70px
+        .comment
+            margin-top 30px
+
+.comment-list
+    margin 0
+    padding 0
+    list-style none
+
+    .children
+        list-style none

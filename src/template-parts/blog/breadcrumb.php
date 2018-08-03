@@ -15,10 +15,10 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 					<span itemprop="title"><?php echo esc_html( sprintf( __( 'Search Results for &#8220;%s&#8221;' ), get_search_query() ) ) ?></span>
 				</a>
 			</li>
-			<?php 
+			<?php
 				elseif ( is_archive() ) :
 					$title = get_the_archive_title();
-					
+
 					if ( is_category() ) :
 						$url = get_category_link( get_query_var( 'category_name' ) );
 						$title = single_cat_title( '', false );
@@ -31,16 +31,15 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 					<span itemprop="title"><?php echo esc_html( $title ) ?></span>
 				</a>
 			</li>
-			<?php 
+			<?php
 				elseif ( is_single() ) :
 					if ( $categories = get_the_category() ) :
 						$category = $categories[0];
 						$url = get_category_link( $category );
-						$title = sprintf( __( 'Category: %s' ), $category->name );
 			?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( $url ) ?>" itemprop="url">
-					<span itemprop="title"><?php echo esc_html( $title ) ?></span>
+					<span itemprop="title"><?php echo esc_html( $category->name ) ?></span>
 				</a>
 			</li>
 			<?php endif; ?>
@@ -50,7 +49,7 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 				</a>
 			</li>
 			<?php endif; ?>
-			<?php 
+			<?php
 				if ( $paged = get_query_var( 'paged' ) ) :
 					$paged_url = add_query_arg( 'paged', $paged, $url );
 			?>

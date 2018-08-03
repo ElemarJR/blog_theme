@@ -89,7 +89,7 @@ class Comments extends Base {
 			'<div class="$2">$3class="screen-reader-text" $4$5$9$10$12 placeholder="$6$7$8"$11$13</div>',
 			$fields
 		);
-		
+
 		return array(
 			'author'  => $fields['author'],
 			'email'   => $fields['email'],
@@ -97,7 +97,7 @@ class Comments extends Base {
 			'comment' => $fields['comment'],
 		);
 	}
-	
+
 	public function comment_form_submit_field( $submit_field, $args ) {
 		/*
 		 * Capturing groups
@@ -115,10 +115,10 @@ class Comments extends Base {
 			'<div class="$2">$3</div>',
 			$submit_field
 		);
-		
+
 		return $submit_field;
 	}
-	
+
 	public function comments_navigation_template( $template ) {
 		$template = preg_replace(
 			'/(<div class="nav-links)(">)/',
@@ -130,7 +130,21 @@ class Comments extends Base {
 			'$2 class="button"$3',
 			$template
 		);
-		
+
 		return $template;
+	}
+
+	/**
+	 * Change comments template.
+	 *
+	 */
+	public function comment_template($comment, $args, $depth) {
+		$this->container->set('comment_template', [
+			'comment' => $comment,
+			'args' => $args,
+			'depth' => $depth,
+		]);
+
+		get_template_part( 'template-parts/blog/single/comment' );
 	}
 }

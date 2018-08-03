@@ -4,32 +4,33 @@
         display flex
         flex-direction row
         justify-content space-between
-        
+
         @media screen and ( min-width $screen-md )
             flex-direction column
             justify-content inherit
             padding-right 40px
+            padding-bottom 30px
             width 108px
-            
+
         &-sticky
             position sticky
             top 65px
-        
+
         &-item
             color $gray
             font-size 24px
             margin-left 20px
             text-decoration none
-            
+
             @media screen and ( min-width 350px )
                 margin-left 50px
-            
+
             @media screen and ( min-width $screen-md )
                 margin 20px auto 0
 
     &--social
         display flex
-        
+
         @media screen and ( min-width $screen-md )
             flex-direction column
 
@@ -38,15 +39,15 @@
         color $gray
         display flex
         text-align center
-        
+
         @media screen and ( min-width $screen-md )
             flex-direction column
             margin-bottom 30px
-        
+
         &-count
             font-size 30px
             margin-bottom 8px
-            
+
             @media screen and ( min-width $screen-md )
                 font-size 22px
 
@@ -60,7 +61,7 @@
             line-height 84px
             margin-left 22px
             width 80px
-            
+
             @media screen and ( min-width $screen-md )
                 font-size 24px
                 height 68px

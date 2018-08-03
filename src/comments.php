@@ -1,5 +1,7 @@
 <?php
 
+global $container;
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -8,13 +10,15 @@
 if ( post_password_required() ) {
 	return;
 }
+
+$comment_callback = $container->get( Aztec\Setup\Comments::class )->callback( 'comment_template' );
 ?>
 
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 	<div class="comments-area--number">
-		<?php 
+		<?php
 			$n = (int) get_comments_number();
 			$comments_string = __( 'No Comments' );
 			if( 1 === $n ) {
@@ -26,13 +30,14 @@ if ( post_password_required() ) {
 			echo esc_html( $comments_string );
 		?>
 	</div>
-	
+
 	<ol class="comment-list">
 		<?php
 			wp_list_comments( array(
 				'style'      => 'ol',
 				'short_ping' => true,
 				'avatar_size' => 64,
+				'callback' => $comment_callback,
 			) );
 		?>
 	</ol><!-- .comment-list -->
@@ -53,5 +58,4 @@ if ( post_password_required() ) {
 			'class_submit' => 'button'
 		) );
 	?>
-
 </div><!-- #comments -->

@@ -346,7 +346,11 @@ button
     &--wrapper
         position relative
         margin-top 100px
+        transition margin-top $transition-default
         z-index 10
+        
+        /.sticky &
+            margin-top 115px
 
         @media screen and ( min-width $screen-md )
             margin-top 107px
