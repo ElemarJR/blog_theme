@@ -59,7 +59,7 @@ get_header(); ?>
 
 		<div class="front-page--purpose container">
 			<div class="front-page--purpose-image">
-				<img src="<?php echo esc_html( get_field( 'purpose_image' )['url'] ); ?>">
+				<img src="<?php echo esc_url( get_field( 'purpose_image' )['url'] ); ?>" alt="Meu trabalho">
 			</div>
 			<div class="front-page--purpose-content">
 				<div class="front-page--purpose-title">
