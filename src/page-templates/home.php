@@ -1,5 +1,6 @@
 <?php
 use Aztec\PostType\Testimonial;
+use Aztec\Helper\Url;
 
 /**
  * The template for displaying all pages
@@ -21,6 +22,12 @@ use Aztec\PostType\Testimonial;
 
 global $container;
 
+/**
+ *
+ * @var Url $url_helper
+ */
+$url_helper = $container->get( Aztec\Helper\Url::class );
+
 get_header(); ?>
 
 <main>
@@ -32,51 +39,21 @@ get_header(); ?>
 		<div class="front-page--blog">
 			<div class="container">
 				<div class="front-page--blog-title">
-					<h2>Blog</h2>
+					<h2><?php esc_html_e( 'Blog', 'elemarjr' ) ?></h2>
 				</div>
 
-				<p class="front-page--blog-description">
-					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'blog_text', true ) ) ?>
-				</p>
+				<?php
+					$container->set( 'template.home.blog', [
+						'description' => get_post_meta( get_the_ID(), 'blog_text', true ),
+					] );
+					get_template_part( 'template-parts/page/home/blog' );
 
-				<br>
-				<br>
-				<br>
-
-				<div class="front-page--blog-list">
-					<?php
-						$query = new WP_Query( array(
-							'posts_per_page' => 3,
-						) );
-						$container->set( 'post_list.query', $query );
-						$container->set( 'post_list.extra_class', 'front-page--blog--list' );
-						get_template_part( 'template-parts/blog/post-list' );
-					?>
-					<div class="front-page--blog-actions">
-						<a class="button button__transparent" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
-							<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
-						</a>						
-					</div>
-				</div>
-
-				<p class="front-page--blog-description">Últimos posts em inglês</p>
-
-				<div class="front-page--blog-list">
-					<?php
-						$query = new WP_Query( array(
-							'lang' => 'en',
-							'posts_per_page' => 3,
-						) );
-						$container->set( 'post_list.query', $query );
-						$container->set( 'post_list.extra_class', 'front-page--blog--list' );
-						get_template_part( 'template-parts/blog/post-list' );
-					?>
-					<div class="front-page--blog-actions">
-						<a class="button button__transparent" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) )?>" class="see-more">
-							<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
-						</a>						
-					</div>
-				</div>
+					$container->set( 'template.home.blog', [
+						'description' => __( 'Last posts in English', 'elemarjr' ),
+						'lang', 'en',
+					] );
+					get_template_part( 'template-parts/page/home/blog' );
+				?>
 			</div>
 		</div>
 
@@ -88,7 +65,7 @@ get_header(); ?>
 				<div class="front-page--purpose-title">
 					Meu <b>trabalho</b>
 				</div>
-				<div class="purpose wow fadeInUpBig">				
+				<div class="purpose wow fadeInUpBig">
 					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
@@ -100,7 +77,7 @@ get_header(); ?>
 						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ); ?>
 					</div>
 				</div>
-				<div class="purpose wow fadeInUpBig">				
+				<div class="purpose wow fadeInUpBig">
 					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
@@ -120,13 +97,13 @@ get_header(); ?>
 				<div class="wow fadeInUpBig">
 					<div class="front-page--quote-content">
 						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ); ?>
-						<p class="front-page--quote-author">Elemar JR</p>				
+						<p class="front-page--quote-author">Elemar JR</p>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</div>
 
-		<?php 
+		<?php
 			$posts = $container->get( Testimonial::class )->get_testimonials();
 			if ( 0 < count( $posts ) ) :
 		?>
