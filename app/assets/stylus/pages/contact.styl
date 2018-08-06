@@ -1,13 +1,15 @@
 .contact
     color $black
+    padding-top 50px
+    padding-bottom 70px
     text-align center
-    
+
     &--subtitle
         color $black
         font-weight bold
         margin-bottom 10px
         text-transform uppercase
-        
+
     &--description
         margin-bottom 60px
 
@@ -15,23 +17,32 @@
         input,
         textarea
             border-color $black
-    
+
+            &::placeholder
+                color $black
+                text-transform lowercase
+
     &--form
         @media screen and ( min-width $screen-md )
             display flex
             flex-wrap wrap
-            
+
             label
                 margin-bottom 8px
                 width 100%
-            
+
             label:nth-child(1)
                 width calc( 50% - 10px )
                 margin-right 10px
-                
+
             label:nth-child(2)
                 width 50%
 
             .form--submit-wrapper
                 width 100%
                 text-align center
+
+.page-template-contact
+    &,
+    .site-content
+        background $white-two

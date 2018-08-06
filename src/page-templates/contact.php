@@ -6,7 +6,7 @@
  * Please note that this is the WordPress construct of <pages></pages>
  * and that other 'pages' on your WordPress site may use a
  * different template.
- * 
+ *
  * Template name: Contact
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -22,7 +22,7 @@ use Aztec\Form\Contact;
 global $container;
 
 /**
- * 
+ *
  * @var Contact $form
  */
 $form = $container->get( Contact::class );
@@ -35,7 +35,7 @@ get_header(); ?>
 		while ( have_posts() ) :
 			the_post();
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact' ) ?>>
 		<div class="container">
 			<div class="page-header">
 				<h1 class="page-header--title">
@@ -51,7 +51,7 @@ get_header(); ?>
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'description', true  ) ); ?>
 			</p>
 
-			<?php 
+			<?php
 				if ( false !== ( $message_id = $container->get( 'contact.message_id' ) ) ) :
 					get_template_part( 'template-parts/contact/message', 'success' === $message_id ? 'success' : 'error' );
 				endif;
