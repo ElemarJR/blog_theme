@@ -2,11 +2,14 @@
 
 global $container;
 
+use Aztec\Helper\Url;
+
 $args = $container->get( 'template.home.blog' );
 $blog_id = get_option( 'page_for_posts' );
 $query_args = [
 	'posts_per_page' => 3,
 ];
+$url_helper = new Url();
 $see_more_url = '';
 
 if( ! empty( $args['language'] )  ) {

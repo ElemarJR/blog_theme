@@ -49,8 +49,8 @@ get_header(); ?>
 					get_template_part( 'template-parts/page/home/blog' );
 
 					$container->set( 'template.home.blog', [
+						'language' => 'en',
 						'description' => __( 'Last posts in English', 'elemarjr' ),
-						'lang', 'en',
 					] );
 					get_template_part( 'template-parts/page/home/blog' );
 				?>
