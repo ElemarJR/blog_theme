@@ -1,35 +1,50 @@
 .testimonial
     margin 0 auto
     text-align center
-    width 50%
-    
-    &--image
+    width 70%
 
+    @media screen and ( min-width $screen-md )
+       width 50%
+
+    &--image
         img
             background $white
             border 1px solid $dusky-blue
             border-radius 50%
             display inline-block
-            height 130px
+            height 60px
             padding 5px
-            width 130px
+            width 60px
+
+        @media screen and ( min-width $screen-md )
+            margin-top 15px
+
+            img
+                height 130px
+                width 130px
 
     &--content
         color $brownish-grey
-        font-size 20px
         margin 0 auto
+
+        @media screen and ( min-width $screen-md )
+            font-size 20px
 
     &--footer
         align-items center
         display flex
-        margin-top 20px
+        flex-direction column
         justify-content center
-    
+        margin-top 20px
+
+        @media screen and ( min-width $screen-md )
+            flex-direction row
+
     &--company
-        margin-right 60px
+        @media screen and ( min-width $screen-md )
+            margin-right 60px
 
     &--author
-        text-align left
         p
             margin 0
 
@@ -40,3 +55,6 @@
             &:last-child
                 font-weight bold
                 text-transform uppercase
+
+        @media screen and ( min-width $screen-md )
+            text-align left
