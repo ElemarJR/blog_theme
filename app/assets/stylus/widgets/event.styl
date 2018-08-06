@@ -1,0 +1,52 @@
+.event
+	background $white
+	color $black
+	font-weight bold
+	padding 25px
+	text-transform uppercase
+
+	@media screen and ( min-width $screen-md )
+		width 50%
+
+	@media screen and ( min-width $screen-lg )
+		width 33.333333%
+
+	&--header
+		align-items center
+		display flex
+		justify-content space-between
+
+	&--date
+		font-size 20px
+
+	&--content
+		margin 10px 0 40px
+
+	&--title
+		font-size 16px
+		margin 0
+
+	&--role
+		color $dusky-blue
+		font-size 12px
+
+	&--footer
+		font-weight 100
+		text-transform none
+
+	&__active
+		background $dusky-blue
+		color $white
+
+		& ^[0]--role,
+		& ^[0]--footer
+			color $black
+
+	&__old
+		& ^[0]--date
+		& ^[0]--title,
+		& ^[0]--footer
+			color $gray-light-300
+
+		& ^[0]--role
+			color $tiffany
