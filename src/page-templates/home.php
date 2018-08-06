@@ -63,7 +63,7 @@ get_header(); ?>
 			</div>
 			<div class="front-page--purpose-content">
 				<div class="front-page--purpose-title">
-					Meu <b>trabalho</b>
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title', true ) ); ?>
 				</div>
 				<div class="purpose wow fadeInUpBig">
 					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
