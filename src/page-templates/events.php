@@ -21,8 +21,9 @@ use Aztec\Pages\About;
 
 global $container;
 
-get_header();
+$events_by_year = $container->get( Aztec\PostType\Event::class )->get_events_by_year();
 
+get_header();
 
 ?>
 
@@ -31,48 +32,21 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 ?>
+	<?php foreach ( $events_by_year as $year => $events ) : ?>
 	<div class="page-header">
-		<h1 class="page-header--title"><?php the_title(); ?></h1>
+		<h3 class="page-header--title">Agenda <b><?php echo esc_html( $year ); ?></b></h3>
 	</div>
-
 	<section class="event-list">
-		<div class="event">
-			<div class="event--header">
-				<time class="event--date">Junho<br>09</time>
-				<time class="event--image">logo</time>
-			</div>
-			<div class="event--content">
-				<p class="event--role">Palestrante</p>
-				<h3 class="event--title">C# como você (talvez) nunca view</h3>
-			</div>
-			<div class="event--footer">JoinCommunity</div>
-		</div>
-
-		<div class="event event__active">
-			<div class="event--header">
-				<time class="event--date">Junho<br>09</time>
-				<time class="event--image">logo</time>
-			</div>
-			<div class="event--content">
-				<p class="event--role">Palestrante</p>
-				<h3 class="event--title">C# como você (talvez) nunca view</h3>
-			</div>
-			<div class="event--footer">JoinCommunity</div>
-		</div>
-
-		<div class="event event__old">
-			<div class="event--header">
-				<time class="event--date">Junho<br>09</time>
-				<time class="event--image">logo</time>
-			</div>
-			<div class="event--content">
-				<p class="event--role">Palestrante</p>
-				<h3 class="event--title">C# como você (talvez) nunca view</h3>
-			</div>
-			<div class="event--footer">JoinCommunity</div>
-		</div>
+		<?php
+			foreach( $events as $post ) : setup_postdata( $post );
+				get_template_part( 'template-parts/event/event' );
+			endforeach;
+		?>
 	</section>
-	<?php endwhile; ?>
+	<?php
+		endforeach;
+	endwhile;
+	?>
 </main>
 
 <?php get_footer(); ?>
