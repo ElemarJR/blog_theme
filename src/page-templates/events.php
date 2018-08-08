@@ -68,16 +68,25 @@ get_header();
 
 		<div class="gallery--list">
 			<?php
-				$images = get_field('gallery');
 				$size = 'full';
+				$images = get_field('gallery');
+				$counter = 0;
 
 				foreach( $images as $image ) :
+					$counter++;
 			?>
-				<div class="gallery--item">
+				<div class="gallery--item" <?php echo $counter > 6 ? 'style="display:none;"' : '' ?>>
 					<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<?php if ( $counter > 6  ) : ?>
+		<div class="gallery--load-button">
+			<a href="#" class="button button__transparent">
+				<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
+			</a>
+		</div>
+		<?php endif; ?>
 	</div>
 
 </main>
