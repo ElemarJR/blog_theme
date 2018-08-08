@@ -14,13 +14,13 @@ use Aztec\Integration\Polylang\Polylang;
  * Posts listing pages features manipulation
  */
 class Blog extends Base {
-	
+
 	/**
 	 * Add post listing hooks
 	 */
 	public function init() {
 		add_action( 'pre_get_posts', $this->callback( 'limit_posts_per_page' ) );
-		
+
 		add_filter( 'elemarjr_display_hero', $this->callback( 'display_hero' ) );
 		add_filter( 'elemarjr_display_breadcrumb', $this->callback( 'display_breadcrumb' ) );
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
@@ -29,20 +29,20 @@ class Blog extends Base {
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 	}
-	
+
 	/**
 	 * Get the ID of the page set in reading settings
-	 * 
+	 *
 	 * @return int|boolean The page ID in the setting. False, if not set.
 	 */
 	public function get_id() {
 		return (int) get_option( 'page_for_posts', false );
 	}
-	
+
 	/**
 	 * Get the page id for the current language
-	 * 
-	 * @return int|false|NULL The page id, if exist for the current language. 
+	 *
+	 * @return int|false|NULL The page id, if exist for the current language.
 	 *                        Null, if the current language is not defined yet.
 	 *                        False, otherwise.
 	 */
@@ -50,20 +50,20 @@ class Blog extends Base {
 		if( ! $this->container->get( Polylang::class )->is_active() ) {
 			return $this->get_id();
 		}
-		
+
 		return pll_get_post( $this->get_id() );
 	}
-	
+
 	/**
 	 * Get all languages page ids
-	 * 
+	 *
 	 * @return array|number|false|NULL
 	 */
 	public function get_pages_id() {
 		if( ! $this->container->get( Polylang::class )->is_active() ) {
 			return array();
 		}
-		
+
 		$pages_id = array();
 
 		if( $main_page_id = $this->get_id() ) {
@@ -80,24 +80,24 @@ class Blog extends Base {
 
 	/**
 	 * Show header just in the home of the blog
-	 * 
+	 *
 	 * @return boolean True, if is the home of the blog. False, otherwise.
 	 */
-	public function display_hero( $display ) {	
-		return is_front_page() || is_page_template( 'page-templates/about.php' );
+	public function display_hero( $display ) {
+		return is_front_page() || is_page_template( 'page-templates/about.php' ) || is_page_template( 'page-templates/events.php' );
 	}
-	
+
 	public function display_breadcrumb() {
 		return $this->is_post_list();
 	}
-	
+
 	public function is_post_list() {
 		return ( ! is_front_page() && ! is_page() ) || is_search() || is_archive();
 	}
 
 	/**
 	 * Set to show up to 9 posts every query request
-	 * 
+	 *
 	 * @param \WP_Query $query
 	 */
 	public function limit_posts_per_page( $query ) {
@@ -117,7 +117,7 @@ class Blog extends Base {
 	public function excerpt_length( $length ) {
 		return 20;
 	}
-	
+
 	/**
 	 * Set the blog post listing excerpt more
 	 *
@@ -127,14 +127,14 @@ class Blog extends Base {
 	public function excerpt_more( $more ) {
 		return ' ...';
 	}
-	
+
 	public function nav_link_class( $attr ) {
 		return $attr . ' class="button"';
 	}
-	
+
 	/**
 	 * Add current menu item classes for all pages related with the blog
-	 * 
+	 *
 	 * @param array     $classes The CSS classes that are applied to the menu item's `<li>` element.
 	 * @param \WP_Post  $item    The current menu item.
 	 * @param \stdClass $args    An object of wp_nav_menu() arguments.
@@ -145,7 +145,7 @@ class Blog extends Base {
 		if( ! in_array( $item->object_id, $this->get_pages_id() ) ) {
 			return $classes;
 		}
-		
+
 		if ( ! ( $this->is_post_list() || is_single() ) ) {
 			return $classes;
 		}
@@ -153,7 +153,7 @@ class Blog extends Base {
 		$classes[] = 'current-menu-item';
 		$classes[] = 'current_page_item';
 		$classes[] = 'current_page_parent';
-		
+
 		return $classes;
 	}
 }

@@ -24,13 +24,15 @@
         color $white
         font-weight 100
         margin 0
-        
+
         strong
             display block
 
     &--description
         font-size 12px
-        text-transform none
+        margin 25px auto
+        text-transform uppercase
+        width 50%
 
     &--button
         margin 0
@@ -60,6 +62,10 @@
             @media screen and ( min-width $screen-sm )
                 font-size 70px
                 margin 0 0 33px
+
+    ~/__events
+        & ^[0]--title
+            font-weight bold
 
     ~/__about
         width 100%

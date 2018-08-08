@@ -27,26 +27,59 @@ get_header();
 
 ?>
 
-<main class="container">
+<main>
 	<?php
 		while ( have_posts() ) :
 			the_post();
 ?>
-	<?php foreach ( $events_by_year as $year => $events ) : ?>
-	<div class="page-header">
-		<h3 class="page-header--title">Agenda <b><?php echo esc_html( $year ); ?></b></h3>
+	<div class="events">
+		<div class="container">
+			<?php foreach ( $events_by_year as $year => $events ) : ?>
+			<div class="page-header">
+				<h3 class="page-header--title"><?php echo __( 'Calendar', 'elemarjr' ); ?> <b><?php echo esc_html( $year ); ?></b></h3>
+			</div>
+			<section class="events--list">
+				<?php
+					foreach( $events as $post ) : setup_postdata( $post );
+						get_template_part( 'template-parts/event/event' );
+					endforeach;
+
+					wp_reset_postdata();
+				?>
+			</section>
+			<?php endforeach; ?>
+		</div>
+
+		<div class="events--about">
+			<div class="events--about-text">
+				<?php the_field( 'cta_text' ); ?>
+			</div>
+			<a href="<?php the_field( 'cta_url' ); ?>" class="button button__bordered">
+				<?php the_field( 'cta_label' ); ?>
+			</a>
+		</div>
+		<?php endwhile; ?>
 	</div>
-	<section class="event-list">
-		<?php
-			foreach( $events as $post ) : setup_postdata( $post );
-				get_template_part( 'template-parts/event/event' );
-			endforeach;
-		?>
-	</section>
-	<?php
-		endforeach;
-	endwhile;
-	?>
+
+	<div class="container gallery">
+		<div class="page-header">
+			<h3 class="page-header--title"><?php echo __( 'Photos', 'elemarjr' ); ?></b></h3>
+		</div>
+
+		<div class="gallery--list">
+			<?php
+				$images = get_field('gallery');
+				$size = 'full';
+
+				foreach( $images as $image ) :
+			?>
+				<div class="gallery--item">
+					<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+
 </main>
 
 <?php get_footer(); ?>
