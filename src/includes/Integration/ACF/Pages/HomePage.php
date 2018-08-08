@@ -93,6 +93,12 @@ class HomePage extends Base {
 			'fields' => array(
 				array(
 					'type' => 'text',
+					'key' => 'purpose_title',
+					'name' => 'purpose_title',
+					'label' => __( 'Section title', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
 					'key' => 'purpose_icon_1',
 					'name' => 'purpose_icon_1',
 					'label' => __( 'Icon Class 1', 'elemarjr' ),

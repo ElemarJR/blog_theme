@@ -49,8 +49,8 @@ get_header(); ?>
 					get_template_part( 'template-parts/page/home/blog' );
 
 					$container->set( 'template.home.blog', [
+						'language' => 'en',
 						'description' => __( 'Last posts in English', 'elemarjr' ),
-						'lang', 'en',
 					] );
 					get_template_part( 'template-parts/page/home/blog' );
 				?>
@@ -63,7 +63,7 @@ get_header(); ?>
 			</div>
 			<div class="front-page--purpose-content">
 				<div class="front-page--purpose-title">
-					Meu <b>trabalho</b>
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title', true ) ); ?>
 				</div>
 				<div class="purpose wow fadeInUpBig">
 					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
@@ -108,12 +108,14 @@ get_header(); ?>
 			if ( 0 < count( $posts ) ) :
 		?>
 		<div class="front-page--testimonial">
-			<h5 class="front-page--testimonial-title">
-				<?php esc_html_e( 'Testimonials', 'elemarjr' ); ?>
-			</h5>
+			<div class="page-header">
+				<h5 class="page-header--title page-header--title__small">
+					<?php esc_html_e( 'Testimonials', 'elemarjr' ); ?>
+				</h5>
+			</div>
 
 			<div class="swiper-container">
-    			<div class="swiper-wrapper">
+				<div class="swiper-wrapper">
 					<?php
 						foreach ( $posts as $post ) : setup_postdata( $post );
 							$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
@@ -143,10 +145,10 @@ get_header(); ?>
 						wp_reset_postdata();
 					?>
 				</div>
-				<div class="swiper-counter"></div>
 				<div class="swiper-button-next"></div>
-    			<div class="swiper-button-prev"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
+			<div class="swiper-pagination"></div>
 		</div>
 		<?php endif; ?>
 	</article>

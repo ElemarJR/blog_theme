@@ -4,21 +4,21 @@
         display flex
         flex-direction column
         padding-top 60px
-        padding-bottom 60px
+        padding-bottom 70px
         position relative
 
         &-image
             position absolute
             top 60px
-            right 20px
+            right 0
             width 180px
 
             img
                 displat inline-block
-            
+
         &-content
             width 100%
-        
+
         &-title
             color $dark-grey
             font-size 32px
@@ -27,19 +27,20 @@
             margin-bottom 75px
             position relative
             z-index 5
-            
+
             b
                 display block
 
         @media screen and ( min-width $screen-md )
             flex-direction row
-            
+
             &-content
                 width 50%
 
             &-image
                 top 50%
                 transform translateY( -50% )
+                right 20px
                 width 50%
 
                 img
@@ -64,7 +65,7 @@
         background-repeat repeat
         color $white
         padding 60px 0 30px
-        
+
         @media screen and ( min-width $screen-md )
             padding 120px 0 75px
 
@@ -72,7 +73,7 @@
             font-size 14px
             font-weight bold
             margin-top 45px
-            
+
         &-content
             font-size 20px
             margin 0 auto
@@ -89,7 +90,7 @@
             font-weight bold
             text-align center
             text-transform uppercase
-            
+
         &-title
             color $black
             font-weight 100
@@ -108,10 +109,10 @@
 
             .listing-post:last-child
                 display none
-                
+
                 @media screen and ( min-width $screen-lg )
                     display block
-            
+
         &-actions
             margin-top 40px
             text-align center
@@ -119,23 +120,23 @@
     &--testimonial
         padding-bottom 60px
         padding-top 60px
+        position relative
 
-        &-title
-            color $black
-            font-size 14px
-            text-align center
-            margin 0 0 70px
-            text-transform uppercase
-    
-        .swiper-counter
+        .swiper-pagination
             color $brownish-grey
             text-align center
 
+        .swiper-pagination-fraction
+            bottom 30px
+
         .swiper-button-next,
         .swiper-button-prev
-            background-size contain
-            height 15px
-            width 8px
+            background url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAABHNCSVQICAgIfAhkiAAAALNJREFUOI3V0rENwjAQheF3uKGMZIuMcEd2QwpiBQq6VGSTFClgCgpkMUJuhUBjpCgotqHjurP+T7rCYOYHM5+ROcY5tyGig7W2VNUuCVT1aq0tiGiXgwwAqGo/QYWq9lEwQ3UMmemSg8z8IaBy6bwPEFD3Rs659TAMlyiYof0ULYIlRDEQhkTkBqAax3G7StXh21QATt77eypuReTJzE3yjm/j5o/jNic+ZscAICI+O/5lXij9b1pEaWA+AAAAAElFTkSuQmCC' )
+            height 22px
+            width 12px
+
+        .swiper-button-prev
+            transform rotate( -180deg )
 
 // Purpose
 .purpose
@@ -151,7 +152,7 @@
 
     &--content
         color $gray
-        
+
     &--icon
         font-size 40px
         margin-right 35px
