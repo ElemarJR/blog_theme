@@ -38,7 +38,7 @@ $query = new WP_Query( $query_args );
 		if ( false !== $see_more_url ) :
 	?>
 	<div class="front-page--blog-actions">
-		<a class="button button__transparent" href="<?php echo esc_url( get_permalink( $blog_id ) ); ?>" class="see-more">
+		<a class="button button__transparent" href="<?php echo esc_url( $see_more_url ); ?>" class="see-more">
 			<?php echo esc_html_e( 'See more', 'elemarjr' ) ?> <i class="i-arrow-right"></i>
 		</a>
 	</div>

@@ -48,11 +48,13 @@ get_header(); ?>
 					] );
 					get_template_part( 'template-parts/page/home/blog' );
 
-					$container->set( 'template.home.blog', [
-						'language' => 'en',
-						'description' => __( 'Last posts in English', 'elemarjr' ),
-					] );
-					get_template_part( 'template-parts/page/home/blog' );
+					if ( pll_current_language() !== 'en' ) {
+						$container->set( 'template.home.blog', [
+							'language' => 'en',
+							'description' => __( 'Last posts in English', 'elemarjr' ),
+						] );
+						get_template_part( 'template-parts/page/home/blog' );
+					}
 				?>
 			</div>
 		</div>
