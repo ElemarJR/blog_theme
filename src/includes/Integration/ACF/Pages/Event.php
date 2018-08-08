@@ -50,6 +50,7 @@ class Event extends Base {
 		acf_add_local_field_group( array(
 			'key' => 'evento_gallery',
 			'title' => __( 'Gallery', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
 				array(
 					'type' => 'text',
@@ -81,6 +82,7 @@ class Event extends Base {
 		acf_add_local_field_group( array(
 			'key' => 'event_about',
 			'title' => __( 'About', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
 				array(
 					'type' => 'wysiwyg',
@@ -120,6 +122,12 @@ class Event extends Base {
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
 			'fields' => array(
+				array(
+					'type' => 'text',
+					'key' => 'hero_title',
+					'name' => 'hero_title',
+					'label' => __( 'Title', 'elemarjr' ),
+				),
 				array(
 					'type' => 'wysiwyg',
 					'key' => 'hero_text',
