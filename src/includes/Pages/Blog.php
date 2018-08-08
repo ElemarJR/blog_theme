@@ -88,7 +88,7 @@ class Blog extends Base {
 	}
 
 	public function display_breadcrumb() {
-		return $this->is_post_list();
+		return is_single();
 	}
 
 	public function is_post_list() {

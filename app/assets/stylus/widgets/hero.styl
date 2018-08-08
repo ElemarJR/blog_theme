@@ -25,9 +25,6 @@
         font-weight 100
         margin 0
 
-        strong
-            display block
-
         @media screen and ( min-width $screen-md )
             font-size 35px
 
@@ -44,6 +41,10 @@
         margin 0
 
     ~/__home
+        & ^[0]--title
+            strong
+                display block
+
         & ^[0]--description
             margin 25px auto
             text-transform uppercase
@@ -100,7 +101,6 @@
             font-weight 400
 
             strong
-                color $tiffany
                 font-weight 700
                 white-space nowrap
 

@@ -4,6 +4,7 @@
     &:hover
         .listing-post__footer
             height 35px
+            margin-top 2rem
             visibility visible
         .listing-post__overlay
             height 100%
@@ -24,7 +25,7 @@
         width 100%
 
     &__overlay
-        background rgba( $black, .6 )
+        background rgba( $black, .7 )
         bottom 0
         display flex
         flex-direction column
@@ -69,19 +70,19 @@
         text-transform uppercase
 
     &__title
-        font-size 14px
+        font-size 12px
         margin 0
         text-transform uppercase
 
         a
-            height 40px
+            height 50px
             overflow hidden
             color $white
             display block
             display -webkit-box
             text-decoration none
             text-overflow ellipsis
-            -webkit-line-clamp 2
+            -webkit-line-clamp 3
             -webkit-box-orient vertical
 
             &:hover
@@ -89,13 +90,15 @@
                 text-decoration none
 
         @media screen and ( min-width $screen-md )
-            font-size 16px
-            height 45px
+            font-size 14px
+
+            a
+                height 58px
+
 
     &__footer
         color $tiffany
         height 0
-        margin-top 2rem
         transition $transition-default
         visibility hidden
 
@@ -110,6 +113,7 @@
 
         .has-touch &
             height auto
+            margin-top 2rem
             visibility visible
 
     &--date

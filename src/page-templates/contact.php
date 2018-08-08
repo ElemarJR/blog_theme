@@ -36,7 +36,7 @@ get_header(); ?>
 			the_post();
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'contact--container' ) ?>>
-		<div class="container">
+		<div class="container contact--wrapper">
 			<div class="page-header">
 				<h1 class="page-header--title">
 					<?php echo esc_html( get_post_meta( get_the_ID(), 'title', true  ) ); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'description', true  ) ); ?>
 			</p>
 
-			<?php 
+			<?php
 				if ( false !== ( $message_id = $container->get( 'contact.message_id' ) ) ) :
 					get_template_part( 'template-parts/contact/message', 'success' === $message_id ? 'success' : 'error' );
 				endif;

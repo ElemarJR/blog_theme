@@ -32,7 +32,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 ?>
-	<div class="events">
+	<div class="events--wrapper">
 		<div class="container">
 			<?php foreach ( $events_by_year as $year => $events ) : ?>
 			<div class="page-header">
@@ -58,7 +58,6 @@ get_header();
 				<?php the_field( 'cta_label' ); ?>
 			</a>
 		</div>
-		<?php endwhile; ?>
 	</div>
 
 	<div class="container gallery">
@@ -80,6 +79,7 @@ get_header();
 				</div>
 			<?php endforeach; ?>
 		</div>
+
 		<?php if ( $counter > 6  ) : ?>
 		<div class="gallery--load-button">
 			<a href="#" class="button button__transparent">
@@ -88,7 +88,7 @@ get_header();
 		</div>
 		<?php endif; ?>
 	</div>
-
+	<?php endwhile; ?>
 </main>
 
 <?php get_footer(); ?>
