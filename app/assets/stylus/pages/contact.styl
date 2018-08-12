@@ -1,17 +1,8 @@
 .contact
-    &--wrapper
-        color $black
-        padding-bottom 70px
-        padding-top 50px
-        text-align center
-
-        @media screen and ( min-width $screen-md )
-            padding-bottom 40px
-            padding-top 50px
-
-        @media screen and ( min-width $screen-lg )
-            padding-bottom 30px
-            padding-top 30px
+    color $black
+    padding-top 50px
+    padding-bottom 70px
+    text-align center
 
     &--subtitle
         color $black
@@ -26,6 +17,10 @@
         input,
         textarea
             border-color $black
+
+            &::placeholder
+                color $black
+                text-transform lowercase
 
     &--form
         @media screen and ( min-width $screen-md )
@@ -46,3 +41,8 @@
             .form--submit-wrapper
                 width 100%
                 text-align center
+
+.page-template-contact
+    &,
+    .site-content
+        background $white-two
