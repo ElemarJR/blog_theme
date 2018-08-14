@@ -105,6 +105,21 @@
                 padding-bottom 20px
 
         &-list
+            position relative
+
+            &:after
+                background $dusky-blue
+                bottom -20px
+                content ""
+                height 1px
+                left 50%
+                position absolute
+                transform translateX( -50% )
+                width 65px
+
+            &:last-child:after
+                display none
+
             @media screen and ( min-width $screen-md )
                 margin-bottom 60px
 

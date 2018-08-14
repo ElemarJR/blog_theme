@@ -29,7 +29,7 @@ $query = new WP_Query( $query_args );
 	<?php echo wp_kses_post( $args['description'] ); ?>
 </p>
 
-<div class="front-page--blog-list">
+<div class="front-page--blog-list <?php echo esc_attr( isset( $language ) ? $language : 'pt' ); ?>">
 	<?php
 		$container->set( 'post_list.query', $query );
 		$container->set( 'post_list.extra_class', 'front-page--blog--list' );
