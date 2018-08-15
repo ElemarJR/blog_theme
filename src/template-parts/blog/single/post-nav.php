@@ -14,18 +14,19 @@ if( $previous_post = get_adjacent_post( false, '', true ) ) {
 	$post_link = get_permalink( $previous_post->ID );
 
 ?>
-	<a class="link-previous" href="<?php echo esc_url( $post_link ); ?>" title="">
-		<i class="i-arrow-left"></i>
-		<?php esc_html_e( 'Previous', 'elemarjr' ) ?>
-	</a>
-
-	<a class="posts-nav-link--previous" href="<?php echo esc_url( $post_link ); ?>" title="">
-		<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
-		<div class="posts-nav-title-wrapper">
+	<div class="posts-nav-link--previous">
+		<div class="posts-nav-link--thumb">
+			<a class="link-previous" href="<?php echo esc_url( $post_link ); ?>" title="">
+				<i class="i-arrow-left"></i>
+				<span><?php esc_html_e( 'Previous', 'elemarjr' ) ?></span>
+			</a>
+			<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
+		</div>
+		<div class="posts-nav-link--info">
 			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Previous', 'elemarjr' ); ?></p>
 			<p class="posts-nav-link--title"><?php echo esc_html( $title ) ?></p>
 		</div>
-	</a>
+	</div>
 
 <?php
 
@@ -36,18 +37,20 @@ if( $next_post = get_adjacent_post( false, '', false ) ) {
 	$title = get_the_title( $next_post->ID );
 	$post_link = get_permalink( $next_post->ID );
 ?>
-	<a class="link-next" href="<?php echo $post_link; ?>" title="">
-		<?php esc_html_e( 'Next', 'elemarjr' ) ?>
-		<i class="i-arrow-right"></i>
-	</a>
 
-	<a class="posts-nav-link--next" href="<?php echo esc_url( $post_link ); ?>" title="">
-		<div class="posts-nav-title-wrapper linhk-wrapper-next">
+	<div class="posts-nav-link--next">
+		<div class="posts-nav-link--info">
 			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Next', 'elemarjr' ) ?></p>
 			<p class="posts-nav-link--title"><?php echo esc_html( $title ) ?></p>
 		</div>
-		<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
-	</a>
+		<div class="posts-nav-link--thumb">
+			<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
+			<a class="link-next" href="<?php echo $post_link; ?>" title="">
+				<span><?php esc_html_e( 'Next', 'elemarjr' ) ?></span>
+				<i class="i-arrow-right"></i>
+			</a>
+		</div>
+	</div>
 
 <?php
 
