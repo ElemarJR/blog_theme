@@ -10,7 +10,8 @@
 
 	for ($i = 1; $i <= $diff_in_days; ++$i) {
 		$division = $i == $diff_in_days ? ' e ' : ', ';
-		$event_days .= $division . ( sprintf( '%02d', $start->format('d') + $i ) );
+		$start->modify('+1 day');
+		$event_days .= $division . ( sprintf( '%02d', $start->format('d') ) );
 	}
 
 	$month_end = date_i18n( 'F', $end->getTimestamp() );
