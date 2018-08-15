@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elemar Jr Blog Theme 0.1.3\n"
+"Project-Id-Version: Elemar Jr Blog Theme 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-05-18 01:33:59+00:00\n"
+"POT-Creation-Date: 2018-08-15 14:16:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,24 +24,20 @@ msgstr ""
 msgid "Back to home"
 msgstr ""
 
-#: comments.php:19
+#: comments.php:23
 msgid "No Comments"
 msgstr ""
 
-#: comments.php:21
+#: comments.php:25
 msgid "1 Comment"
 msgstr ""
 
-#: comments.php:23 template-parts/hero/hero-single.php:20
+#: comments.php:27
 msgid "Comments"
 msgstr ""
 
-#: comments.php:45
+#: comments.php:50
 msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:30
-msgid "Follow us"
 msgstr ""
 
 #: header.php:37
@@ -56,13 +52,12 @@ msgstr ""
 msgid "Title - (%s)"
 msgstr ""
 
-#: includes/Customize/Newsletter.php:57
-#: includes/Customize/SinglePostBanner.php:47
-msgid "Text - (%s)"
-msgstr ""
-
 #: includes/Customize/SinglePostBanner.php:37
 msgid "Single Post Banner"
+msgstr ""
+
+#: includes/Customize/SinglePostBanner.php:47
+msgid "Text - (%s)"
 msgstr ""
 
 #: includes/Customize/SinglePostBanner.php:60
@@ -77,7 +72,7 @@ msgstr ""
 msgid "Background Image - (%s)"
 msgstr ""
 
-#: includes/Form/Contact.php:36
+#: includes/Form/Contact.php:36 includes/Integration/ACF/PostType/Event.php:61
 msgid "Name"
 msgstr ""
 
@@ -89,7 +84,7 @@ msgstr ""
 msgid "Your Message"
 msgstr ""
 
-#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.1.3)  #-#-#-#-#
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: includes/Form/Contact.php:56
 msgid "Contact"
@@ -117,6 +112,8 @@ msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:64
 #: includes/Integration/ACF/Pages/Contact.php:58
+#: includes/Integration/ACF/Pages/Event.php:59
+#: includes/Integration/ACF/Pages/Event.php:129
 #: includes/Integration/ACF/Pages/HomePage.php:59
 #: includes/Integration/ACF/Pages/Page.php:56
 msgid "Title"
@@ -124,13 +121,16 @@ msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:70
 #: includes/Integration/ACF/Pages/About.php:121
+#: includes/Integration/ACF/Pages/Event.php:91
+#: includes/Integration/ACF/Pages/Event.php:135
 #: includes/Integration/ACF/Pages/HomePage.php:65
-#: includes/Integration/ACF/Pages/HomePage.php:162
+#: includes/Integration/ACF/Pages/HomePage.php:180
 #: includes/Integration/ACF/Pages/Page.php:68
 msgid "Text"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:76
+#: includes/Integration/ACF/Pages/HomePage.php:134
 msgid "Image"
 msgstr ""
 
@@ -151,22 +151,23 @@ msgid "Color Scheme"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:95
-msgid "Background White and Title Blue"
+msgid "Background White and Title Black"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:96
-msgid "Background White and Title Red"
+msgid "Background Gray and Title Black"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:97
-msgid "Background Gray and Title Blue"
+msgid "Background Black and Title White"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:98
-msgid "Background Tiffany and Title White"
+msgid "Background Dusky and Title White"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:114
+#: includes/Integration/ACF/Pages/Event.php:122
 #: includes/Integration/ACF/Pages/HomePage.php:52
 #: includes/Integration/ACF/Pages/Page.php:50
 msgid "Hero"
@@ -177,27 +178,52 @@ msgid "Body"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/Contact.php:64
+#: includes/Integration/ACF/Pages/Page.php:62
+msgid "Subtitle"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:70
+#: includes/Integration/ACF/Pages/Event.php:65
 msgid "Description"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Contact.php:77
+#: includes/Integration/ACF/Pages/Contact.php:83
 msgid "Form"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Contact.php:84
+#: includes/Integration/ACF/Pages/Contact.php:90
 msgid "Success"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Contact.php:90
+#: includes/Integration/ACF/Pages/Contact.php:96
 msgid "Error Message: Empty fields"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Contact.php:96
+#: includes/Integration/ACF/Pages/Contact.php:102
 msgid "Error Message: Spam"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Contact.php:102
+#: includes/Integration/ACF/Pages/Contact.php:108
 msgid "Error Message: Not sent"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Event.php:52
+#: includes/Integration/ACF/Pages/Event.php:71
+msgid "Gallery"
+msgstr ""
+
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: includes/Integration/ACF/Pages/Event.php:84
+msgid "About"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Event.php:97
+msgid "Label"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Event.php:106
+msgid "URL"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:71
@@ -213,7 +239,7 @@ msgid "Purpose"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:98
-msgid "Destination URL"
+msgid "Section title"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:104
@@ -221,38 +247,59 @@ msgid "Icon Class 1"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:110
-msgid "Text 1"
+msgid "Title 1"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:116
-msgid "Icon Class 2"
+msgid "Text 1"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:122
-msgid "Text 2"
+msgid "Icon Class 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:135
-#: includes/Integration/ACF/Pages/HomePage.php:142
+#: includes/Integration/ACF/Pages/HomePage.php:128
+msgid "Title 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:147
+#: includes/Integration/ACF/Pages/HomePage.php:160
 msgid "Quote"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:155
+#: includes/Integration/ACF/Pages/HomePage.php:154
+msgid "Background"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:173 page-templates/home.php:42
 msgid "Blog"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:163
+#: includes/Integration/ACF/Pages/HomePage.php:181
 msgid "Text after the section title"
 msgstr ""
 
-#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.1.3)  #-#-#-#-#
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: includes/Integration/ACF/Pages/NewsletterForm.php:50
 msgid "Newsletter Form"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Page.php:62
-msgid "Subtitle"
+#: includes/Integration/ACF/PostType/Event.php:54
+#: includes/PostType/Event.php:33
+msgid "Event"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Event.php:68
+msgid "Start date"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Event.php:79
+msgid "End date"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Event.php:89
+msgid "Role"
 msgstr ""
 
 #: includes/Integration/ACF/PostType/Testimonial.php:47
@@ -272,15 +319,56 @@ msgstr ""
 msgid "Company Logo"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:46
+#: includes/Integration/Polylang/Polylang.php:47
 msgid "Contact Phone"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:47
+#: includes/Integration/Polylang/Polylang.php:48
 msgid "Contact Email"
 msgstr ""
 
-#: includes/PostType/Testimonial.php:32 page-templates/home.php:67
+#: includes/PostType/Event.php:32
+msgid "Events"
+msgstr ""
+
+#: includes/PostType/Event.php:34
+msgctxt "event"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Event.php:35
+msgid "Add New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:36
+msgid "New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:37
+msgid "Edit Event"
+msgstr ""
+
+#: includes/PostType/Event.php:38
+msgid "View Event"
+msgstr ""
+
+#: includes/PostType/Event.php:39
+msgid "All Events"
+msgstr ""
+
+#: includes/PostType/Event.php:40
+msgid "Search Events"
+msgstr ""
+
+#: includes/PostType/Event.php:41
+msgid "No events found."
+msgstr ""
+
+#: includes/PostType/Event.php:42
+msgid "No events found in Trash."
+msgstr ""
+
+#: includes/PostType/Testimonial.php:32 page-templates/home.php:115
 msgid "Testimonials"
 msgstr ""
 
@@ -389,12 +477,24 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
-#: page-templates/contact.php:62
+#: page-templates/contact.php:74
 msgid "Send"
 msgstr ""
 
-#: page-templates/home.php:125
+#: page-templates/events.php:39
+msgid "Calendar"
+msgstr ""
+
+#: page-templates/events.php:65
+msgid "Photos"
+msgstr ""
+
+#: page-templates/events.php:86 template-parts/page/home/blog.php:42
 msgid "See more"
+msgstr ""
+
+#: page-templates/home.php:54
+msgid "Last posts in English"
 msgstr ""
 
 #: searchform.php:3
@@ -406,11 +506,7 @@ msgstr ""
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
-#: template-parts/blog/breadcrumb.php:36
-msgid "Category: %s"
-msgstr ""
-
-#: template-parts/blog/breadcrumb.php:56
+#: template-parts/blog/breadcrumb.php:58
 msgid "Page %s"
 msgstr ""
 
@@ -426,21 +522,21 @@ msgstr ""
 msgid "Loading posts..."
 msgstr ""
 
-#: template-parts/blog/single/footer-meta.php:3
-msgid "Tags"
+#: template-parts/blog/single/comment.php:28
+msgid "%1$s at %2$s"
 msgstr ""
 
-#: template-parts/blog/single/footer-meta.php:7
-msgid "Share"
+#: template-parts/blog/single/meta.php:16
+msgid "Reading time:"
 msgstr ""
 
 #: template-parts/blog/single/post-nav.php:19
-#: template-parts/blog/single/post-nav.php:26
+#: template-parts/blog/single/post-nav.php:25
 msgid "Previous"
 msgstr ""
 
 #: template-parts/blog/single/post-nav.php:40
-#: template-parts/blog/single/post-nav.php:48
+#: template-parts/blog/single/post-nav.php:46
 msgid "Next"
 msgstr ""
 
@@ -448,19 +544,19 @@ msgstr ""
 msgid "More posts in \"%s\" series:"
 msgstr ""
 
-#: template-parts/hero/hero-single.php:15
-msgid "Reading time:"
+#: template-parts/blog/single/tags.php:3
+msgid "Tags"
 msgstr ""
 
-#: template-parts/newsletter/form.php:25 template-parts/newsletter/form.php:26
+#: template-parts/newsletter/form.php:28
 msgid "Type your email"
 msgstr ""
 
-#: template-parts/newsletter/form.php:29 template-parts/newsletter/form.php:30
+#: template-parts/newsletter/form.php:30
 msgid "First Name"
 msgstr ""
 
-#: template-parts/newsletter/form.php:31 template-parts/newsletter/form.php:32
+#: template-parts/newsletter/form.php:32
 msgid "Last Name"
 msgstr ""
 
@@ -468,27 +564,27 @@ msgstr ""
 msgid "Content of Interest"
 msgstr ""
 
-#: template-parts/newsletter/form.php:44
+#: template-parts/newsletter/form.php:40
 msgid "Events in which I will speak"
 msgstr ""
 
-#: template-parts/newsletter/form.php:52
+#: template-parts/newsletter/form.php:48
 msgid "English content"
 msgstr ""
 
-#: template-parts/newsletter/form.php:62
+#: template-parts/newsletter/form.php:56
 msgid "Portuguese content"
 msgstr ""
 
-#: template-parts/newsletter/form.php:70
+#: template-parts/newsletter/form.php:64
 msgid "Offers and Promotions"
 msgstr ""
 
-#: template-parts/newsletter/form.php:78
+#: template-parts/newsletter/form.php:72
 msgid "Select at least one interest"
 msgstr ""
 
-#: template-parts/newsletter/form.php:82
+#: template-parts/newsletter/form.php:76
 msgid "Subscribe"
 msgstr ""
 
@@ -505,7 +601,7 @@ msgid "http://aztecweb.net/"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "About"
+msgid "Events Calendar"
 msgstr ""
 
 #. Template Name of the plugin/theme
