@@ -5,51 +5,42 @@
         @media screen and ( min-width $screen-md )
             padding 70px 0
 
-        ul
+        &--list
             padding-left 20px
 
-        li
-            font-weight bold
-            margin-bottom 10px
-
-        &--container
-            @media screen and ( min-width $screen-md )
-                align-items center
-                display flex
-                justify-content space-between
-
-        &--content
-            margin-bottom 40px
+            li
+                font-weight bold
+                list-style-position inside
+                margin-bottom 6px
+                vertical-align text-top
 
             @media screen and ( min-width $screen-md )
-                flex 0 0 340px
+                columns 2
+                flex 50%
 
             @media screen and ( min-width $screen-lg )
-                flex-basis 470px
+                padding 0
+
+                li
+                    margin-bottom 10px
+
+        &--button
+            text-align center
+
+        &--content
+            margin-bottom 30px
 
         &--text
             line-height 28px
-            
+
         &--title
             font-size 32px
             margin-top 0
             text-transform uppercase
+            width 100%
 
         &--image
             text-align center
-
-            @media screen and ( min-width $screen-md )
-                margin-left 40px
-
-            @media screen and ( min-width $screen-lg )
-                flex 0 0 640px
-
-            img
-                @media screen and ( min-width $screen-sm )
-                    max-width 400px
-
-                @media screen and ( min-width $screen-md )
-                    max-width 100%
 
         &__light
             background $white-two
@@ -71,3 +62,82 @@
                 @media screen and ( min-width $screen-md )
                     margin-left 0
                     margin-right 40px
+
+        // Templates
+
+        &__default
+            & ^[0..-2]--container
+                @media screen and ( min-width $screen-md )
+                    align-items center
+                    display flex
+                    justify-content space-between
+
+            & ^[0..-2]--content
+                @media screen and ( min-width $screen-md )
+                    flex 0 0 340px
+
+                @media screen and ( min-width $screen-lg )
+                    flex-basis 470px
+
+            & ^[0..-2]--image
+                @media screen and ( min-width $screen-md )
+                    margin-left 40px
+
+                @media screen and ( min-width $screen-lg )
+                    flex 0 0 640px
+
+                img
+                    @media screen and ( min-width $screen-sm )
+                        max-width 400px
+
+                    @media screen and ( min-width $screen-md )
+                        max-width 100%
+
+
+        &__customers
+            position relative
+
+            & ^[0..-2]--container
+                display flex
+                flex-wrap wrap
+
+            & ^[0..-2]--content
+                flex 100%
+                order 1
+
+                @media screen and ( min-width $screen-md )
+                    display flex
+                    flex-wrap wrap
+
+                @media screen and ( min-width $screen-lg )
+                    display block
+                    flex-basis 470px
+                    order 2
+
+            & ^[0..-2]--image
+                flex 100%
+                order 2
+
+                @media screen and ( min-width $screen-lg )
+                    flex 0 0 640px
+                    order 1
+
+            & ^[0..-2]--text
+                @media screen and ( min-width $screen-md )
+                    flex 50%
+
+            & ^[0..-2]--button
+                flex 100%
+                margin-top 40px
+                order 3
+
+                @media screen and ( min-width $screen-lg )
+                    margin -30px 0 0 420px
+
+        &__mvp
+            margin-bottom 150px
+            padding-bottom 0
+
+            & ^[0..-2]--image
+                position relative
+                transform translateY(30%)

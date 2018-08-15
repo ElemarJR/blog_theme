@@ -17,6 +17,7 @@ class About extends Base {
 	public function get_row_classes() {
 		$classes = array();
 		$classes[] = 'about--row';
+		$this->add_template_class( $classes );
 		$this->add_color_scheme_class( $classes );
 		$this->add_image_position_class( $classes );
 
@@ -45,6 +46,10 @@ class About extends Base {
 					break;
 			}
 		}
+	}
+
+	public function add_template_class( &$classes ) {
+		$classes[] = 'about--row__' . get_sub_field( 'template' );
 	}
 
 	public function add_image_position_class( &$classes, $image_position = false ) {
