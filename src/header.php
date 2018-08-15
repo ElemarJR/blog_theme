@@ -89,7 +89,7 @@ $display_hero = $container->get( 'display_hero' );
 						</a>
 					</li>
 				</ul><!-- .langs-navigation -->
-			</div><!-- .header-right -->			
+			</div><!-- .header-right -->
 		</div>
 	</div>
 
@@ -118,7 +118,7 @@ $display_hero = $container->get( 'display_hero' );
 		</div>
 	</div>
 	<?php endif; ?>
-	
+
 	<?php
 		if ( $container->get( 'display_breadcrumb' ) ) :
 			get_template_part( 'template-parts/blog/breadcrumb' );
@@ -126,8 +126,8 @@ $display_hero = $container->get( 'display_hero' );
 	?>
 
 	<?php
-		$bg_images = apply_filters( 'elemarjr_site_content_bg', false ) ? 
-			$container->get( BackgroundImage::class )->get_bg_images() : 
+		$bg_images = apply_filters( 'elemarjr_site_content_bg', false ) ?
+			$container->get( BackgroundImage::class )->get_bg_images() :
 			array();
 	?>
 	<div id="content" class="site-content"<?php

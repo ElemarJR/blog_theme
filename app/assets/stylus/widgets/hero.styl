@@ -20,26 +20,34 @@
         width 100%
 
     &--title
-        font-size 35px
+        font-size 32px
         color $white
         font-weight 100
         margin 0
-        
-        strong
-            display block
+
+        @media screen and ( min-width $screen-md )
+            font-size 35px
 
     &--description
         font-size 12px
-        text-transform none
+        margin 25px auto
+        text-transform uppercase
+        width 70%
+
+        @media screen and ( min-width $screen-md )
+            width 50%
 
     &--button
         margin 0
 
     ~/__home
+        & ^[0]--title
+            strong
+                display block
+
         & ^[0]--description
             margin 25px auto
             text-transform uppercase
-            width 50%
 
     ~/__page
         text-transform uppercase
@@ -60,6 +68,10 @@
             @media screen and ( min-width $screen-sm )
                 font-size 70px
                 margin 0 0 33px
+
+    ~/__events
+        & ^[0]--title
+            font-weight bold
 
     ~/__about
         width 100%
@@ -89,7 +101,6 @@
             font-weight 400
 
             strong
-                color $tiffany
                 font-weight 700
                 white-space nowrap
 

@@ -43,21 +43,20 @@ define([],function () {
 			$topHeader.removeClass( headerStickyClass );
 		}
 
-		var ymin = 0, 
-            ymax = $siteHeader.height(), 
+		var ymin = 0,
+            ymax = $siteHeader.height(),
             scrollPos = jQuery(this).scrollTop();
 
- 
-        // if( scrollPos <= ymax ) { 
-          var normalized = normalize( scrollPos, ymax, ymin ); 
-        	console.log(1 - normalized);
-          $heroContainer.css({ 
-            'opacity': 1 - normalized 
+
+        // if( scrollPos <= ymax ) {
+          var normalized = normalize( scrollPos, ymax, ymin );
+          $heroContainer.css({
+            'opacity': 1 - normalized
           } );
       	// }
 	}).trigger( 'scroll' );
 
-	function normalize( val, max, min ) { 
-	    return ( val - min ) / ( max - min ); 
+	function normalize( val, max, min ) {
+	    return ( val - min ) / ( max - min );
 	}
 });

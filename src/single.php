@@ -24,7 +24,7 @@ get_header(); ?>
 		?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="container">
+			<header class="post--header container">
 				<?php get_template_part( 'template-parts/blog/content-parts/category' )?>
 
 				<?php get_template_part( 'template-parts/blog/content-parts/serie' ); ?>

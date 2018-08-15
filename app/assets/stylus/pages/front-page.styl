@@ -105,7 +105,23 @@
                 padding-bottom 20px
 
         &-list
-            margin-bottom 60px
+            position relative
+
+            &:after
+                background $dusky-blue
+                bottom -20px
+                content ""
+                height 1px
+                left 50%
+                position absolute
+                transform translateX( -50% )
+                width 65px
+
+            &:last-child:after
+                display none
+
+            @media screen and ( min-width $screen-md )
+                margin-bottom 60px
 
             .listing-post:last-child
                 display none
@@ -137,25 +153,3 @@
 
         .swiper-button-prev
             transform rotate( -180deg )
-
-// Purpose
-.purpose
-    display flex
-    margin-bottom 25px
-    width 80%
-
-    &--title
-        color $black
-        font-size 16px
-        font-weight bold
-        margin-bottom 10px
-
-    &--content
-        color $gray
-
-    &--icon
-        font-size 40px
-        margin-right 35px
-
-        i::before
-            color $black

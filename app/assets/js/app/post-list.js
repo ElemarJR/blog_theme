@@ -20,6 +20,6 @@ define( [ 'app/is-touch', 'imagesloaded/imagesloaded' ], function(isTouch) {
 	});
 
 	if ( isTouch ) {
-		jQuery( 'body' ).addClass( 'has-touch' );		
+		jQuery( 'body' ).addClass( 'has-touch' );
 	}
 });

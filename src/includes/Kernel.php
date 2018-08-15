@@ -49,6 +49,8 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\HomePage::class,
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
 			\Aztec\Integration\ACF\Pages\Page::class,
+			\Aztec\Integration\ACF\Pages\Event::class,
+			\Aztec\Integration\ACF\PostType\Event::class,
 			\Aztec\Integration\ACF\PostType\Testimonial::class,
 
 			\Aztec\Integration\AddThis\AddThis::class,
@@ -66,6 +68,7 @@ class Kernel {
 
 			\Aztec\Performance\Css::class,
 
+			\Aztec\PostType\Event::class,
 			\Aztec\PostType\Testimonial::class,
 
 			\Aztec\Setup\Assets::class,
