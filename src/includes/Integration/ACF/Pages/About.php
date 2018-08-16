@@ -125,6 +125,17 @@ class About extends Base {
 						),
 						array(
 							'type' => 'radio',
+							'key' => 'image_align',
+							'name' => 'image_align',
+							'label' => __( 'Image Align', 'elemarjr' ),
+							'choices' => array(
+								'none' => __( 'None', 'elemarjr' ),
+								'top' => __( 'Overlap top', 'elemarjr' ),
+								'down' => __( 'Overlap down', 'elemarjr' ),
+							),
+						),
+						array(
+							'type' => 'radio',
 							'key' => 'color',
 							'name' => 'color',
 							'label' => __( 'Color Scheme', 'elemarjr' ),

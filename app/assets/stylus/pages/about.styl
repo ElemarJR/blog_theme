@@ -1,4 +1,6 @@
 .about
+    $content-width-lg = 640px
+
     &--row
         padding 50px 0
 
@@ -34,10 +36,13 @@
             line-height 28px
 
         &--title
-            font-size 32px
+            font-size 26px
             margin-top 0
             text-transform uppercase
             width 100%
+
+            @media screen and ( min-width $screen-md )
+                font-size 32px
 
         &--image
             text-align center
@@ -84,7 +89,7 @@
                     margin-left 40px
 
                 @media screen and ( min-width $screen-lg )
-                    flex 0 0 640px
+                    flex 0 0 $content-width-lg
 
                 img
                     @media screen and ( min-width $screen-sm )
@@ -119,7 +124,7 @@
                 order 2
 
                 @media screen and ( min-width $screen-lg )
-                    flex 0 0 640px
+                    flex 0 0 $content-width-lg
                     order 1
 
             & ^[0..-2]--text
@@ -136,8 +141,63 @@
 
         &__mvp
             margin-bottom 150px
-            padding-bottom 0
+            padding-bottom 50px
 
             & ^[0..-2]--image
                 position relative
-                transform translateY(30%)
+                transform translateY( 50% )
+
+                @media screen and ( min-width $screen-md )
+                    transform translateY( 30% )
+
+            @media screen and ( min-width $screen-lg )
+                & ^[0..-2]--container
+                    position relative
+
+                & ^[0..-2]--button,
+                & ^[0..-2]--content
+                    width 500px
+
+                & ^[0..-2]--image
+                    left 550px
+                    position absolute
+                    top 50px
+                    transform none
+
+        // Image align
+
+        &__image_top
+            padding-bottom 0
+            position relative
+
+            @media screen and ( min-width $screen-lg )
+                min-height 560px
+
+            & ^[0..-2]--image
+                @media screen and ( min-width $screen-md )
+                    position absolute
+                    left 0
+                    margin 0
+                    top -10%
+                    width 40%
+
+                @media screen and ( min-width $screen-lg )
+                    top -20%
+
+            & ^[0..-2]--content
+                order 2
+                width 100%
+
+                @media screen and ( min-width $screen-md )
+                    flex 50%
+                    margin-left 0
+                    margin-right 50%
+
+            &^[0..-2]__invert
+                & ^[0..-3]--content
+                    @media screen and ( min-width $screen-md )
+                        margin-left 50%
+                        margin-right 0
+
+        &__image_down
+            padding-bottom 0
