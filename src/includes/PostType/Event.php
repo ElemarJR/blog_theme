@@ -49,6 +49,7 @@ class Event extends Base {
 
 	public function get_events() {
 		return get_posts( array(
+			'numberposts' => -1,
 			'post_type' => 'event',
 			'meta_key'	=> 'event_start',
 			'orderby'	=> 'meta_value_num',
