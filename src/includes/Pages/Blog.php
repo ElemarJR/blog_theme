@@ -88,11 +88,11 @@ class Blog extends Base {
 	}
 
 	public function display_breadcrumb() {
-		return is_single();
+		return $this->is_post_list();
 	}
 
 	public function is_post_list() {
-		return ( ! is_front_page() && ! is_page() ) || is_search() || is_archive();
+		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
 	}
 
 	/**
