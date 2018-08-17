@@ -33,6 +33,28 @@ class About extends Base {
 	);
 
 	/**
+	 * MVP template logic condition.
+	 *
+	 * @var array
+	 */
+	protected $mvp = array(
+		'field' => 'template',
+		'operator' => '==',
+		'value' => 'mvp',
+	);
+
+	/**
+	 * Customers template logic condition.
+	 *
+	 * @var array
+	 */
+	protected $customers = array(
+		'field' => 'template',
+		'operator' => '==',
+		'value' => 'customers',
+	);
+
+	/**
 	 * Init on container
 	 */
 	public function init() {
@@ -57,6 +79,21 @@ class About extends Base {
 					'name' => 'about_repeater',
 					'layout' => 'block',
 					'sub_fields' => array(
+						array(
+							'type' => 'select',
+							'key' => 'template',
+							'label' => __( 'Template', 'elemarjr' ),
+							'name' => 'template',
+							'required' => true,
+							'choices' => array (
+								'default' => 'Default',
+								'customers' => 'Customers',
+								'mvp' => 'MVP',
+							),
+							'default_value' => array (
+								0 => 'default',
+							),
+						),
 						array(
 							'type' => 'text',
 							'key' => 'title',
@@ -88,6 +125,17 @@ class About extends Base {
 						),
 						array(
 							'type' => 'radio',
+							'key' => 'image_align',
+							'name' => 'image_align',
+							'label' => __( 'Image Align', 'elemarjr' ),
+							'choices' => array(
+								'none' => __( 'None', 'elemarjr' ),
+								'top' => __( 'Overlap top', 'elemarjr' ),
+								'down' => __( 'Overlap down', 'elemarjr' ),
+							),
+						),
+						array(
+							'type' => 'radio',
 							'key' => 'color',
 							'name' => 'color',
 							'label' => __( 'Color Scheme', 'elemarjr' ),
@@ -97,6 +145,60 @@ class About extends Base {
 								'dark' => __( 'Background Black and Title White', 'elemarjr' ),
 								'dusky' => __( 'Background Dusky and Title White', 'elemarjr' ),
 							)
+						),
+						array (
+							'type' => 'repeater',
+							'key' => 'items',
+							'label' => __( 'Items', 'elemarjr' ),
+							'name' => 'items',
+							'conditional_logic' => array (
+								array (
+									$this->customers,
+								),
+							),
+							'layout' => 'table',
+							'sub_fields' => array (
+								array (
+									'type' => 'text',
+									'key' => 'item_text',
+									'label' => __( 'Item', 'elemarjr' ),
+									'name' => 'item_text',
+								),
+							),
+						),
+						array (
+							'type' => 'text',
+							'key' => 'button_label',
+							'label' => __( 'Button label', 'elemarjr' ),
+							'name' => 'button_label',
+							'wrapper' => array (
+								'width'=> '50%',
+							),
+							'conditional_logic' => array (
+								array (
+									$this->mvp,
+								),
+								array (
+									$this->customers,
+								),
+							),
+						),
+						array (
+							'key' => 'button_url',
+							'label' => __( 'Button URL', 'elemarjr' ),
+							'name' => 'button_url',
+							'type' => 'url',
+							'wrapper' => array (
+								'width'=> '50%',
+							),
+							'conditional_logic' => array (
+								array (
+									$this->mvp,
+								),
+								array (
+									$this->customers,
+								),
+							),
 						),
 					)
 				),
