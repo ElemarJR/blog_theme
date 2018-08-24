@@ -17,7 +17,7 @@ $newsletter = $container->get( Newsletter::class );
 $lang = PLL()->curlang;
 
 ?>
-<div class="newsletter">
+<div class="newsletter" style="background-image: url(<?php echo esc_url( get_theme_mod( $newsletter->get_theme_mod_section_id() . '_background' ) ); ?>)">
 	<div class="container">
 		<h2 class="newsletter--title">
 			<?php echo esc_html( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
@@ -28,7 +28,7 @@ $lang = PLL()->curlang;
 				<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Type your email', 'elemarjr' ); ?>" required>
 
 				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'First Name', 'elemarjr' ); ?>" required>
-				
+
 				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Last Name', 'elemarjr' ); ?>" required>
 			</div>
 

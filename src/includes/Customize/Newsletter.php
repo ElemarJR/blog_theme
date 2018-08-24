@@ -48,7 +48,27 @@ class Newsletter extends Base {
 				'section' => $section_id,
 				'type' => 'text',
 			) );
+
 		}
+
+		$setting_id = $this->get_theme_mod_section_id() . '_background';
+		$control_id = $this->get_theme_mod_section_id() . '_background_control';
+
+		$wp_customize->add_setting( $setting_id, array(
+	        'transport' => 'refresh',
+	        'height' => 325,
+	    ));
+		$wp_customize->add_control(
+			new \WP_Customize_Image_Control(
+				$wp_customize,
+				$control_id,
+				array(
+					'label'    => sprintf( __( 'Background', 'elemarjr' ) ),
+					'section'  => $section_id,
+					'settings' => $setting_id,
+				)
+		   )
+		);
 	}
 
 	public function get_theme_mod_section_id() {
@@ -57,6 +77,10 @@ class Newsletter extends Base {
 
 	public function get_theme_mod_control_id( \PLL_Language $lang, $name ) {
 		return $this->get_theme_mod_section_id() . '_' . $lang->slug . '_' . $name;
+	}
+
+	public function get_theme_mod_setting_id( \PLL_Language $lang, $name ) {
+		return $this->get_theme_mod_section_id() . '_' . $lang->slug . '_setting_' . $name;
 	}
 
 	public function get_background_images( $lang ) {
