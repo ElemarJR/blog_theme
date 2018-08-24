@@ -74,21 +74,30 @@
             font-weight bold
             margin-top 45px
 
+        &-icon
+            display block
+            font-size 2rem
+
         &-content
             font-size 20px
             line-height 32px;
             margin 0 auto
             position relative
+            max-width 80%
 
             &::before
                 background-image url( '../images/quote.png' )
                 background-repeat no-repeat
                 content ""
-                left -25%
+                left -15%
                 height 167px
                 position absolute
-                top -20%
+                top -10%
                 width 259px
+
+                @media screen and ( min-width $screen-md )
+                    left -25%
+                    top -20%
 
             @media screen and ( min-width $screen-md )
                 max-width 500px

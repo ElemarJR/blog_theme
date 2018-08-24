@@ -98,6 +98,7 @@ get_header(); ?>
 			<div class="container">
 				<div class="wow fadeInUpBig">
 					<div class="front-page--quote-content">
+						<span class="front-page--quote-icon"><i class="i-quote"></i></span>
 						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ); ?>
 						<p class="front-page--quote-author">Elemar JR</p>
 					</div>
