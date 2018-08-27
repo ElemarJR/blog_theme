@@ -1,14 +1,6 @@
 .listing-post
     position relative
 
-    &:hover
-        .listing-post__footer
-            height 35px
-            margin-top 2rem
-            visibility visible
-        .listing-post__overlay
-            height 100%
-
     &__container
         min-height 280px
         position relative
@@ -29,12 +21,16 @@
         bottom 0
         display flex
         flex-direction column
-        height auto
+        height 160px
         justify-content center
+        overflow hidden
         padding 20px 15px
         position absolute
         transition $transition-default
         width 100%
+
+        ^[0]:hover &
+            height 310px
 
     &__categories
         list-style none
@@ -99,8 +95,8 @@
     &__footer
         color $tiffany
         height 0
-        transition $transition-default
-        visibility hidden
+        overflow hidden
+        transition all $transition-default
 
         &__right
             float right
@@ -115,6 +111,10 @@
             height auto
             margin-top 2rem
             visibility visible
+
+        ^[0]:hover &
+            height 35px
+            margin-top 2rem
 
     &--date
         display inline-block
