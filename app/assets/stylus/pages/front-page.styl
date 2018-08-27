@@ -3,18 +3,18 @@
     &--purpose
         display flex
         flex-direction column
-        padding-top 60px
         padding-bottom 70px
+        padding-top 60px
         position relative
 
         &-image
             position absolute
-            top 60px
             right 0
+            top 60px
             width 180px
 
             img
-                displat inline-block
+                display inline-block
 
         &-content
             width 100%
@@ -38,9 +38,9 @@
                 width 50%
 
             &-image
+                right 20px
                 top 50%
                 transform translateY( -50% )
-                right 20px
                 width 50%
 
                 img
@@ -51,9 +51,9 @@
 
         @media screen and ( min-width $screen-lg )
             &-image
-                transform none
-                position static
                 padding-right 40px
+                position static
+                transform none
 
                 img
                     max-width 70%
@@ -61,8 +61,8 @@
     &--quote
         background-color $quote-bg
         background-position center
-        background-size cover
         background-repeat repeat
+        background-size cover
         color $white
         padding 60px 0 30px
 
@@ -83,9 +83,9 @@
             &::before
                 background-image url( '../images/quote.png' )
                 background-repeat no-repeat
-                content ""
-                left -25%
+                content ''
                 height 167px
+                left -25%
                 position absolute
                 top -20%
                 width 259px
@@ -94,8 +94,8 @@
                 max-width 500px
 
     &--blog
-        padding 60px 0
         background $white-two
+        padding 60px 0
 
         &-description
             color $black
@@ -122,7 +122,7 @@
             &:after
                 background $dusky-blue
                 bottom -20px
-                content ""
+                content ''
                 height 1px
                 left 50%
                 position absolute
