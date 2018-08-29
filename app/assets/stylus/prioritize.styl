@@ -60,9 +60,9 @@ button
 .top-header-wrapper
     fixed top left
     height $sm-nav-height
+    transition $transition-default
     width 100%
     z-index 99
-    transition $transition-default
 
     &__no-hero
         background $header-bg
@@ -94,9 +94,9 @@ button
             align-items center
             background transparent
             display flex
-            top 0
             padding 0
             position static
+            top 0
             width calc( 100% - 125px )
 
             &.toggled
@@ -108,16 +108,16 @@ button
             display none
 
         .site-search
-            width calc( 70% - 125px )
-            top 50%
             right 20px
+            top 50%
             transform translateY( -50% )
+            width calc( 70% - 125px )
 
 // Logo
 .site-branding
     display block
-    width 125px
     transition width $transition-default
+    width 125px
 
     @media screen and ( min-width $nav-breakpoint )
         width 150px
@@ -135,8 +135,8 @@ button
 
         a
             border-bottom 1px solid $white
-            display block
             color $white
+            display block
             font-size 12px
             padding 15px 0
             text-decoration none
@@ -163,23 +163,25 @@ button
         outline none
 
     .icon-bar
+        background $white
         border-radius 1px
         display block
         height 2px
-        width 22px
-        background $white
         transition transform $transition-default
+        width 22px
 
         & + .icon-bar
             margin-top 4px
 
-    &[aria-expanded="true"]
-        .icon-bar:nth-child(1)
+    &[aria-expanded='true']
+        .icon-bar:nth-child( 1 )
             transform rotate( 45deg )
-        .icon-bar:nth-child(2)
+
+        .icon-bar:nth-child( 2 )
             transform rotate( -45deg )
             margin-top -2px
-        .icon-bar:nth-child(3)
+
+        .icon-bar:nth-child( 3 )
             display none
 
     @media screen and ( min-width $nav-breakpoint )
@@ -192,10 +194,10 @@ button
     padding 0
 
     .menu-item
+        border-bottom 1px solid transparent
         display inline-block
         font-size 12px
         margin-right 50px
-        border-bottom 1px solid transparent
 
         &.current-menu-item a
             color $tiffany
@@ -204,8 +206,8 @@ button
             display none
 
     .menu-link
-        display block
         color $white
+        display block
         padding 8px
         text-decoration none
         text-transform uppercase
@@ -218,29 +220,29 @@ button
             padding 8px 0
 
         .menu-item
-           margin 0 0 0 30px
+            margin 0 0 0 30px
 
-           &.current-menu-item a
-            color $white
-            padding-bottom 3px
-            border-bottom 1px solid $tiffany
+            &.current-menu-item a
+                border-bottom 1px solid $tiffany
+                color $white
+                padding-bottom 3px
 
-           &:last-child
-            display inline-block
+            &:last-child
+                display inline-block
 
 // Search
 .search-form
     align-items center
-    display flex
     border-bottom 1px solid $white
     color $white
+    display flex
     margin-bottom 10px
 
     .search-submit
         text-align center
         width 30px
 
-    input[type="search"]
+    input[type='search']
         background transparent
         border none
         height 48px
@@ -258,15 +260,15 @@ button
         border-bottom none
         margin-bottom 0
 
-        input[type="search"]
+        input[type='search']
             border-bottom 1px solid $white
+            height 28px
             line-height 28px
             margin 0 8px
-            height 28px
 
 .search-close
-    display none
     cursor pointer
+    display none
     height 25px
     position relative
     width 25px
@@ -274,11 +276,11 @@ button
     &:after,
     &:before
         background $white
-        content ""
+        content ''
         display block
         height 1px
-        right 4px
         position absolute
+        right 4px
         top 12px
         width 14px
 
@@ -296,8 +298,8 @@ button
 
     @media screen and ( min-width $nav-breakpoint )
         position absolute
-        top -100%
         right 0
+        top -100%
 
 
 // Header
@@ -359,8 +361,8 @@ button
         padding 25px 0
 
     &--wrapper
-        position relative
         margin-top 100px
+        position relative
         transition margin-top $transition-default
         z-index 10
 
@@ -382,7 +384,7 @@ button
             display none
 
     &--link
-        color #b3b3b3
+        color $gray-light-300
         text-decoration none
 
 .site-content,

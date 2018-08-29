@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Install and configure the website in the public directory
-set -ex
+set -e
 
 # Read and import dotenv variables to script
 dotenv () {
@@ -76,7 +76,7 @@ fi
 # Load project environment variables
 dotenv
 
-# Remove default WordPress packages 
+# Remove default WordPress packages
 rm -rf web/wp-content/themes/twenty*
 rm -rf web/wp-content/plugins/hello.php
 rm -rf web/wp-content/languages/plugins
