@@ -1,6 +1,7 @@
 <?php
 
 use Aztec\Customize\Newsletter;
+use Aztec\Helper\BackgroundImage;
 
 global $container;
 
@@ -17,7 +18,15 @@ $newsletter = $container->get( Newsletter::class );
 $lang = PLL()->curlang;
 
 ?>
-<div class="newsletter">
+
+<?php
+	$bg_images = $container->get( BackgroundImage::class )->get_newsletter_bg_images( $newsletter->get_theme_mod_section_id() . '_background' );
+?>
+<div class="newsletter" <?php
+	foreach ( $bg_images as $size => $url ) :
+		echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
+	endforeach;
+?>>
 	<div class="container">
 		<h2 class="newsletter--title">
 			<?php echo esc_html( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
@@ -28,7 +37,7 @@ $lang = PLL()->curlang;
 				<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Type your email', 'elemarjr' ); ?>" required>
 
 				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'First Name', 'elemarjr' ); ?>" required>
-				
+
 				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Last Name', 'elemarjr' ); ?>" required>
 			</div>
 

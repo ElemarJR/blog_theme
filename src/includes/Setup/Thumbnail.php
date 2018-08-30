@@ -16,12 +16,12 @@ use DI\Container;
 class Thumbnail extends Base {
 
 	public $bg_image_sizes;
-	
+
 	public $post_single_banner_image_sizes;
-	
+
 	public function __construct( Container $container ) {
 		parent::__construct( $container );
-		
+
 		$this->bg_image_sizes = array(
 			array(
 				'name' => 'header-sm',
@@ -42,7 +42,28 @@ class Thumbnail extends Base {
 				'height' => 900,
 			),
 		);
-		
+
+		$this->bg_newsletter_sizes = array(
+			array(
+				'name' => 'newsletter-lg',
+				'size' => 'lg',
+				'width' => 1920,
+				'height' => 0,
+			),
+			array(
+				'name' => 'newsletter-md',
+				'size' => 'md',
+				'width' => 768,
+				'height' => 0,
+			),
+			array(
+				'name' => 'newsletter-sm',
+				'size' => 'sm',
+				'width' => 480,
+				'height' => 0,
+			)
+		);
+
 		$this->post_single_banner_image_sizes = array(
 			array(
 				'name' => 'post-single-banner-sm',
@@ -79,7 +100,7 @@ class Thumbnail extends Base {
 	public function add_thumbnail_support() {
 		add_theme_support( 'post-thumbnails' );
 	}
-	
+
 	/**
 	 * Add header image sizes
 	 */
@@ -87,17 +108,21 @@ class Thumbnail extends Base {
 		foreach ( $this->bg_image_sizes as $image_size ) {
 			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'], true );
 		}
-		
+
+		foreach ( $this->bg_newsletter_sizes as $image_size ) {
+			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'], true );
+		}
+
 		foreach ( $this->post_single_banner_image_sizes as $image_size ) {
 			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'] );
 		}
-		
+
 		// post listing thumbnail
 		add_image_size( 'post-listing', 348, 230, true );
-		
+
 		// previous and next post nav thumbnail
 		add_image_size( 'post-nav', 116, 84, true );
-		
+
 		// testimonial logo
 		add_image_size( 'testimonial-logo', 200, 44 );
 	}
