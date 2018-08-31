@@ -1,8 +1,11 @@
 <?php
 /**
- * Event class
+ * Event custom post type.
  *
- * @package Aztec
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
  */
 
 namespace Aztec\PostType;
@@ -25,7 +28,8 @@ class Event extends Base {
 	 * Register post type
 	 */
 	public function register_post_type() {
-		register_post_type( 'event',
+		register_post_type(
+			'event',
 			array(
 				'hierarchical' => true,
 				'labels' => array(
@@ -47,16 +51,28 @@ class Event extends Base {
 		);
 	}
 
+	/**
+	 * Get all events.
+	 *
+	 * @return array
+	 */
 	public function get_events() {
-		return get_posts( array(
+		return get_posts(
+			array(
 			'numberposts' => -1,
 			'post_type' => 'event',
 			'meta_key'	=> 'event_start',
 			'orderby'	=> 'meta_value_num',
 			'order'		=> 'DESC',
-		) );
+			)
+		);
 	}
 
+	/**
+	 * Get all events grouped by year.
+	 *
+	 * @return array
+	 */
 	public function get_events_by_year() {
 		$years = array();
 
@@ -64,7 +80,7 @@ class Event extends Base {
 			$start = get_field( 'event_start', $event->ID );
 
 			if ( $start ) {
-				$year = date( 'Y', strtotime( $start ) );
+				$year             = date( 'Y', strtotime( $start ) );
 				$years[ $year ][] = $event;
 			}
 		}

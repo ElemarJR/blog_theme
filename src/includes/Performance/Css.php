@@ -43,7 +43,7 @@ class Css extends Base {
 	public function deferred_styles() {
 		echo '
 			<noscript id="deferred-styles">
-		      <link rel="stylesheet" type="text/css" href="' . $this->get_style_file_uri() . '?ver=' . wp_get_theme()->get( 'Version' )  . '"/>
+		      <link rel="stylesheet" type="text/css" href="' . $this->get_style_file_uri() . '?ver=' . wp_get_theme()->get( 'Version' ) . '"/>
 		    </noscript>
 		    <script>
 		      var loadDeferredStyles = function() {

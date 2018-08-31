@@ -1,8 +1,4 @@
 <?php
-
-use Aztec\Helper\Template;
-use Aztec\Helper\BackgroundImage;
-
 /**
  * The header for our theme
  *
@@ -14,16 +10,11 @@ use Aztec\Helper\BackgroundImage;
  * @version 0.1.0
  */
 
-/**
- * @var DI\Container
- */
+use Aztec\Helper\Template;
+use Aztec\Helper\BackgroundImage;
+
 global $container;
 
-/**
- * Display hero in the site header
- * 
- * @var bool $display_hero
- */
 $display_hero = $container->get( 'display_hero' );
 
 ?><!doctype html>
@@ -38,8 +29,8 @@ $display_hero = $container->get( 'display_hero' );
 
 	<div class="top-header-wrapper <?php echo esc_attr( $display_hero ? '' : 'top-header-wrapper__no-hero' ); ?>">
 		<div class="top-header container">
-			<a href="<?php echo esc_url( home_url( '/' ) ) ?>" class="site-branding">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) )?>">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-branding">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			</a><!-- .site-branding -->
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -51,12 +42,14 @@ $display_hero = $container->get( 'display_hero' );
 			<div class="top-header--collapse">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'menu_id'        => 'primary-menu',
-							'depth'          => 1,
-						) )
-					?>
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary',
+								'menu_id'        => 'primary-menu',
+								'depth'          => 1,
+							)
+						)
+						?>
 				</nav><!-- #site-navigation -->
 
 				<div id="site-search" class="site-search">
@@ -73,11 +66,11 @@ $display_hero = $container->get( 'display_hero' );
 					<?php
 						$languages = pll_the_languages( array( 'raw' => 1 ) );
 
-						foreach ( $languages as $lang ) :
+					foreach ( $languages as $lang ) :
 						?>
 							<li class="menu-item<?php echo $lang['current_lang'] ? esc_attr( ' current-menu-item' ) : ''; ?>">
 								<a href="<?php echo esc_url( $lang['url'] ); ?>" class="menu-link">
-									<?php echo esc_html( $lang['name'] ); ?>
+								<?php echo esc_html( $lang['name'] ); ?>
 								</a>
 							</li>
 					<?php endforeach; ?>
@@ -97,20 +90,22 @@ $display_hero = $container->get( 'display_hero' );
 	<div class="site-header--wrapper">
 		<?php
 			$bg_images = $display_hero ? $container->get( BackgroundImage::class )->get_bg_images() : array();
-			$classes = $container->get( Template::class )->header_classes( $display_hero );
+			$classes   = $container->get( Template::class )->header_classes( $display_hero );
 		?>
-		<div class="site-header site-header--image" <?php
-			foreach ( $bg_images as $size => $url ) :
-				echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
+		<div class="site-header site-header--image" 
+		<?php
+		foreach ( $bg_images as $size => $url ) :
+			echo esc_html( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
 			endforeach;
-		?>>
+		?>
+		>
 		</div>
 		<div class="hero--wrapper">
-			<?php $hero_template = $container->get( Template::class )->get_hero_template() ?>
+			<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
 			<div class="container">
-				<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ) ?>">
+				<div class="<?php echo esc_attr( 'hero hero__' . $hero_template ); ?>">
 					<div class="hero--container">
-						<?php get_template_part( 'template-parts/hero/hero', $hero_template )  ?>
+						<?php get_template_part( 'template-parts/hero/hero', $hero_template ); ?>
 					</div>
 					<button class="hero--scroll-button mouse"></button>
 				</div>
@@ -120,8 +115,8 @@ $display_hero = $container->get( 'display_hero' );
 	<?php endif; ?>
 
 	<?php
-		if ( $container->get( 'display_breadcrumb' ) ) :
-			get_template_part( 'template-parts/blog/breadcrumb' );
+	if ( $container->get( 'display_breadcrumb' ) ) :
+		get_template_part( 'template-parts/blog/breadcrumb' );
 		endif;
 	?>
 
@@ -130,11 +125,13 @@ $display_hero = $container->get( 'display_hero' );
 			$container->get( BackgroundImage::class )->get_bg_images() :
 			array();
 	?>
-	<div id="content" class="site-content"<?php
-			foreach ( $bg_images as $name => $url ) :
-				echo ' data-bg-' . $name . '="' . esc_url( $url ) . '"';
+	<div id="content" class="site-content"
+	<?php
+	foreach ( $bg_images as $name => $url ) :
+		echo esc_html( ' data-bg-' . $name . '="' . esc_url( $url ) . '"' );
 			endforeach;
-		?>>
+	?>
+		>
 		<?php if ( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
-		<div class="<?php echo esc_html( ! is_singular() ? 'container' : '' ) ?>">
+		<div class="<?php echo esc_html( ! is_singular() ? 'container' : '' ); ?>">
 		<?php endif; ?>

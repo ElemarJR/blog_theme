@@ -15,10 +15,26 @@ use DI\Container;
  */
 class Thumbnail extends Base {
 
+	/**
+	 * Background images size.
+	 *
+	 * @var array
+	 */
 	public $bg_image_sizes;
 
+	/**
+	 * Background images size.
+	 *
+	 * @var array
+	 */
 	public $post_single_banner_image_sizes;
 
+	/**
+	 * Constructor.
+	 *
+	 * @param  Container $container Container DI.
+	 * @return void
+	 */
 	public function __construct( Container $container ) {
 		parent::__construct( $container );
 
@@ -102,7 +118,7 @@ class Thumbnail extends Base {
 	}
 
 	/**
-	 * Add header image sizes
+	 * Add header image sizes.
 	 */
 	public function add_image_sizes() {
 		foreach ( $this->bg_image_sizes as $image_size ) {
@@ -117,13 +133,13 @@ class Thumbnail extends Base {
 			add_image_size( $image_size['name'], $image_size['width'], $image_size['height'] );
 		}
 
-		// post listing thumbnail
+		// post listing thumbnail.
 		add_image_size( 'post-listing', 348, 230, true );
 
-		// previous and next post nav thumbnail
+		// previous and next post nav thumbnail.
 		add_image_size( 'post-nav', 116, 84, true );
 
-		// testimonial logo
+		// testimonial logo.
 		add_image_size( 'testimonial-logo', 200, 44 );
 	}
 }

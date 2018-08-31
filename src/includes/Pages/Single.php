@@ -13,17 +13,17 @@ use Aztec\Base;
  * Single post template manipulation
  */
 class Single extends Base {
-	
+
 	/**
 	 * Add hooks
 	 */
-	public function init() {		
+	public function init() {
 		add_filter( 'wp_link_pages_link', $this->callback( 'custom_post_page_link' ), 10, 2 );
 	}
 
 	/**
 	 * Customize the post page link to be a button
-	 * 
+	 *
 	 * @param string $link The page number HTML output.
 	 * @param int    $i    Page number for paginated posts' page links.
 	 * @return string The link HTML with button class

@@ -1,6 +1,4 @@
 <?php
-use Aztec\Pages\About;
-
 /**
  * The template for displaying all pages
  *
@@ -21,36 +19,42 @@ use Aztec\Pages\About;
 
 get_header();
 
+use Aztec\Pages\About;
+
 global $container;
 
-$about = $container->get( About::class );
-
-?>
+$about = $container->get( About::class ); ?>
 
 <main>
 	<?php
-		while ( have_posts() ) :
-			the_post();
-?>
+	while ( have_posts() ) :
+		the_post();
+		?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
-		<?php while ( have_rows( 'about_repeater' ) ) : the_row(); ?>
-			<div class="<?php echo esc_attr( $about->row_classes_string() ) ?>">
+		<?php
+		while ( have_rows( 'about_repeater' ) ) :
+			the_row();
+			?>
+			<div class="<?php echo esc_attr( $about->row_classes_string() ); ?>">
 				<div class="about--row--container container">
 					<div class="about--row--content">
 						<!-- Title -->
 						<h2 class="about--row--title">
-							<?php echo esc_html( get_sub_field( 'title' ) ) ?>
+							<?php echo esc_html( get_sub_field( 'title' ) ); ?>
 						</h2>
 
 						<!-- Content -->
 						<div class="about--row--text">
-							<p><?php echo wp_kses_post( get_sub_field( 'text' ) ) ?></p>
+							<p><?php echo wp_kses_post( get_sub_field( 'text' ) ); ?></p>
 						</div>
 
 						<!-- List -->
-						<?php if( have_rows( 'items' ) ) : ?>
+						<?php if ( have_rows( 'items' ) ) : ?>
 						<ul class="about--row--list">
-							<?php while ( have_rows( 'items' ) ) : the_row(); ?>
+							<?php
+							while ( have_rows( 'items' ) ) :
+								the_row();
+								?>
 								<li><?php the_sub_field( 'item_text' ); ?></li>
 							<?php endwhile; ?>
 						</ul>
@@ -58,10 +62,15 @@ $about = $container->get( About::class );
 					</div>
 
 					<!-- Button -->
-					<?php if( $label = get_sub_field( 'button_label' ) && $url = get_sub_field( 'button_url' ) ) : ?>
+					<?php
+					$url   = get_sub_field( 'button_url' );
+					$label = get_sub_field( 'button_label' );
+
+					if ( $label && $url ) :
+						?>
 						<div class="about--row--button">
-							<a href="<?php the_sub_field( 'button_url' ); ?>" class="button button__bordered button__white">
-								<?php the_sub_field( 'button_label' ); ?>
+							<a href="<?php esc_html( $url ); ?>" class="button button__bordered button__white">
+								<?php esc_html( $label ); ?>
 							</a>
 						</div>
 					<?php endif; ?>
@@ -75,7 +84,7 @@ $about = $container->get( About::class );
 					</div>
 				</div>
 			</div>
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 	</article>
 	<?php endwhile; ?>
 </main>

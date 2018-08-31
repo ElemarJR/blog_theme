@@ -9,12 +9,13 @@ namespace Aztec\Customize\Control;
 
 /**
  * Create control to WYSIWYG editor
- * 
+ *
  * Based on Customize Editor Control plugin
+ *
  * @link https://wordpress.org/plugins/customize-editor-control/
  */
 class Editor extends \WP_Customize_Control {
-	
+
 	/**
 	 * Control's Type.
 	 *
@@ -22,7 +23,7 @@ class Editor extends \WP_Customize_Control {
 	 * @var string
 	 */
 	public $type = 'editor';
-	
+
 	/**
 	 * Constructor.
 	 *
@@ -38,12 +39,12 @@ class Editor extends \WP_Customize_Control {
 	 */
 	public function __construct( $manager, $id, $args = array() ) {
 		parent::__construct( $manager, $id, $args );
-		
+
 		if ( ! empty( $args['editor_settings'] ) ) {
 			$this->input_attrs['data-editor'] = wp_json_encode( $args['editor_settings'] );
 		}
 	}
-	
+
 	/**
 	 * Render the control's content.
 	 *

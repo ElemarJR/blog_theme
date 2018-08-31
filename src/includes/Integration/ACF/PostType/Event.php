@@ -49,7 +49,8 @@ class Event extends Base {
 	 * @return void
 	 */
 	public function event_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'event',
 			'title' => __( 'Event', 'elemarjr' ),
 			'fields' => array(
@@ -88,8 +89,9 @@ class Event extends Base {
 					'name' => 'event_role',
 					'label' => __( 'Role', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

@@ -99,8 +99,10 @@ class Kernel {
 	 * Define the list of forms of the website
 	 */
 	public function forms() {
-		$this->container->set( 'forms', [
+		$this->container->set(
+			'forms', [
 			\Aztec\Form\Contact::class,
-		] );
+			 ]
+		);
 	}
 }

@@ -45,11 +45,13 @@ class NewsletterForm extends Base {
 	 * Deactivate the content
 	 */
 	public function deactivate_features() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'newsletter_form_page',
 			'title' => __( 'Newsletter Form', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content', 'featured_image' ),
 			'location' => $this->location,
-		) );
+			)
+		);
 	}
 }

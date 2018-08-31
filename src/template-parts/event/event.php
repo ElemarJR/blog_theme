@@ -1,31 +1,40 @@
 <?php
-	$event_class = '';
-	$now = new DateTime( date( 'Y-m-d' ) );
-	$end = new DateTime( get_field( 'event_end' ) );
-	$start = new DateTime( get_field( 'event_start' ) );
+/**
+ * Event component.
+ *
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
+ */
 
-	$event_days = $start->format('d');
-	$event_months = date_i18n( 'F', $start->getTimestamp() );
-	$diff_in_days = $end->diff( $start )->days;
+$event_class = '';
+$now         = new DateTime( date( 'Y-m-d' ) );
+$end         = new DateTime( get_field( 'event_end' ) );
+$start       = new DateTime( get_field( 'event_start' ) );
 
-	for ($i = 1; $i <= $diff_in_days; ++$i) {
-		$division = $i == $diff_in_days ? ' e ' : ', ';
-		$start->modify('+1 day');
-		$event_days .= $division . ( sprintf( '%02d', $start->format('d') ) );
-	}
+$event_days   = $start->format( 'd' );
+$event_months = date_i18n( 'F', $start->getTimestamp() );
+$diff_in_days = $end->diff( $start )->days;
 
-	$month_end = date_i18n( 'F', $end->getTimestamp() );
+for ( $i = 1; $i <= $diff_in_days; ++$i ) {
+	$division = $i === $diff_in_days ? ' e ' : ', ';
+	$start->modify( '+1 day' );
+	$event_days .= $division . ( sprintf( '%02d', $start->format( 'd' ) ) );
+}
 
-	if ($event_months !== $month_end ) {
-		$event_months .= '/' . $month_end;
-	}
+$month_end = date_i18n( 'F', $end->getTimestamp() );
 
-	// Check if events happened or is happening
-	if ( $now >= $start && $now <= $end ) {
-		$event_class = 'event__active';
-	} else if ( $now > $end ) {
-		$event_class = 'event__old';
-	}
+if ( $event_months !== $month_end ) {
+	$event_months .= '/' . $month_end;
+}
+
+// Check if events happened or is happening.
+if ( $now >= $start && $now <= $end ) {
+	$event_class = 'event__active';
+} elseif ( $now > $end ) {
+	$event_class = 'event__old';
+}
 ?>
 <div class="event <?php echo esc_attr( $event_class ); ?>">
 	<div class="event--wrapper">

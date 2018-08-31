@@ -28,7 +28,10 @@ class Polylang extends Base {
 	}
 
 	/**
-	 * Display language slug instead the full name
+	 * Display language slug instead the full name.
+	 *
+	 * @param  array $args Language arguments.
+	 * @return array
 	 */
 	public function display_language_slug( $args ) {
 		$args['display_names_as'] = 'slug';
@@ -39,19 +42,30 @@ class Polylang extends Base {
 	 * Register theme options to be translated
 	 */
 	public function register_strings() {
-		if( ! $this->is_active() ) {
+		if ( ! $this->is_active() ) {
 			return;
 		}
 
 		$group = 'Elemar Jr.';
+
 		pll_register_string( __( 'Contact Phone', 'elemarjr' ), 'phone', $group, false );
 		pll_register_string( __( 'Contact Email', 'elemarjr' ), 'email', $group, false );
 	}
 
+	/**
+	 * Is active.
+	 */
 	public function is_active() {
 		return function_exists( 'PLL' );
 	}
 
+	/**
+	 * Custom post type support.
+	 *
+	 * @param  array   $post_types Post types.
+	 * @param  boolean $is_settings Is settings.
+	 * @return array
+	 */
 	public function custom_post_type_support( $post_types, $is_settings ) {
 		if ( $is_settings ) {
 			unset( $post_types['testimonial'] );
@@ -62,6 +76,13 @@ class Polylang extends Base {
 		return $post_types;
 	}
 
+	/**
+	 * Custom taxonomy support.
+	 *
+	 * @param  array   $taxonomies Taxonomies.
+	 * @param  boolean $is_settings Is setting.
+	 * @return array
+	 */
 	public function custom_taxonomy_support( $taxonomies, $is_settings ) {
 		if ( $is_settings ) {
 			unset( $taxonomies['serie'] );

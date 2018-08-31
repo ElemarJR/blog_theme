@@ -32,7 +32,7 @@ class Template extends Base {
 		$display_hero = apply_filters( 'elemarjr_display_hero', true );
 		$this->container->set( 'display_hero', $display_hero );
 	}
-	
+
 	/**
 	 * Store in the container if the breadcrumb will be showed in the request
 	 * or not
@@ -43,19 +43,22 @@ class Template extends Base {
 	}
 
 	/**
-	 * Add template name to body class
+	 * Add template name to body class.
+	 *
+	 * @param  array $classes Body classes name.
+	 * @return array
 	 */
 	public function body_class( $classes ) {
 		$classes[] = $this->container->get( HelperTemplate::class )->get_template_name();
-		
-		if( ! $this->container->get( 'display_hero' ) ) {
+
+		if ( ! $this->container->get( 'display_hero' ) ) {
 			$classes[] = 'no-hero';
 		}
-		
-		if( $this->container->get( 'display_breadcrumb' ) ) {
+
+		if ( $this->container->get( 'display_breadcrumb' ) ) {
 			$classes[] = 'has-breadcrumb';
 		}
-		
+
 		return $classes;
 	}
 }

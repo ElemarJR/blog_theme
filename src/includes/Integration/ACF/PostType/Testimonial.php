@@ -32,6 +32,9 @@ class Testimonial extends Base {
 		),
 	);
 
+	/**
+	 * Init.
+	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
 			add_action( 'acf/include_fields', $this->callback( 'testimonial_fields' ) );
@@ -42,7 +45,8 @@ class Testimonial extends Base {
 	 * Add Hero custom fields
 	 */
 	public function testimonial_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'testimonial',
 			'title' => __( 'Testimonial', 'elemarjr' ),
 			'fields' => array(
@@ -64,8 +68,9 @@ class Testimonial extends Base {
 					'name' => 'testimonial_logo',
 					'label' => __( 'Company Logo', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

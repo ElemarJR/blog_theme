@@ -1,10 +1,19 @@
 <?php
+/**
+ * The post meta data.
+ *
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
+ */
+
 use Bookworm\Bookworm;
 ?>
 
 <div class="post--meta">
 	<a href="<?php the_author_link(); ?>" class="post--meta-author">
-		<?php echo esc_html( get_author_name() ); ?>
+		<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
 	</a><!-- .post--meta-author -->
 
 	<div class="post--meta-date">

@@ -1,3 +1,14 @@
+<?php
+/**
+ * The post listing content.
+ *
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
+ */
+
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'listing-post' ); ?>>
 	<div class="listing-post__container">
 		<div class="listing-post__bg" style="background-image: url('<?php the_post_thumbnail_url( 'post-listing' ); ?>')"></div>
@@ -10,7 +21,7 @@
 				?>
 			</header><!-- .listing-post__header -->
 			<footer class="listing-post__footer">
-				<?php get_template_part( 'template-parts/blog/content-parts/footer-meta' ) ?>
+				<?php get_template_part( 'template-parts/blog/content-parts/footer-meta' ); ?>
 			</footer><!-- .listing-post__footer -->
 		</div><!-- .listing-post__overlay -->
 	</div>

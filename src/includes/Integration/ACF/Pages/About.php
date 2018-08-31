@@ -68,7 +68,8 @@ class About extends Base {
 	 * The repeater to create the body lines
 	 */
 	public function body_lines() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'body_lines',
 			'title' => __( 'Page Sections', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -202,16 +203,18 @@ class About extends Base {
 						),
 					)
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add Hero custom fields
 	 */
 	public function add_hero_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'about_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -222,8 +225,9 @@ class About extends Base {
 					'name' => 'hero_text',
 					'label' => __( 'Text', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

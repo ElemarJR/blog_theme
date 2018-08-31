@@ -22,13 +22,16 @@ class Rss extends Base {
 	}
 
 	/**
-	 * Add title tag support
+	 * Add title tag support.
+	 *
+	 * @param  string $title The title.
+	 * @return string
 	 */
 	public function title( $title ) {
-		if( ! function_exists( 'pll_current_language' ) ) {
+		if ( ! function_exists( 'pll_current_language' ) ) {
 			return $title;
 		}
-		
-		return $title  . ' - ' . pll_current_language( 'name' );
+
+		return $title . ' - ' . pll_current_language( 'name' );
 	}
 }

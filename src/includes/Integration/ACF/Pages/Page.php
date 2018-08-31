@@ -45,7 +45,8 @@ class Page extends Base {
 	 * Add Hero custom fields
 	 */
 	public function add_hero_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'page_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'fields' => array(
@@ -67,8 +68,9 @@ class Page extends Base {
 					'name' => 'hero_text',
 					'label' => __( 'Text', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

@@ -47,7 +47,8 @@ class HomePage extends Base {
 	 * Add Hero custom fields
 	 */
 	public function add_hero_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'home_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -76,16 +77,18 @@ class HomePage extends Base {
 					'name' => 'hero_button_url',
 					'label' => __( 'Button URL', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add Purpose custom fields
 	 */
 	public function add_purpose_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'purpose',
 			'title' => __( 'Purpose', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -133,16 +136,18 @@ class HomePage extends Base {
 					'name' => 'purpose_image',
 					'label' => __( 'Image', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add Quote custom fields
 	 */
 	public function add_quote_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'quote',
 			'title' => __( 'Quote', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -159,16 +164,18 @@ class HomePage extends Base {
 					'name' => 'quote',
 					'label' => __( 'Quote', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add Quote custom fields
 	 */
 	public function add_blog_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'blog',
 			'title' => __( 'Blog', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -180,8 +187,9 @@ class HomePage extends Base {
 					'label' => __( 'Text', 'elemarjr' ),
 					'description' => __( 'Text after the section title', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

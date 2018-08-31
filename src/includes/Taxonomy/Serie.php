@@ -13,7 +13,11 @@ use Aztec\Base;
  * Manipulate Testimonial post type
  */
 class Serie extends Base {
-
+	/**
+	 * Slug name.
+	 *
+	 * @var string
+	 */
 	private $slug = 'serie';
 
 	/**
@@ -27,7 +31,8 @@ class Serie extends Base {
 	 * Register post type
 	 */
 	public function register_taxonomy() {
-		register_taxonomy( $this->slug, 'post',
+		register_taxonomy(
+			$this->slug, 'post',
 			array(
 				'hierarchical' => true,
 				'label' => __( 'Series', 'elemarjr' ),
@@ -55,7 +60,7 @@ class Serie extends Base {
 	 * Get the serie term link
 	 *
 	 * @param \WP_Term $serie The term.
- 	 * @return string|\WP_Error HTML link to taxonomy term archive on success, WP_Error if term does not exist.
+	 * @return string|\WP_Error HTML link to taxonomy term archive on success, WP_Error if term does not exist.
 	 */
 	public function get_serie_link( \WP_Term $serie ) {
 		return get_term_link( $serie, $this->slug );
@@ -66,9 +71,9 @@ class Serie extends Base {
 	 *
 	 * @see get_the_terms()
 	 *
-     * @param int|object $post Post ID or object.
-     * @return array|false|\WP_Error Array of WP_Term objects on success, false if there are no terms
-     *                               or the post does not exist, WP_Error on failure.
+	 * @param int|object $post Post ID or object.
+	 * @return array|false|\WP_Error Array of WP_Term objects on success, false if there are no terms
+	 *                               or the post does not exist, WP_Error on failure.
 	 */
 	public function get_post_terms( $post ) {
 		return get_the_terms( $post, $this->slug );
@@ -81,7 +86,8 @@ class Serie extends Base {
 	 * @return \WP_Post[] The serie posts.
 	 */
 	public function get_serie_posts( \WP_Term $serie ) {
-		$query = new \WP_Query( array(
+		$query = new \WP_Query(
+			array(
 			'nopaging'  => true,
 			'post_type' => 'post',
 			'tax_query' => array(
@@ -89,8 +95,9 @@ class Serie extends Base {
 					'taxonomy' => $this->slug,
 					'terms' => array( $serie->term_id ),
 				)
-			),
-		) );
+			 ),
+			)
+		);
 
 		return $query->posts;
 	}

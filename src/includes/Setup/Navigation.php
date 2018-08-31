@@ -15,30 +15,39 @@ use Aztec\Base;
 class Navigation extends Base {
 
 	/**
-	 * Add hooks
+	 * Add hooks.
 	 */
 	public function init() {
 		add_action( 'after_setup_theme', $this->callback( 'register_nav_menus' ) );
 
-		add_filter( 'walker_nav_menu_start_el' , $this->callback( 'social_walker_nav_menu_start_el' ), 10, 4 );
+		add_filter( 'walker_nav_menu_start_el', $this->callback( 'social_walker_nav_menu_start_el' ), 10, 4 );
 	}
 
 	/**
-	 * Register theme navigations
+	 * Register theme navigations.
 	 */
 	public function register_nav_menus() {
-		register_nav_menus( array(
+		register_nav_menus(
+			array(
 			'primary' => __( 'Primary', 'elemarjr' ),
 			'social' => __( 'Social Menu', 'elemarjr' ),
-		) );
+			)
+		);
 	}
 
 	/**
-	 * Add social icons to social menu
+	 * Add social icons to social menu.
+	 *
+	 * @param  string    $item_output The menu item's starting HTML output.
+	 * @param  \WP_Post  $item The current menu item.
+	 * @param  int       $depth Depth of menu item. Used for padding.
+	 * @param  \stdClass $args An object of wp_nav_menu() arguments.
+	 *
+	 * @return string
 	 */
 	public function social_walker_nav_menu_start_el( $item_output, $item, $depth, $args ) {
 		if ( 'social' === $args->theme_location ) {
-			$icon = sprintf( '<i class="%s"></i>', $this->social_menu_item_icon( $item->url ) );
+			$icon        = sprintf( '<i class="%s"></i>', $this->social_menu_item_icon( $item->url ) );
 			$item_output = str_replace( $args->link_after, "</span>{$icon}", $item_output );
 		}
 
@@ -46,34 +55,37 @@ class Navigation extends Base {
 	}
 
 	/**
-	 * Get social menu icon class name
+	 * Get social menu icon class name.
+	 *
+	 * @param  string $url Menu item URL.
+	 * @return string
 	 */
 	private function social_menu_item_icon( $url ) {
-		if( 'mailto:' === substr( $url, 0, 7 ) ) {
+		if ( 'mailto:' === substr( $url, 0, 7 ) ) {
 			return 'i-mail';
 		}
 
 		$home_url = parse_url( home_url( '/' ), PHP_URL_HOST );
-		$url = parse_url( $url, PHP_URL_HOST );
-		$url = preg_replace( '/www\./', '', $url);
+		$url      = parse_url( $url, PHP_URL_HOST );
+		$url      = preg_replace( '/www\./', '', $url );
 
 		switch ( $url ) {
-			case $home_url :
+			case $home_url:
 				$icon = 'i-rss';
 				break;
-			case 'github.com' :
+			case 'github.com':
 				$icon = 'i-github';
 				break;
-			case 'twitter.com' :
+			case 'twitter.com':
 				$icon = 'i-twitter';
 				break;
-			case 'linkedin.com' :
+			case 'linkedin.com':
 				$icon = 'i-linkedin';
 				break;
-			case 'facebook.com' :
+			case 'facebook.com':
 				$icon = 'i-facebook';
 				break;
-			default :
+			default:
 				$icon = 'i-rss';
 				break;
 		}

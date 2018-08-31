@@ -19,28 +19,43 @@ class Comments extends Base {
 	 */
 	public function init() {
 		add_action( 'comment_form_before', $this->callback( 'enqueue_comments_reply' ) );
-		
+
 		add_filter( 'comment_form_fields', $this->callback( 'comment_form_fields' ) );
 		add_filter( 'comment_form_submit_field', $this->callback( 'comment_form_submit_field' ), 10, 2 );
 		add_filter( 'comment_form_field_author', $this->callback( 'open_comment_meta' ) );
 		add_filter( 'comment_form_field_url', $this->callback( 'close_comment_meta' ) );
 		add_filter( 'elemar_comments_navigation_template', $this->callback( 'comments_navigation_template' ) );
 	}
-	
+
+	/**
+	 * Add comments reply
+	 */
 	public function enqueue_comments_reply() {
-		if( get_option( 'thread_comments' ) )  {
+		if ( get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 	}
-	
+
+	/**
+	 * Open comment meta
+	 *
+	 * @param  string $field The field.
+	 * @return string
+	 */
 	public function open_comment_meta( $field ) {
 		return '<div class="comment-meta">' . $field;
 	}
-	
+
+	/**
+	 * Close comment meta
+	 *
+	 * @param  string $field The field.
+	 * @return string
+	 */
 	public function close_comment_meta( $field ) {
 		return $field . '</div>';
 	}
-	
+
 	/**
 	 * Override default fields markup using regex and reorder
 	 *
@@ -98,7 +113,13 @@ class Comments extends Base {
 		);
 	}
 
-	public function comment_form_submit_field( $submit_field, $args ) {
+	/**
+	 * Form submit field.
+	 *
+	 * @param  string $submit_field Submit field.
+	 * @return string
+	 */
+	public function comment_form_submit_field( $submit_field ) {
 		/*
 		 * Capturing groups
 		 * 1:  `<p class="form-submit">`
@@ -119,6 +140,12 @@ class Comments extends Base {
 		return $submit_field;
 	}
 
+	/**
+	 * Navigation template.
+	 *
+	 * @param  string $template The template.
+	 * @return string
+	 */
 	public function comments_navigation_template( $template ) {
 		$template = preg_replace(
 			'/(<div class="nav-links)(">)/',
@@ -135,15 +162,21 @@ class Comments extends Base {
 	}
 
 	/**
-	 * Change comments template.
+	 * Change comment template.
 	 *
+	 * @param  string $comment The comment.
+	 * @param  array  $args The args.
+	 * @param  int    $depth The depth.
+	 * @return void
 	 */
-	public function comment_template($comment, $args, $depth) {
-		$this->container->set('comment_template', [
+	public function comment_template( $comment, $args, $depth) {
+		$this->container->set(
+			'comment_template', [
 			'comment' => $comment,
 			'args' => $args,
 			'depth' => $depth,
-		]);
+			]
+		);
 
 		get_template_part( 'template-parts/blog/single/comment' );
 	}

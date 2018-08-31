@@ -44,15 +44,6 @@ class Form extends Base {
 	 * @var string[string]
 	 */
 	protected $fields;
-	
-	/**
-	 * Define form slug and fields
-	 *
-	 * @param Container $container The dependency injection container.
-	 */
-	public function __construct( Container $container ) {
-		parent::__construct( $container );
-	}
 
 	/**
 	 *
@@ -97,37 +88,41 @@ class Form extends Base {
 	 *
 	 * @todo Validate if mail was sent
 	 */
-	public function process_form() {		
-		if ( false !== ( $form_slug = get_query_var( $this->query_var, false ) ) ) {
-			if( ! $this->container->get( Polylang::class )->is_active() ) {
+	public function process_form() {
+		$form_slug = get_query_var( $this->query_var, false );
+
+		if ( false !== ( $form_slug ) ) {
+
+			if ( ! $this->container->get( Polylang::class )->is_active() ) {
 				wp_safe_redirect( add_query_arg( 'message', 'not-sent', $_SERVER['HTTP_REFERER'] ) );
 				exit;
 			}
-			
+
 			foreach ( $this->container->get( 'forms' ) as $form ) {
 				$form_object = $this->container->get( $form );
-				if ( $form_slug === $form_object->get_slug() ) {					
+
+				if ( $form_slug === $form_object->get_slug() ) {
 					$curlang = PLL()->curlang;
 					$message = 'success';
-					$email = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'email' ), false );
-					$subject = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'subject' ), false );	
-					
-					if( false === $email ) {
+					$email   = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'email' ), false );
+					$subject = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'subject' ), false );
+
+					if ( false === $email ) {
 						$message = 'not-sent';
 					}
-					
+
 					if ( $form_object->is_spam() ) {
 						$message = 'spam';
 					}
-					
+
 					$values = $form_object->get_values();
-					foreach( $values as $value ) {
+					foreach ( $values as $value ) {
 						if ( '' === $value ) {
 							$message = 'empty';
 						}
 					}
-					
-					if( 'success' === $message ) {
+
+					if ( 'success' === $message ) {
 						$sent = wp_mail(
 							$email,
 							$subject,
@@ -146,16 +141,16 @@ class Form extends Base {
 								),
 							)
 						);
-						
+
 						if ( ! $sent ) {
 							$message = 'not-sent';
 						}
 					}
-					
-					if( 'success' !== $message ) {
+
+					if ( 'success' !== $message ) {
 						$form_object->set_flash();
 					}
-					
+
 					wp_safe_redirect( add_query_arg( 'message', $message, $_SERVER['HTTP_REFERER'] ) );
 					exit;
 				}
@@ -237,23 +232,23 @@ class Form extends Base {
 
 		return $message;
 	}
-	
+
 	/**
 	 * Get form inputs values sanitized
 	 */
 	public function get_values() {
-		if( ! is_array( $this->fields ) ) {
+		if ( ! is_array( $this->fields ) ) {
 			return array();
 		}
-		
+
 		$values = array();
-		
-		foreach( array_keys( $this->fields ) as $field ) {
-			if( empty( $_POST[ $field ] ) ) {
+
+		foreach ( array_keys( $this->fields ) as $field ) {
+			if ( empty( $_POST[ $field ] ) ) {
 				$values[ $field ] = '';
 				continue;
 			}
-			
+
 			$value = $_POST[ $field ];
 			if ( 'textarea' === $this->get_type( $field ) ) {
 				$values[ $field ] = sanitize_textarea_field( $value );
@@ -261,83 +256,95 @@ class Form extends Base {
 				$values[ $field ] = sanitize_text_field( $value );
 			}
 		}
-		
+
 		return $values;
 	}
 
 	/**
 	 * Check if the form is spam using Akismet
-	 * 
+	 *
 	 * Based on the `wpcf7_akismet_comment_check` Contact Form 7 plugin
-	 * 
+	 *
 	 * If the Akismet isn't active or the key isn't set, consider not spam.
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public function is_spam() {
 		if ( ! ( is_callable( array( 'Akismet', 'get_api_key' ) ) && (bool) \Akismet::get_api_key() ) ) {
 			return false;
 		}
-		
+
 		$params = $this->spam_parameters();
-		
-		$spam = false;
+
+		$spam         = false;
 		$query_string = build_query( $params );
-		
+
 		$response = \Akismet::http_post( $query_string, 'comment-check' );
-		
+
 		return ! $response[1];
 	}
 
 	/**
 	 * Define spam parameters
-	 * 
-	 * Based on the `wpcf7_akismet` Contact Form 7 plugin 
-	 * 
+	 *
+	 * Based on the `wpcf7_akismet` Contact Form 7 plugin
+	 *
 	 * @link https://akismet.com/development/api/#comment-check
 	 */
 	public function spam_parameters() {
 		$params = array();
-		
+
 		/*
 		 * These parameters aren't required, but can be set by the extended
 		 * class.
 		 */
-		$params['comment_author'] = '';
+		$params['comment_author']       = '';
 		$params['comment_author_email'] = '';
-		$params['comment_author_url'] = '';
-		$params['comment_content'] = '';
-		
-		$params['blog'] = get_option( 'home' );
-		$params['blog_lang'] = get_locale();
+		$params['comment_author_url']   = '';
+		$params['comment_content']      = '';
+
+		$params['blog']         = get_option( 'home' );
+		$params['blog_lang']    = get_locale();
 		$params['blog_charset'] = get_option( 'blog_charset' );
-		$params['user_ip'] = $_SERVER['REMOTE_ADDR'];
-		$params['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
-		$params['referrer'] = $_SERVER['HTTP_REFERER'];
-		
+		$params['user_ip']      = $_SERVER['REMOTE_ADDR'];
+		$params['user_agent']   = $_SERVER['HTTP_USER_AGENT'];
+		$params['referrer']     = $_SERVER['HTTP_REFERER'];
+
 		$params['comment_type'] = 'contact-form';
-		
+
 		return $params;
 	}
-	
+
+	/**
+	 * Get flash key.
+	 */
 	public function get_flash_key() {
 		return $this->slug . '_flash_values';
 	}
-	
+
+	/**
+	 * Get flash.
+	 */
 	public function get_flash() {
-		if( ! empty( $_SESSION[ $this->get_flash_key() ] ) ) {
+		if ( ! empty( $_SESSION[ $this->get_flash_key() ] ) ) {
 			$values = $_SESSION[ $this->get_flash_key() ];
 			$this->empty_flash();
 			return $values;
 		}
-		
+
 		return $this->get_values();
 	}
-	
+
+	/**
+	 * Set flash.
+	 */
 	public function set_flash() {
 		$_SESSION[ $this->get_flash_key() ] = $this->get_values();
 	}
-	
+
+	/**
+	 * Empty flash.
+	 */
 	public function empty_flash() {
 		unset( $_SESSION[ $this->get_flash_key() ] );
 	}

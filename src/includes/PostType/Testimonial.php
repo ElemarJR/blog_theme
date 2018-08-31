@@ -1,8 +1,11 @@
 <?php
 /**
- * Testimonial class
+ * Testimonal custom post type.
  *
- * @package Aztec
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
  */
 
 namespace Aztec\PostType;
@@ -25,7 +28,8 @@ class Testimonial extends Base {
 	 * Register post type
 	 */
 	public function register_post_type() {
-		register_post_type( 'testimonial',
+		register_post_type(
+			'testimonial',
 			array(
 				'hierarchical' => true,
 				'labels' => array(
@@ -46,15 +50,22 @@ class Testimonial extends Base {
 			)
 		);
 	}
-	
+
+	/**
+	 * Get all testimonials.
+	 *
+	 * @return \WP_Query
+	 */
 	public function get_testimonials() {
-		$query = new \WP_Query( array(
+		$query = new \WP_Query(
+			array(
 			'post_type' => 'testimonial',
 			'order' => 'ASC',
 			'orderby' => 'menu_order',
 			'posts_per_page' => -1,
-		) );
-		
+			)
+		);
+
 		return $query->posts;
 	}
 }

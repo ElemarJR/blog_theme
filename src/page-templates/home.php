@@ -1,7 +1,4 @@
 <?php
-use Aztec\PostType\Testimonial;
-use Aztec\Helper\Url;
-
 /**
  * The template for displaying all pages
  *
@@ -20,42 +17,45 @@ use Aztec\Helper\Url;
  * @version 0.1.0
  */
 
+use Aztec\Helper\Url;
+use Aztec\PostType\Testimonial;
+
 global $container;
 
-/**
- *
- * @var Url $url_helper
- */
 $url_helper = $container->get( Aztec\Helper\Url::class );
 
 get_header(); ?>
 
 <main>
 	<?php
-		while ( have_posts() ) :
-			the_post();
-?>
+	while ( have_posts() ) :
+		the_post();
+		?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--blog">
 			<div class="container">
 				<div class="front-page--blog-title">
-					<h2><?php esc_html_e( 'Blog', 'elemarjr' ) ?></h2>
+					<h2><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
 				</div>
 
-				<?php
-					$container->set( 'template.home.blog', [
+			<?php
+				$container->set(
+					'template.home.blog', [
 						'description' => get_post_meta( get_the_ID(), 'blog_text', true ),
-					] );
-					get_template_part( 'template-parts/page/home/blog' );
+					]
+				);
+				get_template_part( 'template-parts/page/home/blog' );
 
-					if ( pll_current_language() !== 'en' ) {
-						$container->set( 'template.home.blog', [
-							'language' => 'en',
-							'description' => __( 'Last posts in English', 'elemarjr' ),
-						] );
-						get_template_part( 'template-parts/page/home/blog' );
-					}
-				?>
+			if ( pll_current_language() !== 'en' ) {
+				$container->set(
+					'template.home.blog', [
+						'language'    => 'en',
+						'description' => __( 'Last posts in English', 'elemarjr' ),
+					]
+				);
+				get_template_part( 'template-parts/page/home/blog' );
+			}
+			?>
 			</div>
 		</div>
 
@@ -65,30 +65,30 @@ get_header(); ?>
 			</div>
 			<div class="front-page--purpose-content">
 				<div class="front-page--purpose-title">
-					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title', true ) ); ?>
+				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title', true ) ); ?>
 				</div>
 				<div class="purpose wow fadeInUpBig">
-					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
+				<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
 					</div>
 					<div class="purpose--content">
 						<div class="purpose--title">
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_1', true ) ); ?>
+						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_1', true ) ); ?>
 						</div>
-						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ); ?>
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ); ?>
 					</div>
 				</div>
 				<div class="purpose wow fadeInUpBig">
-					<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ); ?>
+				<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
 					</div>
 					<div class="purpose--content">
 						<div class="purpose--title">
-							<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_2', true ) ); ?>
+						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title_2', true ) ); ?>
 						</div>
-						<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ); ?>
+					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_2', true ) ); ?>
 					</div>
 				</div>
 			</div>
@@ -107,22 +107,23 @@ get_header(); ?>
 		</div>
 
 		<?php
-			$posts = $container->get( Testimonial::class )->get_testimonials();
-			if ( 0 < count( $posts ) ) :
-		?>
+		$posts = $container->get( Testimonial::class )->get_testimonials();
+		if ( 0 < count( $posts ) ) :
+			?>
 		<div class="front-page--testimonial">
 			<div class="page-header">
 				<h5 class="page-header--title page-header--title__small">
-					<?php esc_html_e( 'Testimonials', 'elemarjr' ); ?>
+				<?php esc_html_e( 'Testimonials', 'elemarjr' ); ?>
 				</h5>
 			</div>
 
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<?php
-						foreach ( $posts as $post ) : setup_postdata( $post );
-							$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
-							$logo_id = get_post_meta( get_the_ID(), 'testimonial_logo', true );
+				<?php
+				foreach ( $posts as $post ) :
+					setup_postdata( $post );
+					$photo_id = get_post_meta( get_the_ID(), 'testimonial_photo', true );
+					$logo_id  = get_post_meta( get_the_ID(), 'testimonial_logo', true );
 					?>
 					<div class="swiper-slide">
 						<div class="testimonial">
@@ -130,7 +131,7 @@ get_header(); ?>
 								<img src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
 							</div>
 							<div class="testimonial--content">
-								<?php the_content(); ?>
+						<?php the_content(); ?>
 							</div>
 							<div class="testimonial--footer">
 								<div class="testimonial--company">
@@ -144,9 +145,9 @@ get_header(); ?>
 						</div>
 					</div>
 					<?php
-						endforeach;
-						wp_reset_postdata();
-					?>
+					endforeach;
+					wp_reset_postdata();
+				?>
 				</div>
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>

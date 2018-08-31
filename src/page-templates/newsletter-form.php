@@ -2,7 +2,7 @@
 /**
  * The template to show just the newsletter form. The form is loaded in the
  * footer
- * 
+ *
  * Template name: Newsletter Form
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -17,11 +17,7 @@ use Aztec\Form\Contact;
 
 global $container;
 
-/**
- * 
- * @var Contact $form
- */
-$form = $container->get( Contact::class );
+$form   = $container->get( Contact::class );
 $values = $form->get_flash();
 
 get_header();

@@ -1,4 +1,12 @@
 <?php
+/**
+ * The post list.
+ *
+ * @package WordPress
+ * @subpackage ElemarJr
+ * @since 0.1.0
+ * @version 0.1.0
+ */
 
 use Aztec\Customize\Newsletter;
 use Aztec\Helper\BackgroundImage;
@@ -22,11 +30,13 @@ $lang = PLL()->curlang;
 <?php
 	$bg_images = $container->get( BackgroundImage::class )->get_newsletter_bg_images( $newsletter->get_theme_mod_section_id() . '_background' );
 ?>
-<div class="newsletter" <?php
-	foreach ( $bg_images as $size => $url ) :
-		echo ' data-bg-' . $size . '="' . esc_url( $url ) . '"';
+<div class="newsletter"
+<?php
+foreach ( $bg_images as $size => $url ) :
+	echo esc_html( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
 	endforeach;
-?>>
+?>
+>
 	<div class="container">
 		<h2 class="newsletter--title">
 			<?php echo esc_html( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>

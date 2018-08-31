@@ -25,7 +25,7 @@ class Blog extends Base {
 		add_filter( 'elemarjr_display_breadcrumb', $this->callback( 'display_breadcrumb' ) );
 		add_filter( 'excerpt_length', $this->callback( 'excerpt_length' ) );
 		add_filter( 'excerpt_more', $this->callback( 'excerpt_more' ) );
-		add_filter( 'nav_menu_css_class', $this->callback( 'nav_menu_css_class' ), 10, 4 ); 
+		add_filter( 'nav_menu_css_class', $this->callback( 'nav_menu_css_class' ), 10, 4 );
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 	}
@@ -47,7 +47,7 @@ class Blog extends Base {
 	 *                        False, otherwise.
 	 */
 	public function get_current_language_id() {
-		if( ! $this->container->get( Polylang::class )->is_active() ) {
+		if ( ! $this->container->get( Polylang::class )->is_active() ) {
 			return $this->get_id();
 		}
 
@@ -60,16 +60,19 @@ class Blog extends Base {
 	 * @return array|number|false|NULL
 	 */
 	public function get_pages_id() {
-		if( ! $this->container->get( Polylang::class )->is_active() ) {
+		if ( ! $this->container->get( Polylang::class )->is_active() ) {
 			return array();
 		}
 
-		$pages_id = array();
+		$pages_id     = array();
+		$main_page_id = $this->get_id();
 
-		if( $main_page_id = $this->get_id() ) {
+		if ( $main_page_id ) {
 			$languages = PLL()->links->model->get_languages_list();
 			foreach ( $languages as $language ) {
-				if( ! empty( $page_id = pll_get_post( $main_page_id, $language->slug ) ) ) {
+				$page_id = pll_get_post( $main_page_id, $language->slug );
+
+				if ( ! empty( $page_id ) ) {
 					$pages_id[] = $page_id;
 				}
 			}
@@ -83,14 +86,20 @@ class Blog extends Base {
 	 *
 	 * @return boolean True, if is the home of the blog. False, otherwise.
 	 */
-	public function display_hero( $display ) {
+	public function display_hero() {
 		return is_front_page() || is_page_template( 'page-templates/about.php' ) || is_page_template( 'page-templates/events.php' );
 	}
 
+	/**
+	 * Display breadcrumb.
+	 */
 	public function display_breadcrumb() {
 		return $this->is_post_list();
 	}
 
+	/**
+	 * Check if is post list.
+	 */
 	public function is_post_list() {
 		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
 	}
@@ -98,7 +107,7 @@ class Blog extends Base {
 	/**
 	 * Set to show up to 9 posts every query request
 	 *
-	 * @param \WP_Query $query
+	 * @param \WP_Query $query WP query.
 	 */
 	public function limit_posts_per_page( $query ) {
 		if ( is_admin() || ! $query->is_main_query() ) {
@@ -111,8 +120,8 @@ class Blog extends Base {
 	/**
 	 * Set the blog post listing excerpt length
 	 *
-	 * @param int $length The current excerpt length.
-	 * @return number The new excerpt length.
+	 * @param  int $length The current excerpt length.
+	 * @return int
 	 */
 	public function excerpt_length( $length ) {
 		return 20;
@@ -121,13 +130,19 @@ class Blog extends Base {
 	/**
 	 * Set the blog post listing excerpt more
 	 *
-	 * @param int $length The current excerpt more.
-	 * @return number The new excerpt more.
+	 * @param  int $more The current excerpt more.
+	 * @return string
 	 */
 	public function excerpt_more( $more ) {
 		return ' ...';
 	}
 
+	/**
+	 * Nav link class.
+	 *
+	 * @param  string $attr The nav link class.
+	 * @return string
+	 */
 	public function nav_link_class( $attr ) {
 		return $attr . ' class="button"';
 	}
@@ -142,7 +157,7 @@ class Blog extends Base {
 	 * @return array The CSS classes adding current classes if internal blog page.
 	 */
 	public function nav_menu_css_class( $classes, $item, $args, $depth ) {
-		if( ! in_array( $item->object_id, $this->get_pages_id() ) ) {
+		if ( ! in_array( $item->object_id, $this->get_pages_id() ) ) {
 			return $classes;
 		}
 

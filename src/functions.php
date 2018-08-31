@@ -20,7 +20,7 @@ use Aztec\Kernel;
  */
 global $container;
 
-$builder = new \DI\ContainerBuilder();
+$builder   = new \DI\ContainerBuilder();
 $container = $builder->build();
 
 $container->get( Kernel::class )->init();

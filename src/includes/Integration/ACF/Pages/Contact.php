@@ -46,7 +46,8 @@ class Contact extends Base {
 	 * Add page body custom fields
 	 */
 	public function add_body_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'contact',
 			'title' => __( 'Body', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -69,16 +70,18 @@ class Contact extends Base {
 					'name' => 'description',
 					'label' => __( 'Description', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add form page fields
 	 */
 	public function add_form_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'contact_form',
 			'title' => __( 'Form', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -107,8 +110,9 @@ class Contact extends Base {
 					'name' => 'message_not-sent',
 					'label' => __( 'Error Message: Not sent', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }

@@ -44,10 +44,11 @@ class Event extends Base {
 	}
 
 	/**
-	 *
+	 * Add gallery fields.
 	 */
 	public function add_gallery_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'evento_gallery',
 			'title' => __( 'Gallery', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -70,16 +71,18 @@ class Event extends Base {
 					'name' => 'gallery',
 					'label' => __( 'Gallery', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
-	 *
+	 * Add about events fields.
 	 */
 	public function add_about_event_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'event_about',
 			'title' => __( 'About', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -108,16 +111,18 @@ class Event extends Base {
 						'width' => '50%',
 					),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 
 	/**
 	 * Add Hero custom fields.
 	 */
 	public function add_hero_fields() {
-		acf_add_local_field_group( array(
+		acf_add_local_field_group(
+			array(
 			'key' => 'event_hero',
 			'title' => __( 'Hero', 'elemarjr' ),
 			'hide_on_screen' => array( 'the_content' ),
@@ -134,8 +139,9 @@ class Event extends Base {
 					'name' => 'hero_text',
 					'label' => __( 'Text', 'elemarjr' ),
 				),
-			),
-			'location' => $this->location,
-		) );
+			 ),
+			 'location' => $this->location,
+			)
+		);
 	}
 }
