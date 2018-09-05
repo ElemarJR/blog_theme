@@ -1,11 +1,12 @@
 .post-list
     $column-gutter = 50px
     display none
-    margin 0 auto
+    flex-wrap wrap
 
-    @media screen and ( min-width $screen-md )
-        clearfix()
-        margin 0 auto
+    // @media screen and ( min-width $screen-md )
+    //     clearfix()
+    //     margin 0 auto
+
 
     &__empty
         font-size 24px
@@ -13,13 +14,14 @@
         text-align center
 
     &--wrapper
-        margin-left -9px
-        margin-right -9px
-        position relative
+        margin-right -10px
+        // margin-left -9px
+        // margin-right -9px
+        // position relative
 
         @media screen and ( min-width $screen-sm )
-            margin-left -4px
-            margin-right -4px
+            // margin-left -4px
+            // margin-right -4px
 
     &--loading
         margin-bottom $column-gutter
@@ -31,15 +33,3 @@
 
     &--loaded
         display flex
-        flex-wrap wrap
-
-    article
-        padding 9px
-        width 100%
-
-        @media screen and ( min-width $screen-sm )
-            padding 4px
-        @media screen and ( min-width $screen-md )
-            width 50%
-        @media screen and ( min-width $screen-lg )
-            width 33.33333%

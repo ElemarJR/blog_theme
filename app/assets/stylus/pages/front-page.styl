@@ -120,33 +120,45 @@
 
     &--blog
         background $white-two
-        padding 60px 0
+        padding 50px 0
+
+        &-title
+            color $black
+            display inline-block
+            font-weight normal
+            font-size 32px
+            margin 0 0 40px
+            position relative
+            text-align center
+            text-transform uppercase
+            width 100%
+
+            &:after
+                border-bottom 1px solid $dusky-blue
+                bottom -20px
+                content ''
+                left 0
+                position absolute
+                margin-left auto
+                margin-right auto
+                right 0
+                width 40px
 
         &-description
             color $black
             font-weight bold
+            margin 0 0 55px
             text-align center
             text-transform uppercase
-
-        &-title
-            color $black
-            font-weight 100
-            text-align center
-            text-transform uppercase
-
-            h2
-                border-bottom 1px solid $dusky-blue
-                display inline-block
-                font-size 32px
-                margin 0 0 20px
-                padding-bottom 20px
 
         &-list
+            margin-bottom 35px
+            padding-bottom 30px
             position relative
 
             &:after
                 background $dusky-blue
-                bottom -20px
+                bottom 0
                 content ''
                 height 1px
                 left 50%
@@ -154,17 +166,21 @@
                 transform translateX( -50% )
                 width 65px
 
-            &:last-child:after
-                display none
+            &:last-child
+                margin-bottom 0
+                padding-bottom 0
 
-            @media screen and ( min-width $screen-md )
-                margin-bottom 60px
+                &:after
+                    display none
 
             .listing-post:last-child
                 display none
 
-                @media screen and ( min-width $screen-lg )
+                @media screen and ( min-width $screen-md )
                     display block
+
+                @media screen and ( min-width $screen-md )
+                    display none
 
         &-actions
             margin-top 40px

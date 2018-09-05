@@ -33,10 +33,8 @@ get_header(); ?>
 		?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--blog">
-			<div class="container">
-				<div class="front-page--blog-title">
-					<h2><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
-				</div>
+			<div class="container container__xs-small-margin">
+				<h2 class="front-page--blog-title"><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
 
 			<?php
 				$container->set(
