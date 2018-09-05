@@ -3,7 +3,7 @@
  */
 module.exports = {
 	livereload: {
-		files: ['<%= config.template.src %>/**/*', '<%= config.assets.build %>/js/**/*.js'],
+		files: ['<%= config.template.src %>/**/*', '<%= config.assets.build %>/**/*'],
 		options: {
 			livereload: true
 		}
