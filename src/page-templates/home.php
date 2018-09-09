@@ -129,7 +129,7 @@ get_header(); ?>
 								<img src="<?php echo esc_html( wp_get_attachment_image_url( $photo_id ) ); ?>" alt="">
 							</div>
 							<div class="testimonial--content">
-						<?php the_content(); ?>
+								&quot;<?php echo wp_kses_post( get_the_content() ); ?>&quot;
 							</div>
 							<div class="testimonial--footer">
 								<div class="testimonial--company">
