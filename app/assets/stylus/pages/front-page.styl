@@ -187,9 +187,13 @@
             text-align center
 
     &--testimonial
+        max-width 680px
         padding-bottom 60px
         padding-top 60px
         position relative
+
+        @media screen and ( min-width $screen-lg )
+            max-width $screen-lg
 
         .swiper-pagination
             color $brownish-grey
@@ -202,7 +206,12 @@
         .swiper-button-prev
             background url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAABHNCSVQICAgIfAhkiAAAALNJREFUOI3V0rENwjAQheF3uKGMZIuMcEd2QwpiBQq6VGSTFClgCgpkMUJuhUBjpCgotqHjurP+T7rCYOYHM5+ROcY5tyGig7W2VNUuCVT1aq0tiGiXgwwAqGo/QYWq9lEwQ3UMmemSg8z8IaBy6bwPEFD3Rs659TAMlyiYof0ULYIlRDEQhkTkBqAax3G7StXh21QATt77eypuReTJzE3yjm/j5o/jNic+ZscAICI+O/5lXij9b1pEaWA+AAAAAElFTkSuQmCC' )
             height 22px
+            left 0
             width 12px
+
+        .swiper-button-next
+            left auto
+            right 0
 
         .swiper-button-prev
             transform rotate( -180deg )

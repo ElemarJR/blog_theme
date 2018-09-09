@@ -108,10 +108,10 @@ get_header(); ?>
 		$posts = $container->get( Testimonial::class )->get_testimonials();
 		if ( 0 < count( $posts ) ) :
 			?>
-		<div class="front-page--testimonial">
+		<div class="front-page--testimonial container">
 			<div class="page-header">
 				<h5 class="page-header--title page-header--title__small">
-				<?php esc_html_e( 'Testimonials', 'elemarjr' ); ?>
+					<?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_title', true ) ); ?>
 				</h5>
 			</div>
 

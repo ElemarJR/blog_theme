@@ -40,6 +40,7 @@ class HomePage extends Base {
 			add_action( 'acf/include_fields', $this->callback( 'add_purpose_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_quote_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_blog_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_testimonial_fields' ) );
 		}
 	}
 
@@ -189,6 +190,28 @@ class HomePage extends Base {
 				),
 			 ),
 			 'location' => $this->location,
+			)
+		);
+	}
+
+	/**
+	 * Add Testimonial custom fields
+	 */
+	public function add_testimonial_fields() {
+		acf_add_local_field_group(
+			array(
+				'key' => 'testimonial',
+				'title' => __( 'Testimonials', 'elemarjr' ),
+				'hide_on_screen' => array( 'the_content' ),
+				'fields' => array(
+					array(
+						'type' => 'text',
+						'key' => 'testimonial_title',
+						'name' => 'testimonial_title',
+						'label' => __( 'Title', 'elemarjr' ),
+					),
+				),
+				'location' => $this->location,
 			)
 		);
 	}
