@@ -8,6 +8,7 @@
 namespace Aztec\Pages;
 
 use Aztec\Base;
+use Aztec\Helper\Text;
 
 /**
  * Contact features manipulation
@@ -102,5 +103,17 @@ class Contact extends Base {
 		}
 
 		return $show;
+	}
+
+	/**
+	 * Replace title text between asterisk to `strong` tag
+	 *
+	 * @return string The title text with `strong` tag
+	 */
+	public function title() {
+		/** @var Text $text_helper */
+		$text_helper = $this->container->get( Text::class );
+
+		return $text_helper->asterisk_to_strong( get_post_meta( get_the_ID(), 'title', true ) );
 	}
 }

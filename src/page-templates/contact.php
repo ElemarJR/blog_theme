@@ -17,12 +17,17 @@
  * @version 0.1.0
  */
 
-use Aztec\Form\Contact;
+use Aztec\Form\Contact as ContactForm;
+use Aztec\Pages\Contact;
 
 global $container;
 
-$form   = $container->get( Contact::class );
+/** @var ContactForm $form */
+$form   = $container->get( ContactForm::class );
 $values = $form->get_flash();
+
+/** @var Contact $contact */
+$contact = $container->get( Contact::class );
 
 get_header(); ?>
 
@@ -35,7 +40,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="page-header">
 				<h1 class="page-header--title">
-				<?php echo esc_html( get_post_meta( get_the_ID(), 'title', true ) ); ?>
+				<?php echo wp_kses_post( $contact->title() ); ?>
 				</h1>
 			</div>
 
