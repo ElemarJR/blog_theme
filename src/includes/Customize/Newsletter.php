@@ -57,10 +57,15 @@ class Newsletter extends Base {
 				)
 			);
 			$wp_customize->add_control(
-				$title_id, array(
-				'label' => sprintf( __( 'Title - (%s)', 'elemarjr' ), $lang->locale ),
-				'section' => $section_id,
-				'type' => 'text',
+				new Editor(
+					$wp_customize, $title_id, array(
+						'label' => sprintf( __( 'Title - (%s)', 'elemarjr' ), $lang->locale ),
+						'section' => $section_id,
+						'editor_settings' => array(
+							'quicktags' => true,
+							'tinymce'   => true,
+						)
+					)
 				)
 			);
 

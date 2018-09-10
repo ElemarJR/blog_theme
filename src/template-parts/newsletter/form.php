@@ -39,19 +39,16 @@ foreach ( $bg_images as $size => $url ) :
 >
 	<div class="container">
 		<h2 class="newsletter--title">
-			<?php echo esc_html( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
+			<?php echo wp_kses_post( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
 		</h2>
 		<form class="form newsletter--form" method="post" action="https://elemarjr.us17.list-manage.com/subscribe/post?u=0ea74f86198646647c46d29cf&amp;id=cd82e1ff48" target="_blank">
-
 			<div class="newsletter--inputs">
-				<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Type your email', 'elemarjr' ); ?>" required>
-
-				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'First Name', 'elemarjr' ); ?>" required>
-
-				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Last Name', 'elemarjr' ); ?>" required>
+				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'Name', 'elemarjr' ); ?>" required>
+				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Surname', 'elemarjr' ); ?>" required>
+				<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Email', 'elemarjr' ); ?>" required>
 			</div>
 
-			<h4 class="newsletter--divisortitle"><?php esc_html_e( 'Content of Interest', 'elemarjr' ); ?></h4>
+			<h4 class="newsletter--divisortitle"><?php esc_html_e( 'Check the content of your interest', 'elemarjr' ); ?></h4>
 
 			<div class="newsletter--options">
 				<label for="evt-pale">
