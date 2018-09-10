@@ -8,6 +8,7 @@
 namespace Aztec\Pages;
 
 use Aztec\Base;
+use Aztec\Helper\Text;
 
 /**
  * About template manipulation
@@ -101,5 +102,17 @@ class About extends Base {
 		if ( 'left' == $image_position ) {
 			$classes[] = 'about--row__invert';
 		}
+	}
+
+	/**
+	 * Replace title text between asterisk to `strong` tag
+	 *
+	 * @return string The title text with `strong` tag
+	 */
+	public function row_title() {
+		/** @var Text $text_helper */
+		$text_helper = $this->container->get( Text::class );
+
+		return $text_helper->asterisk_to_strong( get_sub_field( 'title' ) );
 	}
 }

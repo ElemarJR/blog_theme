@@ -29,6 +29,12 @@
         &--button
             text-align center
 
+            .button
+                padding 0 10px
+
+                @media screen and ( min-width $screen-md )
+                    padding 0 30px
+
         &--content
             margin-bottom 30px
 
@@ -37,6 +43,7 @@
 
         &--title
             font-size 26px
+            font-weight normal
             margin-top 0
             text-transform uppercase
             width 100%
@@ -130,6 +137,10 @@
             & ^[0..-2]--text
                 @media screen and ( min-width $screen-md )
                     flex 50%
+                    padding-right 50px
+
+                @media screen and ( min-width $screen-md )
+                    padding-right 0
 
             & ^[0..-2]--button
                 flex 100%

@@ -40,7 +40,7 @@ $about = $container->get( About::class ); ?>
 					<div class="about--row--content">
 						<!-- Title -->
 						<h2 class="about--row--title">
-							<?php echo esc_html( get_sub_field( 'title' ) ); ?>
+							<?php echo wp_kses_post( $about->row_title() ); ?>
 						</h2>
 
 						<!-- Content -->
@@ -69,8 +69,8 @@ $about = $container->get( About::class ); ?>
 					if ( $label && $url ) :
 						?>
 						<div class="about--row--button">
-							<a href="<?php esc_html( $url ); ?>" class="button button__bordered button__white">
-								<?php esc_html( $label ); ?>
+							<a href="<?php echo esc_url( $url ); ?>" class="button button__bordered button__white">
+								<?php echo esc_html( $label ); ?>
 							</a>
 						</div>
 					<?php endif; ?>

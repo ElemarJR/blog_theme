@@ -87,9 +87,9 @@ class About extends Base {
 							'name' => 'template',
 							'required' => true,
 							'choices' => array (
-								'default' => 'Default',
-								'customers' => 'Customers',
-								'mvp' => 'MVP',
+								'default' => __( 'Default', 'elemarjr' ),
+								'customers' => __( 'Customers', 'elemarjr' ),
+								'mvp' => __( 'MVP', 'elemarjr' ),
 							),
 							'default_value' => array (
 								0 => 'default',
@@ -100,6 +100,7 @@ class About extends Base {
 							'key' => 'title',
 							'name' => 'title',
 							'label' => __( 'Title', 'elemarjr' ),
+							'instructions' => __( 'Use * to bold', 'elemarjr' )
 						),
 						array(
 							'type' => 'wysiwyg',
