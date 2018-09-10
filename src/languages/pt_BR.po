@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-09-10 02:13:39+00:00\n"
-"PO-Revision-Date: 2018-09-09 23:16-0300\n"
+"POT-Creation-Date: 2018-09-10 02:34:27+00:00\n"
+"PO-Revision-Date: 2018-09-10 13:09-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -50,11 +50,11 @@ msgstr "Pular para o conteúdo"
 msgid "Newletter Form"
 msgstr "Formulário de Newsletter"
 
-#: includes/Customize/Newsletter.php:61
+#: includes/Customize/Newsletter.php:62
 msgid "Title - (%s)"
 msgstr "Título - (%s)"
 
-#: includes/Customize/Newsletter.php:83
+#: includes/Customize/Newsletter.php:88
 #: includes/Integration/ACF/Pages/HomePage.php:160
 msgid "Background"
 msgstr "Fundo"
@@ -80,11 +80,11 @@ msgid "Background Image - (%s)"
 msgstr "Imagem de fundo - (%s)"
 
 #: includes/Form/Contact.php:42 includes/Integration/ACF/PostType/Event.php:62
-#: template-parts/newsletter/form.php:47
+#: template-parts/newsletter/form.php:46
 msgid "Name"
 msgstr "Nome"
 
-#: includes/Form/Contact.php:43 template-parts/newsletter/form.php:49
+#: includes/Form/Contact.php:43 template-parts/newsletter/form.php:48
 msgid "Email"
 msgstr "E-mail"
 
@@ -584,35 +584,35 @@ msgstr "Mais posts da série “%s”:"
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: template-parts/newsletter/form.php:48
+#: template-parts/newsletter/form.php:47
 msgid "Surname"
 msgstr "Sobrenome"
 
-#: template-parts/newsletter/form.php:52
+#: template-parts/newsletter/form.php:51
 msgid "Check the content of your interest"
 msgstr "Marque o conteúdo de seu interesse"
 
-#: template-parts/newsletter/form.php:57
+#: template-parts/newsletter/form.php:56
 msgid "Events in which I will speak"
 msgstr "Eventos em que irei palestrar"
 
-#: template-parts/newsletter/form.php:65
+#: template-parts/newsletter/form.php:64
 msgid "English content"
 msgstr "Conteúdo em inglês"
 
-#: template-parts/newsletter/form.php:73
+#: template-parts/newsletter/form.php:72
 msgid "Portuguese content"
 msgstr "Conteúdo em Português"
 
-#: template-parts/newsletter/form.php:81
+#: template-parts/newsletter/form.php:80
 msgid "Offers and Promotions"
 msgstr "Ofertas e Promoções"
 
-#: template-parts/newsletter/form.php:89
+#: template-parts/newsletter/form.php:88
 msgid "Select at least one interest"
 msgstr "Selecione pelo menos um interesse"
 
-#: template-parts/newsletter/form.php:93
+#: template-parts/newsletter/form.php:92
 msgid "Subscribe"
 msgstr "Inscrever-se"
 
