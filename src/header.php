@@ -92,10 +92,10 @@ $display_hero = $container->get( 'display_hero' );
 			$bg_images = $display_hero ? $container->get( BackgroundImage::class )->get_bg_images() : array();
 			$classes   = $container->get( Template::class )->header_classes( $display_hero );
 		?>
-		<div class="site-header site-header--image" 
+		<div class="site-header site-header--image"
 		<?php
 		foreach ( $bg_images as $size => $url ) :
-			echo esc_html( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
+			echo ' data-bg-' . esc_attr( $size ) . '="' . esc_url( $url ) . '"';
 			endforeach;
 		?>
 		>
@@ -128,8 +128,8 @@ $display_hero = $container->get( 'display_hero' );
 	<div id="content" class="site-content"
 	<?php
 	foreach ( $bg_images as $name => $url ) :
-		echo esc_html( ' data-bg-' . $name . '="' . esc_url( $url ) . '"' );
-			endforeach;
+		echo ' data-bg-' . esc_attr( $name ) . '="' . esc_url( $url ) . '"';
+	endforeach;
 	?>
 		>
 		<?php if ( ! is_front_page() && ( ! is_page_template() || is_page_template( 'page-templates/contact.php' ) ) ) : ?>
