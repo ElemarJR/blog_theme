@@ -42,12 +42,20 @@
 
     ~/__home
         & ^[0]--title
+            @media screen and ( min-width $screen-md )
+                font-size 58px
+                padding 0 130px
+
             strong
                 display block
 
         & ^[0]--description
             margin 25px auto
+            line-height 1.75
             text-transform uppercase
+
+            @media screen and ( min-width $screen-md )
+                font-size 15px
 
     ~/__page
         text-transform uppercase
