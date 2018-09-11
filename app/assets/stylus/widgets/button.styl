@@ -8,10 +8,13 @@ input[type='submit'].button
     display inline-block
     font-weight bold
     line-height $height
-    padding 0 50px
+    padding 0 10px
     text-decoration none
     text-transform uppercase
     transition all $transition-default
+
+    @media screen and ( min-width $screen-md )
+        padding 0 30px
 
     &:hover
         background $black
