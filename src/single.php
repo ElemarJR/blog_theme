@@ -34,18 +34,6 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/blog/single/meta' ); ?>
 			</header>
 
-			<?php
-				$bg_images = $container->get( BackgroundImage::class )->get_bg_images();
-			?>
-			<div class="post--image site-header"
-			<?php
-			foreach ( $bg_images as $size => $url ) :
-				echo esc_html( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
-				endforeach;
-			?>
-			>
-			</div>
-
 			<section class="container">
 				<div class="post--main">
 				<?php get_template_part( 'template-parts/blog/single/social-medias' ); ?>

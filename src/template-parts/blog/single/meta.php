@@ -22,7 +22,7 @@ use Bookworm\Bookworm;
 
 	<div class="post--meta-reading">
 		<span class="post--icon__time"></span>
-		<?php echo esc_html_e( 'Reading time:', 'elemarjr' ); ?>
+		<?php echo esc_html_e( 'reading time:', 'elemarjr' ); ?>
 		<?php echo esc_html( Bookworm::estimate( get_the_content(), ' min' ) ); ?>
 	</div><!-- .post--meta-reading -->
 </div><!-- .post--meta -->

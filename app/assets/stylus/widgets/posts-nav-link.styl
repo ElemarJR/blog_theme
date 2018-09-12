@@ -52,7 +52,6 @@
     .link-next,
     .link-previous
         color $brownish-grey
-        font-size 1.875rem
         position absolute
         text-decoration none
         top 50%
@@ -61,21 +60,22 @@
         i
             vertical-align middle
 
-        span
-            font-weight bold
-
         @media screen and ( min-width $screen-md )
             span
                 display none
 
     .link-previous
-        left -25px
+        @media screen and ( min-width $screen-md )
+            left -25px
 
         @media screen and ( min-width $screen-lg )
             left -45px
 
     .link-next
-        right -25px
+        right 0
+
+        @media screen and ( min-width $screen-md )
+            right -25px
 
         @media screen and ( min-width $screen-lg )
             right -45px
