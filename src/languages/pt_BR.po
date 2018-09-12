@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "POT-Creation-Date: 2018-09-12 18:56:23+00:00\n"
-"PO-Revision-Date: 2018-09-12 15:57-0300\n"
+"PO-Revision-Date: 2018-09-12 15:58-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -561,7 +561,7 @@ msgstr "Página %s"
 
 #: template-parts/blog/category-nav.php:29
 msgid "Show All"
-msgstr "Mostrar tudo"
+msgstr "Ver Todos"
 
 #: template-parts/blog/post-list-empty.php:13
 msgid "Nothing found here."
