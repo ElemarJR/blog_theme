@@ -26,15 +26,17 @@
         margin 0
 
         @media screen and ( min-width $screen-md )
-            font-size 35px
+            font-size 58px
+            padding 0 130px
 
     &--description
         font-size 12px
+        line-height 1.75
         margin 25px auto
         text-transform uppercase
-        width 70%
 
         @media screen and ( min-width $screen-md )
+            font-size 15px
             width 50%
 
     &--button
@@ -42,20 +44,11 @@
 
     ~/__home
         & ^[0]--title
-            @media screen and ( min-width $screen-md )
-                font-size 58px
-                padding 0 130px
-
             strong
                 display block
 
         & ^[0]--description
-            margin 25px auto
-            line-height 1.75
-            text-transform uppercase
-
-            @media screen and ( min-width $screen-md )
-                font-size 15px
+            width 70%
 
     ~/__page
         text-transform uppercase
@@ -78,6 +71,10 @@
                 margin 0 0 33px
 
     ~/__events
+        & ^[0]--container
+            padding-left 40px
+            padding-right 40px
+
         & ^[0]--title
             font-weight bold
 

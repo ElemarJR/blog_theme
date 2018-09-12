@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "POT-Creation-Date: 2018-09-10 02:34:27+00:00\n"
-"PO-Revision-Date: 2018-09-10 13:09-0300\n"
+"PO-Revision-Date: 2018-09-12 10:28-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -519,7 +519,7 @@ msgstr "Enviar"
 
 #: page-templates/events.php:37
 msgid "Calendar"
-msgstr "Calendário"
+msgstr "Agenda"
 
 #: page-templates/events.php:64
 msgid "Photos"
@@ -630,7 +630,7 @@ msgstr "http://aztecweb.net/"
 
 #. Template Name of the plugin/theme
 msgid "Events Calendar"
-msgstr "Calendário de Eventos"
+msgstr "Agenda de Eventos"
 
 #. Template Name of the plugin/theme
 msgid "Home"

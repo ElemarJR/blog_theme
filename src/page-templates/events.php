@@ -61,7 +61,13 @@ get_header(); ?>
 
 	<div class="container gallery">
 		<div class="page-header">
-			<h3 class="page-header--title"><?php echo esc_html( __( 'Photos', 'elemarjr' ) ); ?></b></h3>
+			<h3 class="page-header--title"><?php echo esc_html( get_field( 'gallery_title' ) ); ?></h3>
+		</div>
+
+		<div class="events--about">
+			<div class="events--about-text events--about-text__bold">
+				<?php echo esc_html( get_field( 'gallery_description' ) ); ?>
+			</div>
 		</div>
 
 		<div class="gallery--list">

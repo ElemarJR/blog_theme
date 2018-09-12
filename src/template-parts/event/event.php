@@ -17,10 +17,11 @@ $event_days   = $start->format( 'd' );
 $event_months = date_i18n( 'F', $start->getTimestamp() );
 $diff_in_days = $end->diff( $start )->days;
 
+$current_day = clone $start;
 for ( $i = 1; $i <= $diff_in_days; ++$i ) {
 	$division = $i === $diff_in_days ? ' e ' : ', ';
-	$start->modify( '+1 day' );
-	$event_days .= $division . ( sprintf( '%02d', $start->format( 'd' ) ) );
+	$current_day->modify( '+1 day' );
+	$event_days .= $division . ( sprintf( '%02d', $current_day->format( 'd' ) ) );
 }
 
 $month_end = date_i18n( 'F', $end->getTimestamp() );
@@ -30,9 +31,13 @@ if ( $event_months !== $month_end ) {
 }
 
 // Check if events happened or is happening.
-if ( $now >= $start && $now <= $end ) {
+$now_timestamp   = $now->getTimestamp();
+$start_timestamp = $start->getTimestamp();
+$end_timestamp   = $end->getTimestamp();
+
+if ( $now_timestamp >= $start_timestamp && $now_timestamp <= $end_timestamp ) {
 	$event_class = 'event__active';
-} elseif ( $now > $end ) {
+} elseif ( $now_timestamp > $end_timestamp ) {
 	$event_class = 'event__old';
 }
 ?>
