@@ -1,11 +1,14 @@
 .listing-post
-    flex 1 1 100%
+    margin 0 auto
+    max-width 400px
     position relative
+    width 100%
 
     @media screen and ( min-width $screen-md )
-        flex-basis 50%
+        flex 1 1 50%
+        margin 0
 
-    @media screen and ( min-width $screen-md )
+    @media screen and ( min-width $screen-lg )
         flex-basis 33.33%
 
     &__wrapper
@@ -30,6 +33,7 @@
         transition $transition-default
         width 100%
 
+        .has-touch &,
         ^[0]:hover &
             height 100%
 
@@ -41,6 +45,7 @@
         transition bottom $transition-default
         width 100%
 
+        .has-touch &,
         ^[0]:hover &
             bottom 40px
 
@@ -105,10 +110,15 @@
 
 
     &__footer
+        clearfix()
+        bottom -40px
         color $tiffany
-        height 0
+        left 0
         overflow hidden
+        padding 20px
+        position absolute
         transition all $transition-default
+        width 100%
 
         &__right
             float right
@@ -119,17 +129,13 @@
             font-size 20px
             margin-left 3px
 
-        .has-touch &
-            height auto
-            margin-top 2rem
-            visibility visible
-
+        .has-touch &,
         ^[0]:hover &
-            height 35px
-            margin-top 2rem
+            bottom 0
 
     &--date
-        display inline-block
+        display block
+        float left
         letter-spacing 1.6px
 
     &--reading
