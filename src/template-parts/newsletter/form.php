@@ -33,7 +33,7 @@ $lang = PLL()->curlang;
 <div class="newsletter"
 <?php
 foreach ( $bg_images as $size => $url ) :
-	echo esc_html( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
+	echo ' data-bg-' . esc_html( $size ) . '="' . esc_url( $url ) . '"';
 	endforeach;
 ?>
 >
