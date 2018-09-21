@@ -52,7 +52,7 @@ $query = new WP_Query( $query_args );
 		?>
 	<div class="front-page--blog-actions wow fadeIn">
 		<a class="button button__transparent" href="<?php echo esc_url( $see_more_url ); ?>">
-		<?php echo esc_html_e( 'See more', 'elemarjr' ); ?> <i class="button--icon i-arrow-right"></i>
+		<?php echo esc_html_e( 'See more', 'elemarjr' ); ?></i>
 		</a>
 	</div>
 	<?php endif; ?>
