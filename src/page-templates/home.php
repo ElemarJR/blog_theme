@@ -34,7 +34,7 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--blog">
 			<div class="container container__xs-small-margin">
-				<h2 class="front-page--blog-title"><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
+				<h2 class="front-page--blog-title wow fadeIn"><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
 
 			<?php
 				$container->set(
@@ -58,14 +58,14 @@ get_header(); ?>
 		</div>
 
 		<div class="front-page--purpose container">
-			<div class="front-page--purpose-image">
+			<div class="front-page--purpose-image wow fadeIn">
 				<img src="<?php echo esc_url( get_field( 'purpose_image' )['url'] ); ?>" alt="Meu trabalho">
 			</div>
 			<div class="front-page--purpose-content">
-				<div class="front-page--purpose-title">
+				<div class="front-page--purpose-title wow fadeIn">
 				<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_title', true ) ); ?>
 				</div>
-				<div class="purpose wow fadeInUpBig">
+				<div class="purpose wow fadeIn">
 				<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_1', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
@@ -77,7 +77,7 @@ get_header(); ?>
 					<?php echo wp_kses_post( get_post_meta( get_the_ID(), 'purpose_text_1', true ) ); ?>
 					</div>
 				</div>
-				<div class="purpose wow fadeInUpBig">
+				<div class="purpose wow fadeIn">
 				<?php $icon_class = get_post_meta( get_the_ID(), 'purpose_icon_2', true ); ?>
 					<div class="purpose--icon">
 						<i class="<?php echo esc_attr( $icon_class ); ?>"></i>
@@ -94,7 +94,7 @@ get_header(); ?>
 
 		<div class="front-page--quote" style="background-image: url(<?php echo esc_url( get_field( 'quote_image' )['url'] ); ?>);">
 			<div class="container">
-				<div class="wow fadeInUpBig">
+				<div class="wow fadeIn">
 					<div class="front-page--quote-content">
 						<span class="front-page--quote-icon"><i class="i-quote"></i></span>
 						<div><?php echo wp_kses_post( get_post_meta( get_the_ID(), 'quote', true ) ); ?></div>
@@ -108,7 +108,7 @@ get_header(); ?>
 		$posts = $container->get( Testimonial::class )->get_testimonials();
 		if ( 0 < count( $posts ) ) :
 			?>
-		<div class="front-page--testimonial container">
+		<div class="front-page--testimonial container wow fadeIn">
 			<div class="page-header">
 				<h5 class="page-header--title page-header--title__small">
 					<?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_title', true ) ); ?>

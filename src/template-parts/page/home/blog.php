@@ -35,18 +35,22 @@ $query = new WP_Query( $query_args );
 ?>
 
 <div class="front-page--blog-list <?php echo esc_attr( isset( $language ) ? $language : 'pt' ); ?>">
-	<p class="front-page--blog-description">
+	<p class="front-page--blog-description wow fadeIn">
 		<?php echo wp_kses_post( $args['description'] ); ?>
 	</p>
 
-	<?php
-		$container->set( 'post_list.query', $query );
-		$container->set( 'post_list.extra_class', 'front-page--blog--list' );
-		get_template_part( 'template-parts/blog/post-list' );
+	<div class="wow fadeIn">
+		<?php
+			$container->set( 'post_list.query', $query );
+			$container->set( 'post_list.extra_class', 'front-page--blog--list' );
+			get_template_part( 'template-parts/blog/post-list' );
+		?>
+	</div>
 
+	<?php
 	if ( false !== $see_more_url ) :
 		?>
-	<div class="front-page--blog-actions">
+	<div class="front-page--blog-actions wow fadeIn">
 		<a class="button button__transparent" href="<?php echo esc_url( $see_more_url ); ?>">
 		<?php echo esc_html_e( 'See more', 'elemarjr' ); ?> <i class="button--icon i-arrow-right"></i>
 		</a>
