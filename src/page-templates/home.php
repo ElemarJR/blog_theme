@@ -136,8 +136,8 @@ get_header(); ?>
 									<img src="<?php echo esc_html( wp_get_attachment_image_url( $logo_id, 'testimonial-logo' ) ); ?>" alt="">
 								</div>
 								<div class="testimonial--author">
-									<p><?php the_title(); ?></p>
 									<p><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_position', true ) ); ?></p>
+									<p><?php the_title(); ?></p>
 								</div>
 							</div>
 						</div>
