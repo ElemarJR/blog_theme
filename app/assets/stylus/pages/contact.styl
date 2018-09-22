@@ -1,23 +1,18 @@
 .contact
     color $black
     padding-bottom 70px
-    padding-top 50px
     text-align center
 
     &--subtitle
         color $black
         font-weight bold
-        margin-bottom 10px
-        margin-left auto
-        margin-right auto
+        margin 0 auto 10px
         max-width 485px
         text-transform uppercase
 
     &--description
-        margin-bottom 60px
-        margin-left auto
-        margin-right auto
-        max-width 485px
+        margin 0 auto 60px
+        max-width 900px
 
     .form
         input,
@@ -29,6 +24,9 @@
                 text-transform lowercase
 
     &--form
+        margin 0 auto
+        max-width 900px
+
         @media screen and ( min-width $screen-md )
             display flex
             flex-wrap wrap
@@ -43,6 +41,10 @@
 
             label:nth-child( 2 )
                 width 50%
+
+            input[type="text"],
+            textarea
+                color $black
 
             .form--submit-wrapper
                 text-align center
