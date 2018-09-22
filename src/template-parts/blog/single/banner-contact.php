@@ -33,7 +33,7 @@ $bg_images = $spb->get_background_images( $lang );
 <div class="banner-contact"
 <?php
 foreach ( $bg_images as $size => $url ) :
-	echo esc_attr( ' data-bg-' . $size . '="' . esc_url( $url ) . '"' );
+	echo ' data-bg-' . esc_attr( $size ) . '="' . esc_url( $url ) . '"';
 endforeach;
 ?>
 		>
