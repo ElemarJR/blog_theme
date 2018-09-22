@@ -1,15 +1,37 @@
 .events
-    &--wrapper
+    .site-content
         background $white-two
+
+    &--wrapper
         padding 60px 0 80px
+        text-align center
 
     &--list
         display flex
         flex-wrap wrap
-        margin 0 -5px
+        justify-content center
+        margin-bottom 50px
+        text-align left
+
+        @media screen and ( min-width $screen-md )
+            justify-content flex-start
+
+        &:after
+            content ''
+            flex auto
+
+        &--wrapper
+            display inline-block
+
+            @media screen and ( min-width $screen-md )
+                margin-right -10px
+
+            @media screen and ( min-width $screen-lg )
+                display block
 
     &--about
         color $black
+        font-weight bold
         margin-top 50px
         text-align center
 

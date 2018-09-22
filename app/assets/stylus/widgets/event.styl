@@ -1,51 +1,69 @@
 .event
-    color $black
-    font-weight bold
+    $box-padding = 25px
+    height 280px
     margin-bottom 10px
-    padding 0 5px
-    text-transform uppercase
+    max-width 400px
     width 100%
 
     @media screen and ( min-width $screen-md )
-        width 50%
+        flex 1 1 48%
+        margin 0 10px 10px 0
+        max-width: calc( 50% - 10px );
 
     @media screen and ( min-width $screen-lg )
-        width 33.333333%
+        flex 1 1 32%
+        max-width: calc( 33.33% - 10px );
 
     &--wrapper
-        background $white
-        padding 25px
+        height 100%
 
-    &--header
-        align-items center
-        display flex
-        justify-content space-between
-        min-height 58px
+    &--container
+        text-transform uppercase
+        background $white
+        color $black
+        height 100%
+        font-weight bold
+        padding $box-padding
+        position relative
+
+    &--date
+        left $box-padding
+        max-width 45%
+        position absolute
+        top $box-padding
 
     &--image
+        height 100px
+        max-width 50%
+        position absolute
+        right $box-padding
+        top $box-padding
+
         img
-            height 100%
-            max-height 54px
-            width auto
+            max-height 100%
+            max-width 100%
 
     &--date
         font-size 20px
 
     &--content
-        margin 10px 0 40px
-
+        left $box-padding
+        position absolute
+        top 120px
 
     &--title
         font-size 16px
         margin 0
-        min-height 44px
 
     &--role
         color $dusky-blue
         font-size 12px
 
     &--footer
+        bottom $box-padding
         font-weight 100
+        left $box-padding
+        position absolute
         text-transform none
 
     &__active
