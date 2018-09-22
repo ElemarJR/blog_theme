@@ -200,7 +200,7 @@ class HomePage extends Base {
 	public function add_testimonial_fields() {
 		acf_add_local_field_group(
 			array(
-				'key' => 'testimonial',
+				'key' => 'testimonial_section',
 				'title' => __( 'Testimonials', 'elemarjr' ),
 				'hide_on_screen' => array( 'the_content' ),
 				'fields' => array(
