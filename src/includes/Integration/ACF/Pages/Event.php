@@ -38,43 +38,8 @@ class Event extends Base {
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
 			add_action( 'acf/include_fields', $this->callback( 'add_hero_fields' ) );
-			add_action( 'acf/include_fields', $this->callback( 'add_gallery_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_about_event_fields' ) );
 		}
-	}
-
-	/**
-	 * Add gallery fields.
-	 */
-	public function add_gallery_fields() {
-		acf_add_local_field_group(
-			array(
-			'key' => 'evento_gallery',
-			'title' => __( 'Gallery', 'elemarjr' ),
-			'hide_on_screen' => array( 'the_content' ),
-			'fields' => array(
-				array(
-					'type' => 'text',
-					'key' => 'gallery_title',
-					'name' => 'gallery_title',
-					'label' => __( 'Title', 'elemarjr' ),
-				),
-				array(
-					'type' => 'text',
-					'key' => 'gallery_description',
-					'name' => 'gallery_description',
-					'label' => __( 'Description', 'elemarjr' ),
-				),
-				array(
-					'type' => 'gallery',
-					'key' => 'gallery',
-					'name' => 'gallery',
-					'label' => __( 'Gallery', 'elemarjr' ),
-				),
-			 ),
-			 'location' => $this->location,
-			)
-		);
 	}
 
 	/**
