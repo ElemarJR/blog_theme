@@ -83,7 +83,7 @@ class About extends Base {
 		$align = get_sub_field( 'image_align' );
 
 		if ( $align !== 'none' ) {
-			$classes[] = 'about--row__image_' . $align;
+			$classes[] = 'about--row__image-' . $align;
 		}
 	}
 

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-09-12 18:56:23+00:00\n"
+"POT-Creation-Date: 2018-09-22 16:27:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -148,7 +148,7 @@ msgid "Use * to bold"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:109
-#: includes/Integration/ACF/Pages/About.php:227
+#: includes/Integration/ACF/Pages/About.php:229
 #: includes/Integration/ACF/Pages/Event.php:94
 #: includes/Integration/ACF/Pages/Event.php:140
 #: includes/Integration/ACF/Pages/HomePage.php:67
@@ -187,47 +187,55 @@ msgid "Overlap top"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:136
-msgid "Overlap down"
+msgid "Stick on top"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:143
-msgid "Color Scheme"
+#: includes/Integration/ACF/Pages/About.php:137
+msgid "Stick on bottom"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:138
+msgid "Overlap bottom"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:145
-msgid "Background White and Title Black"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:146
-msgid "Background Gray and Title Black"
+msgid "Color Scheme"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:147
-msgid "Background Black and Title White"
+msgid "Background White and Title Black"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:148
+msgid "Background Gray and Title Black"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:149
+msgid "Background Black and Title White"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:150
 msgid "Background Dusky and Title White"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:154
+#: includes/Integration/ACF/Pages/About.php:156
 msgid "Items"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:166
+#: includes/Integration/ACF/Pages/About.php:168
 msgid "Item"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:174
+#: includes/Integration/ACF/Pages/About.php:176
 msgid "Button label"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:190
+#: includes/Integration/ACF/Pages/About.php:192
 #: includes/Integration/ACF/Pages/HomePage.php:79
 msgid "Button URL"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:220
+#: includes/Integration/ACF/Pages/About.php:222
 #: includes/Integration/ACF/Pages/Event.php:127
 #: includes/Integration/ACF/Pages/HomePage.php:54
 #: includes/Integration/ACF/Pages/Page.php:51
@@ -539,7 +547,7 @@ msgstr ""
 msgid "Calendar"
 msgstr ""
 
-#: page-templates/events.php:91 template-parts/page/home/blog.php:51
+#: page-templates/events.php:91 template-parts/page/home/blog.php:55
 msgid "See more"
 msgstr ""
 

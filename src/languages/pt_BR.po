@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-09-12 18:56:23+00:00\n"
-"PO-Revision-Date: 2018-09-12 15:58-0300\n"
+"POT-Creation-Date: 2018-09-22 16:27:05+00:00\n"
+"PO-Revision-Date: 2018-09-22 13:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -149,7 +149,7 @@ msgid "Use * to bold"
 msgstr "Use * para negrito"
 
 #: includes/Integration/ACF/Pages/About.php:109
-#: includes/Integration/ACF/Pages/About.php:227
+#: includes/Integration/ACF/Pages/About.php:229
 #: includes/Integration/ACF/Pages/Event.php:94
 #: includes/Integration/ACF/Pages/Event.php:140
 #: includes/Integration/ACF/Pages/HomePage.php:67
@@ -188,47 +188,55 @@ msgid "Overlap top"
 msgstr "Sobreposição para cima"
 
 #: includes/Integration/ACF/Pages/About.php:136
-msgid "Overlap down"
-msgstr "Sobreposição para baixo"
+msgid "Stick on top"
+msgstr "Grudar acima"
 
-#: includes/Integration/ACF/Pages/About.php:143
+#: includes/Integration/ACF/Pages/About.php:137
+msgid "Stick on bottom"
+msgstr "Grudar abaixo"
+
+#: includes/Integration/ACF/Pages/About.php:138
+msgid "Overlap bottom"
+msgstr "Sobreposição para cima"
+
+#: includes/Integration/ACF/Pages/About.php:145
 msgid "Color Scheme"
 msgstr "Esquema de cores"
 
-#: includes/Integration/ACF/Pages/About.php:145
+#: includes/Integration/ACF/Pages/About.php:147
 msgid "Background White and Title Black"
 msgstr "Fundo Branco e Título Preto"
 
-#: includes/Integration/ACF/Pages/About.php:146
+#: includes/Integration/ACF/Pages/About.php:148
 msgid "Background Gray and Title Black"
 msgstr "Fundo Cinza e Título Preto"
 
-#: includes/Integration/ACF/Pages/About.php:147
+#: includes/Integration/ACF/Pages/About.php:149
 msgid "Background Black and Title White"
 msgstr "Fundo Preto e Título Branco"
 
-#: includes/Integration/ACF/Pages/About.php:148
+#: includes/Integration/ACF/Pages/About.php:150
 msgid "Background Dusky and Title White"
 msgstr "Fundo Escuro e Título Branco"
 
-#: includes/Integration/ACF/Pages/About.php:154
+#: includes/Integration/ACF/Pages/About.php:156
 msgid "Items"
 msgstr "Itens"
 
-#: includes/Integration/ACF/Pages/About.php:166
+#: includes/Integration/ACF/Pages/About.php:168
 msgid "Item"
 msgstr "Item"
 
-#: includes/Integration/ACF/Pages/About.php:174
+#: includes/Integration/ACF/Pages/About.php:176
 msgid "Button label"
 msgstr "Rótulo do botão"
 
-#: includes/Integration/ACF/Pages/About.php:190
+#: includes/Integration/ACF/Pages/About.php:192
 #: includes/Integration/ACF/Pages/HomePage.php:79
 msgid "Button URL"
 msgstr "URL do botão"
 
-#: includes/Integration/ACF/Pages/About.php:220
+#: includes/Integration/ACF/Pages/About.php:222
 #: includes/Integration/ACF/Pages/Event.php:127
 #: includes/Integration/ACF/Pages/HomePage.php:54
 #: includes/Integration/ACF/Pages/Page.php:51
@@ -538,7 +546,7 @@ msgstr "Enviar"
 msgid "Calendar"
 msgstr "Agenda"
 
-#: page-templates/events.php:91 template-parts/page/home/blog.php:51
+#: page-templates/events.php:91 template-parts/page/home/blog.php:55
 msgid "See more"
 msgstr "Veja mais"
 
@@ -648,6 +656,9 @@ msgstr "Agenda de Eventos"
 #. Template Name of the plugin/theme
 msgid "Home"
 msgstr "Página Inicial"
+
+#~ msgid "Overlap down"
+#~ msgstr "Sobreposição para baixo"
 
 #~ msgid "Photos"
 #~ msgstr "Fotos"

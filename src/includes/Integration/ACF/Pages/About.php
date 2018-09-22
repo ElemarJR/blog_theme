@@ -133,7 +133,9 @@ class About extends Base {
 							'choices' => array(
 								'none' => __( 'None', 'elemarjr' ),
 								'top' => __( 'Overlap top', 'elemarjr' ),
-								'down' => __( 'Overlap down', 'elemarjr' ),
+								'stick-top' => __( 'Stick on top', 'elemarjr' ),
+								'stick-bottom' => __( 'Stick on bottom', 'elemarjr' ),
+								'bottom' => __( 'Overlap bottom', 'elemarjr' ),
 							),
 						),
 						array(
