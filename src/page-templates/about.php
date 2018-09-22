@@ -45,7 +45,7 @@ $about = $container->get( About::class ); ?>
 
 						<!-- Content -->
 						<div class="about--row--text">
-							<p><?php echo wp_kses_post( get_sub_field( 'text' ) ); ?></p>
+							<?php echo wp_kses_post( get_sub_field( 'text' ) ); ?>
 						</div>
 
 						<!-- List -->
