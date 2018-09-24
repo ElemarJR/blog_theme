@@ -99,6 +99,7 @@ $display_hero = $container->get( 'display_hero' );
 			endforeach;
 		?>
 		>
+			<div class="site-header--overlay"></div>
 		</div>
 		<div class="hero--wrapper">
 			<?php $hero_template = $container->get( Template::class )->get_hero_template(); ?>
