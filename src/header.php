@@ -108,7 +108,6 @@ $display_hero = $container->get( 'display_hero' );
 					<div class="hero--container">
 						<?php get_template_part( 'template-parts/hero/hero', $hero_template ); ?>
 					</div>
-					<button class="hero--scroll-button mouse"></button>
 				</div>
 			</div>
 		</div>
