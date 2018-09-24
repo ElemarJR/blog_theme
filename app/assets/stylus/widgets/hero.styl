@@ -1,13 +1,20 @@
 // Hero Content
 .hero
     &--wrapper
-        align-items center
+        align-items flex-end
         display flex
         height 100%
+        padding-bottom 50px
         position fixed
         text-align center
         width 100%
         z-index 90
+
+        @media screen and ( min-width $screen-md )
+            padding-bottom 120px
+
+        @media screen and ( min-width $screen-lg )
+            padding-bottom 70px
 
     &--container
         color $white
