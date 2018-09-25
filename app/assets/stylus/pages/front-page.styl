@@ -74,11 +74,7 @@
             font-size 14px
             font-weight bold
             margin-top 15px
-
-            @media screen and ( min-width $screen-md )
-                border-top none
-                display block
-                margin-top 45px
+            padding-top 15px
 
         &-icon
             display block
@@ -93,6 +89,7 @@
             margin 0 auto
             max-width 80%
             position relative
+            z-index 0
 
             &::before
                 background-image url( '../images/quote.png' )
@@ -104,6 +101,7 @@
                 position absolute
                 top 5%
                 width 154px
+                z-index -1
 
                 @media screen and ( min-width $screen-md )
                     height 167px
