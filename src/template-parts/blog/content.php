@@ -13,6 +13,7 @@
 	<div class="listing-post__wrapper">
 		<div class="listing-post__container">
 			<div class="listing-post__bg" style="background-image: url('<?php the_post_thumbnail_url( 'post-listing' ); ?>')"></div>
+			<div class="listing-post__bg__overlay"></div>
 			<div class="listing-post__overlay">
 				<header class="listing-post__header">
 					<?php
