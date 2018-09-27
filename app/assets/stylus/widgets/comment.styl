@@ -45,13 +45,13 @@
 
     &--text
         color $brownish-grey
-        line-height 20px
+        max-width 'calc( 100vw - %s )' % ( $container-padding * 2 )
 
         @media screen and ( min-width $screen-md )
             font-size 15px
             margin-right 30px
             padding-left 70px
-            width calc( 100% - 30px )
+            width calc( 100% - 120px )
 
     &--content
         @media screen and ( min-width $screen-md )
