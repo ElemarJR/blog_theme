@@ -33,6 +33,17 @@ class About extends Base {
 	);
 
 	/**
+	 * Default template logic condition.
+	 *
+	 * @var array
+	 */
+	protected $default = array(
+		'field' => 'template',
+		'operator' => '==',
+		'value' => 'default',
+	);
+
+	/**
 	 * MVP template logic condition.
 	 *
 	 * @var array
@@ -136,6 +147,11 @@ class About extends Base {
 								'stick-top' => __( 'Stick on top', 'elemarjr' ),
 								'stick-bottom' => __( 'Stick on bottom', 'elemarjr' ),
 								'bottom' => __( 'Overlap bottom', 'elemarjr' ),
+							),
+							'conditional_logic' => array (
+								array (
+									$this->default,
+								),
 							),
 						),
 						array(

@@ -76,11 +76,17 @@ class About extends Base {
 	/**
 	 * Add image align classes.
 	 *
+	 * For MVP template the align will be always bottom
+	 *
 	 * @param  array $classes Classes array.
 	 * @return void
 	 */
 	public function add_image_align_class( &$classes ) {
 		$align = get_sub_field( 'image_align' );
+
+		if ( 'mvp' === get_sub_field( 'template' ) ) {
+			$align = 'bottom';
+		}
 
 		if ( $align !== 'none' ) {
 			$classes[] = 'about--row__image-' . $align;
