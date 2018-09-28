@@ -23,7 +23,7 @@ get_header(); ?>
 			the_post();
 			?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="post--content">
+			<div class="rich-content">
 				<?php the_content(); ?>
 			</div>
 		</article>

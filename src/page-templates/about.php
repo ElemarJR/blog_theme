@@ -30,7 +30,7 @@ $about = $container->get( About::class ); ?>
 	while ( have_posts() ) :
 		the_post();
 		?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'rich-content' ); ?>>
 		<?php
 		while ( have_rows( 'about_repeater' ) ) :
 			the_row();
