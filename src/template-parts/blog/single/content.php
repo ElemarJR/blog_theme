@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="post--content">
+<div class="post--content rich-content">
 	<?php
 		the_content();
 
