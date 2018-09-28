@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "POT-Creation-Date: 2018-09-22 20:17:31+00:00\n"
-"PO-Revision-Date: 2018-09-22 17:18-0300\n"
+"PO-Revision-Date: 2018-09-27 22:51-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -196,7 +196,7 @@ msgstr "Grudar abaixo"
 
 #: includes/Integration/ACF/Pages/About.php:138
 msgid "Overlap bottom"
-msgstr "Sobreposição para cima"
+msgstr "Sobreposição para baixo"
 
 #: includes/Integration/ACF/Pages/About.php:145
 msgid "Color Scheme"
