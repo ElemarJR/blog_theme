@@ -22,12 +22,15 @@
 
         &--wrapper
             display inline-block
+            max-width 400px
 
             @media screen and ( min-width $screen-md )
                 margin-right -10px
+                max-width 800px
 
             @media screen and ( min-width $screen-lg )
                 display block
+                max-width 100%
 
     &--about
         color $black
