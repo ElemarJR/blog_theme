@@ -20,7 +20,7 @@ if ( 'div' === $args['style'] ) {
 	$add_below = 'comment';
 } else {
 	$tag       = 'li';
-	$add_below = 'div-comment';
+	$add_below = 'comment';
 }
 ?>
 
