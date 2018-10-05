@@ -4,6 +4,9 @@
     margin-top 32px
     position relative
 
+    a
+        text-decoration none
+
     &--next,
     &--previous
         align-items flex-start
@@ -34,13 +37,17 @@
         position relative
 
     &--cursor
-        color $brownish-grey
         margin 0 0 8px
 
+        a
+            color $brownish-grey
+
     &--title
-        color $black
         margin 0 0 8px
         text-transform uppercase
+
+        a
+            color $black
 
     &--next
         justify-content flex-end

@@ -22,15 +22,24 @@ if ( $previous_post ) {
 	?>
 	<div class="posts-nav-link--previous">
 		<div class="posts-nav-link--thumb">
-			<a class="link-previous" href="<?php echo esc_url( $post_link ); ?>" title="">
+			<a class="link-previous" href="<?php echo esc_url( $post_link ); ?>">
 				<i class="i-arrow-left"></i>
 				<span><?php esc_html_e( 'Previous', 'elemarjr' ); ?></span>
 			</a>
-			<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
+			<a href="<?php echo esc_url( $post_link ); ?>">
+				<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $title ); ?>">
+			</a>
 		</div>
 		<div class="posts-nav-link--info">
-			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Previous', 'elemarjr' ); ?></p>
-			<p class="posts-nav-link--title"><?php echo esc_html( $title ); ?></p>
+			<p class="posts-nav-link--cursor">
+				<a href="<?php echo esc_url( $post_link ); ?>">
+					<?php esc_html_e( 'Previous', 'elemarjr' ); ?></p>
+				</a>
+			<p class="posts-nav-link--title">
+				<a href="<?php echo esc_url( $post_link ); ?>">
+					<?php echo esc_html( $title ); ?>
+				</a>
+			</p>
 		</div>
 	</div>
 
@@ -48,11 +57,21 @@ if ( $next_post ) {
 
 	<div class="posts-nav-link--next">
 		<div class="posts-nav-link--info">
-			<p class="posts-nav-link--cursor"><?php esc_html_e( 'Next', 'elemarjr' ); ?></p>
-			<p class="posts-nav-link--title"><?php echo esc_html( $title ); ?></p>
+			<p class="posts-nav-link--cursor">
+				<a href="<?php echo esc_url( $post_link ); ?>">
+					<?php esc_html_e( 'Next', 'elemarjr' ); ?>
+				</a>
+			</p>
+			<p class="posts-nav-link--title">
+				<a href="<?php echo esc_url( $post_link ); ?>">
+					<?php echo esc_html( $title ); ?>
+				</a>
+			</p>
 		</div>
 		<div class="posts-nav-link--thumb">
-			<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="">
+			<a href="<?php echo esc_url( $post_link ); ?>">
+				<img class="posts-nav-link--img" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $title ); ?>">
+			</a>
 			<a class="link-next" href="<?php echo esc_html( $post_link ); ?>" title="">
 				<span><?php esc_html_e( 'Next', 'elemarjr' ); ?></span>
 				<i class="i-arrow-right"></i>
