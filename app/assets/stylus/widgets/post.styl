@@ -8,8 +8,11 @@
     &--content
         color $black
         font-size 18px
-        margin 0 auto 40px
-        max-width 100%
+        width 100%
+
+        @media screen and ( min-width $screen-lg )
+            margin 0 auto 40px
+            width calc( 100% - 108px )
 
         h2
             font-size 30px
