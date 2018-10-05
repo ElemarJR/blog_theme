@@ -112,10 +112,10 @@
 
                 @media screen and ( min-width $screen-lg )
                     left 0
-                    padding 50px
                     position absolute
-                    top 0
-                    width auto
+                    top 50%
+                    transform translateY( -50% )
+                    width 55%
 
             & ^[0..-2]--text
                 @media screen and ( min-width $screen-md )
@@ -190,16 +190,20 @@
 
         &__image-bottom
             & ^[0..-2]--container
-                @media screen and ( min-width $screen-md )
-                    padding-bottom 0
+                padding-bottom 0
 
             & ^[0..-2]--image
+                margin-top -60px
+                transform translateY( 60px )
+
                 @media screen and ( min-width $screen-md )
                     align-self flex-end
-                    margin-bottom -50px
+                    margin-bottom -75px
+                    margin-top 0
+                    transform none
 
                 @media screen and ( min-width $screen-lg )
-                    margin-bottom -100px
+                    margin-bottom -150px
 
             & + ^[0..-2]
                 & ^[0..-3]--content
