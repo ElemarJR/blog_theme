@@ -6,10 +6,10 @@
     z-index 98
 
     /.no-hero &
-        padding-top $sm-nav-height
+        padding-top "calc(80px + %s)" % $sm-nav-height
 
         @media screen and ( min-width $nav-breakpoint )
-            padding-top $sm-nav-height-breakpoint
+            padding-top "calc(80px + %s)" % $sm-nav-height-breakpoint
 
     /.has-breadcrumb &
         padding-top 0
