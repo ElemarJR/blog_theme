@@ -17,6 +17,33 @@
         h2
             font-size 30px
 
+        blockquote
+            color $gray
+            font-size 16px
+            line-height 32px
+            margin 25px 0
+            min-height 60px
+            padding 0 60px
+            position relative
+
+            &::after,
+            &::before
+                color $tiffany
+                font-size 100px
+                font-weight bold
+                line-height 1
+                position absolute
+
+            &::after
+                bottom -70px
+                content '”'
+                right 0
+
+            &::before
+                content '“'
+                left 0
+                top -20px
+
     &--title
         font-size 32px
         line-height 1.2
