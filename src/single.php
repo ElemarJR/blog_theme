@@ -51,6 +51,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/blog/single/banner-contact' ); ?>
 
+			<?php get_template_part( 'template-parts/blog/single/promotion' ); ?>
+
 			<?php comments_template(); ?>
 			</section>
 		</article>

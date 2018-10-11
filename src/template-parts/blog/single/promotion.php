@@ -8,7 +8,7 @@
  * @version 0.1.0
  */
 
-use Aztec\Customize\Banner\SinglePost\Contact;
+use Aztec\Customize\Banner\SinglePost\Promotion;
 
 global $container;
 
@@ -17,7 +17,7 @@ global $container;
  *
  * @var ContactBanner $spb
  */
-$spb = $container->get( Contact::class );
+$spb = $container->get( Promotion::class );
 
 $lang = PLL()->curlang;
 
@@ -32,7 +32,7 @@ $button_label = get_theme_mod( $spb->get_theme_mod_control_id( $lang, 'label' ) 
 
 if ( $text  ) :
 ?>
-<div class="banner-contact"
+<div class="banner-contact <?php echo esc_attr( sanitize_title( $spb->slug ) ); ?>"
 <?php
 foreach ( $bg_images as $size => $url ) :
 	echo ' data-bg-' . esc_attr( $size ) . '="' . esc_url( $url ) . '"';
