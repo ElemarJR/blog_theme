@@ -37,7 +37,7 @@ abstract class Banner extends Base {
 		$section_id = $this->get_theme_mod_section_id();
 		$wp_customize->add_section(
 			$section_id, array(
-				'title' => __( $this->section_name, 'elemarjr' ),
+				'title' => __( $this->get_section_name(), 'elemarjr' ),
 				'priority' => 190,
 			)
 		);

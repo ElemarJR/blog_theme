@@ -17,9 +17,11 @@ class Contact extends Banner {
 	public $slug = 'single_post_banner';
 
 	/**
-	 * Section name.
+	 * Get sectiona name.
 	 *
-	 * @var string
+	 * @return string
 	 */
-	protected $section_name = 'Single post contact banner';
+	public function get_section_name() {
+		return __( 'Single post contact banner', 'elemarjr' );
+	}
 }

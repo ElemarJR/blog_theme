@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elemar Jr Blog Theme 0.2.0\n"
+"Project-Id-Version: Elemar Jr Blog Theme 0.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2018-09-22 20:17:31+00:00\n"
+"POT-Creation-Date: 2018-10-11 21:10:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,6 +44,34 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: includes/Customize/Banner/Banner.php:55
+msgid "Text - (%s)"
+msgstr ""
+
+#: includes/Customize/Banner/Banner.php:73
+msgid "Label - (%s)"
+msgstr ""
+
+#: includes/Customize/Banner/Banner.php:87
+msgid "URL - (%s)"
+msgstr ""
+
+#: includes/Customize/Banner/Banner.php:104
+msgid "Background Image - (%s)"
+msgstr ""
+
+#: includes/Customize/Banner/Footer/Promotion.php:25
+msgid "Footer promotion banner"
+msgstr ""
+
+#: includes/Customize/Banner/SinglePost/Contact.php:25
+msgid "Single post contact banner"
+msgstr ""
+
+#: includes/Customize/Banner/SinglePost/Promotion.php:25
+msgid "Single post promotion banner"
+msgstr ""
+
 #: includes/Customize/Newsletter.php:47
 msgid "Newletter Form"
 msgstr ""
@@ -55,26 +83,6 @@ msgstr ""
 #: includes/Customize/Newsletter.php:88
 #: includes/Integration/ACF/Pages/HomePage.php:160
 msgid "Background"
-msgstr ""
-
-#: includes/Customize/SinglePostBanner.php:47
-msgid "Single Post Banner"
-msgstr ""
-
-#: includes/Customize/SinglePostBanner.php:62
-msgid "Text - (%s)"
-msgstr ""
-
-#: includes/Customize/SinglePostBanner.php:80
-msgid "Label - (%s)"
-msgstr ""
-
-#: includes/Customize/SinglePostBanner.php:94
-msgid "URL - (%s)"
-msgstr ""
-
-#: includes/Customize/SinglePostBanner.php:111
-msgid "Background Image - (%s)"
 msgstr ""
 
 #: includes/Form/Contact.php:42 includes/Integration/ACF/PostType/Event.php:62
@@ -90,7 +98,7 @@ msgstr ""
 msgid "Your Message"
 msgstr ""
 
-#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: includes/Form/Contact.php:65
 msgid "Contact"
@@ -112,27 +120,27 @@ msgstr ""
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:74
+#: includes/Integration/ACF/Pages/About.php:85
 msgid "Page Sections"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:86
+#: includes/Integration/ACF/Pages/About.php:97
 msgid "Template"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:90
+#: includes/Integration/ACF/Pages/About.php:101
 msgid "Default"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:91
+#: includes/Integration/ACF/Pages/About.php:102
 msgid "Customers"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:92
+#: includes/Integration/ACF/Pages/About.php:103
 msgid "MVP"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:102
+#: includes/Integration/ACF/Pages/About.php:113
 #: includes/Integration/ACF/Pages/Contact.php:59
 #: includes/Integration/ACF/Pages/Event.php:99
 #: includes/Integration/ACF/Pages/HomePage.php:61
@@ -141,13 +149,13 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:103
+#: includes/Integration/ACF/Pages/About.php:114
 #: includes/Integration/ACF/Pages/Contact.php:60
 msgid "Use * to bold"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:109
-#: includes/Integration/ACF/Pages/About.php:229
+#: includes/Integration/ACF/Pages/About.php:120
+#: includes/Integration/ACF/Pages/About.php:245
 #: includes/Integration/ACF/Pages/Event.php:59
 #: includes/Integration/ACF/Pages/Event.php:105
 #: includes/Integration/ACF/Pages/HomePage.php:67
@@ -156,85 +164,85 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:115
+#: includes/Integration/ACF/Pages/About.php:126
 #: includes/Integration/ACF/Pages/HomePage.php:138
 msgid "Image"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:122
+#: includes/Integration/ACF/Pages/About.php:133
 msgid "Image Position"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:124
+#: includes/Integration/ACF/Pages/About.php:135
 msgid "Left"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:125
+#: includes/Integration/ACF/Pages/About.php:136
 msgid "Right"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:132
+#: includes/Integration/ACF/Pages/About.php:143
 msgid "Image Align"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:134
+#: includes/Integration/ACF/Pages/About.php:145
 msgid "None"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:135
+#: includes/Integration/ACF/Pages/About.php:146
 msgid "Overlap top"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:136
+#: includes/Integration/ACF/Pages/About.php:147
 msgid "Stick on top"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:137
+#: includes/Integration/ACF/Pages/About.php:148
 msgid "Stick on bottom"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:138
+#: includes/Integration/ACF/Pages/About.php:149
 msgid "Overlap bottom"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:145
+#: includes/Integration/ACF/Pages/About.php:161
 msgid "Color Scheme"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:147
+#: includes/Integration/ACF/Pages/About.php:163
 msgid "Background White and Title Black"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:148
+#: includes/Integration/ACF/Pages/About.php:164
 msgid "Background Gray and Title Black"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:149
+#: includes/Integration/ACF/Pages/About.php:165
 msgid "Background Black and Title White"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:150
+#: includes/Integration/ACF/Pages/About.php:166
 msgid "Background Dusky and Title White"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:156
+#: includes/Integration/ACF/Pages/About.php:172
 msgid "Items"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:168
+#: includes/Integration/ACF/Pages/About.php:184
 msgid "Item"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:176
+#: includes/Integration/ACF/Pages/About.php:192
 msgid "Button label"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:192
+#: includes/Integration/ACF/Pages/About.php:208
 #: includes/Integration/ACF/Pages/HomePage.php:79
 msgid "Button URL"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:222
+#: includes/Integration/ACF/Pages/About.php:238
 #: includes/Integration/ACF/Pages/Event.php:92
 #: includes/Integration/ACF/Pages/HomePage.php:54
 #: includes/Integration/ACF/Pages/Page.php:51
@@ -274,7 +282,7 @@ msgstr ""
 msgid "Error Message: Not sent"
 msgstr ""
 
-#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: includes/Integration/ACF/Pages/Event.php:52
 msgid "About"
@@ -338,7 +346,7 @@ msgstr ""
 msgid "Testimonials"
 msgstr ""
 
-#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.0)  #-#-#-#-#
+#. #-#-#-#-#  elemarjr.pot (Elemar Jr Blog Theme 0.2.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: includes/Integration/ACF/Pages/NewsletterForm.php:51
 msgid "Newsletter Form"
@@ -578,12 +586,12 @@ msgid "reading time:"
 msgstr ""
 
 #: template-parts/blog/single/post-nav.php:27
-#: template-parts/blog/single/post-nav.php:32
+#: template-parts/blog/single/post-nav.php:36
 msgid "Previous"
 msgstr ""
 
-#: template-parts/blog/single/post-nav.php:51
-#: template-parts/blog/single/post-nav.php:57
+#: template-parts/blog/single/post-nav.php:62
+#: template-parts/blog/single/post-nav.php:76
 msgid "Next"
 msgstr ""
 

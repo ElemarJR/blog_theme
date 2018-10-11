@@ -20,9 +20,11 @@ global $container;
 	</div><!-- .container -->
 	<?php endif; ?>
 
-	<div class="container">
-		<?php get_template_part( 'template-parts/footer/promotion' ); ?>
-	</div>
+	<?php if ( is_front_page() ) : ?>
+		<div class="container">
+			<?php get_template_part( 'template-parts/footer/promotion' ); ?>
+		</div>
+	<?php endif; ?>
 
 	<?php
 	if ( ! is_page_template( 'page-templates/contact.php' ) && ! is_page_template( 'page-templates/about.php' ) ) :

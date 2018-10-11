@@ -17,9 +17,11 @@ class Promotion extends Banner {
 	public $slug = 'single_post_promotion_banner';
 
 	/**
-	 * Section name.
+	 * Get sectiona name.
 	 *
-	 * @var string
+	 * @return string
 	 */
-	protected $section_name = 'Single post promotion banner';
+	public function get_section_name() {
+		return __( 'Single post promotion banner', 'elemarjr' );
+	}
 }
