@@ -194,6 +194,7 @@ button
 
 // Langs
 .langs-navigation
+    display flex
     list-style none
     margin 0
     padding 0
@@ -207,9 +208,6 @@ button
         &.current-menu-item a
             color $tiffany
 
-        &:last-child
-            display none
-
     .menu-link
         color $white
         display block
@@ -219,7 +217,6 @@ button
 
     @media screen and ( min-width $nav-breakpoint )
         font-weight bold
-        margin-left auto
 
         .menu-link
             padding 8px 0
@@ -231,9 +228,6 @@ button
                 border-bottom 1px solid $tiffany
                 color $white
                 padding-bottom 3px
-
-            &:last-child
-                display inline-block
 
 // Search
 .search-form

@@ -74,13 +74,6 @@ $display_hero = $container->get( 'display_hero' );
 								</a>
 							</li>
 					<?php endforeach; ?>
-					<li class="menu-item">
-						<a href="#" class="menu-link">
-							<button class="search-toggle" aria-controls="search" aria-expanded="false">
-								<i class="i-search"></i>
-							</button>
-						</a>
-					</li>
 				</ul><!-- .langs-navigation -->
 			</div><!-- .header-right -->
 		</div>
