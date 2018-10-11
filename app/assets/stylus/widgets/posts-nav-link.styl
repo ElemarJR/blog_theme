@@ -28,13 +28,16 @@
             display block
 
     &--thumb
-        background purple
         display flex
         flex-basis 92px
         flex-grow 0
         flex-shrink 0
+        height 2px
         margin-right 20px
         position relative
+
+        @media screen and ( min-width $screen-sm )
+            height auto
 
     &--cursor
         margin 0 0 8px

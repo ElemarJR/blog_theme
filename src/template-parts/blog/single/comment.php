@@ -36,7 +36,7 @@ if ( 'div' === $args['style'] ) {
 			<?php echo get_comment_author_link( $comment ); ?>
 		</h5>
 		<time class="comment--meta-date">
-			<?php esc_html( printf( __( '%1$s at %2$s' ), get_comment_date( 'd M, Y', $comment ), get_comment_time( 'H:i' ) ) ); ?>
+			<?php esc_html( printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time( '' ) ) ); ?>
 		</time>
 	</div>
 	<div class="comment--content">
