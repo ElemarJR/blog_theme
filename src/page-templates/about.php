@@ -76,7 +76,7 @@ $about = $container->get( About::class ); ?>
 					<?php endif; ?>
 
 					<!-- Image -->
-					<div class="about--row--image wow fadeInDown">
+					<div class="about--row--image wow fadeIn">
 						<?php
 							$media_id = get_sub_field( 'image' );
 							echo wp_kses_post( wp_get_attachment_image( $media_id, 'full' ) );
