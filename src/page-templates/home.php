@@ -109,7 +109,7 @@ get_header(); ?>
 		if ( 0 < count( $posts ) ) :
 			?>
 		<div class="front-page--testimonial container wow fadeIn">
-			<div class="page-header">
+			<div class="front-page--testimonial-header page-header">
 				<h5 class="page-header--title page-header--title__small">
 					<?php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_title', true ) ); ?>
 				</h5>

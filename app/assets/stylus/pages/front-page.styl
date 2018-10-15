@@ -25,10 +25,14 @@
             color $dark-grey
             font-size 32px
             font-weight 100
+            letter-spacing 2px
             text-transform uppercase
             margin-bottom 75px
             position relative
             z-index 5
+
+            @media screen and ( min-width $screen-lg )
+                letter-spacing 3.5px
 
             b
                 display block
@@ -183,6 +187,10 @@
 
         @media screen and ( min-width $screen-lg )
             max-width $screen-lg
+
+        &-header
+            margin-bottom 30px
+            padding-bottom 30px
 
         .swiper-pagination
             color $brownish-grey
