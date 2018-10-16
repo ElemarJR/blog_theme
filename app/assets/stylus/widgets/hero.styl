@@ -13,9 +13,6 @@
         @media screen and ( min-width $screen-md )
             padding-bottom 120px
 
-        @media screen and ( min-width $screen-lg )
-            padding-bottom 70px
-
     &--container
         color $white
 
@@ -38,6 +35,7 @@
 
     &--description
         font-size 12px
+        letter-spacing 3px
         line-height 1.75
         margin 25px auto
         text-transform uppercase
@@ -50,12 +48,15 @@
         margin 0
 
     ~/__home
+        & ^[0]--wrapper
+            @media screen and ( min-width $screen-lg )
+                padding-bottom 70px
+
         & ^[0]--title
             strong
                 display block
 
         & ^[0]--description
-            letter-spacing 3px
             width 70%
 
     ~/__page
