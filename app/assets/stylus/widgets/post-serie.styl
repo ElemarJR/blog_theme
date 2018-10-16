@@ -2,7 +2,7 @@
     background $gray-light-100
     margin 32px ( - $container-padding ) 0 ( - $container-padding )
     padding 40px 30px
-    
+
     @media screen and ( min-width $screen-md )
         margin 32px 0 0
 
@@ -12,7 +12,7 @@
         margin 0 0 30px
         text-align center
         text-transform uppercase
-        
+
         @media screen and ( min-width $screen-md )
             font-size 14px
 
@@ -24,20 +24,19 @@
     &--item
         display flex
         flex-direction column
-        font-size 20px
+        font-size 14px
         justify-content space-between
         margin-bottom 15px
-        
+
         @media screen and ( min-width $screen-md )
             flex-direction row
-            font-size 15px
-        
+
         &__current
             font-weight bold
 
         &-date
             color $tiffany
-            
+
             @media screen and ( min-width $screen-md )
                 margin-right 60px
                 width 110px
@@ -45,6 +44,6 @@
         &-title
             color $gray-dark
             text-decoration none
-            
+
             @media screen and ( min-width $screen-md )
                 width calc( 100% - 170px )
