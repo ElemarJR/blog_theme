@@ -133,6 +133,7 @@ button
         list-style none
         margin 0
         padding 0
+        text-align left
 
     .menu-item
         &.current-menu-item a
@@ -241,8 +242,12 @@ button
 
     .search-submit
         margin-right 1rem
+        padding-left 0
         text-align center
         width 30px
+
+        @media screen and ( min-width $nav-breakpoint )
+            padding-left 8px
 
     input[type='search']
         background transparent
