@@ -1,6 +1,4 @@
 .about
-    $content-width-lg = 640px
-
     &--row
         &--container
             align-items center
@@ -54,7 +52,7 @@
 
         &--image
             @media screen and ( min-width $screen-md )
-                flex 0 0 45%flex 0 0 $content-width-lg
+                flex 0 0 45%
 
             img
                 display block
@@ -169,15 +167,24 @@
         // Image align
         &__image-top
             & ^[0..-2]--container
-                @media screen and ( min-width $screen-lg )
+                @media screen and ( min-width $screen-md )
+                    justify-content flex-end
                     padding-top 0
+                    position relative
+
+            & ^[0..-2]--content
+                @media screen and ( min-width $screen-md )
+                    padding-top 70px
 
             & ^[0..-2]--image
                 @media screen and ( min-width $screen-md )
-                    align-self flex-end
-                    margin-top -50px
+                    left 35px
+                    position absolute
+                    top -100px
+                    width 45%
 
                 @media screen and ( min-width $screen-lg )
+                    position static
                     margin-top -100px
 
             &__before
@@ -215,8 +222,7 @@
 
         &__image-stick-top
             & ^[0..-2]--container
-                @media screen and ( min-width $screen-md )
-                    padding-top 0
+                padding-top 0
 
             & ^[0..-2]--content
                 @media screen and ( min-width $screen-md )
@@ -228,8 +234,7 @@
 
         &__image-stick-bottom
             & ^[0..-2]--container
-                @media screen and ( min-width $screen-md )
-                    padding-bottom 0
+                padding-bottom 0
 
             & ^[0..-2]--content
                 @media screen and ( min-width $screen-md )
