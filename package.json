@@ -1,5 +1,5 @@
 {
-  "name": "base-project",
+  "name": "elemarjr",
   "version": "1.0.0",
   "description": "A quick way to start a project with WordPress using Docker.",
   "repository": {
@@ -11,6 +11,9 @@
   "devDependencies": {
     "dotenv": "^4.0.0",
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-requirejs": "^1.0.0",
