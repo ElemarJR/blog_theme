@@ -3,6 +3,7 @@
 /.ssh/
 /app/template/assets
 /database/
+/src/assets
 /web/
 .salts
 deploy.log
