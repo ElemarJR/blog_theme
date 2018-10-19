@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# @todo Enviar composer.lock e instalar pacote no-dev
-# @todo Empacotar todos arquivos num zip e mandar apenas o pacote
-
 set -ex
 
 grunt="docker-compose run --rm node grunt"
@@ -26,13 +23,23 @@ ${grunt} dist
 
 # Make deploy
 elemar-ssh mkdir -p ${deployDir}
-elemar-scp composer.json composer.lock src/
+elemar-scp elemarjr.zip
 
 elemar-ssh << EOF
 	cd ${deployDir}
+	unzip elemarjr.zip
+	sed -i -r 's/(\/..\/..\/..\/vendor)/\/..\/..\/..\1/g' src/includes/WP_CLI/bootstrap.php
+	sed -i -r 's/src(\/includes)/html\/wp-content\/themes\/elemarjr\1/g' composer.json
 	../vendor/bin/composer install --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader
+	cd ..
+	cp -R ${deployDir}/composer.* .
 	cp -R ${deployDir}/src/* html/wp-content/themes/elemarjr
+	cp -R ${deployDir}/vendor vendor
+	cp -R ${deployDir}/web/wp-content/plugins html/wp-content/plugins
+	rm -r ${deployDir}
 EOF
+
+rm elemarjr.zip
 
 # Regenerate dev assets
 rm -rf .assets/
