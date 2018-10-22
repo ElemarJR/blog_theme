@@ -12,7 +12,7 @@ use Bookworm\Bookworm;
 ?>
 
 <div class="post--meta">
-	<a href="<?php the_author_link(); ?>" class="post--meta-author">
+	<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="post--meta-author">
 		<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
 	</a><!-- .post--meta-author -->
 
