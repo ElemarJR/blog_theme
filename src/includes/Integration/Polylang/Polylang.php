@@ -69,10 +69,12 @@ class Polylang extends Base {
 	public function custom_post_type_support( $post_types, $is_settings ) {
 		if ( $is_settings ) {
 			unset( $post_types['testimonial'] );
+			unset( $post_types['event'] );
 			return $post_types;
 		}
 
 		$post_types['testimonial'] = 'testimonial';
+		$post_types['event'] = 'event';
 		return $post_types;
 	}
 
