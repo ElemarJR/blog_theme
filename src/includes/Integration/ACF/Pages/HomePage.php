@@ -132,6 +132,12 @@ class HomePage extends Base {
 					'label' => __( 'Title 2', 'elemarjr' ),
 				),
 				array(
+					'type' => 'wysiwyg',
+					'key' => 'purpose_text_2',
+					'name' => 'purpose_text_2',
+					'label' => __( 'Text 2', 'elemarjr' ),
+				),
+				array(
 					'type' => 'image',
 					'key' => 'purpose_image',
 					'name' => 'purpose_image',
