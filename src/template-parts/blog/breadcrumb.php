@@ -37,7 +37,7 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 					?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="url">
-					<span itemprop="title"><?php echo esc_html( $title ); ?></span>
+					<span itemprop="title"><?php echo wp_kses_post( $title ); ?></span>
 				</a>
 			</li>
 					<?php
